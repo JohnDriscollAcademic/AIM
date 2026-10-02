@@ -1,0 +1,6 @@
+detected: mu = 1.98 > lambda_h3 -> expected exactly 3 discrete eigenvalues below mu (0, lam_h1, lam_h2)
+detected: rho = 0.7 < lambda~ -> Temple hypothesis violated: Rayleigh quotient must lie below rho
+detected: R_LOC = 1 -> local check failed at r in [983039/983040,1], phi in 2pi*[1966079/1966080,1966080/1966080]
+detected: R_FAR = 0.3 -> far bound failed
+detected: target lowered -> far bound failed
+ALL MUTATIONS DETECTED

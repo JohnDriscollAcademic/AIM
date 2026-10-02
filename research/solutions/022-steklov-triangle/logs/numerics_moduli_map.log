@@ -1,0 +1,14 @@
+r= 0.00  min=3.87246160  max=3.87246160  conv(K30 vs45)=3.2e-14  argmax p=0.000
+r= 0.01  min=3.81123379  max=3.81174962  conv(K30 vs45)=4.2e-13  argmax p=2.094
+r= 0.02  min=3.75001635  max=3.75199316  conv(K30 vs45)=3.1e-13  argmax p=0.000
+r= 0.05  min=3.56737643  max=3.57824498  conv(K30 vs45)=1.2e-12  argmax p=4.189
+r= 0.10  min=3.27071636  max=3.30587888  conv(K30 vs45)=1.1e-11  argmax p=2.094
+r= 0.20  min=2.72532907  max=2.81790577  conv(K30 vs45)=1.2e-10  argmax p=0.000
+r= 0.30  min=2.25610693  max=2.39411025  conv(K30 vs45)=1.1e-09  argmax p=2.094
+r= 0.40  min=1.86136901  max=2.02458350  conv(K30 vs45)=2.7e-08  argmax p=2.094
+r= 0.50  min=1.53267100  max=1.70282382  conv(K30 vs45)=2.5e-07  argmax p=0.000
+r= 0.75  min=0.93812400  max=1.07967774  conv(K30 vs45)=2.7e-06  argmax p=0.000
+r= 1.00  min=0.57159818  max=0.66851261  conv(K30 vs45)=4.2e-06  argmax p=2.094
+r= 1.50  min=0.21089612  max=0.24885858  conv(K30 vs45)=1.3e-06  argmax p=4.189
+r= 2.00  min=0.07762132  max=0.09170722  conv(K30 vs45)=2.7e-07  argmax p=4.189
+r= 3.00  min=0.01050573  max=0.01241454  conv(K30 vs45)=4.4e-08  argmax p=4.189
