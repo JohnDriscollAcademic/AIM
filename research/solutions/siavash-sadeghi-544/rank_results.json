@@ -1,0 +1,761 @@
+{
+  "status": "PASS",
+  "checks_passed": 3650,
+  "exact_boundary_matrix_ranks": 356,
+  "finite_inequality_instances": 3267,
+  "records": [
+    {
+      "degree": 1,
+      "field": "Q",
+      "space": "X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        3
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "degree": 1,
+      "field": "Q",
+      "space": "Y",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        3
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "degree": 1,
+      "field": "Q",
+      "space": "Z",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        3
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "degree": 1,
+      "field": "Q",
+      "space": "pullback_X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        6
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "degree": 1,
+      "field": "Q",
+      "space": "pullback_Y",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        6
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "degree": 1,
+      "field": "F_3",
+      "space": "X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        3
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "degree": 1,
+      "field": "F_3",
+      "space": "Y",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        3
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "degree": 1,
+      "field": "F_3",
+      "space": "Z",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        3
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "degree": 1,
+      "field": "F_3",
+      "space": "pullback_X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        6
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "degree": 1,
+      "field": "F_3",
+      "space": "pullback_Y",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        6
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "Q",
+      "space": "X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        4
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "Q",
+      "space": "Y",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        4
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "Q",
+      "space": "Z",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        4
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "Q",
+      "space": "pullback_X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        10
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        9
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "Q",
+      "space": "pullback_Y",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        10
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        9
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "F_3",
+      "space": "X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        4
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "F_3",
+      "space": "Y",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        4
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "F_3",
+      "space": "Z",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        4
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        4
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "F_3",
+      "space": "pullback_X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        10
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        9
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "F_3",
+      "space": "pullback_Y",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        10
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        9
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "Q",
+      "space": "X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        5
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "Q",
+      "space": "Y",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        5
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        5
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "Q",
+      "space": "Z",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        5
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        5
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "Q",
+      "space": "pullback_X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        15
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        14
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "Q",
+      "space": "pullback_Y",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        15
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        14
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "F_3",
+      "space": "X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        5
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "F_3",
+      "space": "Y",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        5
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        5
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "F_3",
+      "space": "Z",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        5
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        5
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "F_3",
+      "space": "pullback_X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        15
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        14
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "F_3",
+      "space": "pullback_Y",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        15
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        14
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "Q",
+      "space": "X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        6
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "Q",
+      "space": "Y",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        6
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "Q",
+      "space": "Z",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        6
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "Q",
+      "space": "pullback_X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        21
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        20
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "Q",
+      "space": "pullback_Y",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        21
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        20
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "F_3",
+      "space": "X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        6
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "F_3",
+      "space": "Y",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        6
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "F_3",
+      "space": "Z",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        6
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        6
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "F_3",
+      "space": "pullback_X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        21
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        20
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "F_3",
+      "space": "pullback_Y",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        21
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        20
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "Q",
+      "space": "X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        7
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        6
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "Q",
+      "space": "Y",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        7
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        7
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "Q",
+      "space": "Z",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        7
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        7
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "Q",
+      "space": "pullback_X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        28
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        27
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "Q",
+      "space": "pullback_Y",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        28
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        27
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "F_3",
+      "space": "X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        7
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        6
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "F_3",
+      "space": "Y",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        7
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        7
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "F_3",
+      "space": "Z",
+      "cumulative_boundary_ranks": [
+        0,
+        0,
+        7
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        0,
+        7
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "F_3",
+      "space": "pullback_X",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        28
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        27
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "F_3",
+      "space": "pullback_Y",
+      "cumulative_boundary_ranks": [
+        0,
+        1,
+        28
+      ],
+      "diagonal_bar_multiplicities_at_0_1_2": [
+        0,
+        1,
+        27
+      ]
+    }
+  ],
+  "scope": "Independent implementation of exact finite rank checks, not independent mathematical review or a proof-assistant certificate.",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0"
+}

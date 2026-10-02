@@ -1,0 +1,116 @@
+AIM 544: separate AI mathematical and primary-source review
+Date: 2 October 2026
+Reviewer: Codex AI subagent aim544_proof_review
+
+Scope
+Read the complete original aim544_counterexample.tex, counterexample.json,
+and the repository's problems/544-verbose-persistence-pullback-triangle.md
+at target commit aa776a01d7d48a79f93251af11fde9454b0aea95. Reviewed the
+argument independently of the two supplied verification programs. This
+review did not execute those programs, prove the result in a proof
+assistant, inspect every literature source, or perform the repository's
+duplicate-submission audit. It is a separate AI review, not human peer
+review or a guarantee of mathematical correctness.
+
+Conclusion
+No blocking mathematical flaw was found. The four-point construction,
+unbounded-pullback lower bound, extension to every positive degree over
+every field, and minimality among triples of equal original cardinality
+are supported by the written arguments. The JSON agrees with the degree-
+one matrices, surjections, barcodes, distance claims, and general family
+in the note. No change to the construction is recommended.
+
+Primary-source verification
+The published paper's Definitions 4.7 and 5.3 prescribe actual multiset
+bijections and an infimum over finite tripods. Remark 1.1 identifies the
+positive-degree triangle question. Example 5.10 and Figure 7 contain the
+same X,Y pair, original barcodes, and a five-point duplication witness
+with one (1,1) and five (2,2) bars. Their separate space named Z has
+equilateral distance 1; the present note uses equilateral distance 2.
+These source observations support target matching and attribution, not
+a claim that the new three-space construction is original.
+Source: https://jocg.org/index.php/jocg/article/download/5193/3734/16411
+(printed pp. 261, 283, 293, 298).
+
+The arXiv v8 PDF still states the positive-degree question in Remark 1.1
+and has the same finite-tripod Definition 5.3 and Example 5.10. The v8
+submission is dated 21 August 2025; the PDF title page says 22 August.
+Sources: https://arxiv.org/pdf/2208.11770v8
+and https://arxiv.org/abs/2208.11770v8
+
+Mathematical checks
+1. The simplex boundary-rank proof uses a cone vertex to exhibit an
+   independent spanning family of boundaries. Its coefficients are
+   nonzero signs over any field, including characteristic two. The
+   rank is choose(r-1,k+1), with the stated zero convention.
+
+2. For the ultrametric pullbacks, all complexes at thresholds 0,1,2
+   are disjoint unions of full simplices. Their positive-degree
+   homology therefore vanishes. Every positive-degree bar is diagonal,
+   and cumulative deaths equal boundary rank. Differences of these
+   ranks give the claimed multiplicities without a tie-order choice.
+
+3. For the original four-point spaces the ranks yield X's barcode
+   {(1,1),(2,2),(2,2)} and Y's and Z's common barcode {(2,2)^3}.
+   The two surjections in the note are onto. The five-vertex pullbacks
+   have identical component-size lists at every threshold, hence
+   identical degree-one barcodes and zero matching cost. The identity
+   four-point comparison gives D_1(Y,Z)=0.
+
+4. For arbitrary positive fiber sizes a,b,c,d over X, the count of
+   (1,1) bars is exactly ab+ac+bc-2, at least one. The contribution
+   from d cancels. This proof covers every finite common set, without
+   imposing a fiber-size or cardinality bound. Every Z-pullback has
+   diagonal bars at only 0 or 2, so every actual bijection must move
+   an X-bar at 1 by cost one. Identical common-set cardinality gives
+   equal total numbers of bars. Original-space matching attains one.
+
+5. For k>=1, n=k+3 gives X cluster sizes k+2,1 and Y sizes k+1,2.
+   Their original degree-k multiplicities and the (k+4)-vertex witness
+   follow from the same rank formula. A size-two duplicated fiber
+   creates no degree-k bars at zero. At level one both witness
+   pullbacks have rank one, and at level two rank choose(k+3,k+1).
+
+6. The all-fiber inequality is valid: the disjoint union of the sets
+   of sizes m_i-1 and an additional set R of size k+1 has size M-1.
+   Subtracting subsets contained in one fiber-set leaves the subset
+   R, so at least one (1,1) bar remains for every multiplicity vector.
+   This is an analytic universal proof, not an inference from tests.
+
+7. The diameter-bar lemma holds for arbitrary finite pseudometrics
+   with at least k+2 distinct vertices. A (k+1)-simplex containing a
+   diameter-realizing edge has a boundary with a nonzero coefficient
+   on a k-face entering exactly at the diameter. It is a new cycle
+   outside the earlier chain space. Thus the cumulative cycle-space
+   dimension, equivalently the count of degree-k births, increases
+   there. Since the final complex is a full simplex, the newly born
+   bar dies at that same diameter. This also covers diameter zero.
+
+8. If the equal original cardinality n<=k+1, empty original barcodes
+   give distance zero under the repository's explicit convention.
+   If n=k+2, the sole original degree-k pair is the diameter bar.
+   All pullbacks retain their target diameter and contain a diameter
+   bar; matching the larger diameter bar costs at least the diameter
+   difference because every endpoint in the other barcode is bounded
+   by its diameter. This proves equality with the diameter difference
+   and the triangle inequality on that cardinality class. Together
+   with the construction, it establishes the stated equal-cardinality
+   minimum k+3. It does not claim minimum total cardinality for triples
+   of unequal sizes.
+
+9. The correspondence restriction is met: identity pairs plus (n,1)
+   are distinct, onto pairs realizing the required duplication of
+   X's singleton and one member of Y's large cluster. The other
+   comparisons use bijections. Nontransitivity of zero distance,
+   absence of a finite multiplicative triangle constant, and absence
+   of a universal additive defect bound follow by the stated scaling.
+
+Recommended polish
+- Retain Mémoli-Zhou attribution for X,Y and the duplication witness.
+- Clarify that this note's equilateral Z has distance 2 and is not the
+  source Example 5.10's space bearing the same letter at distance 1.
+- Replace the now-stale statement that no separate AI mathematical
+  review occurred with a precise description of this review's scope.
+  Continue to distinguish it from human peer review and formal proof.
+- Keep the status as a proposed solution awaiting repository review;
+  this report does not justify claiming repository acceptance.

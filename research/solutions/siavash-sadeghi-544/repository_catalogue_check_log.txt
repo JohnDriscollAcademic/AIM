@@ -1,0 +1,10 @@
+Current upstream checked: fa98b7525fa3f78317536a8825f9cfa0ae1c369c
+Command: python scripts/catalogue.py --check
+Exit: 0
+Validated 651 unique problems, metadata, required sections, math delimiters,
+local links, and freshness of README.md, CATALOG.md, RESOLVED.md.
+
+The original aa776a01d7d48a79f93251af11fde9454b0aea95 baseline also passed
+before the upstream refresh (665 active problems).
+These structural checks do not verify the mathematical argument.
+The proposed contribution changes no catalogue machinery or problem status.

@@ -1,0 +1,231 @@
+{
+  "problem": 544,
+  "target_commit": "aa776a01d7d48a79f93251af11fde9454b0aea95",
+  "claim_status": "Complete proposed disproof; independent mathematical review outstanding",
+  "field": "F_2 suffices; the proof works over every field",
+  "degree": 1,
+  "vertex_labels": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "X": [
+    [
+      0,
+      1,
+      1,
+      2
+    ],
+    [
+      1,
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      1,
+      0,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      0
+    ]
+  ],
+  "Y": [
+    [
+      0,
+      1,
+      2,
+      2
+    ],
+    [
+      1,
+      0,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      0,
+      1
+    ],
+    [
+      2,
+      2,
+      1,
+      0
+    ]
+  ],
+  "Z": [
+    [
+      0,
+      2,
+      2,
+      2
+    ],
+    [
+      2,
+      0,
+      2,
+      2
+    ],
+    [
+      2,
+      2,
+      0,
+      2
+    ],
+    [
+      2,
+      2,
+      2,
+      0
+    ]
+  ],
+  "XY_common_set": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "XY_map_to_X": [
+    1,
+    2,
+    3,
+    4,
+    4
+  ],
+  "XY_map_to_Y": [
+    1,
+    2,
+    3,
+    4,
+    1
+  ],
+  "native_barcodes": {
+    "X": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "Y": [
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "Z": [
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ]
+  },
+  "XY_pullback_barcodes": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      2
+    ]
+  ],
+  "distances": {
+    "D_1(X,Y)": 0,
+    "D_1(Y,Z)": 0,
+    "D_1(X,Z)": 1
+  },
+  "uniform_lower_bound": {
+    "X_fiber_sizes": "a,b,c,d >= 1, with a,b,c over the close triple",
+    "X_multiplicity_at_1": "a*b + a*c + b*c - 2 >= 1",
+    "Z_possible_pairs": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "minimum_cost_for_an_X_1_bar": 1,
+    "scope": "all finite common sets and all surjections, proved analytically"
+  },
+  "general_family": {
+    "degrees": "every integer k >= 1",
+    "common_original_cardinality": "k+3",
+    "X_cluster_sizes_at_1": [
+      "k+2",
+      1
+    ],
+    "Y_cluster_sizes_at_1": [
+      "k+1",
+      2
+    ],
+    "Z": "equilateral distance 2",
+    "XY_common_cardinality": "k+4",
+    "XY_repeat_X": "the singleton",
+    "XY_repeat_Y": "one point in the cluster of size k+1",
+    "distances": [
+      0,
+      0,
+      1
+    ]
+  },
+  "attribution": "The degree-one X,Y pair and its zero distance occur in Memoli-Zhou Example 5.10. No novelty is claimed for that pair.",
+  "contributor_and_submitter": "Siavash Sadeghi",
+  "review_disclosure": "AI-generated source; Codex and separate AI reviewers during preparation. No human peer review or formal verification claimed; see verification_record.md.",
+  "current_problem": 534,
+  "current_target_commit": "fa98b7525fa3f78317536a8825f9cfa0ae1c369c",
+  "current_target_path": "problems/534-verbose-persistence-pullback-triangle.md",
+  "identity_note": "Original problem 544 was renumbered to 534; the target statement is unchanged except for its numbered heading."
+}
