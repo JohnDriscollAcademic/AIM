@@ -1,0 +1,21 @@
+{
+  "original_filename": "aim618_solution.tex",
+  "original_sha256": "83d57aea14bddb5a3b6e993888f0e1ace1f73fc3958db4e98d0b0b6a438908b1",
+  "original_target_id": "618",
+  "original_target_commit": "aa776a01d7d48a79f93251af11fde9454b0aea95",
+  "current_target_id": "665",
+  "current_target_commit": "fa98b7525fa3f78317536a8825f9cfa0ae1c369c",
+  "author": "Matthew J. Colbrook",
+  "affiliation": "Department of Applied Mathematics and Theoretical Physics, University of Cambridge, Cambridge CB3 0WA, United Kingdom",
+  "email": "m.colbrook@damtp.cam.ac.uk",
+  "author_information_sources": [
+    "https://www.damtp.cam.ac.uk/user/mjc249/home.html",
+    "https://www.damtp.cam.ac.uk/user/mjc249/Talks.html"
+  ],
+  "prepared_on": "2026-10-02",
+  "submission_status": "Solution claimed; additional proof awaiting pull-request review",
+  "existing_catalogue_status": "Solved by a different previously reviewed argument; unchanged by this submission",
+  "checks_by": "OpenAI Codex (AI), editorial and mathematical pre-submission check",
+  "independent_review_claimed": false,
+  "proof_assistant_verification_claimed": false
+}

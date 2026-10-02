@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-02",
+  "compiler": "pdfTeX 3.141592653-2.6-1.40.25 (MiKTeX 23.5)",
+  "passes": 2,
+  "pages": 6,
+  "final_warnings": [],
+  "pdf_author": "Matthew J. Colbrook",
+  "source_sha256": "b3d80574f094216133e94355fabaf879ad0a7c62bc2ad02c479f24565fc4c2ef",
+  "pdf_sha256": "73a1a6bfed3df899a1c08fa0ae761b075f8dd609a5c61513a6e5f8a3d5c70aa7",
+  "visual_review": "All six pages rendered with Poppler at 110 dpi and inspected; no clipping, overlapping text, unresolved citations or layout defects identified.",
+  "builtin_compiler": "Unavailable: Unable to find standard directories for platform. The saved source was opened in the built-in editor; PDF exported with the existing local LaTeX installation.",
+  "source_encoding": "UTF-8, LF. Original uploaded TeX is exempted from Git text conversion to preserve its exact bytes."
+}
