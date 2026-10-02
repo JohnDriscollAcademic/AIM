@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "role": "supplementary numerical checks; not rigorous interval bounds",
+  "decimal_precision": 80,
+  "grid_points_including_midpoints": 10001,
+  "grid_sign_checks": 10001,
+  "grid_curvature_checks": 10001,
+  "certified_enclosure_cross_checks": 10,
+  "finite_difference_cross_checks": 6,
+  "tail_sample_checks": 6,
+  "total_supporting_checks": 20024,
+  "largest_sampled_residual_at_x": "0.3945",
+  "largest_sampled_residual": "-0.0010032739511116228551098558618039536625156172104048667314204139647960800282957",
+  "largest_sampled_absolute_second_derivative": "15.687557738705652437719093042047031186090884321477534583313013320015675127100089",
+  "max_finite_difference_error": "6.14290570944590341778396897112209570164616858E-35",
+  "dimension_upper_bound_decimal": "0.99021025794277901345318874494025224010785733480036464874382858499056231709956389"
+}

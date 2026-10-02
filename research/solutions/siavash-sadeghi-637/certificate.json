@@ -1,0 +1,64 @@
+{
+  "target_id_observed": "637",
+  "target_title": "Absolute continuity of stationary Elo ratings",
+  "access_date": "2026-10-02",
+  "evidence_status": "Solution claimed; independent review pending",
+  "parameters": {
+    "N": 2,
+    "rho": [
+      "0",
+      "0"
+    ],
+    "c": "1/2",
+    "K": "9/10",
+    "Kc": "9/20"
+  },
+  "scalar_maps": "F_+(x)=x-(9/10)tanh(x)+9/10; F_-(x)=x-(9/10)tanh(x)-9/10",
+  "sign_probabilities": [
+    "1/2",
+    "1/2"
+  ],
+  "auxiliary_function_basis": [
+    "x^2",
+    "log(cosh(x))",
+    "tanh(x)^2",
+    "tanh(x)^4",
+    "tanh(x)^6",
+    "tanh(x)^8"
+  ],
+  "coefficient_numerators": [
+    152316,
+    -650393,
+    237867,
+    -54616,
+    149840,
+    -31596
+  ],
+  "common_coefficient_denominator": 10000,
+  "drift_constant": "7/10",
+  "log_derivative": "log(1/10+(9/10)*tanh(x)^2)",
+  "residual": "log_derivative+7/10-h+(h(F_+)+h(F_-))/2",
+  "grid": {
+    "first_index": 0,
+    "last_index": 5000,
+    "argument": "j/1000",
+    "strict_upper_bound": "-9/10000"
+  },
+  "curvature_absolute_bound_on_minus5_to5": "4000",
+  "interpolation_error_upper_bound": "1/2000",
+  "compact_residual_upper_bound": "-1/2500",
+  "tail_lower_bound_for_h_minus_Ph": "2555547/500000",
+  "interval_denominator": "2^192",
+  "exp_series_terms": 41,
+  "log_atanh_series_terms": 100,
+  "measure_dimension_upper_bound": "10*log(2)/7",
+  "not_claimed": [
+    "exact dimension",
+    "density classification for all parameters",
+    "independent review",
+    "proof-assistant verification"
+  ],
+  "submitted_by": "Siavash Sadeghi",
+  "repository_commit": "fa98b7525fa3f78317536a8825f9cfa0ae1c369c",
+  "repository_path": "problems/637-elo-density.md"
+}

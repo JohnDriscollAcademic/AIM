@@ -1,4 +1,4 @@
-# AIM 637 â€” singular stationary Elo ratings
+# AIM 637 - singular stationary Elo ratings
 
 **Siavash Sadeghi**
 
