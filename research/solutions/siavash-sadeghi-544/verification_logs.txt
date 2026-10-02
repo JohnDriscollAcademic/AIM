@@ -1,0 +1,19 @@
+Recorded 2 October 2026; commands shown relative to package directory.
+
+python verify_boundary.py --output boundary_results.json
+PASS: 6653 checks; 720 exact reductions; 5226 finite pullback-pair comparisons
+
+python -O verify_boundary.py --output boundary_results.json
+PASS: 6653 checks; 720 exact reductions; 5226 finite pullback-pair comparisons
+
+python verify_ranks.py --output rank_results.json
+PASS: 3650 checks; 356 exact matrix ranks; 3267 finite inequality instances
+
+python -O verify_ranks.py --output rank_results.json
+PASS: 3650 checks; 356 exact matrix ranks; 3267 finite inequality instances
+
+python verify_supplementary.py --output supplementary_results.json
+PASS: 246 supplementary checks
+
+python -O verify_supplementary.py --output supplementary_results.json
+PASS: 246 supplementary checks

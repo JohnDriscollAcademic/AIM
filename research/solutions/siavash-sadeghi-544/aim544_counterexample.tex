@@ -1,0 +1,425 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=0.87in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype,booktabs}
+\usepackage{enumitem,fancyhdr,xcolor,hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue,
+ pdftitle={A four-point counterexample to the verbose pullback triangle inequality},
+ pdfauthor={Siavash Sadeghi (contributor and submitter); AI-assisted research note},pdfsubject={Proposed resolution of original AIM 544, current AIM 534}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt plus 1pt}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small AIM 544 (now 534) \;|\; Proposed counterexample}
+\rhead{\small 2 October 2026}
+\cfoot{\thepage}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\F}{\mathbb F}
+\newcommand{\VR}{\operatorname{VR}}
+\newcommand{\rk}{\operatorname{rank}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\sq}{\sqcup}
+\newcommand{\barc}[2]{\{(#1,#1)\}^{#2}}
+\title{\vspace{-1.1em}A four-point counterexample to the\newline verbose pullback triangle inequality}
+\author{Siavash Sadeghi\\\small Contributor and submitter; AI-assisted research note}
+\date{2 October 2026}
+\begin{document}
+\maketitle
+\vspace{-1.2em}
+\begin{abstract}
+The fixed-degree pullback matching distance of verbose Vietoris--Rips barcodes
+fails the triangle inequality. In degree one, three four-point ultrametric
+spaces, with nonzero distances only $1$ and $2$, have pairwise distances
+$0,0,1$. More generally, in every degree $k\ge1$ and over every field, the
+same phenomenon occurs on three spaces of equal cardinality $k+3$.
+Every barcode involved is nonempty. A rank-counting argument proves the
+positive lower bound over \emph{all} finite common pullbacks, not merely
+an enumerated set. The common cardinality $k+3$ is minimal. The degree-one
+zero-distance pair used here is already in M\'emoli--Zhou, Example~5.10;
+the third space and the uniform lower bound complete a counterexample.
+\end{abstract}
+
+\textbf{Evidence status.} Complete proposed disproof, awaiting independent
+mathematical review. The supplied proof and programs are AI-generated. Codex and separate
+AI reviewers checked the argument, programs, and target sources during
+submission preparation; details appear in \texttt{verification\_record.md}.
+No human peer review, formal proof-assistant verification, or repository
+acceptance is claimed.
+
+\section{The target and conventions}
+The target is original AIM 544, \emph{Triangle inequality for the pullback
+distance of verbose persistence barcodes}, pinned at \texttt{aa776a0}~\cite{aim}.
+As of 2 October 2026 it is AIM 534 at \texttt{fa98b75}; only the numbered
+heading changed, and the target remains Open. Full revision hashes and the
+dated prior-submission audit are in \texttt{target\_audit.md}. No overlapping
+claim was found in the inspected public records.
+
+Fix a field $\F$. For a finite nonempty pseudometric space $(S,d)$, give each
+simplex its diameter as filtration value. Write $V_k(S,d)$ for the degree-$k$
+barcode obtained by the ordinary boundary reduction \emph{retaining all
+zero-length pairs}. Endpoint pairs have their full multiplicities.
+For equal-size finite barcodes, $m$ is the least maximum $\ell^\infty$
+endpoint discrepancy over bijections; no additional diagonal points are
+allowed. For finite metric spaces $A,B$, the target distance is
+\begin{equation}
+D_k(A,B)=\inf_{\substack{S\text{ finite}\,;\ p:S\twoheadrightarrow A\,;\ q:S\twoheadrightarrow B}}
+ m\bigl(V_k(S,p^*d_A),V_k(S,q^*d_B)\bigr).
+\label{eq:target}
+\end{equation}
+Distinct vertices at zero pullback distance are not identified. We work
+only in degrees $k\ge1$, so all bars have finite endpoints. On a common
+set of $s$ vertices, either pullback has exactly $\binom{s-1}{k+1}$
+degree-$k$ pairs, since its final complex is the full simplex. Thus the
+compared barcodes have equal cardinality (Lemma~\ref{lem:rank}). The published
+fixed-degree question is in Remark~1.1 and Definition~5.3 of~\cite{mz}.
+
+\section{The four-point counterexample}
+Take three copies of $\{1,2,3,4\}$ with distance matrices
+\begin{equation}
+ d_X=\begin{pmatrix}
+0&1&1&2\\1&0&1&2\\1&1&0&2\\2&2&2&0
+\end{pmatrix},\quad
+ d_Y=\begin{pmatrix}
+0&1&2&2\\1&0&2&2\\2&2&0&1\\2&2&1&0
+\end{pmatrix},\quad
+ d_Z=\begin{pmatrix}
+0&2&2&2\\2&0&2&2\\2&2&0&2\\2&2&2&0
+\end{pmatrix}.
+\label{eq:matrices}
+\end{equation}
+All are genuine ultrametrics. At scale $1$, the clusters of $X$ have sizes
+$3,1$, those of $Y$ have sizes $2,2$, and those of $Z$ have sizes $1,1,1,1$.
+At scale $2$, all four vertices form a simplex.
+
+\begin{theorem}\label{thm:four}
+For the spaces in~\eqref{eq:matrices}, over every field,
+\[
+\boxed{D_1(X,Y)=0,\qquad D_1(Y,Z)=0,\qquad D_1(X,Z)=1.}
+\]
+In particular, these spaces disprove the universal assertion in AIM 544.
+\end{theorem}
+
+We first give the elementary counting facts that justify every barcode
+and the lower bound over arbitrary pullbacks.
+
+\begin{lemma}[Boundary ranks of a simplex]\label{lem:rank}
+For the full simplex on $r\ge1$ vertices and $k\ge1$,
+\[
+\rk\partial_{k+1}=\binom{r-1}{k+1},
+\]
+where a binomial coefficient is zero when its lower index exceeds its
+nonnegative upper index. For a disjoint union of simplexes on
+$r_1,\ldots,r_s$ vertices, the rank is the sum of these quantities.
+\end{lemma}
+\begin{proof}
+Fix one vertex $v$. The boundaries of the $(k+1)$-simplexes containing
+$v$ are independent: each has a distinct face of dimension $k$ not
+containing $v$, with coefficient $1$ or $-1$. They span the boundary
+space. Indeed, the boundary of a $(k+1)$-simplex not containing $v$ is a
+linear combination of these boundaries, obtained by applying
+$\partial^2=0$ to its cone with vertex $v$. There are
+$\binom{r-1}{k+1}$ such simplexes. The argument works in every characteristic.
+Disjoint components give a direct sum.
+\end{proof}
+
+\begin{lemma}[Counting the diagonal bars]\label{lem:counts}
+Suppose a finite simplicial filtration changes only at
+$t_0<\cdots<t_s$, and its positive-degree homology vanishes at every
+threshold. Then every positive-degree verbose bar is diagonal.
+The number of degree-$k$ bars with death time at most $t_i$ is
+$\rk\partial_{k+1}(K_{t_i})$.
+Consequently, the multiplicity of $(t_i,t_i)$ is the increment of this
+rank from the preceding threshold.
+\end{lemma}
+\begin{proof}
+A positive-length bar would give nonzero homology at some threshold or
+on an interval between successive thresholds. Thus no such bars occur.
+In a boundary reduction, nonzero columns of degree $k+1$ are exactly the
+deaths of degree-$k$ pairs. Reducing all columns with entry time at most
+$t_i$ gives as many nonzero columns as the rank of the corresponding
+boundary map. This statement includes deaths paired with births at the
+same filtration value. Differences count deaths at the individual
+thresholds.
+\end{proof}
+
+\subsection{The two zero distances}
+The filtrations here are disjoint unions of simplexes at every scale, so
+Lemmas~\ref{lem:rank}--\ref{lem:counts} give
+\begin{equation}
+V_1(X)=\{(1,1),(2,2),(2,2)\},\qquad
+V_1(Y)=V_1(Z)=\barc{2}{3}.
+\label{eq:base}
+\end{equation}
+Use the original four-element set, with bijections onto $Y$ and $Z$.
+Their equal barcodes prove $D_1(Y,Z)=0$.
+
+For $X,Y$, use a five-element set $S=\{1,2,3,4,5\}$ and the surjections
+\begin{equation}
+\begin{array}{c|ccccc}
+s&1&2&3&4&5\\\hline
+p(s)\in X&1&2&3&4&4\\
+q(s)\in Y&1&2&3&4&1
+\end{array}.
+\label{eq:witness}
+\end{equation}
+The first pullback repeats the isolated point of $X$; the second repeats
+one member of a close pair in $Y$. Their cluster sizes at the thresholds
+are
+\[
+\begin{array}{c|ccc}
+&0&1&2\\\hline
+(S,p^*d_X)&2,1,1,1&3,2&5\\
+(S,q^*d_Y)&2,1,1,1&3,2&5
+\end{array}.
+\]
+For degree one, the boundary ranks at these thresholds are $0,1,6$.
+Hence both pullbacks have barcode
+\begin{equation}
+\{(1,1)\}\sq\barc{2}{5}.
+\label{eq:pullback}
+\end{equation}
+This is a zero-cost admissible matching, proving $D_1(X,Y)=0$.
+
+\subsection{A lower bound for every common pullback}
+Let $S$ be \emph{any} finite set surjecting onto $X$ and $Z$.
+Let $a,b,c,d\ge1$ be the fiber sizes for its map to $X$.
+At threshold $0$, the $X$-pullback is the disjoint union of simplexes
+on $a,b,c,d$ vertices. At threshold $1$, these merge into simplexes
+on $a+b+c$ and $d$ vertices. The number of $(1,1)$ bars is therefore
+\begin{align}
+&\binom{a+b+c-1}{2}+\binom{d-1}{2}
+ -\binom{a-1}{2}-\binom{b-1}{2}-\binom{c-1}{2}-\binom{d-1}{2}\notag\\
+&\hspace{2cm}=ab+ac+bc-2\ \ge\ 1.
+\label{eq:positive}
+\end{align}
+This includes all possible duplication patterns, without any size bound.
+
+The $Z$-pullback has only distances $0$ and $2$. At threshold $0$ it is a
+disjoint union of simplexes, and at threshold $2$ it is a full simplex.
+Its degree-one bars are therefore only $(0,0)$ and $(2,2)$.
+Every bijection must match the $(1,1)$ bar supplied by~\eqref{eq:positive}
+to one of these two pairs. Either choice has cost $1$.
+Thus every admissible comparison in~\eqref{eq:target} costs at least $1$.
+
+Conversely, the original four-point barcodes in~\eqref{eq:base} can be
+matched with cost $1$. This proves $D_1(X,Z)=1$ and completes the proof of
+Theorem~\ref{thm:four}.
+\qed
+
+\paragraph{Attribution and scope.}
+The spaces $X,Y$, their degree-one barcodes, and a zero-cost duplication
+comparison already occur in M\'emoli--Zhou, Example~5.10 and Figure~7,
+after relabeling~\cite{mz}. No novelty is claimed for that pair. The choice
+of an equilateral third space with distance $2$, together with the
+uniform obstruction~\eqref{eq:positive}, completes the proposed disproof.
+Our $Z$ differs from the equilateral distance-$1$ space denoted $Z$ in
+that source example.
+This is a fixed-degree argument, not the source's distinct all-degree
+pullback-interleaving counterexample. It does not depend on any convention
+for empty barcodes: every original barcode here has three entries and
+every common pullback has at least four vertices.
+
+\section{A counterexample in every positive degree}
+\begin{theorem}\label{thm:general}
+For every field $\F$ and every integer $k\ge1$, there are three ultrametric
+spaces $X_k,Y_k,Z_k$, each with $k+3$ points and nonzero distances in
+$\{1,2\}$, such that
+\[
+D_k(X_k,Y_k)=D_k(Y_k,Z_k)=0,\qquad D_k(X_k,Z_k)=1.
+\]
+The degree-$k$ barcode of every original space and every common pullback
+in these comparisons is nonempty.
+\end{theorem}
+\begin{proof}
+Set $n=k+3$. Give $X_k$ a close cluster of size $k+2$ and a singleton,
+and give $Y_k$ two close clusters of sizes $k+1$ and $2$.
+Distances between distinct points in the same close cluster are $1$;
+all remaining off-diagonal distances are $2$.
+Let $Z_k$ be the equilateral $n$-point space with distance $2$.
+
+Lemmas~\ref{lem:rank}--\ref{lem:counts} give
+\begin{align}
+V_k(X_k)&=\{(1,1)\}\sq\barc{2}{k+1},\label{eq:general-base}\\
+V_k(Y_k)&=V_k(Z_k)=\barc{2}{k+2}.
+\end{align}
+In particular, the original sets give a zero-cost comparison of $Y_k,Z_k$.
+
+Repeat the singleton in $X_k$ and one vertex of the size-$(k+1)$ cluster
+in $Y_k$. Both pullbacks have $k+4$ vertices. At $0$, one fiber has size
+$2$ and all others have size $1$; since $k\ge1$, this yields no degree-$k$
+bars at $0$. At $1$, both have component sizes $k+2,2$, with boundary
+rank $1$. At $2$, the rank is $\binom{k+3}{k+1}$. Both barcodes are
+\begin{equation}
+\{(1,1)\}\sq\barc{2}{\binom{k+3}{k+1}-1},
+\end{equation}
+so $D_k(X_k,Y_k)=0$.
+
+Now consider any pullback of $X_k$. Let $m_1,\ldots,m_{k+2}\ge1$
+be the fiber sizes over its large cluster, and put $M=\sum_i m_i$.
+The singleton fiber's contribution cancels between levels $0$ and $1$.
+The multiplicity of $(1,1)$ is
+\begin{equation}
+B=\binom{M-1}{k+1}-\sum_{i=1}^{k+2}\binom{m_i-1}{k+1}\ \ge\ 1.
+\label{eq:all-multiplicities}
+\end{equation}
+For a direct proof of the inequality, form disjoint sets $A_i$ with
+$|A_i|=m_i-1$ and a further disjoint set $R$ of size $k+1$.
+Their union has size $M-1$. The first binomial counts all its
+$(k+1)$-element subsets; the sum subtracts just those lying entirely
+in some $A_i$. The subset $R$ is not subtracted, so the remainder is
+at least one.
+
+Every pullback of $Z_k$ has only $(0,0)$ and $(2,2)$ bars, as in the
+degree-one argument. Equation~\eqref{eq:all-multiplicities} forces matching
+cost at least $1$ for every common pullback. The original barcodes
+in~\eqref{eq:general-base} give cost $1$, proving equality.
+Finally, on any $s\ge k+3$ vertices a full simplex has
+$\binom{s-1}{k+1}>0$ degree-$k$ pairs, which proves nonemptiness.
+\end{proof}
+
+\section{Minimal equal cardinality and consequences}
+\begin{lemma}[A diameter bar]\label{lem:diameter}
+Let $A$ be a finite pseudometric space with $r\ge k+2$ distinct vertices
+and diameter $\delta$, where $k\ge1$. Then $V_k(A)$ contains
+$(\delta,\delta)$.
+\end{lemma}
+\begin{proof}
+Choose two vertices realizing the diameter and extend them to a set of
+$k+2$ vertices, defining a $(k+1)$-simplex $\sigma$.
+The cycle $\partial\sigma$ has a nonzero coefficient on a $k$-face
+containing those two vertices: delete any of the other $k$ vertices.
+That face has entry time $\delta$. Thus $\partial\sigma$ is not in the
+chain space strictly below $\delta$, and the dimension of the space of
+$k$-cycles increases at $\delta$.
+
+The number of degree-$k$ barcode births through a threshold is the
+number of zero reduced degree-$k$ columns, namely the dimension of
+that threshold's $k$-cycle space. Hence at least one bar is born at
+$\delta$. The filtration is the full simplex at $\delta$, so every
+bar born then also dies then. If $\delta=0$, the same argument uses
+the empty complex below $0$.
+\end{proof}
+
+\begin{proposition}\label{prop:minimal}
+Among triples whose three spaces have the same cardinality, $k+3$ is the
+smallest cardinality at which the triangle inequality for $D_k$ can fail.
+\end{proposition}
+\begin{proof}
+For equal cardinality $n\le k+1$, the original degree-$k$ barcodes are
+empty, so $D_k$ is identically zero on that cardinality class, using the
+repository's explicit empty-matching convention.
+
+For $n=k+2$, the original degree-$k$ barcode has exactly one pair by
+Lemma~\ref{lem:rank}. Lemma~\ref{lem:diameter} identifies it as
+$(\diam A,\diam A)$. This gives
+\[
+D_k(A,B)\le |\diam A-\diam B|.
+\]
+Every admissible common pullback has at least $k+2$ vertices, has the
+same diameter as its target, and has a diameter bar by
+Lemma~\ref{lem:diameter}. All endpoints in the other barcode are at most
+its target's diameter. Matching the larger diameter bar therefore costs
+at least $|\diam A-\diam B|$, proving equality. The absolute-value triangle
+inequality applies on this cardinality class. Theorem~\ref{thm:general}
+attains failure at $n=k+3$.
+\end{proof}
+
+\paragraph{Consequences.}
+In every positive degree, the zero-distance relation is not transitive.
+Moreover, there is no finite constant $C$ such that
+\[
+D_k(A,C')\le C\bigl(D_k(A,B)+D_k(B,C')\bigr)
+\]
+for all finite metric spaces: the right-hand side for our triple is zero.
+Multiplying all distances by $a>0$ gives distances $0,0,a$, so there is
+no universal additive bound on the triangle defect either.
+Taking an infimum of sums along chains produces a \emph{different}
+quantity, which identifies $X_k$ and $Z_k$ at zero cost.
+
+The witness also works if common pullbacks are restricted to
+\emph{correspondences}, meaning $s\mapsto(p(s),q(s))$ is injective.
+In the general construction, take identity labels for the first $n$
+vertices and an additional pair $(n,1)$; these $n+1$ ordered pairs are
+distinct. The other two upper bounds use bijections. The lower bound
+already holds for all finite tripods, hence for this subclass as well.
+
+These conclusions concern the specified fixed-degree verbose pullback
+construction. Ordinary positive-degree persistence barcodes of these
+ultrametric spaces are empty, so they give no counterexample to the usual
+bottleneck metric. The established degree-zero result is also unaffected.
+
+\section{Verification and research status}
+The proof is exact and self-contained; it does not depend on numerical
+optimization or a finite search over pullbacks. Two standard-library
+Python implementations accompany this note.
+
+\begin{center}
+\begin{tabular}{@{}lrr@{}}\toprule
+Implementation & Supporting checks & Matrix computations\\\midrule
+\texttt{verify\_boundary.py} & 6,653 & 720 persistence reductions\\
+\texttt{verify\_ranks.py} & 3,650 & 356 boundary ranks\\\bottomrule
+\end{tabular}
+\end{center}
+
+The first program implements oriented boundary-column reduction over
+$\mathbb Q,\mathbb F_2,\mathbb F_3,\mathbb F_5,\mathbb F_7$, retaining
+all zero-length pairs. It checks the family for $1\le k\le6$, including
+two tie orders. It also tests every positive four-fiber size vector with
+$4\le |S|\le8$ in three fields, resulting in 5,226 pairwise comparisons.
+The upper bounds and endpoint obstruction are reproduced exactly.
+Its matching routine introduces no artificial diagonal points.
+
+The second program does not import the first. It builds the boundary
+matrices at thresholds $0,1,2$, uses dense row elimination over
+$\mathbb Q$ and $\mathbb F_3$, checks vanishing positive-degree homology,
+and compares rank increments with the claimed barcode multiplicities.
+It additionally checks 3,267 finite instances of
+\eqref{eq:all-multiplicities}. These finite tests do not establish the
+universal quantifier; the subset-counting proof does.
+
+Run, from the extracted package directory:
+\begin{verbatim}
+python3 verify_boundary.py --output boundary_results.json
+python3 verify_ranks.py --output rank_results.json
+\end{verbatim}
+
+\textbf{Limitations.} Separate computational implementations are not
+independent mathematical review. No Lean or other proof-assistant
+certificate is supplied. The available repository and literature audit
+found no matching prior 544 submission, but it is not an exhaustive
+certification of unpublished work or inaccessible records. The accompanying resolution report is prepared for submission by
+Siavash Sadeghi. Under the repository's evidence rules~\cite{contributing},
+the appropriate status is \emph{Solution claimed} until a documented
+independent audit or publication establishes a stronger status.
+
+\begin{thebibliography}{9}
+\bibitem{aim}
+S. Brunton, M. Colbrook, M. de Hoop, G. Stepaniants, A. Townsend, and R. Ward,
+\emph{AIM: Original problem 544, Triangle inequality for the pullback
+distance of verbose persistence barcodes}. Target at
+\href{https://github.com/MColbrook/AIM/blob/aa776a01d7d48a79f93251af11fde9454b0aea95/problems/544-verbose-persistence-pullback-triangle.md}{commit \texttt{aa776a0}};
+\href{https://github.com/MColbrook/AIM/blob/fa98b7525fa3f78317536a8825f9cfa0ae1c369c/problems/534-verbose-persistence-pullback-triangle.md}{current AIM 534 statement}
+inspected 2 October 2026.
+
+\bibitem{mz}
+F. M\'emoli and L. Zhou,
+\emph{Ephemeral persistence features and the stability of filtered chain complexes},
+Journal of Computational Geometry \textbf{15}(2), 258--328
+(volume labeled 2024; published 2025).
+\href{https://doi.org/10.20382/jocg.v15i2a8}{doi:10.20382/jocg.v15i2a8}.
+See Remark~1.1; Definitions~4.7, 5.3; Example~5.10 and Figure~7;
+and Proposition~6.2. Author revision:
+\href{https://arxiv.org/abs/2208.11770v8}{arXiv:2208.11770v8}, 21 August 2025.
+
+\bibitem{contributing}
+\emph{AIM contribution and evidence rules}.
+\href{https://github.com/MColbrook/AIM/blob/fa98b7525fa3f78317536a8825f9cfa0ae1c369c/CONTRIBUTING.md}{\texttt{CONTRIBUTING.md}},
+inspected 2 October 2026.
+\end{thebibliography}
+\end{document}

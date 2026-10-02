@@ -1,0 +1,16 @@
+AIM 544 (current 534) repository duplicate-submission audit
+Checked UTC: 2026-10-02T10:42:35.803035+00:00
+
+Result: no matching prior repository submission found in the public sources inspected.
+
+Target identity: original AIM 544 at aa776a01d7d48a79f93251af11fde9454b0aea95 is now AIM 534 at fa98b7525fa3f78317536a8825f9cfa0ae1c369c. Its file is problems/534-verbose-persistence-pullback-triangle.md. The complete text differs only in its first-line ID heading. Current AIM 544 concerns a different problem.
+
+Scope: 20 indexed PR entries (4 open, 16 closed), 18 available dedicated PR records, 3 issue comments, 0 inline-review comments, and 1,144 tracked main files. Review endpoints for all four open PRs succeeded and returned no submitted reviews. The fourteen closed-PR review endpoints were rate-limited.
+
+Changed-file coverage: available API records covered 138 changed-file observations. Ten cached immutable diffs were reused only after fresh base/head SHA equality checks. Five missing current diffs were recovered through public Git refs, adding 891 changed-file observations. Thus paths and available text changes were inspected for all eighteen PRs with dedicated records. Recovered matches concern catalogue renumbering or unrelated uses of the search terms; no matching solution appeared.
+
+Five focused issue searches, for the original and current IDs plus verbose, pullback and persistence, each returned zero with incomplete_results=false. Target/source terminology was also searched directly in titles, bodies, comments, changed files and current main text.
+
+Current target status remains Open; its automated-attempt queue is unstarted. Relevant main-tree hits describe the target, catalogue, source-screening history and ID mapping. The updated contribution instructions retain the same resolution-report and PR route; a package-only PR does not require a catalogue status change.
+
+Limitations: GitHub core API rate limiting prevented fourteen closed-PR review reads and dedicated-detail reads for two closed entries retained in the issue index. Their retained titles, bodies and comments concern unrelated targets. Binary contents are not semantically searched by text-patch inspection. Deleted, private, unsubmitted or unindexed work and search lag cannot be excluded. This is a bounded repository check, not proof of literature novelty or mathematical correctness. No external change was made during this audit.

@@ -1,0 +1,1228 @@
+{
+  "status": "PASS",
+  "checks_passed": 6653,
+  "exact_persistence_reductions": 720,
+  "finite_pullback_pair_comparisons": 5226,
+  "fields": [
+    "Q",
+    "F_2",
+    "F_3",
+    "F_5",
+    "F_7"
+  ],
+  "family_degrees_checked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "cases": [
+    {
+      "degree": 1,
+      "field": "Q",
+      "original_vertices": 4,
+      "witness_vertices": 5,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 2
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 3
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ]
+    },
+    {
+      "degree": 1,
+      "field": "F_2",
+      "original_vertices": 4,
+      "witness_vertices": 5,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 2
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 3
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ]
+    },
+    {
+      "degree": 1,
+      "field": "F_3",
+      "original_vertices": 4,
+      "witness_vertices": 5,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 2
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 3
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ]
+    },
+    {
+      "degree": 1,
+      "field": "F_5",
+      "original_vertices": 4,
+      "witness_vertices": 5,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 2
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 3
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ]
+    },
+    {
+      "degree": 1,
+      "field": "F_7",
+      "original_vertices": 4,
+      "witness_vertices": 5,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 2
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 3
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "Q",
+      "original_vertices": 5,
+      "witness_vertices": 6,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 3
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 4
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 9
+        }
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "F_2",
+      "original_vertices": 5,
+      "witness_vertices": 6,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 3
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 4
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 9
+        }
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "F_3",
+      "original_vertices": 5,
+      "witness_vertices": 6,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 3
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 4
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 9
+        }
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "F_5",
+      "original_vertices": 5,
+      "witness_vertices": 6,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 3
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 4
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 9
+        }
+      ]
+    },
+    {
+      "degree": 2,
+      "field": "F_7",
+      "original_vertices": 5,
+      "witness_vertices": 6,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 3
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 4
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 9
+        }
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "Q",
+      "original_vertices": 6,
+      "witness_vertices": 7,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 4
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 14
+        }
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "F_2",
+      "original_vertices": 6,
+      "witness_vertices": 7,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 4
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 14
+        }
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "F_3",
+      "original_vertices": 6,
+      "witness_vertices": 7,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 4
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 14
+        }
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "F_5",
+      "original_vertices": 6,
+      "witness_vertices": 7,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 4
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 14
+        }
+      ]
+    },
+    {
+      "degree": 3,
+      "field": "F_7",
+      "original_vertices": 6,
+      "witness_vertices": 7,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 4
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 14
+        }
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "Q",
+      "original_vertices": 7,
+      "witness_vertices": 8,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 6
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 20
+        }
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "F_2",
+      "original_vertices": 7,
+      "witness_vertices": 8,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 6
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 20
+        }
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "F_3",
+      "original_vertices": 7,
+      "witness_vertices": 8,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 6
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 20
+        }
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "F_5",
+      "original_vertices": 7,
+      "witness_vertices": 8,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 6
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 20
+        }
+      ]
+    },
+    {
+      "degree": 4,
+      "field": "F_7",
+      "original_vertices": 7,
+      "witness_vertices": 8,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 5
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 6
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 20
+        }
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "Q",
+      "original_vertices": 8,
+      "witness_vertices": 9,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 6
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 7
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 27
+        }
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "F_2",
+      "original_vertices": 8,
+      "witness_vertices": 9,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 6
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 7
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 27
+        }
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "F_3",
+      "original_vertices": 8,
+      "witness_vertices": 9,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 6
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 7
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 27
+        }
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "F_5",
+      "original_vertices": 8,
+      "witness_vertices": 9,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 6
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 7
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 27
+        }
+      ]
+    },
+    {
+      "degree": 5,
+      "field": "F_7",
+      "original_vertices": 8,
+      "witness_vertices": 9,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 6
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 7
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 27
+        }
+      ]
+    },
+    {
+      "degree": 6,
+      "field": "Q",
+      "original_vertices": 9,
+      "witness_vertices": 10,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 7
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 8
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 35
+        }
+      ]
+    },
+    {
+      "degree": 6,
+      "field": "F_2",
+      "original_vertices": 9,
+      "witness_vertices": 10,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 7
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 8
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 35
+        }
+      ]
+    },
+    {
+      "degree": 6,
+      "field": "F_3",
+      "original_vertices": 9,
+      "witness_vertices": 10,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 7
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 8
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 35
+        }
+      ]
+    },
+    {
+      "degree": 6,
+      "field": "F_5",
+      "original_vertices": 9,
+      "witness_vertices": 10,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 7
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 8
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 35
+        }
+      ]
+    },
+    {
+      "degree": 6,
+      "field": "F_7",
+      "original_vertices": 9,
+      "witness_vertices": 10,
+      "original_X": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 7
+        }
+      ],
+      "original_Y_and_Z": [
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 8
+        }
+      ],
+      "XY_pullbacks": [
+        {
+          "birth": "1",
+          "death": "1",
+          "multiplicity": 1
+        },
+        {
+          "birth": "2",
+          "death": "2",
+          "multiplicity": 35
+        }
+      ]
+    }
+  ],
+  "finite_exhaustive_checks": [
+    {
+      "field": 0,
+      "vertices": 4,
+      "fiber_vectors": 1,
+      "minimum": 1
+    },
+    {
+      "field": 0,
+      "vertices": 5,
+      "fiber_vectors": 4,
+      "minimum": 1
+    },
+    {
+      "field": 0,
+      "vertices": 6,
+      "fiber_vectors": 10,
+      "minimum": 1
+    },
+    {
+      "field": 0,
+      "vertices": 7,
+      "fiber_vectors": 20,
+      "minimum": 1
+    },
+    {
+      "field": 0,
+      "vertices": 8,
+      "fiber_vectors": 35,
+      "minimum": 1
+    },
+    {
+      "field": 2,
+      "vertices": 4,
+      "fiber_vectors": 1,
+      "minimum": 1
+    },
+    {
+      "field": 2,
+      "vertices": 5,
+      "fiber_vectors": 4,
+      "minimum": 1
+    },
+    {
+      "field": 2,
+      "vertices": 6,
+      "fiber_vectors": 10,
+      "minimum": 1
+    },
+    {
+      "field": 2,
+      "vertices": 7,
+      "fiber_vectors": 20,
+      "minimum": 1
+    },
+    {
+      "field": 2,
+      "vertices": 8,
+      "fiber_vectors": 35,
+      "minimum": 1
+    },
+    {
+      "field": 5,
+      "vertices": 4,
+      "fiber_vectors": 1,
+      "minimum": 1
+    },
+    {
+      "field": 5,
+      "vertices": 5,
+      "fiber_vectors": 4,
+      "minimum": 1
+    },
+    {
+      "field": 5,
+      "vertices": 6,
+      "fiber_vectors": 10,
+      "minimum": 1
+    },
+    {
+      "field": 5,
+      "vertices": 7,
+      "fiber_vectors": 20,
+      "minimum": 1
+    },
+    {
+      "field": 5,
+      "vertices": 8,
+      "fiber_vectors": 35,
+      "minimum": 1
+    }
+  ],
+  "scope": "Finite exact computations only. The proof handles all fields, all positive degrees, and all finite common pullbacks.",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0"
+}
