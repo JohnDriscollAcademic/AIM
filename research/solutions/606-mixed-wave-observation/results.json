@@ -1,0 +1,1602 @@
+{
+  "purpose": "Finite numerical diagnostics only; no certification of the all-mesh theorem.",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "spectral_checks": [
+    {
+      "potential": "zero",
+      "N": 1,
+      "A": 0.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 0.0,
+      "sandwich_lower_min_margin": 4.440892098500626e-16,
+      "sandwich_upper_min_margin": -4.440892098500626e-16,
+      "q2_plus_r2_min": 2.0,
+      "q2_plus_r2_max": 2.0
+    },
+    {
+      "potential": "zero",
+      "N": 3,
+      "A": 0.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 9.992007221626409e-16,
+      "sandwich_lower_min_margin": -3.552713678800501e-15,
+      "sandwich_upper_min_margin": -7.105427357601002e-15,
+      "q2_plus_r2_min": 1.9999999999999987,
+      "q2_plus_r2_max": 2.0,
+      "derived_gap_bound_min_margin": 1.5446988474254475,
+      "actual_positive_frequency_min_gap": 4.686291501015241
+    },
+    {
+      "potential": "zero",
+      "N": 7,
+      "A": 0.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 7.771561172376096e-16,
+      "sandwich_lower_min_margin": -2.398081733190338e-14,
+      "sandwich_upper_min_margin": -3.907985046680551e-14,
+      "q2_plus_r2_min": 1.999999999999988,
+      "q2_plus_r2_max": 2.0000000000000444,
+      "derived_gap_bound_min_margin": 0.3032264663051376,
+      "actual_positive_frequency_min_gap": 3.4448191198949307
+    },
+    {
+      "potential": "zero",
+      "N": 15,
+      "A": 0.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 1.9984014443252818e-15,
+      "sandwich_lower_min_margin": -1.0169642905566434e-13,
+      "sandwich_upper_min_margin": -8.526512829121202e-13,
+      "q2_plus_r2_min": 1.9999999999998466,
+      "q2_plus_r2_max": 2.0000000000000457,
+      "derived_gap_bound_min_margin": 0.0718781951300369,
+      "actual_positive_frequency_min_gap": 3.21347084871983
+    },
+    {
+      "potential": "zero",
+      "N": 31,
+      "A": 0.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 7.882583474838611e-15,
+      "sandwich_lower_min_margin": -1.929123527588672e-12,
+      "sandwich_upper_min_margin": -1.5187850976872141e-12,
+      "q2_plus_r2_min": 1.9999999999956382,
+      "q2_plus_r2_max": 2.0000000000033014,
+      "derived_gap_bound_min_margin": 0.017738776026262393,
+      "actual_positive_frequency_min_gap": 3.1593314296160555
+    },
+    {
+      "potential": "zero",
+      "N": 63,
+      "A": 0.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 7.0800026530787555e-15,
+      "sandwich_lower_min_margin": -1.0580158971151832e-10,
+      "sandwich_upper_min_margin": -3.346301014062192e-11,
+      "q2_plus_r2_min": 1.9999999998933997,
+      "q2_plus_r2_max": 2.0000000001480194,
+      "derived_gap_bound_min_margin": 0.004420486960261094,
+      "actual_positive_frequency_min_gap": 3.146013140550054
+    },
+    {
+      "potential": "zero",
+      "N": 127,
+      "A": 0.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 5.417888360170764e-14,
+      "sandwich_lower_min_margin": -6.255569395818839e-10,
+      "sandwich_upper_min_margin": -1.1356959817021561e-10,
+      "q2_plus_r2_min": 1.9999999995463804,
+      "q2_plus_r2_max": 2.0000000001166875,
+      "derived_gap_bound_min_margin": 0.0011042375639216395,
+      "actual_positive_frequency_min_gap": 3.1426968911537148
+    },
+    {
+      "potential": "zero",
+      "N": 255,
+      "A": 0.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 1.84442870957209e-14,
+      "sandwich_lower_min_margin": -1.2770922097615767e-09,
+      "sandwich_upper_min_margin": -1.1059455573558807e-09,
+      "q2_plus_r2_min": 1.9999999982557861,
+      "q2_plus_r2_max": 2.00000000478423,
+      "derived_gap_bound_min_margin": 0.0002760036289961576,
+      "actual_positive_frequency_min_gap": 3.1418686572187893
+    },
+    {
+      "potential": "constant_9",
+      "N": 1,
+      "A": 9.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 0.0,
+      "sandwich_lower_min_margin": 1.8309518948453012,
+      "sandwich_upper_min_margin": -8.881784197001252e-16,
+      "q2_plus_r2_min": 1.4705882352941175,
+      "q2_plus_r2_max": 1.4705882352941175
+    },
+    {
+      "potential": "constant_9",
+      "N": 3,
+      "A": 9.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 7.771561172376096e-16,
+      "sandwich_lower_min_margin": 1.0553851381374146,
+      "sandwich_upper_min_margin": -7.105427357601002e-15,
+      "q2_plus_r2_min": 1.1637560690850588,
+      "q2_plus_r2_max": 1.9585707059363224,
+      "derived_gap_bound_min_margin": 2.731880908005476,
+      "actual_positive_frequency_min_gap": 4.415900264411876
+    },
+    {
+      "potential": "constant_9",
+      "N": 7,
+      "A": 9.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 6.661338147750939e-16,
+      "sandwich_lower_min_margin": 0.5529453572468466,
+      "sandwich_upper_min_margin": -7.105427357601002e-15,
+      "q2_plus_r2_min": 1.0762136290099726,
+      "q2_plus_r2_max": 1.997316095800685,
+      "derived_gap_bound_min_margin": 1.263075488243268,
+      "actual_positive_frequency_min_gap": 2.9659789516669193
+    },
+    {
+      "potential": "constant_9",
+      "N": 15,
+      "A": 9.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 2.220446049250313e-15,
+      "sandwich_lower_min_margin": 0.280024783137943,
+      "sandwich_upper_min_margin": -8.526512829121202e-13,
+      "q2_plus_r2_min": 1.0536613398968886,
+      "q2_plus_r2_max": 1.9998309823218356,
+      "derived_gap_bound_min_margin": 0.7149571753233492,
+      "actual_positive_frequency_min_gap": 2.7007278748036985
+    },
+    {
+      "potential": "constant_9",
+      "N": 31,
+      "A": 9.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 8.659739592076221e-15,
+      "sandwich_lower_min_margin": 0.1404708432981252,
+      "sandwich_upper_min_margin": -7.958078640513122e-13,
+      "q2_plus_r2_min": 1.0479817940997962,
+      "q2_plus_r2_max": 1.9999894173391413,
+      "derived_gap_bound_min_margin": 0.45094882800476244,
+      "actual_positive_frequency_min_gap": 2.638945982009652
+    },
+    {
+      "potential": "constant_9",
+      "N": 63,
+      "A": 9.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 7.734695350724193e-15,
+      "sandwich_lower_min_margin": 0.07029319869515405,
+      "sandwich_upper_min_margin": -2.2783552822147612e-11,
+      "q2_plus_r2_min": 1.0465593186598616,
+      "q2_plus_r2_max": 1.999999338289323,
+      "derived_gap_bound_min_margin": 0.2873842107904401,
+      "actual_positive_frequency_min_gap": 2.623765596920604
+    },
+    {
+      "potential": "constant_9",
+      "N": 127,
+      "A": 9.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 5.551115123125783e-14,
+      "sandwich_lower_min_margin": 0.03515383634359637,
+      "sandwich_upper_min_margin": -5.846345629834104e-11,
+      "q2_plus_r2_min": 1.0462035385149326,
+      "q2_plus_r2_max": 1.999999958638378,
+      "derived_gap_bound_min_margin": 0.18304788708811381,
+      "actual_positive_frequency_min_gap": 2.619986803751157
+    },
+    {
+      "potential": "constant_9",
+      "N": 255,
+      "A": 9.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 1.5786218730940034e-14,
+      "sandwich_lower_min_margin": 0.017577823265753523,
+      "sandwich_upper_min_margin": -3.3840885649283337e-09,
+      "q2_plus_r2_min": 1.046114578883683,
+      "q2_plus_r2_max": 1.9999999974148508,
+      "derived_gap_bound_min_margin": 0.11614434696179599,
+      "actual_positive_frequency_min_gap": 2.6190431163590553
+    },
+    {
+      "potential": "smooth",
+      "N": 1,
+      "A": 7.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 0.0,
+      "sandwich_lower_min_margin": 1.4772255750516616,
+      "sandwich_upper_min_margin": 0.0,
+      "q2_plus_r2_min": 1.5333333333333332,
+      "q2_plus_r2_max": 1.5333333333333332
+    },
+    {
+      "potential": "smooth",
+      "N": 3,
+      "A": 7.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 3.191891195797325e-16,
+      "sandwich_lower_min_margin": 0.6602540378443882,
+      "sandwich_upper_min_margin": 0.1028125005618481,
+      "q2_plus_r2_min": 1.3518277110861674,
+      "q2_plus_r2_max": 1.9611654504077818,
+      "derived_gap_bound_min_margin": 2.3711012938150042,
+      "actual_positive_frequency_min_gap": 4.383377720348438
+    },
+    {
+      "potential": "smooth",
+      "N": 7,
+      "A": 7.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 9.992007221626409e-16,
+      "sandwich_lower_min_margin": 0.34013463836819646,
+      "sandwich_upper_min_margin": 0.04888357759148043,
+      "q2_plus_r2_min": 1.287425777915889,
+      "q2_plus_r2_max": 1.9995025151408954,
+      "derived_gap_bound_min_margin": 1.0927262405587226,
+      "actual_positive_frequency_min_gap": 3.116426386151975
+    },
+    {
+      "potential": "smooth",
+      "N": 15,
+      "A": 7.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 1.5543122344752192e-15,
+      "sandwich_lower_min_margin": 0.17141588429091925,
+      "sandwich_upper_min_margin": 0.02780696766243196,
+      "q2_plus_r2_min": 1.2842625355099564,
+      "q2_plus_r2_max": 2.001318468520551,
+      "derived_gap_bound_min_margin": 0.6285917340262572,
+      "actual_positive_frequency_min_gap": 2.8642643240743846
+    },
+    {
+      "potential": "smooth",
+      "N": 31,
+      "A": 7.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 7.327471962526033e-15,
+      "sandwich_lower_min_margin": 0.08587988004823188,
+      "sandwich_upper_min_margin": 0.023401819250196354,
+      "q2_plus_r2_min": 1.2813707982599019,
+      "q2_plus_r2_max": 2.000572683117725,
+      "derived_gap_bound_min_margin": 0.3979141086734508,
+      "actual_positive_frequency_min_gap": 2.805479605853025
+    },
+    {
+      "potential": "smooth",
+      "N": 63,
+      "A": 7.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 7.639475705522486e-15,
+      "sandwich_lower_min_margin": 0.04296154026185661,
+      "sandwich_upper_min_margin": 0.011714282216416905,
+      "q2_plus_r2_min": 1.2805945425647915,
+      "q2_plus_r2_max": 2.0001579121498323,
+      "derived_gap_bound_min_margin": 0.22883138852284723,
+      "actual_positive_frequency_min_gap": 2.791031141391388
+    },
+    {
+      "potential": "smooth",
+      "N": 127,
+      "A": 7.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 5.573319583618286e-14,
+      "sandwich_lower_min_margin": 0.02148347354122393,
+      "sandwich_upper_min_margin": 0.005858816300928993,
+      "q2_plus_r2_min": 1.280397671778672,
+      "q2_plus_r2_max": 2.0000403878952526,
+      "derived_gap_bound_min_margin": 0.15637945160447853,
+      "actual_positive_frequency_min_gap": 2.787434259503049
+    },
+    {
+      "potential": "smooth",
+      "N": 255,
+      "A": 7.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 1.7903868337881434e-14,
+      "sandwich_lower_min_margin": 0.010742074790925926,
+      "sandwich_upper_min_margin": 0.0029296176746811398,
+      "q2_plus_r2_min": 1.280348282207623,
+      "q2_plus_r2_max": 2.0000101536507997,
+      "derived_gap_bound_min_margin": 0.09887603995624783,
+      "actual_positive_frequency_min_gap": 2.786535987622084
+    },
+    {
+      "potential": "step",
+      "N": 1,
+      "A": 25.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 0.0,
+      "sandwich_lower_min_margin": 4.440892098500626e-16,
+      "sandwich_upper_min_margin": 4.124038404635961,
+      "q2_plus_r2_min": 2.0,
+      "q2_plus_r2_max": 2.0
+    },
+    {
+      "potential": "step",
+      "N": 3,
+      "A": 25.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 2.5907626350743863e-16,
+      "sandwich_lower_min_margin": 0.6183115027649349,
+      "sandwich_upper_min_margin": 1.3114229505121955,
+      "q2_plus_r2_min": 0.547108131393498,
+      "q2_plus_r2_max": 2.3372612339837655,
+      "derived_gap_bound_min_margin": 6.4651971598684845,
+      "actual_positive_frequency_min_gap": 5.433635299769421
+    },
+    {
+      "potential": "step",
+      "N": 7,
+      "A": 25.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 5.551115123125783e-16,
+      "sandwich_lower_min_margin": 0.39073097770447696,
+      "sandwich_upper_min_margin": 0.9616036515141211,
+      "q2_plus_r2_min": 0.5487855830039843,
+      "q2_plus_r2_max": 2.0900598000331385,
+      "derived_gap_bound_min_margin": 2.86691847564169,
+      "actual_positive_frequency_min_gap": 3.730787028337314
+    },
+    {
+      "potential": "step",
+      "N": 15,
+      "A": 25.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 2.220446049250313e-15,
+      "sandwich_lower_min_margin": 0.2548911556721656,
+      "sandwich_upper_min_margin": 0.48067874126999754,
+      "q2_plus_r2_min": 0.4235785688660296,
+      "q2_plus_r2_max": 2.024730943708518,
+      "derived_gap_bound_min_margin": 1.5602693920308215,
+      "actual_positive_frequency_min_gap": 3.0891530691421254
+    },
+    {
+      "potential": "step",
+      "N": 31,
+      "A": 25.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 9.880984919163893e-15,
+      "sandwich_lower_min_margin": 0.13657011233819816,
+      "sandwich_upper_min_margin": 0.24314782982294503,
+      "q2_plus_r2_min": 0.3811799038872495,
+      "q2_plus_r2_max": 2.0073536030895176,
+      "derived_gap_bound_min_margin": 0.9546664072934186,
+      "actual_positive_frequency_min_gap": 2.8784649505479045
+    },
+    {
+      "potential": "step",
+      "N": 63,
+      "A": 25.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 7.58790737451892e-15,
+      "sandwich_lower_min_margin": 0.07070422208492744,
+      "sandwich_upper_min_margin": 0.12194404856543883,
+      "q2_plus_r2_min": 0.3641586153746715,
+      "q2_plus_r2_max": 2.0019015595485845,
+      "derived_gap_bound_min_margin": 0.5985737944175793,
+      "actual_positive_frequency_min_gap": 2.815559707919771
+    },
+    {
+      "potential": "step",
+      "N": 127,
+      "A": 25.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 5.562217353372034e-14,
+      "sandwich_lower_min_margin": 0.035978488237986994,
+      "sandwich_upper_min_margin": 0.06101925518782991,
+      "q2_plus_r2_min": 0.356601136446076,
+      "q2_plus_r2_max": 2.000477941330104,
+      "derived_gap_bound_min_margin": 0.37253723240866776,
+      "actual_positive_frequency_min_gap": 2.7938942216730984
+    },
+    {
+      "potential": "step",
+      "N": 255,
+      "A": 25.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 1.7972946040228755e-14,
+      "sandwich_lower_min_margin": 0.017928769377647313,
+      "sandwich_upper_min_margin": 0.030738242032782637,
+      "q2_plus_r2_min": 0.3599237060802372,
+      "q2_plus_r2_max": 2.0001196317762395,
+      "derived_gap_bound_min_margin": 0.2335636090004627,
+      "actual_positive_frequency_min_gap": 2.797833636086854
+    },
+    {
+      "potential": "oscillatory",
+      "N": 1,
+      "A": 12.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 0.0,
+      "sandwich_lower_min_margin": 2.3245553203367595,
+      "sandwich_upper_min_margin": -8.881784197001252e-16,
+      "q2_plus_r2_min": 1.4,
+      "q2_plus_r2_max": 1.4
+    },
+    {
+      "potential": "oscillatory",
+      "N": 3,
+      "A": 12.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 6.661338147750939e-16,
+      "sandwich_lower_min_margin": 0.7277324801515794,
+      "sandwich_upper_min_margin": 0.4654323668976055,
+      "q2_plus_r2_min": 1.7569655350324114,
+      "q2_plus_r2_max": 1.9776687966759943,
+      "derived_gap_bound_min_margin": 3.0125435411530033,
+      "actual_positive_frequency_min_gap": 4.199514549895457
+    },
+    {
+      "potential": "oscillatory",
+      "N": 7,
+      "A": 12.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 1.2212453270876722e-15,
+      "sandwich_lower_min_margin": 0.691262528113068,
+      "sandwich_upper_min_margin": 0.0,
+      "q2_plus_r2_min": 1.3300271719520904,
+      "q2_plus_r2_max": 2.0587285178418755,
+      "derived_gap_bound_min_margin": 1.5985385354770807,
+      "actual_positive_frequency_min_gap": 2.819081290027981
+    },
+    {
+      "potential": "oscillatory",
+      "N": 15,
+      "A": 12.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 1.5543122344752192e-15,
+      "sandwich_lower_min_margin": 0.23357504022866848,
+      "sandwich_upper_min_margin": 0.09805841390234349,
+      "q2_plus_r2_min": 1.6439099566061222,
+      "q2_plus_r2_max": 2.0306782747186722,
+      "derived_gap_bound_min_margin": 0.9498483829238933,
+      "actual_positive_frequency_min_gap": 2.587646895980713
+    },
+    {
+      "potential": "oscillatory",
+      "N": 31,
+      "A": 12.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 7.66053886991358e-15,
+      "sandwich_lower_min_margin": 0.14752065978200335,
+      "sandwich_upper_min_margin": 0.035064198817082115,
+      "q2_plus_r2_min": 1.541490825749536,
+      "q2_plus_r2_max": 2.012769545807866,
+      "derived_gap_bound_min_margin": 0.526196545663467,
+      "actual_positive_frequency_min_gap": 2.507526364837781
+    },
+    {
+      "potential": "oscillatory",
+      "N": 63,
+      "A": 12.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 7.596558131605502e-15,
+      "sandwich_lower_min_margin": 0.07547476263565045,
+      "sandwich_upper_min_margin": 0.014638597067602177,
+      "q2_plus_r2_min": 1.4679652738135773,
+      "q2_plus_r2_max": 2.0047175923086957,
+      "derived_gap_bound_min_margin": 0.3499639813484503,
+      "actual_positive_frequency_min_gap": 2.4856963773846967
+    },
+    {
+      "potential": "oscillatory",
+      "N": 127,
+      "A": 12.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 5.540012892879531e-14,
+      "sandwich_lower_min_margin": 0.03651651499649233,
+      "sandwich_upper_min_margin": 0.009345104141743832,
+      "q2_plus_r2_min": 1.4981947579295638,
+      "q2_plus_r2_max": 2.0037903494525273,
+      "derived_gap_bound_min_margin": 0.22148307188055316,
+      "actual_positive_frequency_min_gap": 2.4748846148440693
+    },
+    {
+      "potential": "oscillatory",
+      "N": 255,
+      "A": 12.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 1.811274677815554e-14,
+      "sandwich_lower_min_margin": 0.017760922788113476,
+      "sandwich_upper_min_margin": 0.005155808429321951,
+      "q2_plus_r2_min": 1.5302885052250432,
+      "q2_plus_r2_max": 2.003544630395365,
+      "derived_gap_bound_min_margin": 0.1411060506994537,
+      "actual_positive_frequency_min_gap": 2.4747740613955997
+    },
+    {
+      "potential": "meshwise_random",
+      "N": 1,
+      "A": 40.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 0.0,
+      "sandwich_lower_min_margin": 1.1659472905338402,
+      "sandwich_upper_min_margin": 4.632011680598872,
+      "q2_plus_r2_min": 1.599542592276165,
+      "q2_plus_r2_max": 1.599542592276165
+    },
+    {
+      "potential": "meshwise_random",
+      "N": 3,
+      "A": 40.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 6.661338147750939e-16,
+      "sandwich_lower_min_margin": 2.2399346233620205,
+      "sandwich_upper_min_margin": 1.7600653766379786,
+      "q2_plus_r2_min": 0.8654021501621937,
+      "q2_plus_r2_max": 1.9183293429304147,
+      "derived_gap_bound_min_margin": 8.182434431781429,
+      "actual_positive_frequency_min_gap": 4.460470164533235
+    },
+    {
+      "potential": "meshwise_random",
+      "N": 7,
+      "A": 40.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 8.881784197001252e-16,
+      "sandwich_lower_min_margin": 0.8035535851958571,
+      "sandwich_upper_min_margin": 1.1365551057043568,
+      "q2_plus_r2_min": 0.9554399247350741,
+      "q2_plus_r2_max": 2.140400678260214,
+      "derived_gap_bound_min_margin": 3.8510764000821887,
+      "actual_positive_frequency_min_gap": 3.0422841905196396
+    },
+    {
+      "potential": "meshwise_random",
+      "N": 15,
+      "A": 40.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 1.1102230246251565e-15,
+      "sandwich_lower_min_margin": 0.5254300342813423,
+      "sandwich_upper_min_margin": 0.6334919953571543,
+      "q2_plus_r2_min": 0.7660338729877607,
+      "q2_plus_r2_max": 2.0279198669415233,
+      "derived_gap_bound_min_margin": 2.2575401428434105,
+      "actual_positive_frequency_min_gap": 2.6825129826478227
+    },
+    {
+      "potential": "meshwise_random",
+      "N": 31,
+      "A": 40.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 6.328271240363392e-15,
+      "sandwich_lower_min_margin": 0.31912281562397027,
+      "sandwich_upper_min_margin": 0.27218927278018157,
+      "q2_plus_r2_min": 0.7377651712752631,
+      "q2_plus_r2_max": 2.0130915098094966,
+      "derived_gap_bound_min_margin": 1.307942722467927,
+      "actual_positive_frequency_min_gap": 2.0124503999257692
+    },
+    {
+      "potential": "meshwise_random",
+      "N": 63,
+      "A": 40.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 8.281454812587187e-15,
+      "sandwich_lower_min_margin": 0.15479299130126378,
+      "sandwich_upper_min_margin": 0.14676646006770966,
+      "q2_plus_r2_min": 0.5007498318443959,
+      "q2_plus_r2_max": 2.019973837288797,
+      "derived_gap_bound_min_margin": 0.8119912566664462,
+      "actual_positive_frequency_min_gap": 2.31717209575086
+    },
+    {
+      "potential": "meshwise_random",
+      "N": 127,
+      "A": 40.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 5.828670879282072e-14,
+      "sandwich_lower_min_margin": 0.0813872667277451,
+      "sandwich_upper_min_margin": 0.06989627870530057,
+      "q2_plus_r2_min": 0.8969531359949786,
+      "q2_plus_r2_max": 2.008025033663322,
+      "derived_gap_bound_min_margin": 0.4935054840919042,
+      "actual_positive_frequency_min_gap": 2.2247494632384646
+    },
+    {
+      "potential": "meshwise_random",
+      "N": 255,
+      "A": 40.0,
+      "mass_stiffness_identity_max_error": 0.0,
+      "M_orthonormality_max_error": 1.7005898350738775e-14,
+      "sandwich_lower_min_margin": 0.03499227710597097,
+      "sandwich_upper_min_margin": 0.03953134934147329,
+      "q2_plus_r2_min": 0.7731717497252834,
+      "q2_plus_r2_max": 2.0074820776570146,
+      "derived_gap_bound_min_margin": 0.31412290764843,
+      "actual_positive_frequency_min_gap": 2.3299358861949413
+    }
+  ],
+  "normalization_check": {
+    "N": 7,
+    "T": 1.7,
+    "energy_direct": 24.249106122201525,
+    "energy_coefficients": 24.24910612220156,
+    "observation_analytic_gram": 37.668565602015015,
+    "observation_dense_trapezoid": 37.668565604434974,
+    "relative_observation_discrepancy": 6.424346946449536e-11
+  },
+  "gram_diagnostics": [
+    {
+      "potential": "zero",
+      "N": 7,
+      "T": 1.0,
+      "minimum_O_over_E": 0.03143379376481714,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 7,
+      "T": 1.5,
+      "minimum_O_over_E": 0.7627019000435942,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 7,
+      "T": 1.9,
+      "minimum_O_over_E": 1.4305809076748368,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 7,
+      "T": 2.1,
+      "minimum_O_over_E": 1.4681587796913218,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 7,
+      "T": 2.5,
+      "minimum_O_over_E": 1.7686941159282268,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 7,
+      "T": 3.0,
+      "minimum_O_over_E": 2.0530015506976658,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 15,
+      "T": 1.0,
+      "minimum_O_over_E": 1.2872715509160838e-07,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 15,
+      "T": 1.5,
+      "minimum_O_over_E": 0.373641263668298,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 15,
+      "T": 1.9,
+      "minimum_O_over_E": 1.3006661728084308,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 15,
+      "T": 2.1,
+      "minimum_O_over_E": 1.431001813624586,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 15,
+      "T": 2.5,
+      "minimum_O_over_E": 1.6404636049645895,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 15,
+      "T": 3.0,
+      "minimum_O_over_E": 1.8669063343666106,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 31,
+      "T": 1.0,
+      "minimum_O_over_E": 1.8384660483545517e-16,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 31,
+      "T": 1.5,
+      "minimum_O_over_E": 0.0010930679938065029,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 31,
+      "T": 1.9,
+      "minimum_O_over_E": 1.0887408294327792,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 31,
+      "T": 2.1,
+      "minimum_O_over_E": 1.3236447029804757,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 31,
+      "T": 2.5,
+      "minimum_O_over_E": 1.541390568407043,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 31,
+      "T": 3.0,
+      "minimum_O_over_E": 1.7888126123672174,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 63,
+      "T": 1.0,
+      "minimum_O_over_E": -9.018068313441124e-16,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 63,
+      "T": 1.5,
+      "minimum_O_over_E": 1.850200386303326e-10,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 63,
+      "T": 1.9,
+      "minimum_O_over_E": 0.6358629069571067,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 63,
+      "T": 2.1,
+      "minimum_O_over_E": 1.2503842002148424,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 63,
+      "T": 2.5,
+      "minimum_O_over_E": 1.4643137177159828,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 63,
+      "T": 3.0,
+      "minimum_O_over_E": 1.7117715329281449,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 127,
+      "T": 1.0,
+      "minimum_O_over_E": -1.666211428883648e-15,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 127,
+      "T": 1.5,
+      "minimum_O_over_E": -5.431575092209303e-16,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 127,
+      "T": 1.9,
+      "minimum_O_over_E": 0.18460901892196313,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 127,
+      "T": 2.1,
+      "minimum_O_over_E": 1.1944369080514725,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 127,
+      "T": 2.5,
+      "minimum_O_over_E": 1.4040170000519212,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "zero",
+      "N": 127,
+      "T": 3.0,
+      "minimum_O_over_E": 1.6574049113453437,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 7,
+      "T": 1.0,
+      "minimum_O_over_E": 0.03486350197428497,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 7,
+      "T": 1.5,
+      "minimum_O_over_E": 0.5284306802853835,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 7,
+      "T": 1.9,
+      "minimum_O_over_E": 1.0002693098092117,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 7,
+      "T": 2.1,
+      "minimum_O_over_E": 1.1352814872526633,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 7,
+      "T": 2.5,
+      "minimum_O_over_E": 1.4400935381418516,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 7,
+      "T": 3.0,
+      "minimum_O_over_E": 1.5171748046733815,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 15,
+      "T": 1.0,
+      "minimum_O_over_E": 1.4556841842506046e-07,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 15,
+      "T": 1.5,
+      "minimum_O_over_E": 0.1421907208991268,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 15,
+      "T": 1.9,
+      "minimum_O_over_E": 0.8628648409662856,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 15,
+      "T": 2.1,
+      "minimum_O_over_E": 1.0623589575454502,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 15,
+      "T": 2.5,
+      "minimum_O_over_E": 1.452887356635219,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 15,
+      "T": 3.0,
+      "minimum_O_over_E": 1.552320740314619,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 31,
+      "T": 1.0,
+      "minimum_O_over_E": -7.574102542477262e-17,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 31,
+      "T": 1.5,
+      "minimum_O_over_E": 0.0011376153746091198,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 31,
+      "T": 1.9,
+      "minimum_O_over_E": 0.7787983830734754,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 31,
+      "T": 2.1,
+      "minimum_O_over_E": 1.0055568576867833,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 31,
+      "T": 2.5,
+      "minimum_O_over_E": 1.4748059590760105,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 31,
+      "T": 3.0,
+      "minimum_O_over_E": 1.5595581361785502,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 63,
+      "T": 1.0,
+      "minimum_O_over_E": -1.2024748144188824e-15,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 63,
+      "T": 1.5,
+      "minimum_O_over_E": 1.8990501734704068e-10,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 63,
+      "T": 1.9,
+      "minimum_O_over_E": 0.5808180268417149,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 63,
+      "T": 2.1,
+      "minimum_O_over_E": 0.9762092223712009,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 63,
+      "T": 2.5,
+      "minimum_O_over_E": 1.4632745673233807,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 63,
+      "T": 3.0,
+      "minimum_O_over_E": 1.5589703922229519,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 127,
+      "T": 1.0,
+      "minimum_O_over_E": -1.46432974481336e-15,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 127,
+      "T": 1.5,
+      "minimum_O_over_E": -9.825515749148441e-16,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 127,
+      "T": 1.9,
+      "minimum_O_over_E": 0.1099384187149868,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 127,
+      "T": 2.1,
+      "minimum_O_over_E": 0.966515359182623,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 127,
+      "T": 2.5,
+      "minimum_O_over_E": 1.4034857016145006,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "smooth",
+      "N": 127,
+      "T": 3.0,
+      "minimum_O_over_E": 1.558330061784682,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 7,
+      "T": 1.0,
+      "minimum_O_over_E": 0.027134882732493766,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 7,
+      "T": 1.5,
+      "minimum_O_over_E": 0.3083920667598869,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 7,
+      "T": 1.9,
+      "minimum_O_over_E": 0.48025841372535716,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 7,
+      "T": 2.1,
+      "minimum_O_over_E": 0.4920374152340843,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 7,
+      "T": 2.5,
+      "minimum_O_over_E": 0.5691803586824769,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 7,
+      "T": 3.0,
+      "minimum_O_over_E": 0.7157592464931566,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 15,
+      "T": 1.0,
+      "minimum_O_over_E": 1.282038582892848e-07,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 15,
+      "T": 1.5,
+      "minimum_O_over_E": 0.08993240946598302,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 15,
+      "T": 1.9,
+      "minimum_O_over_E": 0.36098302657720704,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 15,
+      "T": 2.1,
+      "minimum_O_over_E": 0.38377450612760766,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 15,
+      "T": 2.5,
+      "minimum_O_over_E": 0.4483832848425964,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 15,
+      "T": 3.0,
+      "minimum_O_over_E": 0.5336965360267802,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 31,
+      "T": 1.0,
+      "minimum_O_over_E": 2.333252812653183e-16,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 31,
+      "T": 1.5,
+      "minimum_O_over_E": 0.0010755630888642127,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 31,
+      "T": 1.9,
+      "minimum_O_over_E": 0.30877706405864336,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 31,
+      "T": 2.1,
+      "minimum_O_over_E": 0.3454953090788385,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 31,
+      "T": 2.5,
+      "minimum_O_over_E": 0.40675559745056156,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 31,
+      "T": 3.0,
+      "minimum_O_over_E": 0.4768801148268167,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 63,
+      "T": 1.0,
+      "minimum_O_over_E": -1.2578966760283681e-15,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 63,
+      "T": 1.5,
+      "minimum_O_over_E": 1.8478664885516992e-10,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 63,
+      "T": 1.9,
+      "minimum_O_over_E": 0.28346721167164335,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 63,
+      "T": 2.1,
+      "minimum_O_over_E": 0.32921157875620033,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 63,
+      "T": 2.5,
+      "minimum_O_over_E": 0.39024746558568224,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 63,
+      "T": 3.0,
+      "minimum_O_over_E": 0.4542408007111875,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 127,
+      "T": 1.0,
+      "minimum_O_over_E": -1.463380865351841e-15,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 127,
+      "T": 1.5,
+      "minimum_O_over_E": -3.034956659731072e-16,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 127,
+      "T": 1.9,
+      "minimum_O_over_E": 0.09317735564922758,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 127,
+      "T": 2.1,
+      "minimum_O_over_E": 0.3220406051392726,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 127,
+      "T": 2.5,
+      "minimum_O_over_E": 0.3830390509059647,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "step",
+      "N": 127,
+      "T": 3.0,
+      "minimum_O_over_E": 0.4439600116940553,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 7,
+      "T": 1.0,
+      "minimum_O_over_E": 0.03928312677507456,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 7,
+      "T": 1.5,
+      "minimum_O_over_E": 0.5159411962134682,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 7,
+      "T": 1.9,
+      "minimum_O_over_E": 0.922722152870785,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 7,
+      "T": 2.1,
+      "minimum_O_over_E": 1.1174800807756344,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 7,
+      "T": 2.5,
+      "minimum_O_over_E": 1.4660809331170255,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 7,
+      "T": 3.0,
+      "minimum_O_over_E": 1.6234300350486421,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 15,
+      "T": 1.0,
+      "minimum_O_over_E": 1.6617747518226642e-07,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 15,
+      "T": 1.5,
+      "minimum_O_over_E": 0.10022298544820499,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 15,
+      "T": 1.9,
+      "minimum_O_over_E": 0.7613982244569963,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 15,
+      "T": 2.1,
+      "minimum_O_over_E": 1.1854970274453107,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 15,
+      "T": 2.5,
+      "minimum_O_over_E": 1.5768177313204805,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 15,
+      "T": 3.0,
+      "minimum_O_over_E": 1.7297367127415835,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 31,
+      "T": 1.0,
+      "minimum_O_over_E": -1.19792763059311e-16,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 31,
+      "T": 1.5,
+      "minimum_O_over_E": 0.0011880494024945898,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 31,
+      "T": 1.9,
+      "minimum_O_over_E": 0.5345047745294413,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 31,
+      "T": 2.1,
+      "minimum_O_over_E": 1.0549081152372435,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 31,
+      "T": 2.5,
+      "minimum_O_over_E": 1.5004311669526156,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 31,
+      "T": 3.0,
+      "minimum_O_over_E": 1.7540224274346978,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 63,
+      "T": 1.0,
+      "minimum_O_over_E": -7.399517464456114e-16,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 63,
+      "T": 1.5,
+      "minimum_O_over_E": 1.9532886643441622e-10,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 63,
+      "T": 1.9,
+      "minimum_O_over_E": 0.4277493884918162,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 63,
+      "T": 2.1,
+      "minimum_O_over_E": 0.9726226333665985,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 63,
+      "T": 2.5,
+      "minimum_O_over_E": 1.4505794074296494,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 63,
+      "T": 3.0,
+      "minimum_O_over_E": 1.7006345297961545,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 127,
+      "T": 1.0,
+      "minimum_O_over_E": -1.2236306928939512e-15,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 127,
+      "T": 1.5,
+      "minimum_O_over_E": -1.0920891023450185e-15,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 127,
+      "T": 1.9,
+      "minimum_O_over_E": 0.1024582525423284,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 127,
+      "T": 2.1,
+      "minimum_O_over_E": 0.9657496548905369,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 127,
+      "T": 2.5,
+      "minimum_O_over_E": 1.4035180146676898,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    },
+    {
+      "potential": "oscillatory",
+      "N": 127,
+      "T": 3.0,
+      "minimum_O_over_E": 1.6557610333695543,
+      "interpretation": "Negative values near machine epsilon are roundoff."
+    }
+  ],
+  "wave_packet_diagnostics": [
+    {
+      "potential": "zero",
+      "m": 2,
+      "J": 4,
+      "N": 511,
+      "T": 1.0,
+      "coefficient_l2_squared": 0.9999999999999998,
+      "max_frequency_defect": 0.0021293239286634957,
+      "ideal_packet_observation": 0.15117363684322477,
+      "actual_O": 0.1513354164223409,
+      "actual_E": 1.0002384903703279,
+      "O_over_E": 0.15129933298838616
+    },
+    {
+      "potential": "zero",
+      "m": 3,
+      "J": 9,
+      "N": 511,
+      "T": 1.0,
+      "coefficient_l2_squared": 0.9999999999999994,
+      "max_frequency_defect": 0.0170414915589987,
+      "ideal_packet_observation": 0.06629100052754726,
+      "actual_O": 0.06671181372408821,
+      "actual_E": 1.0010426891004776,
+      "O_over_E": 0.06664232649661972
+    },
+    {
+      "potential": "zero",
+      "m": 4,
+      "J": 16,
+      "N": 511,
+      "T": 1.0,
+      "coefficient_l2_squared": 0.9999999999999996,
+      "max_frequency_defect": 0.07897197234878206,
+      "ideal_packet_observation": 0.029912727820828315,
+      "actual_O": 0.030626750733438075,
+      "actual_E": 1.0030612695792571,
+      "O_over_E": 0.030533280131815613
+    },
+    {
+      "potential": "zero",
+      "m": 5,
+      "J": 25,
+      "N": 600,
+      "T": 1.0,
+      "coefficient_l2_squared": 0.9999999999999986,
+      "max_frequency_defect": 0.19362104410038228,
+      "ideal_packet_observation": 0.013744606617842136,
+      "actual_O": 0.014431003865155601,
+      "actual_E": 1.0051887093056302,
+      "O_over_E": 0.014356512097240258
+    },
+    {
+      "potential": "zero",
+      "m": 6,
+      "J": 36,
+      "N": 840,
+      "T": 1.0,
+      "coefficient_l2_squared": 0.9999999999999989,
+      "max_frequency_defect": 0.27132801038479215,
+      "ideal_packet_observation": 0.006395460616484889,
+      "actual_O": 0.006783454233356339,
+      "actual_E": 1.0053278626395235,
+      "O_over_E": 0.006747504456452786
+    },
+    {
+      "potential": "step",
+      "m": 2,
+      "J": 4,
+      "N": 511,
+      "T": 1.0,
+      "coefficient_l2_squared": 0.9999999999999998,
+      "max_frequency_defect": 0.35092183068816674,
+      "ideal_packet_observation": 0.15117363684322477,
+      "actual_O": 0.14222787773781156,
+      "actual_E": 1.0788019447391846,
+      "O_over_E": 0.13183872946409744
+    },
+    {
+      "potential": "step",
+      "m": 3,
+      "J": 9,
+      "N": 511,
+      "T": 1.0,
+      "coefficient_l2_squared": 0.9999999999999994,
+      "max_frequency_defect": 0.163774955013821,
+      "ideal_packet_observation": 0.06629100052754726,
+      "actual_O": 0.06484250690223137,
+      "actual_E": 1.0165248418023634,
+      "O_over_E": 0.06378841346096517
+    },
+    {
+      "potential": "step",
+      "m": 4,
+      "J": 16,
+      "N": 511,
+      "T": 1.0,
+      "coefficient_l2_squared": 0.9999999999999996,
+      "max_frequency_defect": 0.1517874734461344,
+      "ideal_packet_observation": 0.029912727820828315,
+      "actual_O": 0.03042373357928048,
+      "actual_E": 1.0088405797705913,
+      "O_over_E": 0.030157127091575548
+    },
+    {
+      "potential": "step",
+      "m": 5,
+      "J": 25,
+      "N": 600,
+      "T": 1.0,
+      "coefficient_l2_squared": 0.9999999999999986,
+      "max_frequency_defect": 0.2425282285028203,
+      "ideal_packet_observation": 0.013744606617842136,
+      "actual_O": 0.014333518572938304,
+      "actual_E": 1.0074120583486375,
+      "O_over_E": 0.014228059366724267
+    },
+    {
+      "potential": "step",
+      "m": 6,
+      "J": 36,
+      "N": 840,
+      "T": 1.0,
+      "coefficient_l2_squared": 0.9999999999999989,
+      "max_frequency_defect": 0.30667538764311075,
+      "ideal_packet_observation": 0.006395460616484889,
+      "actual_O": 0.006774270638234675,
+      "actual_E": 1.006518413649386,
+      "O_over_E": 0.006730399112792035
+    }
+  ]
+}
