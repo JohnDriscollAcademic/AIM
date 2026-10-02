@@ -15,9 +15,9 @@ Contributions made with or without AI are welcome.
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**649 open targets** (536 open, 113 partial) · **16 solved entries** · **0 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
+**642 open targets** (531 open, 111 partial) · **23 solved entries** · **0 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 649 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 642 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
@@ -27,16 +27,16 @@ If a problem here is resolved, we encourage you to improve the proof, explain it
 | [Operators, matrices and computation](CATALOG.md#operators-matrices-and-computation) | [35](CATALOG.md#operators-open) | [4](CATALOG.md#operators-solved) |
 | [Inverse problems, control and dynamics](CATALOG.md#inverse-problems-control-and-dynamics) | [28](CATALOG.md#inverse-open) | [0](CATALOG.md#inverse-solved) |
 | [PDEs, fluids and materials](CATALOG.md#pdes-fluids-and-materials) | [31](CATALOG.md#pdes-materials-open) | [1](CATALOG.md#pdes-materials-solved) |
-| [Probability, statistics and learning](CATALOG.md#probability-statistics-and-learning) | [43](CATALOG.md#probability-statistics-open) | [3](CATALOG.md#probability-statistics-solved) |
-| [Numerical analysis and scientific computing](CATALOG.md#numerical-analysis-and-scientific-computing) | [28](CATALOG.md#numerical-analysis-open) | [1](CATALOG.md#numerical-analysis-solved) |
-| [Geometry and topology](CATALOG.md#geometry-and-topology) | [78](CATALOG.md#geometry-topology-open) | [1](CATALOG.md#geometry-topology-solved) |
+| [Probability, statistics and learning](CATALOG.md#probability-statistics-and-learning) | [42](CATALOG.md#probability-statistics-open) | [4](CATALOG.md#probability-statistics-solved) |
+| [Numerical analysis and scientific computing](CATALOG.md#numerical-analysis-and-scientific-computing) | [26](CATALOG.md#numerical-analysis-open) | [3](CATALOG.md#numerical-analysis-solved) |
+| [Geometry and topology](CATALOG.md#geometry-and-topology) | [77](CATALOG.md#geometry-topology-open) | [2](CATALOG.md#geometry-topology-solved) |
 | [Combinatorics, optimization and information theory](CATALOG.md#combinatorics-optimization-and-information-theory) | [26](CATALOG.md#optimization-information-open) | [0](CATALOG.md#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](CATALOG.md#waves-quantum-systems-and-spectral-geometry) | [32](CATALOG.md#spectral2-open) | [0](CATALOG.md#spectral2-solved) |
 | [Imaging, control, geometry and dynamics](CATALOG.md#imaging-control-geometry-and-dynamics) | [30](CATALOG.md#inverse2-open) | [0](CATALOG.md#inverse2-solved) |
 | [Fluids, kinetic theory and continuum mechanics](CATALOG.md#fluids-kinetic-theory-and-continuum-mechanics) | [48](CATALOG.md#continuum2-open) | [0](CATALOG.md#continuum2-solved) |
-| [Stochastic growth, populations and statistical mechanics](CATALOG.md#stochastic-growth-populations-and-statistical-mechanics) | [31](CATALOG.md#stochastic2-open) | [0](CATALOG.md#stochastic2-solved) |
+| [Stochastic growth, populations and statistical mechanics](CATALOG.md#stochastic-growth-populations-and-statistical-mechanics) | [30](CATALOG.md#stochastic2-open) | [1](CATALOG.md#stochastic2-solved) |
 | [Many-body physics, quantum information and wave analysis](CATALOG.md#many-body-physics-quantum-information-and-wave-analysis) | [32](CATALOG.md#spectral3-open) | [1](CATALOG.md#spectral3-solved) |
-| [Nonlinear waves, fluids and kinetic equations](CATALOG.md#nonlinear-waves-fluids-and-kinetic-equations) | [33](CATALOG.md#waves-fluids-kinetics-open) | [0](CATALOG.md#waves-fluids-kinetics-solved) |
+| [Nonlinear waves, fluids and kinetic equations](CATALOG.md#nonlinear-waves-fluids-and-kinetic-equations) | [31](CATALOG.md#waves-fluids-kinetics-open) | [2](CATALOG.md#waves-fluids-kinetics-solved) |
 | [Diffusion, materials and variational problems](CATALOG.md#diffusion-materials-and-variational-problems) | [57](CATALOG.md#diffusion-materials-open) | [2](CATALOG.md#diffusion-materials-solved) |
 | [Applied geometry, control and information](CATALOG.md#applied-geometry-control-and-information) | [48](CATALOG.md#inverse3-open) | [1](CATALOG.md#inverse3-solved) |
 | [Stochastic dynamics, reaction networks and applied optimization](CATALOG.md#stochastic-dynamics-reaction-networks-and-applied-optimization) | [46](CATALOG.md#stochastic3-open) | [0](CATALOG.md#stochastic3-solved) |
@@ -49,6 +49,13 @@ Complete resolutions recorded in this collection, including counterexamples to t
 | --- | --- | --- | --- | --- | --- |
 | 043 | [A nearly cubic Schur algorithm using only linear precision](problems/043-linear-precision-schur.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/eigenvalues-and-inverse-problems/IE-08/solution.md) | [Review](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-additional-2026-09-11/verification/reviews/IE-08-review.md) |
 | 045 | [Improve the worst-case tensor-train approximation factor](problems/045-tensor-train-approximation.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-recovered-tensors-2026-09-11/manuscripts/TR-04.pdf) | [Review](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-recovered-tensors-2026-09-11/verification/reviews/TR-04-review.md) |
+| 351 | [Can every bounded entire Burgers profile recur at late times?](problems/351-burgers-entire-limits.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/351-burgers-profile-realization/aim351_burgers_realization.pdf) | [Review](research/solution_reviews/2026-10-02-active-prs/351-review.md) |
+| 353 | [A genuinely periodic firing pattern in the delayed noisy integrate-and-fire PDE](problems/353-delayed-nnlif-periodic.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/353-delayed-nnlif-periodic-branch/aim353_delayed_nnlif_periodic.pdf) | [Review](research/solution_reviews/2026-10-02-active-prs/353-review.md) |
+| 489 | [Global attraction in D-stable Lotka–Volterra systems](problems/489-lotka-volterra-d-stable-global-attraction.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/490-lotka-volterra-counterexample/PROOF.md) | [Review](research/solution_reviews/2026-10-02-active-prs/489-review.md) |
+| 534 | [Triangle inequality for the pullback distance of verbose persistence barcodes](problems/534-verbose-persistence-pullback-triangle.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-544/aim544_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02-active-prs/534-review.md) |
+| 561 | [A fixed-time lower bound for Trotter splitting of the hydrogen ground state](problems/561-hydrogen-trotter-lower-bound.md) | ✅ SOLVED | Disproved lower bound | [Proof](research/solutions/562-hydrogen-trotter-disproof/PROOF.md) | [Review](research/solution_reviews/2026-10-02-active-prs/561-review.md) |
+| 605 | [Optimal uniform observation time for mixed finite element waves](problems/605-mixed-wave-optimal-observation-time.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/606-mixed-wave-observation/PROOF.md) | [Review](research/solution_reviews/2026-10-02-active-prs/605-review.md) |
+| 637 | [Absolute continuity of stationary Elo ratings](problems/637-elo-density.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-637/aim637_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02-active-prs/637-review.md) |
 | 652 | [The Robin fundamental gap conjecture](research/resolved/652-robin-fundamental-gap.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/021-robin-gap-counterexample/robin_gap_021.pdf) | [Review](research/solution_reviews/2026-10-02/021-review.md) |
 | 653 | [Exponential interior decay for smooth Steklov domains](research/resolved/653-steklov-smooth-interior-decay.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-steklov-024/steklov_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02/024-review.md) |
 | 654 | [Bounded harmonic lifting for complex media](research/resolved/654-complex-harmonic-lifting.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/218-complex-harmonic-lifting/PROOF.md) | [Review](research/solution_reviews/2026-10-02/218-review.md) |

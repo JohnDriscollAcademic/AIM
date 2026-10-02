@@ -332,8 +332,11 @@
     "title": "Absolute continuity of stationary Elo ratings",
     "area": "Probability, statistics, and uncertainty quantification",
     "file": "problems/637-elo-density.md",
-    "status": "Partially resolved",
-    "last_checked": "2026-09-24"
+    "status": "Solved",
+    "last_checked": "2026-10-02",
+    "outcome": "Counterexample",
+    "proof": "research/solutions/siavash-sadeghi-637/aim637_counterexample.pdf",
+    "review": "research/solution_reviews/2026-10-02-active-prs/637-review.md"
   },
   {
     "id": "642",

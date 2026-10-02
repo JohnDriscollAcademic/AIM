@@ -212,8 +212,11 @@
     "title": "Triangle inequality for the pullback distance of verbose persistence barcodes",
     "area": "Applied topology and persistent homology",
     "file": "problems/534-verbose-persistence-pullback-triangle.md",
-    "status": "Open",
-    "last_checked": "2026-09-24"
+    "status": "Solved",
+    "last_checked": "2026-10-02",
+    "outcome": "Counterexample",
+    "proof": "research/solutions/siavash-sadeghi-544/aim544_counterexample.pdf",
+    "review": "research/solution_reviews/2026-10-02-active-prs/534-review.md"
   },
   {
     "id": "537",

@@ -172,8 +172,8 @@
     "title": "The regular-polygon Steklov conjecture",
     "area": "Boundary spectral optimization",
     "file": "problems/022-steklov-polygon-optimizer.md",
-    "status": "Open",
-    "last_checked": "2026-09-08"
+    "status": "Partially resolved",
+    "last_checked": "2026-10-02"
   },
   {
     "id": "295",

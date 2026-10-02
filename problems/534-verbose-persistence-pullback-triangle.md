@@ -2,9 +2,9 @@
 
 **Area:** Applied topology and persistent homology
 
-**Status:** 🔵 OPEN
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-24
+**Last checked:** 2026-10-02
 
 ## Problem statement
 
@@ -44,6 +44,14 @@ Verbose barcodes retain features discarded by ordinary persistent homology. A tr
 1. F. Mémoli and L. Zhou, [Ephemeral persistence features and the stability of filtered chain complexes](https://doi.org/10.20382/jocg.v15i2a8), Journal of Computational Geometry **15**(2), 258–328, volume labelled 2024; article published in 2025. Remark 1.1, Definitions 4.7 and 5.3, Remark 5.17 and Corollary 6.10. [Latest author version checked: arXiv:2208.11770v8](https://arxiv.org/abs/2208.11770v8).
 
 ## Status review
+
+**Resolution (2026-10-02):** Four-point ultrametrics in degree one give pullback distances 0, 0 and 1 over every field. The positive lower bound is proved for all finite common pullbacks. The manuscript also extends the counterexample to every positive degree.
+
+**Proof and review:** [Accepted solution](../research/solutions/siavash-sadeghi-544/aim544_counterexample.pdf); [fresh mathematical audit](../research/solution_reviews/2026-10-02-active-prs/534-review.md); [PR #21](https://github.com/MColbrook/AIM/pull/21). The audit records the pinned submission, target comparison and any supporting computations.
+
+**Evidence:** Solved under the documented-independent-audit convention. The review was performed by AI; it does not assert human peer review, publication, proof-assistant verification or novelty priority. The problem retains its existing page and ID.
+
+### Previous status review
 
 The degree-zero analogue satisfies the triangle inequality. The positive-degree question is explicitly open in the published article and the August 2025 author revision. The pullback interleaving distance has a counterexample, but it takes a common comparison across degrees; it does not settle this fixed-degree question. Replacing $`D_k`$ by an infimum of sums along chains of metric spaces defines a different quantity.
 

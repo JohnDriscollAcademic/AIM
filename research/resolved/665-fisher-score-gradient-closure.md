@@ -35,6 +35,8 @@ The approximation would remove an extra hypothesis from entropy chain rules on s
 
 ## Status review
 
+**Additional proof (2026-10-02):** [PR #19](https://github.com/MColbrook/AIM/pull/19) supplies a [heat-semigroup proof](../solutions/618-fisher-score-heat-semigroup/aim618_solution.pdf), checked in a [fresh Codex AI audit](../solution_reviews/2026-10-02-active-prs/665-additional-proof-review.md). It treats the same full smooth-manifold target, including vacuum, unbounded densities and nonconvex boundary. The previously recorded proof and review remain available below; this is one solved problem with two proof routes.
+
 **Resolution (2026-10-02):** Affirmative proof. The complete target was checked in an independent Codex AI mathematical audit of [the submitted proof](../solutions/618-fisher-score/PROOF.md). See [the review record](../solution_reviews/2026-10-02/618-review.md) for the reasoning, scope and supporting checks.
 
 **Original target:** [618 at the pinned catalogue revision](https://github.com/MColbrook/AIM/blob/aa776a01d7d48a79f93251af11fde9454b0aea95/problems/618-fisher-score-gradient-closure.md). Current archive ID: 665. Submitted in [PR #4](https://github.com/MColbrook/AIM/pull/4).

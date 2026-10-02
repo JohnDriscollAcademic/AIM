@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**649 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**642 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -12,16 +12,16 @@
 | [Operators, matrices and computation](#operators-matrices-and-computation) | [35](#operators-open) | [4](#operators-solved) |
 | [Inverse problems, control and dynamics](#inverse-problems-control-and-dynamics) | [28](#inverse-open) | [0](#inverse-solved) |
 | [PDEs, fluids and materials](#pdes-fluids-and-materials) | [31](#pdes-materials-open) | [1](#pdes-materials-solved) |
-| [Probability, statistics and learning](#probability-statistics-and-learning) | [43](#probability-statistics-open) | [3](#probability-statistics-solved) |
-| [Numerical analysis and scientific computing](#numerical-analysis-and-scientific-computing) | [28](#numerical-analysis-open) | [1](#numerical-analysis-solved) |
-| [Geometry and topology](#geometry-and-topology) | [78](#geometry-topology-open) | [1](#geometry-topology-solved) |
+| [Probability, statistics and learning](#probability-statistics-and-learning) | [42](#probability-statistics-open) | [4](#probability-statistics-solved) |
+| [Numerical analysis and scientific computing](#numerical-analysis-and-scientific-computing) | [26](#numerical-analysis-open) | [3](#numerical-analysis-solved) |
+| [Geometry and topology](#geometry-and-topology) | [77](#geometry-topology-open) | [2](#geometry-topology-solved) |
 | [Combinatorics, optimization and information theory](#combinatorics-optimization-and-information-theory) | [26](#optimization-information-open) | [0](#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](#waves-quantum-systems-and-spectral-geometry) | [32](#spectral2-open) | [0](#spectral2-solved) |
 | [Imaging, control, geometry and dynamics](#imaging-control-geometry-and-dynamics) | [30](#inverse2-open) | [0](#inverse2-solved) |
 | [Fluids, kinetic theory and continuum mechanics](#fluids-kinetic-theory-and-continuum-mechanics) | [48](#continuum2-open) | [0](#continuum2-solved) |
-| [Stochastic growth, populations and statistical mechanics](#stochastic-growth-populations-and-statistical-mechanics) | [31](#stochastic2-open) | [0](#stochastic2-solved) |
+| [Stochastic growth, populations and statistical mechanics](#stochastic-growth-populations-and-statistical-mechanics) | [30](#stochastic2-open) | [1](#stochastic2-solved) |
 | [Many-body physics, quantum information and wave analysis](#many-body-physics-quantum-information-and-wave-analysis) | [32](#spectral3-open) | [1](#spectral3-solved) |
-| [Nonlinear waves, fluids and kinetic equations](#nonlinear-waves-fluids-and-kinetic-equations) | [33](#waves-fluids-kinetics-open) | [0](#waves-fluids-kinetics-solved) |
+| [Nonlinear waves, fluids and kinetic equations](#nonlinear-waves-fluids-and-kinetic-equations) | [31](#waves-fluids-kinetics-open) | [2](#waves-fluids-kinetics-solved) |
 | [Diffusion, materials and variational problems](#diffusion-materials-and-variational-problems) | [57](#diffusion-materials-open) | [2](#diffusion-materials-solved) |
 | [Applied geometry, control and information](#applied-geometry-control-and-information) | [48](#inverse3-open) | [1](#inverse3-solved) |
 | [Stochastic dynamics, reaction networks and applied optimization](#stochastic-dynamics-reaction-networks-and-applied-optimization) | [46](#stochastic3-open) | [0](#stochastic3-solved) |
@@ -57,7 +57,7 @@
 | 019 | [The polygonal Payne–Pólya–Weinberger ratio conjecture](problems/019-polygonal-ppw.md) | 🔵 OPEN | Spectral shape optimization |
 | 020 | [Bareket's conjecture for simply connected planar domains](problems/020-bareket-simply-connected.md) | 🔵 OPEN | Robin spectra and surface interactions |
 | 021 | [The Robin eigenvalue ratio at fixed volume](problems/021-robin-ppw.md) | 🟡 PARTIAL | Robin spectra and resonator design |
-| 022 | [The regular-polygon Steklov conjecture](problems/022-steklov-polygon-optimizer.md) | 🔵 OPEN | Boundary spectral optimization |
+| 022 | [The regular-polygon Steklov conjecture](problems/022-steklov-polygon-optimizer.md) | 🟡 PARTIAL | Boundary spectral optimization |
 | 295 | [Dirichlet spectral determination of smooth strictly convex planar domains](problems/295-convex-dirichlet-spectrum.md) | 🔵 OPEN | Spectral theory and spectral geometry |
 
 <a name="spectral-solved"></a>
@@ -264,7 +264,6 @@ No solved problems are currently recorded in this subject.
 | 609 | [Low-degree representations determining a unitary shuffle's gap](problems/609-unitary-hypergraph-gap.md) | 🟡 PARTIAL | Random unitary sampling and spectral analysis |
 | 615 | [Fourth-order diffusion approximation for three-player ruin](problems/615-gambler-scaling.md) | 🟡 PARTIAL | Applied probability and diffusion approximation |
 | 636 | [A uniform Gaussian approximation bound for Jack measures](problems/636-jack-normal.md) | 🟡 PARTIAL | Probability and random matrix models |
-| 637 | [Absolute continuity of stationary Elo ratings](problems/637-elo-density.md) | 🟡 PARTIAL | Probability, statistics, and uncertainty quantification |
 | 642 | [Oscillation of partition functions under very strong disorder](problems/642-polymer-oscillation.md) | 🟡 PARTIAL | Probability and statistical mechanics |
 
 <a name="probability-statistics-solved"></a>
@@ -273,6 +272,7 @@ No solved problems are currently recorded in this subject.
 
 | ID | Problem | Status | Outcome | Proof | Review |
 | --- | --- | --- | --- | --- | --- |
+| 637 | [Absolute continuity of stationary Elo ratings](problems/637-elo-density.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-637/aim637_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02-active-prs/637-review.md) |
 | 660 | [Small-ball ratios for general symmetric product priors](research/resolved/660-product-prior-small-ball-ratios.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-506/aim506_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02/506-review.md) |
 | 662 | [Variance ordering for Gaussian alpha-divergence approximations](research/resolved/662-gaussian-variational-variance-ordering.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-457-558/aim_558_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02/558-review.md) |
 | 663 | [Monotone variance in the Gaussian approximation to DrMMD flow](research/resolved/663-drmmd-gaussian-variance-monotonicity.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/siavash-sadeghi-560/aim560_proof.pdf) | [Review](research/solution_reviews/2026-10-02/560-review.md) |
@@ -300,14 +300,12 @@ No solved problems are currently recorded in this subject.
 | 554 | [Sharp asymptotic constant for rational approximation of fractional inverse powers](problems/554-stieltjes-rational-asymptotic-constant.md) | 🔵 OPEN | Rational approximation and numerical analysis |
 | 555 | [Maximal gain from randomization with nonadaptive linear measurements](problems/555-nonadaptive-randomization-gain.md) | 🔵 OPEN | Information-based complexity and randomized approximation |
 | 556 | [Does integration of uniformly derivative-bounded analytic functions suffer the dimensional curse?](problems/556-smooth-integration-dimensional-curse.md) | 🔵 OPEN | Numerical integration and information-based complexity |
-| 561 | [A fixed-time lower bound for Trotter splitting of the hydrogen ground state](problems/561-hydrogen-trotter-lower-bound.md) | 🔵 OPEN | Numerical analysis and quantum dynamics |
 | 568 | [Sharp permutation bound for triangular parts of correlation matrices](problems/568-sor-permutation-sharp-constant.md) | 🔵 OPEN | Numerical linear algebra and iterative methods |
 | 569 | [A sharp Galerkin projection bound on nonobtuse triangles](problems/569-nonobtuse-galerkin-projection-constant.md) | 🔵 OPEN | Finite element approximation and numerical PDEs |
 | 570 | [The cost of continuous reconstruction on Banach unit balls](problems/570-continuous-decoder-banach-balls.md) | 🔵 OPEN | Information-based complexity and nonlinear approximation |
 | 578 | [A real nearest matrix with spectrum in the closed left half-plane](problems/578-nearest-hurwitz-real-minimizer.md) | 🔵 OPEN | Numerical linear algebra and matrix optimization |
 | 581 | [Infinitely many obstacle resonances in a fixed strip under trapping](problems/581-modified-lax-phillips-trapping.md) | 🟡 PARTIAL | Scattering theory and numerical wave propagation |
 | 582 | [Full Sobolev invertibility range for Hausdorff-measure screen operators](problems/582-fractal-screen-sobolev-invertibility.md) | 🟡 PARTIAL | Boundary integral equations and numerical scattering |
-| 605 | [Optimal uniform observation time for mixed finite element waves](problems/605-mixed-wave-optimal-observation-time.md) | 🟡 PARTIAL | Numerical control and inverse problems |
 | 626 | [Polynomial-size nonobtuse tetrahedral meshes](problems/626-polynomial-nonobtuse-tetrahedral-meshes.md) | 🟡 PARTIAL | Numerical PDEs and computational geometry |
 | 633 | [Local potential bases on Freudenthal meshes](problems/633-freudenthal-local-potential-basis.md) | 🔵 OPEN | Finite elements and multigrid methods |
 | 639 | [Strong convergence rate of the fractional WIS Euler integrator](problems/639-wis-fractional-euler-rate.md) | 🟡 PARTIAL | Numerical stochastic differential equations |
@@ -320,6 +318,8 @@ No solved problems are currently recorded in this subject.
 
 | ID | Problem | Status | Outcome | Proof | Review |
 | --- | --- | --- | --- | --- | --- |
+| 561 | [A fixed-time lower bound for Trotter splitting of the hydrogen ground state](problems/561-hydrogen-trotter-lower-bound.md) | ✅ SOLVED | Disproved lower bound | [Proof](research/solutions/562-hydrogen-trotter-disproof/PROOF.md) | [Review](research/solution_reviews/2026-10-02-active-prs/561-review.md) |
+| 605 | [Optimal uniform observation time for mixed finite element waves](problems/605-mixed-wave-optimal-observation-time.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/606-mixed-wave-observation/PROOF.md) | [Review](research/solution_reviews/2026-10-02-active-prs/605-review.md) |
 | 664 | [Logarithmic controlled bandwidth for locally analytic functions](research/resolved/664-analytic-controlled-bandwidth.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/593-analytic-bandwidth/PROOF.md) | [Review](research/solution_reviews/2026-10-02/593-review.md) |
 
 ## Geometry and topology
@@ -356,7 +356,6 @@ No solved problems are currently recorded in this subject.
 | 531 | [Homology at the second transition of torus-grid Rips complexes](problems/531-torus-grid-transition-homology.md) | 🔵 OPEN | Applied topology and persistent homology |
 | 532 | [Homotopy type of torus-grid Rips complexes at half the diameter](problems/532-torus-grid-half-diameter-homotopy.md) | 🔵 OPEN | Applied topology and persistent homology |
 | 533 | [Motion-planning complexity of symmetric products of non-orientable surfaces](problems/533-nonorientable-symmetric-product-motion-planning.md) | 🟡 PARTIAL | Applied topology and motion planning |
-| 534 | [Triangle inequality for the pullback distance of verbose persistence barcodes](problems/534-verbose-persistence-pullback-triangle.md) | 🔵 OPEN | Applied topology and persistent homology |
 | 537 | [Betti numbers of a persistence fiber with no finite bars](problems/537-persistence-fiber-betti-numbers.md) | 🔵 OPEN | Applied topology and inverse persistent homology |
 | 538 | [Monotonicity of connectivity in spherical Čech filtrations](problems/538-spherical-cech-connectivity-monotonicity.md) | 🔵 OPEN | Applied and computational topology |
 | 539 | [Finite homotopy models for spherical Čech complexes](problems/539-spherical-cech-finite-homotopy-models.md) | 🔵 OPEN | Applied and computational topology |
@@ -415,6 +414,7 @@ No solved problems are currently recorded in this subject.
 
 | ID | Problem | Status | Outcome | Proof | Review |
 | --- | --- | --- | --- | --- | --- |
+| 534 | [Triangle inequality for the pullback distance of verbose persistence barcodes](problems/534-verbose-persistence-pullback-triangle.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-544/aim544_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02-active-prs/534-review.md) |
 | 661 | [Path connectivity of the infinity Z-Gromov–Wasserstein space](research/resolved/661-z-gw-infinity-path-connectivity.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/514-infinity-z-gw/PROOF.md) | [Review](research/solution_reviews/2026-10-02/514-review.md) |
 
 ## Combinatorics, optimization and information theory
@@ -651,13 +651,14 @@ No solved problems are currently recorded in this subject.
 | 318 | [Bolthausen–Sznitman ancestry for a fixed-size selected population](problems/318-selected-brownian-population-genealogy.md) | 🔵 OPEN | Population genetics and stochastic selection |
 | 328 | [Accuracy of parsimony reconstruction under a molecular clock](problems/328-fitch-ultrametric-ancestral-accuracy.md) | 🔵 OPEN | Mathematical phylogenetics and ancestral-state inference |
 | 348 | [Non-explosion of Brownian Fleming–Viot systems in arbitrary domains](problems/348-brownian-fleming-viot-nonexplosion.md) | 🔵 OPEN | Interacting particles and conditioned diffusion |
-| 489 | [Global attraction in D-stable Lotka–Volterra systems](problems/489-lotka-volterra-d-stable-global-attraction.md) | 🟡 PARTIAL | Population dynamics and nonlinear stability |
 
 <a name="stochastic2-solved"></a>
 
 ### Solved problems
 
-No solved problems are currently recorded in this subject.
+| ID | Problem | Status | Outcome | Proof | Review |
+| --- | --- | --- | --- | --- | --- |
+| 489 | [Global attraction in D-stable Lotka–Volterra systems](problems/489-lotka-volterra-d-stable-global-attraction.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/490-lotka-volterra-counterexample/PROOF.md) | [Review](research/solution_reviews/2026-10-02-active-prs/489-review.md) |
 
 ## Many-body physics, quantum information and wave analysis
 
@@ -724,8 +725,6 @@ No solved problems are currently recorded in this subject.
 | 231 | [Nonlinear orbital stability of small solitary gravity waves](problems/231-solitary-gravity-wave-nonlinear-stability.md) | 🔵 OPEN | Free-surface fluid dynamics |
 | 232 | [Asymptotic stability of the phi-four kink without odd symmetry](problems/232-phi-four-general-kink-stability.md) | 🔵 OPEN | Nonlinear scalar fields |
 | 239 | [Uniqueness of the homogeneous cooling state for inelastic hard spheres](problems/239-inelastic-cooling-profile-uniqueness.md) | 🟡 PARTIAL | Granular-gas kinetic theory |
-| 351 | [Can every bounded entire Burgers profile recur at late times?](problems/351-burgers-entire-limits.md) | 🔵 OPEN | Viscous conservation laws; asymptotic dynamics |
-| 353 | [A genuinely periodic firing pattern in the delayed noisy integrate-and-fire PDE](problems/353-delayed-nnlif-periodic.md) | 🔵 OPEN | Mathematical neuroscience; nonlinear Fokker–Planck equations |
 | 354 | [Self-sustained oscillations in the full voltage–conductance neuron equation](problems/354-voltage-conductance-periodic.md) | 🔵 OPEN | Mathematical neuroscience; kinetic equations |
 | 355 | [Global smooth Schrödinger maps below the degree-zero energy threshold](problems/355-schrodinger-map-threshold.md) | 🔵 OPEN | Ferromagnetism; geometric dispersive PDEs |
 | 356 | [Finite-time Langmuir collapse for the three-dimensional Zakharov system](problems/356-zakharov-three-dimensional-collapse.md) | 🔵 OPEN | Plasma physics; coupled dispersive equations |
@@ -754,7 +753,10 @@ No solved problems are currently recorded in this subject.
 
 ### Solved problems
 
-No solved problems are currently recorded in this subject.
+| ID | Problem | Status | Outcome | Proof | Review |
+| --- | --- | --- | --- | --- | --- |
+| 351 | [Can every bounded entire Burgers profile recur at late times?](problems/351-burgers-entire-limits.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/351-burgers-profile-realization/aim351_burgers_realization.pdf) | [Review](research/solution_reviews/2026-10-02-active-prs/351-review.md) |
+| 353 | [A genuinely periodic firing pattern in the delayed noisy integrate-and-fire PDE](problems/353-delayed-nnlif-periodic.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/353-delayed-nnlif-periodic-branch/aim353_delayed_nnlif_periodic.pdf) | [Review](research/solution_reviews/2026-10-02-active-prs/353-review.md) |
 
 ## Diffusion, materials and variational problems
 
@@ -963,7 +965,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 
 | Publication batch | Open targets | Entry review dates |
 | --- | ---: | --- |
-| Original collection | 91 | 2026-09-08–2026-09-22 |
+| Original collection | 91 | 2026-09-08–2026-10-02 |
 | Second collection | 100 | 2026-09-08 |
 | Third collection | 96 | 2026-09-13 |
 | September 2026 expansion — batch 1 | 10 | 2026-09-17 |
@@ -972,9 +974,9 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 2026 expansion — batch 4 | 10 | 2026-09-18 |
 | September 2026 expansion — batch 5 | 10 | 2026-09-18 |
 | September 2026 expansion — batch 6 | 10 | 2026-09-19 |
-| September 22 expansion — PDE emphasis | 136 | 2026-09-22 |
-| September 2026 expansion — remaining accepted drafts | 7 | 2026-09-23 |
-| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 159 | 2026-09-23–2026-09-24 |
+| September 22 expansion — PDE emphasis | 134 | 2026-09-22 |
+| September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23 |
+| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 155 | 2026-09-23–2026-09-24 |
 
 ## Maintaining the collection
 

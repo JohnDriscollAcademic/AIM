@@ -2,9 +2,9 @@
 
 **Area:** Numerical analysis and quantum dynamics
 
-**Status:** 🔵 OPEN
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-24
+**Last checked:** 2026-10-02
 
 ## Problem statement
 
@@ -41,6 +41,14 @@ A sharp lower bound would identify an intrinsic cost of split-operator simulatio
 2. D. Fang and X. Wu, [Trotterization with many-body Coulomb interactions: convergence for general initial conditions and state-dependent improvements](https://arxiv.org/abs/2604.07704), arXiv:2604.07704v2, 24 August 2026, introduction and Section 6.
 
 ## Status review
+
+**Resolution (2026-10-02):** The fixed-time error for the stated ground state is bounded above by a constant times n to the power -3/8, hence is little-o of n to the power -1/4. The corrected comparison vector and resonance estimates disprove the proposed eventual lower bound; optimality of the upper exponent is not claimed.
+
+**Proof and review:** [Accepted solution](../research/solutions/562-hydrogen-trotter-disproof/PROOF.md); [fresh mathematical audit](../research/solution_reviews/2026-10-02-active-prs/561-review.md); [PR #18](https://github.com/MColbrook/AIM/pull/18). The audit records the pinned submission, target comparison and any supporting computations.
+
+**Evidence:** Solved under the documented-independent-audit convention. The review was performed by AI; it does not assert human peer review, publication, proof-assistant verification or novelty priority. The problem retains its existing page and ID.
+
+### Previous status review
 
 The source [1] proves upper estimates approaching the exponent $`1/4`$ for general sufficiently regular states and identifies an analytic ground-state lower bound as open. Numerical results support the $`1/4`$ exponent. The later revision [2] proves exact one-step local error asymptotics of order $`t^{5/4}`$, while explicitly retaining the fixed-time many-step lower-bound question. Local errors may cancel during propagation, so these local asymptotics do not imply the displayed bound.
 

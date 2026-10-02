@@ -2,9 +2,9 @@
 
 **Area:** Boundary spectral optimization
 
-**Status:** 🔵 OPEN
+**Status:** 🟡 PARTIAL
 
-**Last checked:** 2026-09-08
+**Last checked:** 2026-10-02
 
 ## Problem statement
 
@@ -26,6 +26,14 @@ Steklov modes describe a membrane with mass concentrated on its boundary and the
 2. N. Nigam (problem proposer), [Open problems from the miniconference on sharp eigenvalue estimates for partial differential operators](https://publish.illinois.edu/eigenvalues2020/files/2020/04/Open-problems.pdf), April 2020, Open Problem 8.
 
 ## Status review
+
+**Known cases:** The n=3 case is resolved: among nondegenerate triangles of fixed perimeter, the equilateral triangle uniquely maximizes the first positive Steklov eigenvalue. The [computer-assisted proof](../research/solutions/022-steklov-triangle/PROOF.md) combines analytic estimates with exact rational and outward-rounded interval certificates.
+
+**Remaining target:** The comparison with the regular n-gon, including the equality characterization, remains open for n>=4 and arbitrary convex polygons with at most n sides. The triangle result does not resolve this full family.
+
+**Review (2026-10-02):** [Independent Codex AI audit](../research/solution_reviews/2026-10-02-active-prs/022-triangles-review.md) of [PR #20](https://github.com/MColbrook/AIM/pull/20), including fresh certificate reproduction and additional checks. This is not human peer review or proof-assistant verification. The audit records a minor arithmetic-precision documentation correction.
+
+### Previous status review
 
 **Literature check:** Open in cited literature; no later resolution located.
 

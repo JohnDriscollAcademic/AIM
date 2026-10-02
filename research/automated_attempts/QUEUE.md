@@ -1,16 +1,16 @@
 # Research Queue
 
-Synchronized at **2026-10-02T09:56:51.406357+00:00** against the current working tree: **649 open targets** and **16 solved entries**. Problems 043 and 045 retain their original pages and IDs. Snapshot base commit: fa98b7525fa3f78317536a8825f9cfa0ae1c369c; this checkpoint includes the catalogue changes in the working tree.
+Synchronized at **2026-10-02T19:49:43.999426+00:00** against the current working tree: **642 open targets** and **23 solved entries**. Every problem retains its page and ID. Snapshot base commit: 3c76fb05f1cbf9a62e9d6d75111526bb415a620e; this checkpoint includes the reviewed status changes in the working tree.
 
 The queue covers every current problem and all registered metadata. Problem pages keep their IDs when labelled Solved. The [earlier thirteen reviews](../solution_reviews/2026-10-02/README.md), [Robin gap review](../solution_reviews/2026-10-02/021-review.md) and [previous identity mapping](../solution_reviews/2026-10-02/021-id-mapping.json) document earlier archive transitions. The status reviews on problems 043 and 045 link to their resolutions in the NLA repository.
 
 Every surviving entry keeps its programme status and discovery date. Retained entries preserve their histories but are ineligible for selection. This synchronization is administrative: campaign 001, its phase and its attempt and senior-review counters are unchanged.
 
-[Current snapshot](queue-sync-2026-10-02-nla-labels.json) · [Previous snapshot](queue-sync-2026-10-02-robin-gap.json) · [Programme state](STATE.md) · [Pólya research status](001/STATUS.md)
+[Current snapshot](queue-sync-2026-10-02-active-pr-reviews.json) · [Previous snapshot](queue-sync-2026-10-02-nla-labels.json) · [Programme state](STATE.md) · [Pólya research status](001/STATUS.md)
 
 ## Problem queue
 
-Only Open and Partially resolved entries are eligible for selection. Solved entries 043 and 045 remain visible here with their programme histories preserved, but are ineligible.
+Only Open and Partially resolved entries are eligible for selection. All solved entries remain visible here with their programme histories preserved, but are ineligible. The [active-PR review](../solution_reviews/2026-10-02-active-prs/README.md) records the new resolutions and the triangle-only partial result.
 
 | ID | Problem | Literature status | Programme status | Queue discovery / legacy snapshot |
 | --- | --- | --- | --- | --- |
@@ -35,7 +35,7 @@ Only Open and Partially resolved entries are eligible for selection. Solved entr
 | 019 | [The polygonal Payne–Pólya–Weinberger ratio conjecture](../../problems/019-polygonal-ppw.md) | Open | queued | Legacy (by 2026-09-08) |
 | 020 | [Bareket's conjecture for simply connected planar domains](../../problems/020-bareket-simply-connected.md) | Open | queued | Legacy (by 2026-09-08) |
 | 021 | [The Robin eigenvalue ratio at fixed volume](../../problems/021-robin-ppw.md) | Partially resolved | queued | Legacy (by 2026-09-08) |
-| 022 | [The regular-polygon Steklov conjecture](../../problems/022-steklov-polygon-optimizer.md) | Open | queued | Legacy (by 2026-09-08) |
+| 022 | [The regular-polygon Steklov conjecture](../../problems/022-steklov-polygon-optimizer.md) | Partially resolved | queued | Legacy (by 2026-09-08) |
 | 023 | [The complete Crouzeix conjecture](../../problems/023-complete-crouzeix.md) | Partially resolved | queued | Legacy (by 2026-09-08) |
 | 024 | [Lieb’s permanental dominance conjecture](../../problems/024-lieb-permanental-dominance.md) | Open | queued | Legacy (by 2026-09-08) |
 | 025 | [Chollet’s Hadamard-product permanent inequality](../../problems/025-chollet-permanent.md) | Open | queued | Legacy (by 2026-09-08) |
@@ -364,9 +364,9 @@ Only Open and Partially resolved entries are eligible for selection. Solved entr
 | 348 | [Non-explosion of Brownian Fleming–Viot systems in arbitrary domains](../../problems/348-brownian-fleming-viot-nonexplosion.md) | Open | unstarted | 2026-09-23 |
 | 349 | [The ball as the least densely packable convex solid](../../problems/349-ulam-convex-solid-packing.md) | Open | unstarted | 2026-09-23 |
 | 350 | [Nonexistence of subcritical Lane–Emden equilibria in higher dimensions](../../problems/350-lane-emden-subcritical-system.md) | Open | unstarted | 2026-09-23 |
-| 351 | [Can every bounded entire Burgers profile recur at late times?](../../problems/351-burgers-entire-limits.md) | Open | unstarted | 2026-09-23 |
+| 351 | [Can every bounded entire Burgers profile recur at late times?](../../problems/351-burgers-entire-limits.md) | Solved | unstarted | 2026-09-23 |
 | 352 | [Competitive exclusion by the slowest diffuser in a multispecies habitat](../../problems/352-dockery-slowest-diffuser.md) | Open | unstarted | 2026-09-23 |
-| 353 | [A genuinely periodic firing pattern in the delayed noisy integrate-and-fire PDE](../../problems/353-delayed-nnlif-periodic.md) | Open | unstarted | 2026-09-23 |
+| 353 | [A genuinely periodic firing pattern in the delayed noisy integrate-and-fire PDE](../../problems/353-delayed-nnlif-periodic.md) | Solved | unstarted | 2026-09-23 |
 | 354 | [Self-sustained oscillations in the full voltage–conductance neuron equation](../../problems/354-voltage-conductance-periodic.md) | Open | unstarted | 2026-09-23 |
 | 355 | [Global smooth Schrödinger maps below the degree-zero energy threshold](../../problems/355-schrodinger-map-threshold.md) | Open | unstarted | 2026-09-23 |
 | 356 | [Finite-time Langmuir collapse for the three-dimensional Zakharov system](../../problems/356-zakharov-three-dimensional-collapse.md) | Open | unstarted | 2026-09-23 |
@@ -502,7 +502,7 @@ Only Open and Partially resolved entries are eligible for selection. Solved entr
 | 486 | [The sharp number of directions illuminating a convex body](../../problems/486-hadwiger-boltyanski-illumination.md) | Partially resolved | unstarted | 2026-09-23 |
 | 487 | [The GNRS conjecture for minor-free network flow](../../problems/487-gnrs-minor-free-flow-cut.md) | Partially resolved | unstarted | 2026-09-23 |
 | 488 | [The Fourier entropy–influence conjecture](../../problems/488-fourier-entropy-influence.md) | Partially resolved | unstarted | 2026-09-23 |
-| 489 | [Global attraction in D-stable Lotka–Volterra systems](../../problems/489-lotka-volterra-d-stable-global-attraction.md) | Partially resolved | unstarted | 2026-09-23 |
+| 489 | [Global attraction in D-stable Lotka–Volterra systems](../../problems/489-lotka-volterra-d-stable-global-attraction.md) | Solved | unstarted | 2026-09-23 |
 | 490 | [Deterministic parallel perfect matching in general graphs](../../problems/490-general-graph-perfect-matching-nc.md) | Partially resolved | unstarted | 2026-09-23 |
 | 491 | [Polynomial-time solution of simple stochastic games](../../problems/491-simple-stochastic-games-polynomial-time.md) | Partially resolved | unstarted | 2026-09-23 |
 | 492 | [Constant-gap NP-hardness of densest k-subgraph](../../problems/492-densest-k-subgraph-constant-gap-hardness.md) | Open | unstarted | 2026-09-23 |
@@ -547,7 +547,7 @@ Only Open and Partially resolved entries are eligible for selection. Solved entr
 | 531 | [Homology at the second transition of torus-grid Rips complexes](../../problems/531-torus-grid-transition-homology.md) | Open | unstarted | 2026-09-24 |
 | 532 | [Homotopy type of torus-grid Rips complexes at half the diameter](../../problems/532-torus-grid-half-diameter-homotopy.md) | Open | unstarted | 2026-09-24 |
 | 533 | [Motion-planning complexity of symmetric products of non-orientable surfaces](../../problems/533-nonorientable-symmetric-product-motion-planning.md) | Partially resolved | unstarted | 2026-09-24 |
-| 534 | [Triangle inequality for the pullback distance of verbose persistence barcodes](../../problems/534-verbose-persistence-pullback-triangle.md) | Open | unstarted | 2026-09-24 |
+| 534 | [Triangle inequality for the pullback distance of verbose persistence barcodes](../../problems/534-verbose-persistence-pullback-triangle.md) | Solved | unstarted | 2026-09-24 |
 | 535 | [Mixing time of the reflected Burnside sampler for integer partitions](../../problems/535-reflected-burnside-mixing.md) | Open | unstarted | 2026-09-24 |
 | 536 | [Optimal star-discrepancy lower bound for infinite sequences](../../problems/536-star-discrepancy-sequence-lower-bound.md) | Open | unstarted | 2026-09-24 |
 | 537 | [Betti numbers of a persistence fiber with no finite bars](../../problems/537-persistence-fiber-betti-numbers.md) | Open | unstarted | 2026-09-24 |
@@ -574,7 +574,7 @@ Only Open and Partially resolved entries are eligible for selection. Solved entr
 | 558 | [Arbitrarily large integer-distance sets in general position](../../problems/558-integer-distance-general-position.md) | Open | unstarted | 2026-09-24 |
 | 559 | [Deciding nonnegativity of unnormalized univariate trace polynomials](../../problems/559-univariate-trace-decidability.md) | Open | unstarted | 2026-09-24 |
 | 560 | [Hardness of minimum-dilation triangulation](../../problems/560-minimum-dilation-hardness.md) | Open | unstarted | 2026-09-24 |
-| 561 | [A fixed-time lower bound for Trotter splitting of the hydrogen ground state](../../problems/561-hydrogen-trotter-lower-bound.md) | Open | unstarted | 2026-09-24 |
+| 561 | [A fixed-time lower bound for Trotter splitting of the hydrogen ground state](../../problems/561-hydrogen-trotter-lower-bound.md) | Solved | unstarted | 2026-09-24 |
 | 562 | [Sharp least-singular-value bounds for independent random tensor columns](../../problems/562-tensor-singular-value.md) | Partially resolved | unstarted | 2026-09-24 |
 | 563 | [Identifying a distribution from its Gaussian-channel MMSE curve](../../problems/563-mmse-identification.md) | Partially resolved | unstarted | 2026-09-24 |
 | 564 | [The sharp radius in quantitative Steinitz selection](../../problems/564-quantitative-steinitz-radius.md) | Open | unstarted | 2026-09-24 |
@@ -618,7 +618,7 @@ Only Open and Partially resolved entries are eligible for selection. Solved entr
 | 602 | [A linear genus–girth bound for facial cycles](../../problems/602-surface-girth-facial-linear-bound.md) | Open | unstarted | 2026-09-24 |
 | 603 | [The symmetry point of a unimodular lattice's secrecy function](../../problems/603-belfiore-sole.md) | Partially resolved | unstarted | 2026-09-24 |
 | 604 | [Divisible point sets as unions of parallel lines](../../problems/604-strong-cylinder.md) | Partially resolved | unstarted | 2026-09-24 |
-| 605 | [Optimal uniform observation time for mixed finite element waves](../../problems/605-mixed-wave-optimal-observation-time.md) | Partially resolved | unstarted | 2026-09-24 |
+| 605 | [Optimal uniform observation time for mixed finite element waves](../../problems/605-mixed-wave-optimal-observation-time.md) | Solved | unstarted | 2026-09-24 |
 | 606 | [A zero in the nontrivial spectrum of a power permutation](../../problems/606-helleseth-vanishing.md) | Partially resolved | unstarted | 2026-09-24 |
 | 607 | [Hypergraph shuffles and the one-particle spectral gap](../../problems/607-caputo-hypergraph-gap.md) | Partially resolved | unstarted | 2026-09-24 |
 | 608 | [A degree-two spectral gap for Brownian energy exchange](../../problems/608-brownian-energy-quadratic-gap.md) | Partially resolved | unstarted | 2026-09-24 |
@@ -650,7 +650,7 @@ Only Open and Partially resolved entries are eligible for selection. Solved entr
 | 634 | [Finitely many radius sets for compact sphere packings](../../problems/634-compact-packing-radius-finiteness.md) | Partially resolved | unstarted | 2026-09-24 |
 | 635 | [Small mod-two area cycles in drawings with bounded pairwise intersections](../../problems/635-bounded-crossing-heilbronn.md) | Partially resolved | unstarted | 2026-09-24 |
 | 636 | [A uniform Gaussian approximation bound for Jack measures](../../problems/636-jack-normal.md) | Partially resolved | unstarted | 2026-09-24 |
-| 637 | [Absolute continuity of stationary Elo ratings](../../problems/637-elo-density.md) | Partially resolved | unstarted | 2026-09-24 |
+| 637 | [Absolute continuity of stationary Elo ratings](../../problems/637-elo-density.md) | Solved | unstarted | 2026-09-24 |
 | 638 | [A limiting law for maximal persistence in random clique complexes](../../problems/638-random-clique-maximal-persistence-law.md) | Partially resolved | unstarted | 2026-09-24 |
 | 639 | [Strong convergence rate of the fractional WIS Euler integrator](../../problems/639-wis-fractional-euler-rate.md) | Partially resolved | unstarted | 2026-09-24 |
 | 640 | [Coboundary expansion of random balanced Cayley complexes](../../problems/640-random-balanced-cayley-expansion.md) | Partially resolved | unstarted | 2026-09-24 |

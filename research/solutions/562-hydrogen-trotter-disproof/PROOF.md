@@ -1,6 +1,6 @@
 # Disproof of the proposed fixed-time hydrogen Trotter lower bound
 
-**Target:** Problem 562 at `61dec31d3c3ffe6e15aae8ad84ecf0968a18866d`; [unchanged original statement](statement.md). The current catalogue record is [archive 651](../../resolved/651-hydrogen-trotter-lower-bound.md).
+**Target:** Problem 562 at `61dec31d3c3ffe6e15aae8ad84ecf0968a18866d`; [unchanged original statement](statement.md). The current catalogue record is [AIM 561](../../../problems/561-hydrogen-trotter-lower-bound.md).
 
 **Status:** Solved — disproof supported by a [documented AI audit](REVIEW.md) of the complete supplied argument, under the repository's independent-audit convention.
 

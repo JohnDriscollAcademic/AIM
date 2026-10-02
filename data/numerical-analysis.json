@@ -124,8 +124,11 @@
     "title": "A fixed-time lower bound for Trotter splitting of the hydrogen ground state",
     "area": "Numerical analysis and quantum dynamics",
     "file": "problems/561-hydrogen-trotter-lower-bound.md",
-    "status": "Open",
-    "last_checked": "2026-09-24"
+    "status": "Solved",
+    "last_checked": "2026-10-02",
+    "outcome": "Disproved lower bound",
+    "proof": "research/solutions/562-hydrogen-trotter-disproof/PROOF.md",
+    "review": "research/solution_reviews/2026-10-02-active-prs/561-review.md"
   },
   {
     "id": "568",
@@ -180,8 +183,11 @@
     "title": "Optimal uniform observation time for mixed finite element waves",
     "area": "Numerical control and inverse problems",
     "file": "problems/605-mixed-wave-optimal-observation-time.md",
-    "status": "Partially resolved",
-    "last_checked": "2026-09-24"
+    "status": "Solved",
+    "last_checked": "2026-10-02",
+    "outcome": "Affirmative proof",
+    "proof": "research/solutions/606-mixed-wave-observation/PROOF.md",
+    "review": "research/solution_reviews/2026-10-02-active-prs/605-review.md"
   },
   {
     "id": "626",

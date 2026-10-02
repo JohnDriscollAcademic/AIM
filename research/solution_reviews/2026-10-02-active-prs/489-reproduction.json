@@ -1,0 +1,86 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "head": "7faf58307c22882ccd730eae421acb61fca3f43d",
+  "runs": [
+    {
+      "command": [
+        "C:\\Users\\MatthewColbrook\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "verify.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 43.07811709999805,
+      "log": "fresh-verification.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\MatthewColbrook\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "audit.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.9638371000182815,
+      "log": "fresh-audit.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\MatthewColbrook\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+        "-B",
+        "review_checks.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.295236299978569,
+      "log": "fresh-review-checks.log"
+    }
+  ],
+  "date": "2026-10-02",
+  "review_type": "Independent AI mathematical and implementation audit",
+  "target_id": 489,
+  "target_commit": "fa98b7525fa3f78317536a8825f9cfa0ae1c369c",
+  "package_directory": "research/solutions/490-lotka-volterra-counterexample",
+  "slow_run": {
+    "command": [
+      "C:\\Users\\MatthewColbrook\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "verify.py",
+      "--slow-matmul"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 128.5126894999994,
+    "bounds_hashes_before": {
+      "fourier_bounds.json": "302c05ae57f6ddf904052b2d6bfbfc721c210b21e099f71e9aa1d629f5d0fa1d",
+      "positivity_bounds.json": "3714e73b864e974716f684f29111540bc95c69abc785fd373e09ca0949a5105e"
+    },
+    "bounds_hashes_after": {
+      "fourier_bounds.json": "302c05ae57f6ddf904052b2d6bfbfc721c210b21e099f71e9aa1d629f5d0fa1d",
+      "positivity_bounds.json": "3714e73b864e974716f684f29111540bc95c69abc785fd373e09ca0949a5105e"
+    },
+    "identical_exact_bounds": true
+  },
+  "independent_run": {
+    "command": [
+      "C:\\Users\\MatthewColbrook\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "-B",
+      "C:\\Users\\MatthewColbrook\\Documents\\git_repos\\AIM\\research\\solution_reviews\\2026-10-02-active-prs\\489-independent-checks.py",
+      "C:\\Users\\MatthewColbrook\\.codex\\visualizations\\2026\\10\\01\\01a0f88a-46a6-73c1-ae0f-23d167c70a94\\pr22-lotka-review"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 4.228544299956411
+  },
+  "generated_outputs_match_pinned_json_values": true,
+  "generated_outputs_differ_from_pinned_bytes_only_by_windows_crlf": true,
+  "initial_auxiliary_hash_check": "Detected expected Windows CRLF rewriting of the two generated JSON outputs; normalized only these outputs and reran successfully.",
+  "decision": "Accept mathematical counterexample; preserve AIM 489 and repair stale submission routing during integration.",
+  "evidence_sha256": {
+    "489-review.md": "3fdebb090d3c8ed35a6359bae8d1e05782ac0facddbc54c3e560f324bc347e01",
+    "489-input-hashes.json": "c9dddf44fbe2f1196dd2a4b592f0f58e02035018d7c737e317fce7051aea7b87",
+    "489-independent-checks.py": "27e08dde13fa896bd1a34fc75981167877b90089d615eddf7f2e4bf9302e95bd",
+    "489-verification.log": "7291c45e1c735de9edb9b8d9b90c7fd889b51c1166a7a04af07c1426843d6077",
+    "489-slow-verification.log": "f145eda38361fa536d80adb1b0e25edc84af08643e3dd240bd0aebc769cc98cd",
+    "489-supplied-audit.log": "b817bdd7b3c69a39c67e3826bca466a8e45056f9da1b94563b3dffd073039b1b",
+    "489-submission-checks.log": "61f39ab18109a6f87e941cb0605110aa39c210ce7907d39482f611b9b9596560",
+    "489-independent-checks.log": "17d06eacc6b7ca43d523214815f69e403e1e1ebffc8e2c5f7abd934334cac005"
+  }
+}

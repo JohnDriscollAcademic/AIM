@@ -2,9 +2,9 @@
 
 **Area:** Population dynamics and nonlinear stability
 
-**Status:** 🟡 PARTIAL
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-23
+**Last checked:** 2026-10-02
 
 ## Problem statement
 
@@ -50,6 +50,14 @@ D-stability ensures local stability at every feasible positive equilibrium when 
 6. Stephen Baigent and Zhanyuan Hou, *Global Stability of Interior and Boundary Fixed Points for Lotka–Volterra Systems*, Differential Equations and Dynamical Systems **20** (2012), 53–66, DOI 10.1007/s12591-012-0103-0. [Author manuscript](https://www.ucl.ac.uk/~ucess29/resources/preprints/JDEDSGlobal_Stab_Rev.pdf), §2 definitions and Theorems 5–6, manuscript pp.8–10.
 
 ## Status review
+
+**Resolution (2026-10-02):** An exact rational four-species D-stable interaction matrix admits a nonconstant strictly positive periodic orbit. Exact certificates cover all positive diagonal scalings and an infinite Fourier tail, disproving global attraction under D-stability alone.
+
+**Proof and review:** [Accepted solution](../research/solutions/490-lotka-volterra-counterexample/PROOF.md); [fresh mathematical audit](../research/solution_reviews/2026-10-02-active-prs/489-review.md); [PR #22](https://github.com/MColbrook/AIM/pull/22). The audit records the pinned submission, target comparison and any supporting computations.
+
+**Evidence:** Solved under the documented-independent-audit convention. The review was performed by AI; it does not assert human peer review, publication, proof-assistant verification or novelty priority. The problem retains its existing page and ID.
+
+### Previous status review
 
 **Known cases:** Positive diagonal Lyapunov stability yields forward existence and attraction of all strictly positive trajectories; references 1–3 discuss this sufficient subclass.
 

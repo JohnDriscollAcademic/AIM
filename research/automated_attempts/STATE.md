@@ -1,6 +1,6 @@
 ---
 schema_version: 1
-revision: 84
+revision: 85
 current_problem: "001"
 phase: research
 status: open
@@ -59,10 +59,10 @@ current_campaign:
 last_sol_run: "research/automated_attempts/001/attempts/2026-09-08_1206_sol.md"
 last_astra_run: "2026-09-08T13:14:00Z"
 last_astra_review: "research/automated_attempts/001/reviews/2026-09-08_1314_astra.md"
-last_queue_sync: "2026-10-02T09:56:51.406357+00:00"
-queue_snapshot_commit: "fa98b7525fa3f78317536a8825f9cfa0ae1c369c"
+last_queue_sync: "2026-10-02T19:49:43.999426+00:00"
+queue_snapshot_commit: "3c76fb05f1cbf9a62e9d6d75111526bb415a620e"
 queue_manifest_initial_commit: "05e95237c571731534faaee9d4aa29865b5962b1"
-current_problem_count_observed: 649
+current_problem_count_observed: 642
 newly_discovered_problems: []
 queue_integrity_issues: []
 new_problem_ids_this_run: []
@@ -151,15 +151,16 @@ run_history:
   - "revision 83: Administrative update after external Robin gap resolution PR #16; 651 active, 14 retained. No programme attempt or Astra invocation; all campaign counters preserved."
   - "revision 81: Administrative removal of obsolete archive records; 665 active entries and no retained entries. No research attempt or proof verification."
   - "revision 84: AIM 043 and 045 labelled Solved in place; 649 open targets, 16 solved entries. All IDs, files, programme histories and campaign counters preserved."
-queue_snapshot_record: "research/automated_attempts/queue-sync-2026-10-02-nla-labels.json"
+  - "revision 85: Active PRs 17-24 audited; seven new complete resolutions and the triangle case recorded. 642 open targets, 23 solved entries. IDs, programme histories and campaign counters preserved."
+queue_snapshot_record: "research/automated_attempts/queue-sync-2026-10-02-active-pr-reviews.json"
 queue_snapshot_includes_working_tree_changes: true
-retained_problem_count_observed: 16
-last_maintenance_kind: "administrative status update for NLA resolutions; no renumbering, programme research or Astra invocation"
+retained_problem_count_observed: 23
+last_maintenance_kind: "administrative integration of reviewed solution PRs; no renumbering, programme research or Astra invocation"
 renumbering_record: "research/solution_reviews/2026-10-02/021-id-mapping.json"
 previous_renumbering_record: "research/solution_reviews/2026-10-02/id-mapping.json"
 queue_sync_notes:
   - "AIM 043 and 045 are Solved in their existing pages, with proof and review links to the NLA repository."
-  - "649 open targets and 16 solved entries agree with the catalogue."
+  - "642 open targets and 23 solved entries agree with the catalogue."
   - "Every problem ID, file, programme status and discovery date is preserved."
   - "Solved entries are ineligible for selection; historical snapshots are retained."
   - "Campaign 001 and its research/verification counters are unchanged."

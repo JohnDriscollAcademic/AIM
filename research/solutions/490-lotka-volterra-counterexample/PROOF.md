@@ -2,7 +2,7 @@
 
 **Target:** [Problem 489 at `823ea0c6f9151792238d8ccbe7d64ea7d66faf5d`](https://github.com/April-Hannah-Lena/AIM/blob/823ea0c6f9151792238d8ccbe7d64ea7d66faf5d/problems/489-lotka-volterra-d-stable-global-attraction.md), formerly problem 490 before the Robin renumbering; [preserved statement](statement.md).
 
-**Status:** Solved — counterexample supported by a [complete documented AI audit](REVIEW.md) and reproduced exact certificates. Current catalogue record: [archive 650](../../resolved/650-lotka-volterra-d-stable-global-attraction.md).
+**Status:** Solved — counterexample supported by a [complete documented AI audit](REVIEW.md) and reproduced exact certificates. Current catalogue record: [AIM 489](../../../problems/489-lotka-volterra-d-stable-global-attraction.md).
 
 **Prepared:** 2026-10-02 by OpenAI Codex, adapting the mathematical argument and certificates supplied by the contributor. The supplied package does not identify its author. [Provenance and reproduction record](reproduction.json).
 

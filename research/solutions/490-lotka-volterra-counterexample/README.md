@@ -1,6 +1,6 @@
 # D-stable Lotka–Volterra counterexample
 
-The [proof](PROOF.md) gives an exact rational four-species interaction matrix that is D-stable but has a nonconstant strictly positive periodic solution. This disproves global attraction in [problem 489 at the pinned target revision](statement.md), formerly problem 490. The [current archive record is 650](../../resolved/650-lotka-volterra-d-stable-global-attraction.md).
+The [proof](PROOF.md) gives an exact rational four-species interaction matrix that is D-stable but has a nonconstant strictly positive periodic solution. This disproves global attraction in [problem 489 at the pinned target revision](statement.md), formerly problem 490. The [current problem record is AIM 489](../../../problems/489-lotka-volterra-d-stable-global-attraction.md).
 
 **Status:** Solved under the repository's documented-independent-audit convention. Read the [complete AI audit](REVIEW.md) for the analytic argument, implementation checks and scope of the review. The supplied derivation does not identify its author. The package was adapted and reviewed by OpenAI Codex on 2026-10-02; human peer review and proof-assistant verification are not claimed.
 

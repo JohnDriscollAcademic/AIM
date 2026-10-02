@@ -2,9 +2,9 @@
 
 **Area:** Viscous conservation laws; asymptotic dynamics
 
-**Status:** 🔵 OPEN
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-22
+**Last checked:** 2026-10-02
 
 ## Problem statement
 
@@ -32,6 +32,14 @@ Burgers dynamics models nonlinear transport with viscosity. The question asks ho
 2. E. Hopf, [*The partial differential equation $`u_t+uu_x=\mu u_{xx}`$*](https://doi.org/10.1002/cpa.3160030302), Communications on Pure and Applied Mathematics 3 (1950), 201–230; the linearizing transformation underlying the profile representation.
 
 ## Status review
+
+**Resolution (2026-10-02):** Every probability measure on the specified bounded interval is realized as a late-time, spatially translated Burgers profile. The locality and diagonal gluing argument covers continuous as well as atomic measures.
+
+**Proof and review:** [Accepted solution](../research/solutions/351-burgers-profile-realization/aim351_burgers_realization.pdf); [fresh mathematical audit](../research/solution_reviews/2026-10-02-active-prs/351-review.md); [PR #23](https://github.com/MColbrook/AIM/pull/23). The audit records the pinned submission, target comparison and any supporting computations.
+
+**Evidence:** Solved under the documented-independent-audit convention. The review was performed by AI; it does not assert human peer review, publication, proof-assistant verification or novelty priority. The problem retains its existing page and ID.
+
+### Previous status review
 
 **Literature check:** Open in cited literature; no later resolution located.
 

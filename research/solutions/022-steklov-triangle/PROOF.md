@@ -134,7 +134,7 @@ Let $`s(x,y)=(-x,y)`$ and let $`R`$ be the rotation by $`2\pi/3`$; they generate
 
 $`\mathcal S`$ is a closed $`\Lambda`$-invariant subspace by (F2) and lies in $`\{\int_{\partial E}f=0\}`$. For $`F(z)=\sum_kc_ka_kz^k`$ with $`k\in\mathcal K:=\{k\ge1:3\nmid k\}`$, $`a_k=1`$ for odd $`k`$ and $`a_k=-i`$ for even $`k`$, the trace of $`w=\mathop{\mathrm{Re}}F`$ lies in $`\mathcal S`$: $`\mathop{\mathrm{Re}}z^k`$ ($`k`$ odd) and $`\mathop{\mathrm{Im}}z^k`$ ($`k`$ even) are odd under $`z\mapsto-\bar z`$, and $`\sum_j\omega^{jk}=0`$ for $`3\nmid k`$, $`\omega=e^{2\pi i/3}`$.
 
-**Trial function** (`certify/cert_E.py`). $`\tilde w_1=\mathop{\mathrm{Re}}F`$ with $`k\in\mathcal K`$, $`k\le25`$ ($`17`$ terms). Its coefficients are the exact rationals stored in `certify/trial_coeffs.json`. They were produced once by the non-rigorous helper `certify/make_trial_coeffs.py`; their origin is irrelevant for rigour. All quantities below are integrals of polynomials in the edge parameter $`t\in[0,1]`$, with $`z=V_k+t(V_{k+1}-V_k)`$ and $`ds=\sqrt3\,dt`$, computed exactly in Arb at 320 bits:
+**Trial function** (`certify/cert_E.py`). $`\tilde w_1=\mathop{\mathrm{Re}}F`$ with $`k\in\mathcal K`$, $`k\le25`$ ($`17`$ terms). Its coefficients are the exact rationals stored in `certify/trial_coeffs.json`. They were produced once by the non-rigorous helper `certify/make_trial_coeffs.py`; their origin is irrelevant for rigour. All quantities below are integrals of polynomials in the edge parameter $`t\in[0,1]`$, with $`z=V_k+t(V_{k+1}-V_k)`$ and $`ds=\sqrt3\,dt`$, enclosed using Arb ball arithmetic (128-bit working precision in the driver; the module's geometric constants are initialized at 320 bits):
 
 ```math
 n_0=\int_{\partial E}\tilde w_1^2,\qquad n_1=\int_{\partial E}\tilde w_1\,\partial_\nu\tilde w_1=\int_E|\nabla\tilde w_1|^2,\qquad n_2=\int_{\partial E}(\partial_\nu\tilde w_1)^2,
@@ -275,7 +275,7 @@ By Lemma 1 every triangle is similar to some $`T_S`$; $`S=0`$ is the equilateral
 | Step | Script | Arithmetic | Output |
 | --- | --- | --- | --- |
 | 1 | `certify/cert_rho.py` | exact integers (FLINT charpoly); Arb for the constants | third eigenvalue at least 1.388851 |
-| 2 | `certify/cert_E.py` | Arb at 320 bits; exact rational trial coefficients | first-eigenvalue enclosure, eigenvector errors, moments |
+| 2 | `certify/cert_E.py` | Arb at 128-bit working precision in the driver; exact rational trial coefficients | first-eigenvalue enclosure, eigenvector errors, moments |
 | 3 | `certify/cert_local.py` | Arb at 128 bits; outward-enclosed boxes | local region |
 | 4 | `certify/cert_far.py` | Arb | far region |
 

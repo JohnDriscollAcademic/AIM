@@ -2,9 +2,9 @@
 
 **Area:** Mathematical neuroscience; nonlinear Fokker–Planck equations
 
-**Status:** 🔵 OPEN
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-22
+**Last checked:** 2026-10-02
 
 ## Problem statement
 
@@ -33,6 +33,14 @@ This model represents a large inhibitory neuronal population with noise, firing 
 3. C. Rieutord and D. Salort, [*Asymptotic dynamics of inhibitory networks for the NNLIF Model in the large-delay limit*](https://arxiv.org/abs/2606.17611), preprint (2026), §1.2, Theorem 1 and §7.
 
 ## Status review
+
+**Resolution (2026-10-02):** A nonconstant positive periodic branch is constructed for an admissible choice of inhibitory coupling, delay and thresholds in the full delayed NNLIF PDE. The proof includes the reset operator, infinite-dimensional bifurcation argument, positivity and tail conditions. This is an existence result for some parameters, with negative thresholds allowed by the statement, not a claim for every fixed parameter choice.
+
+**Proof and review:** [Accepted solution](../research/solutions/353-delayed-nnlif-periodic-branch/aim353_delayed_nnlif_periodic.pdf); [fresh mathematical audit](../research/solution_reviews/2026-10-02-active-prs/353-review.md); [PR #23](https://github.com/MColbrook/AIM/pull/23). The audit records the pinned submission, target comparison and any supporting computations.
+
+**Evidence:** Solved under the documented-independent-audit convention. The review was performed by AI; it does not assert human peer review, publication, proof-assistant verification or novelty priority. The problem retains its existing page and ID.
+
+### Previous status review
 
 **Literature check:** Open in cited literature; no later resolution located.
 

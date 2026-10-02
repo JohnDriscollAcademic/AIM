@@ -10,7 +10,7 @@
 
 **Reviewed package:** [PROOF.md](PROOF.md), the three exact certificate modules and their finite data, the orchestration and supplied audit scripts. [reproduction.json](reproduction.json) records the original and adapted proof hashes, all supplied input hashes, versions and successful commands; [SHA256SUMS.txt](SHA256SUMS.txt) pins this review and the complete adapted package.
 
-**Current catalogue record:** [Archive 650](../../resolved/650-lotka-volterra-d-stable-global-attraction.md). [ID mapping](../../solution_reviews/2026-10-02/490-id-mapping.json).
+**Current catalogue record:** [AIM 489](../../../problems/489-lotka-volterra-d-stable-global-attraction.md). [Fresh independent audit and current integration](../../solution_reviews/2026-10-02-active-prs/489-review.md). The proposed archive move and renumbering are superseded; the original ID and page are retained.
 
 ## Provenance and scope
 

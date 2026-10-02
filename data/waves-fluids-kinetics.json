@@ -68,16 +68,22 @@
     "title": "Can every bounded entire Burgers profile recur at late times?",
     "area": "Viscous conservation laws; asymptotic dynamics",
     "file": "problems/351-burgers-entire-limits.md",
-    "status": "Open",
-    "last_checked": "2026-09-22"
+    "status": "Solved",
+    "last_checked": "2026-10-02",
+    "outcome": "Affirmative proof",
+    "proof": "research/solutions/351-burgers-profile-realization/aim351_burgers_realization.pdf",
+    "review": "research/solution_reviews/2026-10-02-active-prs/351-review.md"
   },
   {
     "id": "353",
     "title": "A genuinely periodic firing pattern in the delayed noisy integrate-and-fire PDE",
     "area": "Mathematical neuroscience; nonlinear Fokker–Planck equations",
     "file": "problems/353-delayed-nnlif-periodic.md",
-    "status": "Open",
-    "last_checked": "2026-09-22"
+    "status": "Solved",
+    "last_checked": "2026-10-02",
+    "outcome": "Affirmative proof",
+    "proof": "research/solutions/353-delayed-nnlif-periodic-branch/aim353_delayed_nnlif_periodic.pdf",
+    "review": "research/solution_reviews/2026-10-02-active-prs/353-review.md"
   },
   {
     "id": "354",

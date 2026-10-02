@@ -1,8 +1,8 @@
 # 637. Absolute continuity of stationary Elo ratings
 
 **Area:** Probability, statistics, and uncertainty quantification
-**Status:** 🟡 PARTIAL
-**Last checked:** 2026-09-24
+**Status:** ✅ SOLVED
+**Last checked:** 2026-10-02
 
 ## Problem statement
 
@@ -40,6 +40,14 @@ Elo ratings estimate relative skills in repeated paired comparisons. A density t
 - David Aldous, *Elo ratings and the sports model: A neglected topic in applied probability?*, Statistical Science 32(4), 2017, 616–629, DOI [10.1214/17-STS628](https://doi.org/10.1214/17-STS628).
 
 ## Status review
+
+**Resolution (2026-10-02):** For two players, equal true ratings, logistic parameter c=1/2 and update K=9/10, the unique stationary law is singular continuous with full support. A rigorous global drift certificate bounds the Hausdorff dimension of a full-measure carrier by 10 log(2)/7, strictly below 1. This disproves universal absolute continuity without classifying the other parameters.
+
+**Proof and review:** [Accepted solution](../research/solutions/siavash-sadeghi-637/aim637_counterexample.pdf); [fresh mathematical audit](../research/solution_reviews/2026-10-02-active-prs/637-review.md); [PR #24](https://github.com/MColbrook/AIM/pull/24). The audit records the pinned submission, target comparison and any supporting computations.
+
+**Evidence:** Solved under the documented-independent-audit convention. The review was performed by AI; it does not assert human peer review, publication, proof-assistant verification or novelty priority. The problem retains its existing page and ID.
+
+### Previous status review
 
 **Known cases:** The invariant measure exists uniquely, has full support and an exponential moment, and attracts the chain exponentially in the 2-Wasserstein distance under the source assumptions. The source contrasts binary scores with continuously distributed scores, where density existence is available. Its binary-score numerical experiments suggest densities but do not establish them.
 

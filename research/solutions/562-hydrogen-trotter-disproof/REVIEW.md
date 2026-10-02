@@ -10,9 +10,9 @@
 
 **Reviewed proof:** [PROOF.md](PROOF.md), SHA-256 `cac159018343ff49ddff55bedfa784bba28ffdbc570ecba00cc97c3c83045b45`.
 
-**Current catalogue record:** [Archive 651](../../resolved/651-hydrogen-trotter-lower-bound.md). [Current integration mapping](../../solution_reviews/2026-10-02/562-merge-id-mapping.json); [original submission mapping](id-mapping.json).
+**Current catalogue record:** [AIM 561](../../../problems/561-hydrogen-trotter-lower-bound.md). [Current integration and fresh review](../../solution_reviews/2026-10-02-active-prs/561-review.md); [historical proposed submission mapping](id-mapping.json), which is not applied to the current catalogue.
 
-**Catalogue integration:** The original audit and submission are retained at commit `1a187cd00296b87fcbbd261a161aa1b3b9a30881`. Merging upstream `fa98b7525fa3f78317536a8825f9cfa0ae1c369c` moves this record from archive 652 to 651 because upstream independently archived the Robin gap problem. The proof's catalogue link and its pinned digest have been updated; its mathematical content is unchanged.
+**Catalogue integration:** The original audit and submission are retained in Git history. The active-PR integration keeps problem 561 in place and supersedes the proposed archive moves and renumbering. Only current routing and manifest digests have been updated; the mathematical argument is unchanged.
 
 ## Provenance and scope
 

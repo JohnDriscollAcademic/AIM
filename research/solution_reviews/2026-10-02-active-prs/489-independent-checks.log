@@ -1,0 +1,6 @@
+PASS: all 24 pinned files match (two regenerated JSON outputs use LF-normalized hashes).
+PASS: all 15 principal minors independently reproduced by rational elimination.
+PASS: all 21 printed AM--GM atoms equal the machine certificate.
+PASS: all 1453977 Jacobian entries agree with a separate basis-vector reconstruction.
+PASS: storage bound max|J|=7191457749287168000 < 2**63.
+No new obstruction found; these finite checks supplement the separately audited infinite-tail proof.

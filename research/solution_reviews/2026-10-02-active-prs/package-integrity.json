@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-02",
+  "scope": "Intended Git bytes: existing HEAD blobs for unmodified files and saved bytes for explicitly edited metadata/proof-precision files. Original pinned inputs are identified in the individual reviews.",
+  "packages": [
+    {
+      "package": "606-mixed-wave-observation",
+      "manifest_entries_checked": 13,
+      "status": "PASS"
+    },
+    {
+      "package": "562-hydrogen-trotter-disproof",
+      "manifest_entries_checked": 4,
+      "status": "PASS"
+    },
+    {
+      "package": "618-fisher-score-heat-semigroup",
+      "manifest_entries_checked": 11,
+      "status": "PASS"
+    },
+    {
+      "package": "022-steklov-triangle",
+      "manifest_entries_checked": 29,
+      "status": "PASS"
+    },
+    {
+      "package": "siavash-sadeghi-544",
+      "manifest_entries_checked": 19,
+      "status": "PASS"
+    },
+    {
+      "package": "490-lotka-volterra-counterexample",
+      "manifest_entries_checked": 23,
+      "status": "PASS"
+    },
+    {
+      "package": "351-burgers-profile-realization",
+      "manifest_entries_checked": 11,
+      "status": "PASS"
+    },
+    {
+      "package": "353-delayed-nnlif-periodic-branch",
+      "manifest_entries_checked": 13,
+      "status": "PASS"
+    },
+    {
+      "package": "siavash-sadeghi-637",
+      "manifest_entries_checked": 18,
+      "status": "PASS"
+    }
+  ]
+}

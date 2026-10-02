@@ -2,9 +2,9 @@
 
 **Area:** Numerical control and inverse problems
 
-**Status:** 🟡 PARTIAL
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-24
+**Last checked:** 2026-10-02
 
 ## Problem statement
 
@@ -49,6 +49,14 @@ The threshold determines how long one must measure at a boundary to reconstruct 
 1. C. Castro and S. Micu, [A mixed finite elements approximation of inverse source problems for the wave equation with variable coefficients using observability](https://doi.org/10.1007/s00211-025-01489-0), *Numerische Mathematik* **157** (2025), 1847–1895. Equations (10)–(17), Theorem 1 and following discussion, pages 1852–1854. [Preprint](https://arxiv.org/abs/2501.11352).
 
 ## Status review
+
+**Resolution (2026-10-02):** The optimal uniform observation-time infimum is 2: observability holds for every T greater than 2, uniformly in the mesh for each specified bounded nonnegative potential, and fails below 2. The endpoint T=2 is not needed to determine this infimum.
+
+**Proof and review:** [Accepted solution](../research/solutions/606-mixed-wave-observation/PROOF.md); [fresh mathematical audit](../research/solution_reviews/2026-10-02-active-prs/605-review.md); [PR #17](https://github.com/MColbrook/AIM/pull/17). The audit records the pinned submission, target comparison and any supporting computations.
+
+**Evidence:** Solved under the documented-independent-audit convention. The review was performed by AI; it does not assert human peer review, publication, proof-assistant verification or novelty priority. The problem retains its existing page and ID.
+
+### Previous status review
 
 **Known cases:** Theorem 1 gives a finite mesh-independent threshold for bounded nonnegative potentials. The corresponding continuous equation is observable for every $`T>2`$; earlier work treats the zero-potential mixed discretization.
 
