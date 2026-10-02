@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-02T09:56:25.851654+00:00",
+  "target": {
+    "id": "489",
+    "former_id": "490",
+    "commit": "823ea0c6f9151792238d8ccbe7d64ea7d66faf5d",
+    "path": "problems/489-lotka-volterra-d-stable-global-attraction.md",
+    "original_sha256": "010b5ad654a0013132d00b8a4c5cbdc04948c275676c89dba7791772ada8005a"
+  },
+  "reviewer": "OpenAI Codex (AI), separate review of the previously supplied argument and certificates",
+  "supplied_author": "Not identified in supplied material",
+  "environment": {
+    "python": "3.14.4",
+    "numpy": "2.5.3",
+    "platform": "Linux-7.0.14-aarch64-with-glibc2.43",
+    "machine": "aarch64",
+    "assertions_enabled": true
+  },
+  "supplied_input_sha256": {
+    "PROOF.md": "f60149759c4638e9c9240955d9d6a42c976ddf8af037ca7f4a2cbbdf3b2981ff",
+    "README.md": "333c20a5bcc9f955615d88cc1f1359b22efac2bf10c8f4d90ccac596b7976c42",
+    "SHA256SUMS.txt": "0efaabba7145bbd71d5b63ff4971ab270e73c49cbbb96a63b7e901de83ca7ed4",
+    "anchor_coefficients.csv": "59a0a0bdf721a3f43f7edef3c132a95f87593ff717abc39879b7a9647187d949",
+    "audit.log": "b817bdd7b3c69a39c67e3826bca466a8e45056f9da1b94563b3dffd073039b1b",
+    "audit.py": "88f6d9381db135a3ba8c100569bf15f18de01a0b9cb59d66318bf458b0b79b5e",
+    "dstability.py": "68ce07d9268d77a2079770a7a7ecd8634d98c9579288f21d3834ca0982ededc4",
+    "dstability_certificate.json": "b56fc79b8802e4a71a3a3cda6179958730c1519af0480f4c73a51858ad401d71",
+    "fourier.py": "0a82a32f5cc89520598acb4b6cc67a42f9ceb9b4f52be8da28676db8082e6757",
+    "fourier_bounds.json": "9b54e9047e18ad1c7a2f21aab30391baf17b32c2c56a3426979febb10891fe95",
+    "fourier_certificate.npz": "f18907b6bc041a87d4561a24605b4dc81c6cd79d092539f219ecf5d3a5dc2eec",
+    "positivity.py": "1d1253d2d29b02ae5cc0fd0fb1cdc4fdf63af90011c997d574f41cd67541de15",
+    "positivity_bounds.json": "6d498b097e8e6fad1672b071bba842833bbfaa0e60491e7507c4dd9e00f86669",
+    "requirements.txt": "e09f656c130b9c08b2c5ab7187c891295e449ed77febea2a6ceee9cc98ccb0fc",
+    "verification.log": "7291c45e1c735de9edb9b8d9b90c7fd889b51c1166a7a04af07c1426843d6077",
+    "verify.py": "ebccc8eaee165dc95b1512392a140408cd3b438810454e7896558e2e80127c92"
+  },
+  "copied_without_changes": [
+    "verify.py",
+    "audit.py",
+    "dstability.py",
+    "fourier.py",
+    "positivity.py",
+    "anchor_coefficients.csv",
+    "dstability_certificate.json",
+    "fourier_certificate.npz",
+    "fourier_bounds.json",
+    "positivity_bounds.json"
+  ],
+  "adapted_proof_sha256": "fe7c43ae3376ab1fe5dc60f27f5e90af9225b6bdf8a11906a684d5fe764c5966",
+  "proof_adaptations": [
+    "Protected Markdown mathematics and core TeX operator macros",
+    "Pinned target, current archive, and reference links",
+    "Explicit distinction between supplied checks and current independent AI audit"
+  ],
+  "successful_commands": [
+    {
+      "command": "python verify.py",
+      "exit_code": 0,
+      "log": "verification.log"
+    },
+    {
+      "command": "python verify.py --slow-matmul",
+      "exit_code": 0,
+      "log": "slow-verification.log"
+    },
+    {
+      "command": "python audit.py",
+      "exit_code": 0,
+      "log": "audit.log"
+    },
+    {
+      "command": "python review_checks.py",
+      "exit_code": 0,
+      "log": "review-checks.log"
+    }
+  ],
+  "exact_outputs_reproduced_byte_for_byte": [
+    "fourier_bounds.json",
+    "positivity_bounds.json"
+  ],
+  "assertion_guard_test": "python -O verify.py rejects execution; checked by review_checks.py",
+  "int64_storage_overflow_probe": "NumPy raises OverflowError for 2**63 assigned to signed int64",
+  "formal_verification": false,
+  "human_review": false,
+  "literature_search": "No new literature search; the date records review of supplied mathematical evidence.",
+  "csv_line_endings": "Original CRLF bytes retained; package attributes disable conversion and recognize CR-at-EOL whitespace."
+}

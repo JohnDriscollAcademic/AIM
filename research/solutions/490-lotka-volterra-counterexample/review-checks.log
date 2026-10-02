@@ -1,0 +1,4 @@
+PASS: all 196 CSV coefficient pairs agree exactly with the NPZ certificate.
+PASS: all 1029 residual coordinates agree with independent direct integer sums.
+PASS: three exact quadratic central-difference identities, including tail-only input.
+PASS: the main verifier rejects disabled assertions (Python -O).
