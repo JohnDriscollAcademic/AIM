@@ -1,0 +1,13 @@
+{
+  "challenge_module": "IdentityChallenge",
+  "solution_module": "IdentitySolution",
+  "theorem_names": [
+    "AIM.Statements.ComparatorControl.log_two_upper"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

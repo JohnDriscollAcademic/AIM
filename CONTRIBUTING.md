@@ -10,6 +10,11 @@ Give a precise statement, primary references, and a dated search for later proof
 
 Include the problem ID and repository commit, a proof or counterexample link, and an explanation of how it matches the full target. Identify what was reviewed and by whom, including whether the review was human or AI.
 
+For Lean work, follow the [setup and verification guide](docs/lean/README.md).
+The shared [statement workspace](lean-statements/README.md) pins the same Lean,
+Mathlib and LeanCert versions as OpenProblemsInNLA. Complete proof projects
+live in `research/lean/<ID>/` and use the isolated Linux verification workflow.
+
 ## Status and evidence
 
 Use the [status labels](README.md#problem-status), keeping the page badge and metadata consistent.
