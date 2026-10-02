@@ -9,7 +9,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
-from catalogue import next_problem_id, render_catalog, render_readme, render_resolved, subject_index
+from catalogue import next_problem_id, presentation_records, render_catalog, render_readme, render_resolved, subject_index
 from markdown_math import expressions, validate_math
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -155,10 +155,14 @@ class CatalogueTests(unittest.TestCase):
     def write_json(self, name, value):
         (self.root / name).write_text(json.dumps(value, indent=2) + '\n', encoding="utf-8")
 
-    def active_entries(self):
+    def problem_entries(self):
         manifest = self.read_json('catalogue.json')
-        return [row for group in manifest['groups']
+        return [{**row, 'group': group['key']} for group in manifest['groups']
                 for row in self.read_json(f"data/{group['key']}.json")]
+
+    def active_entries(self):
+        return [row for row in self.problem_entries()
+                if row['status'] in ('Open', 'Partially resolved')]
 
     def section(self, text, heading):
         return text.split(f'## {heading}\n', 1)[1].split('\n## ', 1)[0]
@@ -246,8 +250,7 @@ class CatalogueTests(unittest.TestCase):
         readme = (self.root / 'README.md').read_text(encoding="utf-8")
         catalogue = (self.root / 'CATALOG.md').read_text(encoding="utf-8")
         resolved = (self.root / 'RESOLVED.md').read_text(encoding="utf-8")
-        manifest = self.read_json('catalogue.json')
-        entries = self.active_entries()
+        entries, manifest = presentation_records(self.problem_entries(), self.read_json('catalogue.json'))
         self.assertTrue(readme.startswith('# AIM — Open Applied Problems\n'))
         self.assertIn(f'**{len(entries)} open targets**', readme)
         self.assertIn('](CATALOG.md)', readme)
@@ -263,7 +266,7 @@ class CatalogueTests(unittest.TestCase):
         for group in manifest['groups']:
             self.assertNotIn(f"## {group['title']}\n", readme)
             section = self.section(catalogue, group['title'])
-            open_rows = self.read_json(f"data/{group['key']}.json")
+            open_rows = [row for row in entries if row['group'] == group['key']]
             solved_count = sum(row['group'] == group['key'] and row['id'] in solved_ids
                                for row in manifest['retired'])
             self.assertIn(f"[{len(open_rows)}](CATALOG.md#{group['key']}-open) | "
@@ -515,7 +518,7 @@ class CatalogueTests(unittest.TestCase):
         self.assertIn(f'**{len(self.active_entries())} open targets**', readme)
         for identifier in ids:
             self.assertNotIn(f'| {identifier} |', readme)
-        spectral_count = len(grouped['spectral'])
+        spectral_count = sum(row['status'] in ('Open', 'Partially resolved') for row in grouped['spectral'])
         self.assertIn(f'[{spectral_count}](CATALOG.md#spectral-open)', readme)
 
     def test_missing_batch_membership(self):
@@ -554,6 +557,31 @@ class CatalogueTests(unittest.TestCase):
     def test_gap_in_active_numbering_is_rejected(self):
         self.change_row(lambda rows: rows.pop(1))
         self.run_catalogue(expected=1, message='Active problem IDs must be consecutive')
+
+    def test_solved_page_keeps_its_id_and_path(self):
+        rows = self.read_json('data/spectral.json')
+        row = rows[0]
+        row.update(status='Solved', outcome='Affirmative proof',
+                   proof='https://example.com/proof', review='https://example.com/review')
+        self.write_json('data/spectral.json', rows)
+        self.set_page_status(self.root / row['file'], 'Solved')
+        self.run_catalogue()
+        self.run_catalogue('--check')
+        self.assertTrue((self.root / row['file']).is_file())
+        self.assertEqual(self.read_json('data/spectral.json')[0]['id'], row['id'])
+        self.assertNotIn(row['id'], [r['id'] for r in self.read_json('catalogue.json')['retired']])
+        readme = (self.root / 'README.md').read_text(encoding='utf-8')
+        catalogue = (self.root / 'CATALOG.md').read_text(encoding='utf-8')
+        resolved = (self.root / 'RESOLVED.md').read_text(encoding='utf-8')
+        self.assertIn(f'**{len(self.active_entries())} open targets**', readme)
+        for text in (readme, catalogue, resolved):
+            self.assertIn(f"[{row['title']}]({row['file']}) | ✅ SOLVED", text)
+        self.assertNotIn(f"| {row['id']} |", catalogue.split('### Solved problems', 1)[0])
+        original = dict(row)
+        for field in ('outcome', 'proof', 'review'):
+            rows[0] = {k: v for k, v in original.items() if k != field}
+            self.write_json('data/spectral.json', rows)
+            self.run_catalogue(expected=1, message=f'Solved requires a {field} link' if field != 'outcome' else 'Solved requires an outcome')
 
     def test_documented_retirement_preserves_id(self):
         manifest = self.read_json('catalogue.json')
@@ -615,7 +643,8 @@ class CatalogueTests(unittest.TestCase):
                                          self.section(resolved, other_heading))
         readme = (self.root / 'README.md').read_text(encoding="utf-8")
         self.assertIn(f'**{len(self.active_entries())} open targets**', readme)
-        retired = self.read_json('catalogue.json')['retired']
+        _, display_manifest = presentation_records(self.problem_entries(), self.read_json('catalogue.json'))
+        retired = display_manifest['retired']
         solved = sum(row['status'] == 'Solved' for row in retired)
         lean = sum(row['status'] == 'Lean verified' for row in retired)
         claimed = sum(row['status'] == 'Solution claimed' for row in retired)

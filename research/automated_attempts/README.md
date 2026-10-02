@@ -1,8 +1,8 @@
 # Autonomous Mathematical Research Programme
 
-This is the persistent coordination layer for the repository's growing problem collection. Repository problem files and their established indexes determine membership. Discover membership from the current metadata rather than assuming a fixed count or maximum identifier. Active IDs are consecutive from 001 and may change after deletions.
+This is the persistent coordination layer for the repository's growing problem collection. Repository problem files and their established indexes determine membership. Discover membership from the current metadata rather than assuming a fixed count or maximum identifier. Problem-page IDs are consecutive from 001 and may change after deletions; solved pages keep their IDs and are ineligible for research selection.
 
-**Current checkpoint (2026-10-02):** [651 active and 14 retained solved entries](QUEUE.md). Campaign 001 remains incomplete conditional research; see [its evidence summary](001/STATUS.md). This queue checkpoint is administrative; external solution reviews are recorded [separately](../solution_reviews/2026-10-02/README.md).
+**Current checkpoint (2026-10-02):** [649 open targets and 16 solved entries](QUEUE.md). Campaign 001 remains incomplete conditional research; see [its evidence summary](001/STATUS.md). This queue checkpoint is administrative; external solution reviews are recorded [separately](../solution_reviews/2026-10-02/README.md).
 
 ## Scope and layout
 

@@ -2,9 +2,9 @@
 
 **Area:** Tensor computation and high-dimensional models
 
-**Status:** 🔵 OPEN
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-08
+**Last checked:** 2026-10-02
 
 ## Problem statement
 
@@ -29,6 +29,12 @@ Tensor trains represent high-dimensional states and functions in quantum dynamic
 3. G. Yu, J. Feng, Z. Chen, X. Cai and L. Qi, [A randomized block Krylov method for tensor train approximation](https://doi.org/10.3389/fams.2026.1824146), Frontiers in Applied Mathematics and Statistics 12 (2026). Recent approximation algorithms.
 
 ## Status review
+
+**Resolution (2026-10-02):** Solved in [NLA TR-04](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/tensor-computations/TR-04/README.md#resolution--2026-09-11). [Complete proof](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-recovered-tensors-2026-09-11/manuscripts/TR-04.pdf) · [Independent review](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-recovered-tensors-2026-09-11/verification/reviews/TR-04-review.md).
+
+Theorem 3 and Sections 2–4 provide the requested pointwise strict improvement at unchanged ranks, with exact recovery at zero optimum, in the exact arithmetic/SVD model. The NLA repository records an independent AI audit; this is not Lean verification.
+
+### Previous status review
 
 **Literature check:** Open in cited literature; no later resolution located
 

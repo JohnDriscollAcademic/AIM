@@ -2,9 +2,9 @@
 
 **Area:** Stable algorithms for general eigenproblems
 
-**Status:** 🔵 OPEN
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-08
+**Last checked:** 2026-10-02
 
 ## Problem statement
 
@@ -27,6 +27,12 @@ An end-to-end error guarantee at modest precision would make fast Schur computat
 3. N. Amsel et al., [Linear Systems and Eigenvalue Problems: Open Questions from a Simons Workshop](https://arxiv.org/abs/2602.05394), 2026; Problem 3.3.
 
 ## Status review
+
+**Resolution (2026-10-02):** Solved in [NLA IE-08](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/eigenvalues-and-inverse-problems/IE-08/README.md#resolution--2026-09-11). [Complete proof](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/eigenvalues-and-inverse-problems/IE-08/solution.md) · [Independent review](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-additional-2026-09-11/verification/reviews/IE-08-review.md).
+
+Theorem 1 supplies the stated work, precision, probability and residual guarantees, including input rounding and without spectral-gap assumptions. Smaller tolerances cover this entry's full tolerance range. The NLA repository records an independent AI audit; this is not Lean verification.
+
+### Previous status review
 
 **Literature check:** Open in cited literature; no later resolution located
 

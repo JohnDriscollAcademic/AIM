@@ -15,16 +15,16 @@ Contributions made with or without AI are welcome.
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**651 open targets** (538 open, 113 partial) · **14 solved entries** · **0 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
+**649 open targets** (536 open, 113 partial) · **16 solved entries** · **0 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 651 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 649 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
 | Subject group | Open targets | Solved |
 | --- | ---: | ---: |
 | [Spectral theory and spectral geometry](CATALOG.md#spectral-theory-and-spectral-geometry) | [23](CATALOG.md#spectral-open) | [2](CATALOG.md#spectral-solved) |
-| [Operators, matrices and computation](CATALOG.md#operators-matrices-and-computation) | [37](CATALOG.md#operators-open) | [2](CATALOG.md#operators-solved) |
+| [Operators, matrices and computation](CATALOG.md#operators-matrices-and-computation) | [35](CATALOG.md#operators-open) | [4](CATALOG.md#operators-solved) |
 | [Inverse problems, control and dynamics](CATALOG.md#inverse-problems-control-and-dynamics) | [28](CATALOG.md#inverse-open) | [0](CATALOG.md#inverse-solved) |
 | [PDEs, fluids and materials](CATALOG.md#pdes-fluids-and-materials) | [31](CATALOG.md#pdes-materials-open) | [1](CATALOG.md#pdes-materials-solved) |
 | [Probability, statistics and learning](CATALOG.md#probability-statistics-and-learning) | [43](CATALOG.md#probability-statistics-open) | [3](CATALOG.md#probability-statistics-solved) |
@@ -47,6 +47,8 @@ Complete resolutions recorded in this collection, including counterexamples to t
 
 | ID | Problem | Status | Outcome | Proof | Review |
 | --- | --- | --- | --- | --- | --- |
+| 043 | [A nearly cubic Schur algorithm using only linear precision](problems/043-linear-precision-schur.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/eigenvalues-and-inverse-problems/IE-08/solution.md) | [Review](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-additional-2026-09-11/verification/reviews/IE-08-review.md) |
+| 045 | [Improve the worst-case tensor-train approximation factor](problems/045-tensor-train-approximation.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-recovered-tensors-2026-09-11/manuscripts/TR-04.pdf) | [Review](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-recovered-tensors-2026-09-11/verification/reviews/TR-04-review.md) |
 | 652 | [The Robin fundamental gap conjecture](research/resolved/652-robin-fundamental-gap.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/021-robin-gap-counterexample/robin_gap_021.pdf) | [Review](research/solution_reviews/2026-10-02/021-review.md) |
 | 653 | [Exponential interior decay for smooth Steklov domains](research/resolved/653-steklov-smooth-interior-decay.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-steklov-024/steklov_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02/024-review.md) |
 | 654 | [Bounded harmonic lifting for complex media](research/resolved/654-complex-harmonic-lifting.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/218-complex-harmonic-lifting/PROOF.md) | [Review](research/solution_reviews/2026-10-02/218-review.md) |
@@ -64,7 +66,7 @@ Complete resolutions recorded in this collection, including counterexamples to t
 
 ## Reading the collection
 
-Each [problem page](problems/) records its assumptions and quantifiers, an **Application** section, references, a status label, and its last review date. The Application section describes a supported use where one is clear, labels indirect connections, or states that no direct application has been identified. Active problems are numbered consecutively from 001. Complete deletion closes the gap: subsequent entries and their links are renumbered, and deleted numbers are not reserved. Cite the repository commit alongside an ID because numbering can change.
+Each [problem page](problems/) records its assumptions and quantifiers, an **Application** section, references, a status label, and its last review date. The Application section describes a supported use where one is clear, labels indirect connections, or states that no direct application has been identified. Changing a problem's status to Solved keeps its page and ID in place. Complete deletion closes the gap: subsequent entries and their links are renumbered, and deleted numbers are not reserved. Cite the repository commit alongside an ID because numbering can change.
 
 The collection includes foundational questions as well as directly applied ones, with a wide range of difficulty. Related entries may imply one another; the count does not assert logical independence. Further additions exclude numerical linear algebra (NLA).
 

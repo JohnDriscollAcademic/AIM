@@ -164,8 +164,11 @@
     "title": "A nearly cubic Schur algorithm using only linear precision",
     "area": "Stable algorithms for general eigenproblems",
     "file": "problems/043-linear-precision-schur.md",
-    "status": "Open",
-    "last_checked": "2026-09-08"
+    "status": "Solved",
+    "last_checked": "2026-10-02",
+    "outcome": "Affirmative proof",
+    "proof": "https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/eigenvalues-and-inverse-problems/IE-08/solution.md",
+    "review": "https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-additional-2026-09-11/verification/reviews/IE-08-review.md"
   },
   {
     "id": "044",
@@ -180,8 +183,11 @@
     "title": "Improve the worst-case tensor-train approximation factor",
     "area": "Tensor computation and high-dimensional models",
     "file": "problems/045-tensor-train-approximation.md",
-    "status": "Open",
-    "last_checked": "2026-09-08"
+    "status": "Solved",
+    "last_checked": "2026-10-02",
+    "outcome": "Affirmative proof",
+    "proof": "https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-recovered-tensors-2026-09-11/manuscripts/TR-04.pdf",
+    "review": "https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-recovered-tensors-2026-09-11/verification/reviews/TR-04-review.md"
   },
   {
     "id": "290",

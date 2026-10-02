@@ -1,14 +1,16 @@
 # Research Queue
 
-Synchronized at **2026-10-02T08:58:31.960491+00:00** against the current working tree: **651 active problems** and **14 retained solved entries**. Snapshot base commit: dd0e96874add04c0ea8bbd10342fd2f6bd630639; this checkpoint includes the catalogue changes in the working tree.
+Synchronized at **2026-10-02T09:56:51.406357+00:00** against the current working tree: **649 open targets** and **16 solved entries**. Problems 043 and 045 retain their original pages and IDs. Snapshot base commit: fa98b7525fa3f78317536a8825f9cfa0ae1c369c; this checkpoint includes the catalogue changes in the working tree.
 
-The queue covers every current problem and all registered metadata. Active IDs are consecutive from 001. The [earlier thirteen reviews](../solution_reviews/2026-10-02/README.md) and [Robin gap review](../solution_reviews/2026-10-02/021-review.md) document the resolutions. The [latest identity mapping](../solution_reviews/2026-10-02/021-id-mapping.json) records this transition.
+The queue covers every current problem and all registered metadata. Problem pages keep their IDs when labelled Solved. The [earlier thirteen reviews](../solution_reviews/2026-10-02/README.md), [Robin gap review](../solution_reviews/2026-10-02/021-review.md) and [previous identity mapping](../solution_reviews/2026-10-02/021-id-mapping.json) document earlier archive transitions. The status reviews on problems 043 and 045 link to their resolutions in the NLA repository.
 
 Every surviving entry keeps its programme status and discovery date. Retained entries preserve their histories but are ineligible for selection. This synchronization is administrative: campaign 001, its phase and its attempt and senior-review counters are unchanged.
 
-[Current snapshot](queue-sync-2026-10-02-robin-gap.json) · [Previous snapshot](queue-sync-2026-10-02.json) · [Programme state](STATE.md) · [Pólya research status](001/STATUS.md)
+[Current snapshot](queue-sync-2026-10-02-nla-labels.json) · [Previous snapshot](queue-sync-2026-10-02-robin-gap.json) · [Programme state](STATE.md) · [Pólya research status](001/STATUS.md)
 
-## Active queue
+## Problem queue
+
+Only Open and Partially resolved entries are eligible for selection. Solved entries 043 and 045 remain visible here with their programme histories preserved, but are ineligible.
 
 | ID | Problem | Literature status | Programme status | Queue discovery / legacy snapshot |
 | --- | --- | --- | --- | --- |
@@ -54,9 +56,9 @@ Every surviving entry keeps its programme status and discovery date. Retained en
 | 040 | [Uniformly effective algebraic multigrid for diagonally dominant systems](../../problems/040-universal-algebraic-multigrid.md) | Open | queued | Legacy (by 2026-09-08) |
 | 041 | [Deterministic pseudospectral shattering in nearly cubic time](../../problems/041-deterministic-pseudospectral-shattering.md) | Open | queued | Legacy (by 2026-09-08) |
 | 042 | [Accurate selected bidiagonal singular vectors in O(kn) work](../../problems/042-accurate-bidiagonal-svd.md) | Open | queued | Legacy (by 2026-09-08) |
-| 043 | [A nearly cubic Schur algorithm using only linear precision](../../problems/043-linear-precision-schur.md) | Open | queued | Legacy (by 2026-09-08) |
+| 043 | [A nearly cubic Schur algorithm using only linear precision](../../problems/043-linear-precision-schur.md) | Solved | queued | Legacy (by 2026-09-08) |
 | 044 | [Quadratic-scale bit complexity for well-conditioned sparse systems](../../problems/044-sparse-linear-solve-bit-complexity.md) | Open | queued | Legacy (by 2026-09-08) |
-| 045 | [Improve the worst-case tensor-train approximation factor](../../problems/045-tensor-train-approximation.md) | Open | queued | Legacy (by 2026-09-08) |
+| 045 | [Improve the worst-case tensor-train approximation factor](../../problems/045-tensor-train-approximation.md) | Solved | queued | Legacy (by 2026-09-08) |
 | 046 | [Calderón uniqueness for bounded measurable conductivities](../../problems/046-rough-conductivity-calderon.md) | Partially resolved | queued | Legacy (by 2026-09-08) |
 | 047 | [Smooth anisotropic Calderón uniqueness](../../problems/047-smooth-anisotropic-calderon.md) | Partially resolved | queued | Legacy (by 2026-09-08) |
 | 048 | [Calderón uniqueness from an arbitrary local boundary patch](../../problems/048-arbitrary-local-calderon-data.md) | Open | queued | Legacy (by 2026-09-08) |

@@ -2,14 +2,14 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**651 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**649 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
 | Subject group | Open targets | Solved |
 | --- | ---: | ---: |
 | [Spectral theory and spectral geometry](#spectral-theory-and-spectral-geometry) | [23](#spectral-open) | [2](#spectral-solved) |
-| [Operators, matrices and computation](#operators-matrices-and-computation) | [37](#operators-open) | [2](#operators-solved) |
+| [Operators, matrices and computation](#operators-matrices-and-computation) | [35](#operators-open) | [4](#operators-solved) |
 | [Inverse problems, control and dynamics](#inverse-problems-control-and-dynamics) | [28](#inverse-open) | [0](#inverse-solved) |
 | [PDEs, fluids and materials](#pdes-fluids-and-materials) | [31](#pdes-materials-open) | [1](#pdes-materials-solved) |
 | [Probability, statistics and learning](#probability-statistics-and-learning) | [43](#probability-statistics-open) | [3](#probability-statistics-solved) |
@@ -97,9 +97,7 @@
 | 040 | [Uniformly effective algebraic multigrid for diagonally dominant systems](problems/040-universal-algebraic-multigrid.md) | 🔵 OPEN | Numerical PDE solvers and preconditioning |
 | 041 | [Deterministic pseudospectral shattering in nearly cubic time](problems/041-deterministic-pseudospectral-shattering.md) | 🔵 OPEN | Eigenvalue computation and nonnormal operators |
 | 042 | [Accurate selected bidiagonal singular vectors in O(kn) work](problems/042-accurate-bidiagonal-svd.md) | 🔵 OPEN | Numerical linear algebra and low-rank approximation |
-| 043 | [A nearly cubic Schur algorithm using only linear precision](problems/043-linear-precision-schur.md) | 🔵 OPEN | Stable algorithms for general eigenproblems |
 | 044 | [Quadratic-scale bit complexity for well-conditioned sparse systems](problems/044-sparse-linear-solve-bit-complexity.md) | 🔵 OPEN | Sparse numerical linear algebra |
-| 045 | [Improve the worst-case tensor-train approximation factor](problems/045-tensor-train-approximation.md) | 🔵 OPEN | Tensor computation and high-dimensional models |
 | 290 | [The log-rank conjecture for deterministic communication](problems/290-log-rank.md) | 🔵 OPEN | Communication complexity and distributed computation |
 | 305 | [Dynamic optimality of splay trees](problems/305-splay-dynamic-optimality.md) | 🔵 OPEN | Adaptive data structures and online computation |
 | 310 | [Deterministic identity testing for arithmetic circuits](problems/310-deterministic-polynomial-identity-testing.md) | 🔵 OPEN | Symbolic computation and derandomization |
@@ -121,6 +119,8 @@
 
 | ID | Problem | Status | Outcome | Proof | Review |
 | --- | --- | --- | --- | --- | --- |
+| 043 | [A nearly cubic Schur algorithm using only linear precision](problems/043-linear-precision-schur.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/eigenvalues-and-inverse-problems/IE-08/solution.md) | [Review](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-additional-2026-09-11/verification/reviews/IE-08-review.md) |
+| 045 | [Improve the worst-case tensor-train approximation factor](problems/045-tensor-train-approximation.md) | ✅ SOLVED | Affirmative proof | [Proof](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-recovered-tensors-2026-09-11/manuscripts/TR-04.pdf) | [Review](https://github.com/ajt60gaibb/OpenProblemsInNLA/blob/e375a6fc0a12df52c4f5a38b53df78b837e1c390/references/colbrook-recovered-tensors-2026-09-11/verification/reviews/TR-04-review.md) |
 | 656 | [Poisson kernel bounds for elliptic boundary diffusion on Lipschitz domains](research/resolved/656-dtn-poisson-bounds-lipschitz.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/435-corner-poisson-counterexample/PROOF.md) | [Review](research/solution_reviews/2026-10-02/435-review.md) |
 | 657 | [Finite-density time sampling of an infinite observation window](research/resolved/657-infinite-time-dynamical-frame-discretization.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/siavash-sadeghi-457-558/aim_457_uniform_sampling.pdf) | [Review](research/solution_reviews/2026-10-02/457-review.md) |
 
@@ -963,7 +963,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 
 | Publication batch | Open targets | Entry review dates |
 | --- | ---: | --- |
-| Original collection | 93 | 2026-09-08–2026-09-22 |
+| Original collection | 91 | 2026-09-08–2026-09-22 |
 | Second collection | 100 | 2026-09-08 |
 | Third collection | 96 | 2026-09-13 |
 | September 2026 expansion — batch 1 | 10 | 2026-09-17 |

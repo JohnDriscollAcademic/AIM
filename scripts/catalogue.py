@@ -175,11 +175,31 @@ def load_entries(manifest):
             if not valid_id(row["id"]):
                 errors.append(f"{path.name}: invalid ID {row['id']}")
                 continue
-            if row["status"] not in OPEN_STATUSES:
-                errors.append(f"{row['id']}: invalid active status; use Open or Partially resolved")
+            if row["status"] not in (*OPEN_STATUSES, "Solved"):
+                errors.append(f"{row['id']}: invalid page status; use Open, Partially resolved or Solved")
+            if row["status"] == "Solved":
+                if not isinstance(row.get("outcome"), str) or not row["outcome"].strip():
+                    errors.append(f"{row['id']}: Solved requires an outcome")
+                for field in ("proof", "review"):
+                    value = row.get(field)
+                    if not isinstance(value, str) or not value.strip():
+                        errors.append(f"{row['id']}: Solved requires a {field} link")
+                    elif not re.fullmatch(r"https?://\S+", value):
+                        evidence = (ROOT / value).resolve()
+                        if Path(value).is_absolute() or ROOT not in evidence.parents or not evidence.is_file():
+                            errors.append(f"{row['id']}: invalid {field} link")
             errors.extend(date_errors(row["last_checked"], row["id"]))
             entries.append({**row, "group": stem})
     return sorted(entries, key=lambda row: int(row["id"])), errors
+
+
+def presentation_records(entries, manifest):
+    """List resolutions separately while keeping their original pages and IDs."""
+    opened = [row for row in entries if row["status"] in OPEN_STATUSES]
+    solved = [{**row, "record": row["file"],
+               "reason": "Resolution recorded on the problem page."}
+              for row in entries if row["status"] == "Solved"]
+    return opened, {**manifest, "retired": [*manifest["retired"], *solved]}
 
 
 def table_text(value):
@@ -254,7 +274,7 @@ def render_readme(entries, manifest):
         ]
     lines += [
         "## Reading the collection", "",
-        "Each [problem page](problems/) records its assumptions and quantifiers, an **Application** section, references, a status label, and its last review date. The Application section describes a supported use where one is clear, labels indirect connections, or states that no direct application has been identified. Active problems are numbered consecutively from 001. Complete deletion closes the gap: subsequent entries and their links are renumbered, and deleted numbers are not reserved. Cite the repository commit alongside an ID because numbering can change.", "",
+        "Each [problem page](problems/) records its assumptions and quantifiers, an **Application** section, references, a status label, and its last review date. The Application section describes a supported use where one is clear, labels indirect connections, or states that no direct application has been identified. Changing a problem's status to Solved keeps its page and ID in place. Complete deletion closes the gap: subsequent entries and their links are renumbered, and deleted numbers are not reserved. Cite the repository commit alongside an ID because numbering can change.", "",
         "The collection includes foundational questions as well as directly applied ones, with a wide range of difficulty. Related entries may imply one another; the count does not assert logical independence. Further additions exclude numerical linear algebra (NLA).", "",
         "## Problem status", "",
         "The same labels appear on problem pages and index rows. Only Open and Partial count as open targets; each problem counts once.", "",
@@ -349,7 +369,7 @@ def render_resolved(manifest):
     lines += [
         "## Reporting a solution", "",
         "Open a [GitHub issue](https://github.com/MColbrook/AIM/issues) or pull request with the problem ID, a direct proof or counterexample reference, and a comparison with the entry's assumptions and conclusion. State whether the result is a claim, a published result, or an independently reviewed argument, and identify the review evidence. See [CONTRIBUTING.md](CONTRIBUTING.md#reporting-a-resolution) for how to update the record and index.", "",
-        "Candidates excluded before admission are documented in the [research records](research/README.md); they are not counted as resolved catalogue entries. This archive is generated from the `retired` records in [catalogue.json](catalogue.json).", "",
+        "Candidates excluded before admission are documented in the [research records](research/README.md); they are not counted as resolved catalogue entries. This list is generated from solved problem metadata in `data/` and the `retired` records in [catalogue.json](catalogue.json).", "",
     ]
     return "\n".join(lines)
 
@@ -460,8 +480,14 @@ def main():
             print(f"ERROR: {error}")
         raise SystemExit(1)
     entries, errors = load_entries(manifest)
+    if errors:
+        for error in errors:
+            print(f"ERROR: {error}")
+        raise SystemExit(1)
+    open_entries, display_manifest = presentation_records(entries, manifest)
     documents = dict(zip(GENERATED_DOCUMENTS, (
-        render_readme(entries, manifest), render_catalog(entries, manifest), render_resolved(manifest))))
+        render_readme(open_entries, display_manifest), render_catalog(open_entries, display_manifest),
+        render_resolved(display_manifest))))
     errors.extend(validate(entries, manifest, documents))
     if args.check:
         for name, content in documents.items():
@@ -477,7 +503,7 @@ def main():
     if args.write:
         for name, content in documents.items():
             (ROOT / name).write_text(content, encoding="utf-8")
-        print(f"Wrote {', '.join(documents)} with {len(entries)} open targets and {len(manifest['retired'])} retained entries.")
+        print(f"Wrote {', '.join(documents)} with {len(open_entries)} open targets and {len(display_manifest['retired'])} retained entries.")
     else:
         print(f"Validated {len(entries)} unique problems, metadata, required sections, math delimiters, local links, and freshness of {', '.join(documents)}.")
 
