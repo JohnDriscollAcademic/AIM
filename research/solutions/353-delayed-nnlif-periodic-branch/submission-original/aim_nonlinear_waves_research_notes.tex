@@ -1,0 +1,805 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=27mm]{geometry}
+\usepackage{microtype,enumitem,booktabs,longtable,array}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{xcolor}
+\hypersetup{pdftitle={AIM nonlinear-waves research notes: Burgers realization and a delayed NNLIF periodic branch},pdfauthor={Research draft prepared in conversation}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small AIM nonlinear-waves research notes}
+\fancyhead[R]{\small 2 October 2026}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}\newcommand{\C}{\mathbb C}\newcommand{\T}{\mathbb T}
+\newcommand{\HH}{\mathcal H}\newcommand{\DD}{\mathcal D}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\Ker}{ker}
+\DeclareMathOperator{\Ran}{ran}
+\DeclareMathOperator{\PV}{PV}
+\title{\textbf{Two proof arguments in the AIM nonlinear-waves category}\\[5pt]
+\large Burgers realization, a delayed-NNLIF periodic branch,\\and the limits of the present ten-problem attempt}
+\author{Prepared in this conversation}
+\date{2 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A spatial patching construction realizes every compactly supported probability-measure profile as a translated late-time limit of one bounded Burgers solution. A separate, longer argument proposes a periodic branch for the original delayed noisy leaky integrate-and-fire equation: the stationary Ornstein--Uhlenbeck reset profile is held fixed by varying the physical voltage thresholds together with the coupling, and an explicit boundary-response function supplies a nondegenerate two-parameter bifurcation. The operator estimates, nonlinear reduction, positivity argument and reconstruction of the physical parameters are included. An elementary single-entropy counterexample is recorded but explicitly excluded from any claim of novelty. Eight further selected targets remain unresolved in this work.
+\end{abstract}
+
+\subsection*{Scope and status}
+This document \textbf{does not supply ten complete solutions}. Section~\ref{sec:burgers} is a self-contained construction for the literal Burgers target. Section~\ref{sec:nnlif} is a research-level proposed proof, with its analytic steps spelled out; it has not been independently refereed or formally verified. In particular, the existence of this draft must not be confused with external validation of a new theorem.
+
+The repository pages consulted on 2 October 2026 label the two targets open and record status checks dated 22 September 2026. The Burgers paper explicitly poses the realization conjecture. The NNLIF literature located includes linear instability results and finite-window large-delay oscillations, neither of which by itself proves an exactly periodic solution of the full reset PDE. Targeted searches did not locate an announced resolution of either exact target; a negative search is not a certificate that no announcement exists. References~\cite{burgersentry,nnlifentry,gs,ccr,rs} identify the statements and the relevant distinctions.
+
+Repository numbers can change. The descriptive file names and titles in the bibliography, rather than the numbers alone, identify the targets addressed here.
+
+\clearpage
+\tableofcontents
+\clearpage
+
+\section{Realization of arbitrary entire Burgers profiles}\label{sec:burgers}
+
+Fix $\alpha<\beta$ and a Borel probability measure $\mu$ supported in $[\alpha,\beta]$. Write
+\begin{equation}\label{eq:profile}
+ \phi_\mu(x)=\frac{\displaystyle\int z e^{-zx/2}\dd\mu(z)}
+ {\displaystyle\int e^{-zx/2}\dd\mu(z)}.
+\end{equation}
+The target permits arbitrary observation shifts $x_k$ and imposes no prescribed tails, monotonicity or spatial recurrence on the initial datum~\cite{burgersentry,gs}. That freedom is decisive.
+
+\begin{theorem}\label{thm:burgers}
+There exists $u_0\in L^\infty(\R)$, with $\alpha\leq u_0\leq\beta$ almost everywhere, such that the solution of
+\[
+ u_t+u u_x=u_{xx},\qquad u(0,\cdot)=u_0,
+\]
+has a sequence of observation points $x_k$ satisfying
+\[
+ \sup_{|x|\leq k}|u(k,x_k+x)-\phi_\mu(x)|<\frac1k,
+ \qquad k\geq1.
+\]
+Consequently $u(k,x_k+\cdot)\to\phi_\mu$ uniformly on every compact interval.
+\end{theorem}
+
+\subsection{A bounded entire history}
+Define, for every real $s$ and $x$,
+\begin{equation}\label{eq:entirehistory}
+ H(s,x)=\int e^{-zx/2+z^2s/4}\dd\mu(z),\qquad
+ U(s,x)=-2\frac{H_x(s,x)}{H(s,x)}.
+\end{equation}
+Compact support permits differentiation to every order on compact $(s,x)$-sets. Moreover, $H>0$ and $H_s=H_{xx}$. A direct differentiation of the logarithmic derivative gives
+\[
+ U_s+UU_x=U_{xx}.
+\]
+The same formula writes $U(s,x)$ as a positive weighted average of $z\in[\alpha,\beta]$, hence
+\begin{equation}\label{eq:entirebounds}
+ \alpha\leq U(s,x)\leq\beta \quad(s,x\in\R),
+ \qquad U(0,x)=\phi_\mu(x).
+\end{equation}
+No finiteness or discreteness assumption on the support of $\mu$ was used.
+
+\subsection{A uniform fixed-time locality lemma}
+For $g\in L^\infty(\R)$ set
+\[
+ h_g(y)=\exp\left(-\frac12\int_0^y g(z)\dd z\right),\qquad
+ W_g(t,x)=\int_\R G_t(x-y)h_g(y)\dd y,
+\]
+where $G_t(z)=(4\pi t)^{-1/2}e^{-z^2/(4t)}$. Define
+\begin{equation}\label{eq:semigroup}
+ S_tg(x)=-2\frac{\partial_xW_g(t,x)}{W_g(t,x)}.
+\end{equation}
+The Gaussian dominates the at-most-exponential growth of $h_g$, so these expressions and their positive-time derivatives exist.
+
+For completeness, $h_g'=-g h_g/2$ almost everywhere. Integration by parts, whose boundary term vanishes by Gaussian decay, gives
+\begin{equation}\label{eq:average}
+ S_tg(x)=\frac{\int G_t(x-y)g(y)h_g(y)\dd y}
+ {\int G_t(x-y)h_g(y)\dd y}.
+\end{equation}
+Thus $\alpha\leq S_tg\leq\beta$ whenever $\alpha\leq g\leq\beta$. The heat equation and logarithmic differentiation give the Burgers equation. The approximate-identity property gives the initial trace at Lebesgue points and in $L^1_{\rm loc}$. This is the bounded Burgers solution.
+
+\begin{lemma}[Uniform locality]\label{lem:locality}
+For every $M,t,L,\varepsilon>0$, there exists $R>0$ such that, whenever
+\[
+ \|g\|_\infty,\|h\|_\infty\leq M,
+ \qquad g=h\ \hbox{almost everywhere on }[-R,R],
+\]
+one has
+\[
+ \sup_{|x|\leq L}|S_tg(x)-S_th(x)|<\varepsilon.
+\]
+The radius depends only on $M,t,L,\varepsilon$, not on the exterior values of either datum.
+\end{lemma}
+\begin{proof}
+The normalization at zero is important. It gives
+\[
+ e^{-M|y|/2}\leq h_g(y),h_h(y)\leq e^{M|y|/2},
+ \qquad h_g=h_h\quad\hbox{on }[-R,R].
+\]
+For $j=0,1$,
+\begin{equation}\label{eq:heat-tail}
+ |\partial_x^j(W_g-W_h)(t,x)|
+ \leq 2\int_{|y|>R}|\partial_x^jG_t(x-y)|e^{M|y|/2}\dd y.
+\end{equation}
+For fixed $t,L,M$, the right side tends to zero uniformly for $|x|\leq L$. Indeed, the Gaussian, multiplied by the polynomial arising from its first derivative and by $e^{M|y|/2}$, has an integrable majorant uniform on that compact $x$-interval.
+
+There is also a uniform positive lower bound on both denominators. Restricting the heat integral to $-1\leq y\leq1$ yields
+\begin{equation}\label{eq:denom}
+ W_g(t,x),W_h(t,x)\geq
+ m:=\frac{2}{\sqrt{4\pi t}}
+ \exp\left(-\frac{(L+1)^2}{4t}-\frac M2\right)>0.
+\end{equation}
+Also
+\[
+ |\partial_xW_h(t,x)|\leq
+ B:=\sup_{|x|\leq L}\int|\partial_xG_t(x-y)|e^{M|y|/2}\dd y<\infty.
+\]
+Therefore
+\[
+ |S_tg-S_th|
+ \leq \frac{2|\partial_x(W_g-W_h)|}{m}
+      +\frac{2B|W_g-W_h|}{m^2}.
+\]
+Choosing $R$ so that both Gaussian tails in~\eqref{eq:heat-tail} are sufficiently small proves the lemma.
+\end{proof}
+
+\subsection{Patching the backward histories into one datum}
+\begin{proof}[Proof of Theorem~\ref{thm:burgers}]
+Put $M=\max(|\alpha|,|\beta|)>0$ and $g_k(x)=U(-k,x)$. By~\eqref{eq:entirebounds}, all $g_k$ take values in $[\alpha,\beta]$.
+
+The semigroup identity needed here can be checked directly, without an appeal to uniqueness. The normalized Cole--Hopf datum of $g_k$ is
+\[
+ h_{g_k}(x)=\frac{H(-k,x)}{H(-k,0)}.
+\]
+For $z\in[\alpha,\beta]$,
+\[
+ G_k*e^{-z(\cdot)/2}(x)=e^{-zx/2+z^2k/4}.
+\]
+Tonelli's theorem in~\eqref{eq:entirehistory} therefore gives
+\[
+ G_k*h_{g_k}(x)=\frac{H(0,x)}{H(-k,0)},
+ \qquad S_kg_k=\phi_\mu.
+\]
+
+Use Lemma~\ref{lem:locality} with $t=k$, $L=k$ and $\varepsilon=1/k$ to obtain a finite radius $R_k$. Choose centers $x_k$ so that the intervals
+\[
+ I_k=[x_k-R_k,x_k+R_k]
+\]
+are pairwise disjoint; for example, choose them recursively from left to right with gaps of length one. Fix any $c\in[\alpha,\beta]$ and define the single measurable function
+\begin{equation}\label{eq:patched-data}
+ u_0(y)=
+ \begin{cases}
+ g_k(y-x_k),&y\in I_k,\\
+ c,&y\notin\bigcup_{k\geq1}I_k.
+ \end{cases}
+\end{equation}
+It satisfies the required pointwise bounds. For each $k$, the translated datum $y\mapsto u_0(x_k+y)$ agrees with $g_k$ on $[-R_k,R_k]$. Translation invariance and the locality lemma yield
+\[
+ \sup_{|x|\leq k}|S_ku_0(x_k+x)-S_kg_k(x)|<1/k.
+\]
+Since $S_kg_k=\phi_\mu$, this is exactly the claimed estimate.
+\end{proof}
+
+\begin{remark}[The order of the choices]
+The radius $R_k$ is allowed to be very large. It is chosen after the observation time $k$, not before it. Only then is the $k$th spatial window placed. There is no claim that heat propagation has finite speed, and there is no need to exchange a large-time limit with a large-radius limit. Uniform control of all possible exterior patches is precisely the content of Lemma~\ref{lem:locality}.
+\end{remark}
+
+\begin{corollary}[A universal initial datum]\label{cor:universal}
+For fixed $\alpha<\beta$, one bounded initial datum can be chosen so that every $\phi_\mu$, with $\mu$ a probability measure on $[\alpha,\beta]$, occurs as a translated late-time limit.
+\end{corollary}
+\begin{proof}
+Choose a sequence $(\mu_k)$ in the compact metrizable space of probability measures on $[\alpha,\beta]$ such that every measure is a subsequential limit along indices tending to infinity. For example, enumerate a countable dense subset in successive repeated finite blocks. At stage $k$, patch the backward history $U_{\mu_k}(-k,\cdot)$, using the same tolerances as above. Then
+\[
+ \sup_{|x|\leq k}|u(k,x_k+x)-\phi_{\mu_k}(x)|<1/k.
+\]
+Weak convergence of measures implies convergence of the numerator and denominator in~\eqref{eq:profile}, uniformly on compact $x$-intervals. This follows from compactness of the $z$-support, uniform equicontinuity in $x$, and a uniform positive lower bound for the denominator. Passing to an appropriate subsequence proves the assertion.
+\end{proof}
+This corollary strengthens the same catalogue target; it is not a second open problem.
+
+\newpage
+\section{A proposed periodic branch for the delayed NNLIF equation}\label{sec:nnlif}
+
+\subsection{Statement and the parameter freedom used}
+The target~\cite{nnlifentry} asks for some $a>0$, $b<0$, $d>0$, real $V_R<V_F$, and $T>0$, for which
+\begin{align}
+ p_t+\partial_v[(-v+bN(t-d))p]-a p_{vv}&=N(t)\delta_{V_R},\label{eq:physical}\\
+ p(t,V_F)=0,\qquad N(t)&=-a p_v(t,V_F),\qquad
+ \int_{-\infty}^{V_F}p(t,v)\dd v=1\label{eq:physical-bc}
+\end{align}
+has a nonnegative periodic solution with nonconstant $N$ and the stated reset, regularity, flux and moment properties.
+
+The argument below fixes $a=1$. It does \emph{not} prove a bifurcation for every prescribed pair of physical thresholds. Instead it uses the existential freedom in the target to choose
+\begin{equation}\label{eq:threshold-family}
+ V_F=bN_0,\qquad V_R=bN_0-1.
+\end{equation}
+This keeps a convenient centered stationary profile fixed as $b$ varies. Both thresholds will be negative. The catalogue imposes no positivity condition on them.
+
+\begin{theorem}[Proposed existence result]\label{thm:nnlif}
+For a sufficiently large frequency $\omega_0$, the construction below gives a fixed phase $\delta\in(0,2\pi)$ and a local nontrivial branch of parameters $b(\kappa)<0$, $\omega(\kappa)>0$. For sufficiently small nonzero real $\kappa$, setting
+\[
+ a=1,\quad d=\frac{\delta}{\omega(\kappa)},\quad
+ T=\frac{2\pi}{\omega(\kappa)},\quad
+ V_F=b(\kappa)N_0,\quad V_R=V_F-1
+\]
+gives a solution of~\eqref{eq:physical}--\eqref{eq:physical-bc} with all the properties required in the target and with a nonzero first firing-rate harmonic.
+\end{theorem}
+
+The proof is given rather than inferred from linear instability. The stationary profile, reset resolvent, response asymptotics, nonlinear reduction and positivity are all needed. The status qualification preceding Section~\ref{sec:burgers} applies to this theorem.
+
+\subsection{The centered stationary reset process}
+Use a centered voltage $w<0$, with reset at $-1$ and threshold at $0$. Define
+\begin{align}
+ m_0&=\int_{-1}^0 e^{z^2/2}\int_{-\infty}^{z}e^{-y^2/2}\dd y\dd z,
+ &N_0&=m_0^{-1},\label{eq:N0}\\
+ P(w)&=N_0e^{-w^2/2}\int_{\max(w,-1)}^0e^{z^2/2}\dd z.
+ \label{eq:steadyP}
+\end{align}
+Then $P>0$ for $w<0$, $P(0)=0$, $\int P=1$, $-P'(0)=N_0$, and
+\[
+ [P']_{-1}:=P'(-1+)-P'(-1-)=-N_0=P'(0).
+\]
+On each side of $-1$, $P''+(wP)'=0$.
+
+Let
+\[
+ \HH=L^2(( -\infty,0),e^{w^2/2}\dd w),\qquad
+ \HH_0=\left\{q\in\HH:\int_{-\infty}^0q\dd w=0\right\}.
+\]
+The integral defining $\HH_0$ is bounded on $\HH$ by Cauchy--Schwarz. Complexify these spaces when taking Fourier transforms or resolvents.
+
+Define the reset operator $A$ by
+\begin{equation}\label{eq:Adef}
+ Aq=q''+(wq)' \quad\hbox{on }(-\infty,-1)\cup(-1,0),
+ \qquad Cq=-q'(0).
+\end{equation}
+Its domain consists of the functions for which $r(w)=e^{w^2/4}q(w)$ is continuous at $-1$, belongs to $H^2$ on both component intervals, satisfies $w^2r\in L^2$, and obeys
+\begin{equation}\label{eq:Adomain}
+ q(0)=0,\qquad [q']_{-1}=q'(0).
+\end{equation}
+The corresponding transformed jump is $[r']_{-1}=e^{1/4}r'(0)$. Distributionally the equation $q_t=Aq$ is the absorbing Ornstein--Uhlenbeck equation with reset source $Cq\,\delta_{-1}$: the distributional second derivative contributes $[q']_{-1}\delta_{-1}=-Cq\,\delta_{-1}$, which the source cancels.
+
+Integration on the two component intervals gives
+\begin{equation}\label{eq:massA}
+ \int Aq\dd w=q'(0)-[q']_{-1}=0.
+\end{equation}
+Thus $A$ restricts to an operator $A_0$ on $\HH_0$, and $AP=0$.
+
+\subsection{The reset resolvent and its imaginary-axis bounds}
+Let $D$ denote the absorbing Ornstein--Uhlenbeck operator without reset, with Dirichlet boundary condition at zero and without a derivative jump at $-1$. The unitary map $q\mapsto e^{w^2/4}q$ transforms it into
+\[
+ L=\partial_{ww}+\frac12-\frac{w^2}{4}
+\]
+on $(-\infty,0)$ with Dirichlet boundary condition. It is self-adjoint, with compact resolvent and eigenvalues $-1,-3,-5,\ldots$.
+
+Write $R_D(\lambda)=(\lambda-D)^{-1}$ and
+\[
+ g_\lambda=R_D(\lambda)\delta_{-1},\qquad
+ a(\lambda)=Cg_\lambda.
+\]
+The point source is interpreted via the Green function. It belongs to $\HH$ after application of the resolvent and has derivative jump $-1$.
+
+\begin{lemma}[Rank-one reset formula]\label{lem:reset-resolvent}
+For $\Rea\lambda\geq0$, $\lambda\ne0$,
+\begin{equation}\label{eq:reset-resolvent}
+ R_A(\lambda)h=R_D(\lambda)h+
+ g_\lambda\frac{CR_D(\lambda)h}{1-a(\lambda)}.
+\end{equation}
+The operator $A$ is densely defined, closed and has compact resolvent. Its zero eigenvalue is algebraically simple, with eigenfunction $P$. On $\HH_0$ the whole imaginary axis belongs to the resolvent set. There is a constant $c_0$ such that
+\begin{equation}\label{eq:imag-bounds}
+ \|R_{A_0}(i\xi)\|_{\HH_0\to\HH_0}
+ \leq\frac{c_0}{1+|\xi|},\qquad
+ \|A_0R_{A_0}(i\xi)\|_{\HH_0\to\HH_0}\leq c_0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+If $(\lambda-A)q=h$, then its distributional absorbing equation is
+\[
+ (\lambda-D)q=h+Cq\,\delta_{-1}.
+\]
+Consequently $q=R_D(\lambda)h+Cq\,g_\lambda$. Taking $C$ gives
+\[
+ (1-a(\lambda))Cq=CR_D(\lambda)h,
+\]
+and hence~\eqref{eq:reset-resolvent} whenever its denominator is nonzero. Conversely that formula has precisely the jump~\eqref{eq:Adomain}, so it solves the original operator equation.
+
+To understand the denominator, let $\tau_0$ be the first hitting time of zero for
+\[
+ dW_t=-W_t\dd t+\sqrt2\dd B_t,\qquad W_0=-1.
+\]
+The absorbing flux identity gives $a(\lambda)=\mathbb E_{-1}e^{-\lambda\tau_0}$. One can also verify this identity by solving the adjoint boundary-value equation below. The hitting-time density from $-a$, $a>0$, is
+\begin{equation}\label{eq:hittingdensity}
+ \rho_a(t)=\frac{2a e^{2t}}{\sqrt{2\pi}(e^{2t}-1)^{3/2}}
+ \exp\left[-\frac{a^2}{2(e^{2t}-1)}\right],\qquad t>0.
+\end{equation}
+Indeed, $W_t=e^{-t}(-a+\widetilde B_{e^{2t}-1})$ for a standard Brownian motion $\widetilde B$. Changing variables in its first-passage density gives~\eqref{eq:hittingdensity}.
+
+The density is positive on every positive time interval. Therefore $|a(i\xi)|<1$ for $\xi\ne0$: equality in the triangle inequality would require $e^{-i\xi t}$ to be constant on the support of this density. For $\Rea\lambda>0$, one similarly has $|a(\lambda)|<1$. At zero,
+\[
+ a(0)=1,\qquad a'(0)=-\mathbb E_{-1}\tau_0=-m_0<0.
+\]
+The equality of the mean hitting time and~\eqref{eq:N0} follows either by integrating~\eqref{eq:hittingdensity} or by solving $m''-wm'=-1$, $m(0)=0$, at $w=-1$.
+
+Here are the high-frequency estimates required in the formula. For $|\xi|\geq1$,
+\begin{align}
+ \|R_D(i\xi)\|&\leq |\xi|^{-1},\label{eq:absorbing1}\\
+ \|R_D(i\xi)\delta_{-1}\|_\HH&\leq c|\xi|^{-3/4},\label{eq:absorbing2}\\
+ \|CR_D(i\xi)\|_{\HH\to\C}&\leq c|\xi|^{-1/4}.\label{eq:absorbing3}
+\end{align}
+For detail, the full-line kernel of $e^{tL}$ is
+\[
+ k_t(v,w)=\frac{e^{t/2}}{\sqrt{4\pi\sinh t}}
+ \exp\left[-\frac{(v^2+w^2)\cosh t-2vw}{4\sinh t}\right].
+\]
+The Dirichlet kernel on the half-line is $k_t(v,w)-k_t(v,-w)$. At an interior diagonal point it is bounded by $ct^{-1/2}$ for $0<t\leq1$. Its mixed boundary derivative at $(0,0)$ is bounded by $ct^{-3/2}$. If $\nu_j=2j+1$ and $\varphi_j$ are normalized Dirichlet eigenfunctions of $-L$, these bounds imply
+\[
+ \sum_{\nu_j\leq M}|\varphi_j(-1)|^2\leq cM^{1/2},\qquad
+ \sum_{\nu_j\leq M}|\varphi_j'(0)|^2\leq cM^{3/2},\quad M\geq1.
+\]
+For example, apply the respective heat-kernel bound at $t=1/M$ and use $e^{-\nu_j/M}\geq e^{-1}$ in the indicated sum. Integrating the resulting spectral measures against $(\xi^2+\nu^2)^{-1}$, or splitting them into dyadic intervals above and below $|\xi|$, gives squared-norm bounds $c|\xi|^{-3/2}$ and $c|\xi|^{-1/2}$. The harmless factor $e^{1/4}$ from the transformed point source does not change their powers. This proves~\eqref{eq:absorbing2}--\eqref{eq:absorbing3};~\eqref{eq:absorbing1} is immediate from the spectrum.
+
+The density~\eqref{eq:hittingdensity} is integrable, so $a(i\xi)\to0$. Formula~\eqref{eq:reset-resolvent} and~\eqref{eq:absorbing1}--\eqref{eq:absorbing3} now give $\|R_A(i\xi)\|\leq c/|\xi|$ for large $|\xi|$.
+
+For clarity, the domain and closedness assertions can also be checked from the same construction, rather than presupposed. On a fixed interval next to zero, $r''=Lr-(1/2-w^2/4)r$ bounds the local $H^2$ norm by the graph norm. This controls $r'(0)$ and hence $Cq$. For any fixed positive $\lambda$, the identity
+\[
+ q=R_D(\lambda)(\lambda q-Aq)+Cq\,g_\lambda
+\]
+then controls the full piecewise harmonic-oscillator $H^2$ norm by the graph norm. The converse bound follows directly from the definition. Completeness of this piecewise domain, including its continuous trace conditions, proves closedness. Smooth compactly supported functions avoiding $-1$ and $0$ show density. The resolvent formula is a compact absorbing resolvent plus a rank-one operator, hence is compact.
+
+Near zero, the formula has an at-most-simple pole because $1-a(\lambda)=m_0\lambda+O(\lambda^2)$. The kernel is one-dimensional, as is also immediate from that formula at $\lambda=0$. It contains the normalized $P$. From~\eqref{eq:massA},
+\[
+ \int R_A(\lambda)h\dd w=\lambda^{-1}\int h\dd w.
+\]
+The residue is therefore $h\mapsto P\int h$. It vanishes on $\HH_0$, so the apparent pole is removable on that space and $-A_0$ is invertible. On compact subsets of the rest of the imaginary axis, the resolvent is continuous and bounded. This proves the first bound in~\eqref{eq:imag-bounds}. The identity $A_0R_{A_0}(i\xi)=i\xi R_{A_0}(i\xi)-I$ proves the second.
+\end{proof}
+
+\subsection{Boundary traces and periodic function spaces}
+Equip $D(A)$ with its graph norm. The graph-norm equivalence just proved and the one-dimensional derivative-trace interpolation inequality give
+\begin{equation}\label{eq:trace-interpolation}
+ |Cq|\leq c\|q\|_\HH^{1/4}\|q\|_{D(A)}^{3/4}.
+\end{equation}
+To see the exponents directly, apply the local inequality
+\[
+ |r'(0)|\leq c\|r\|_{L^2(-1/2,0)}^{1/4}
+                  \|r\|_{H^2(-1/2,0)}^{3/4}
+             +c\|r\|_{L^2(-1/2,0)}
+\]
+and absorb the last term into the graph norm. The weight is bounded above and below on this interval. Also
+\begin{equation}\label{eq:derivative-interpolation}
+ \|q_w\|_\HH\leq
+ c\|q\|_\HH^{1/2}\|q\|_{D(A)}^{1/2}.
+\end{equation}
+Indeed, in transformed variables $q_w=e^{-w^2/4}(r'-wr/2)$. Piecewise one-dimensional interpolation controls $r'$, and
+$\|wr\|_2^2\leq\|r\|_2\|w^2r\|_2$ controls the second term. Continuity of $r$ at the reset makes its piecewise first derivative its global weak first derivative.
+
+Let $\T=\R/(2\pi\mathbb Z)$, and initially use the real Hilbert spaces
+\begin{equation}\label{eq:XY}
+ X=H^1(\T;\HH_0),\qquad
+ Y=H^2(\T;\HH_0)\cap H^1(\T;D(A_0)).
+\end{equation}
+For every $\omega>0$, Lemma~\ref{lem:reset-resolvent}, applied to Fourier coefficients, shows that
+\begin{equation}\label{eq:periodiciso}
+ \omega\partial_\theta-A_0:Y\longrightarrow X
+ \quad\hbox{is an isomorphism}.
+\end{equation}
+More generally it is an isomorphism
+\[
+ Y_s:=H^{s+1}(\T;\HH_0)\cap H^s(\T;D(A_0))
+ \longrightarrow H^s(\T;\HH_0)
+\]
+for every $s\geq0$. The $n$th inverse multiplier is $R_{A_0}(in\omega)$; the two bounds in~\eqref{eq:imag-bounds} give exactly one time derivative in $\HH_0$ and one graph norm without a time loss.
+
+Interpolation~\eqref{eq:trace-interpolation} on each Fourier coefficient and H\"older's inequality in the frequency sum give
+\begin{equation}\label{eq:time-trace}
+ Cq\in H^{5/4}(\T),\qquad
+ \|Cq\|_{H^{5/4}}\leq c\|q\|_Y.
+\end{equation}
+Explicitly, the weight $\langle n\rangle^{5/2}$ on $|Cq_n|^2$ is the product of the $\langle n\rangle^4\|q_n\|_\HH^2$ weight to the power $1/4$ and the $\langle n\rangle^2\|q_n\|_{D(A)}^2$ weight to the power $3/4$. Thus $q\mapsto Cq$ is compact from $Y$ to $H^1(\T)$. Likewise~\eqref{eq:derivative-interpolation} gives $q_w\in H^{3/2}(\T;\HH)$; the weaker inclusion $H^1(\T;\HH)$ already suffices for the nonlinear map below.
+
+\subsection{An explicit firing-response function}
+Put
+\begin{equation}\label{eq:response}
+ f=-P'\in\HH_0,
+ \qquad K(\lambda)=C(\lambda-A_0)^{-1}f.
+\end{equation}
+For the imaginary-axis values, the resolvent has just been justified. Let
+\[
+ h_\lambda(w)=\mathbb E_w e^{-\lambda\tau_0},\qquad w<0,
+\]
+where the absorbing OU process is now started at $w$. It solves
+\begin{equation}\label{eq:backward}
+ h_\lambda''-w h_\lambda'=\lambda h_\lambda,
+ \qquad h_\lambda(0)=1.
+\end{equation}
+An integration by parts in the absorbing resolvent equation gives
+\[
+ CR_D(\lambda)g=\int_{-\infty}^0h_\lambda(w)g(w)\dd w,
+ \qquad a(\lambda)=h_\lambda(-1).
+\]
+These identities hold first for $\Rea\lambda>0$ and extend to nonzero imaginary $\lambda$.
+
+\begin{lemma}[Response formula and phase]\label{lem:response}
+For $\lambda=i\xi\ne0$,
+\begin{equation}\label{eq:Kexact}
+ K(\lambda)=
+ \frac{N_0\{h_\lambda'(0)-h_\lambda'(-1)\}}
+ {(\lambda+1)\{1-h_\lambda(-1)\}}.
+\end{equation}
+As $\xi\to+\infty$,
+\begin{align}
+ K(i\xi)&=N_0(i\xi)^{-1/2}
+ \left(1-\frac{5}{4i\xi}+O(\xi^{-2})\right),\label{eq:Kasympt}\\
+ \frac{\mathrm d}{\mathrm d\xi}\arg K(i\xi)
+ &=-\frac{5}{4\xi^2}+O(\xi^{-3}).\label{eq:phase-derivative}
+\end{align}
+The argument is chosen continuously for sufficiently large positive $\xi$. Finally, $K(0)>0$.
+\end{lemma}
+\begin{proof}
+The reset formula yields
+\[
+ K(\lambda)=\frac{\int h_\lambda(-P')\dd w}{1-h_\lambda(-1)}
+ =\frac{\int h_\lambda'P\dd w}{1-h_\lambda(-1)}.
+\]
+For any admissible test function $\varphi$, stationarity of $P$ gives
+\[
+ \int P(\varphi''-w\varphi')\dd w
+ +N_0\{\varphi(-1)-\varphi(0)\}=0.
+\]
+Differentiating~\eqref{eq:backward} shows
+\[
+ (\partial_{ww}-w\partial_w)h_\lambda'=(\lambda+1)h_\lambda'.
+\]
+Taking $\varphi=h_\lambda'$ proves~\eqref{eq:Kexact}. Gaussian decay of $P$ justifies the lower-end integrations; the hitting-time representation also bounds the functions involved there.
+
+For $\Rea\lambda>0$, an integral solution of~\eqref{eq:backward} is
+\[
+ h_\lambda(w)=
+ \frac{\int_0^\infty s^{\lambda-1}e^{-s^2/2+ws}\dd s}
+      {\int_0^\infty s^{\lambda-1}e^{-s^2/2}\dd s}.
+\]
+Integration by parts in $s$ verifies the differential equation, while the boundary value and decay at $-\infty$ select the hitting-time solution. At zero this gives, by continuation,
+\begin{equation}\label{eq:gamma-ratio}
+ h_\lambda'(0)=\sqrt2\,
+ \frac{\Gamma((\lambda+1)/2)}{\Gamma(\lambda/2)}
+ =\lambda^{1/2}\left(1-\frac1{4\lambda}+O(\lambda^{-2})\right).
+\end{equation}
+The last expansion is the gamma-ratio asymptotic~\cite{dlmf}, valid uniformly in a sector containing the positive imaginary axis.
+
+For fixed starting distance $a>0$, the density~\eqref{eq:hittingdensity}, all its time derivatives, and its derivatives in $a$ are flat at $t=0$ and decay exponentially as $t\to\infty$. Multiplication by any fixed power of $t$ preserves integrability of all the required derivatives. Repeated integration by parts in $t$ therefore gives, for every integer $m$,
+\[
+ h_{i\xi}(-1)=O_m(\xi^{-m}),\qquad
+ h_{i\xi}'(-1)=O_m(\xi^{-m}),
+\]
+with the same conclusion after differentiation in $\xi$. In~\eqref{eq:Kexact}, these remote-reset contributions are thus smaller than every inverse power. Combining~\eqref{eq:gamma-ratio} with
+$(\lambda+1)^{-1}=\lambda^{-1}(1-\lambda^{-1}+O(\lambda^{-2}))$
+proves~\eqref{eq:Kasympt}. The coefficient $-5/4$ is the sum of $-1/4$ from the gamma ratio and $-1$ from this last factor. Differentiable asymptotics give
+\[
+ \arg K(i\xi)=-\frac\pi4+\frac5{4\xi}+O(\xi^{-2}),
+\]
+and hence~\eqref{eq:phase-derivative}.
+
+To check the sign at zero, add a constant centered input $I$ to the drift while keeping the centered thresholds $-1,0$ fixed. The mean inter-firing time and stationary firing rate are
+\[
+ m(I)=\int_{-1}^0\int_0^\infty e^{(z-I)s-s^2/2}\dd s\dd z,
+ \qquad N(I)=m(I)^{-1}.
+\]
+Clearly $m'(I)<0$ and therefore $N'(0)>0$. The normalized stationary density $P_I$ is differentiable in the graph norm near zero, as is seen from its explicit Gaussian formula. Differentiating $AP_I-I(P_I)'=0$ at $I=0$ and imposing zero derivative of the mass gives
+\[
+ (-A_0)\dot P_0=-P'=f,
+ \qquad K(0)=C\dot P_0=N'(0)>0.
+\]
+\end{proof}
+
+\subsection{Choosing a simple pair of critical harmonics}
+Choose $\omega_0$ sufficiently large that $K(i\omega_0)\ne0$ and the derivative in~\eqref{eq:phase-derivative} is nonzero. Also arrange
+\begin{equation}\label{eq:harmonic-separation}
+ |K(in\omega_0)|<|K(i\omega_0)|\qquad(n\geq2).
+\end{equation}
+This last choice is uniform over the infinitely many harmonics. Indeed, for sufficiently large $\Omega$ and all $\xi\geq\Omega$,~\eqref{eq:Kasympt} gives
+\[
+ 0.9N_0\xi^{-1/2}\leq|K(i\xi)|\leq1.1N_0\xi^{-1/2}.
+\]
+The ratio in~\eqref{eq:harmonic-separation} is at most
+$(1.1/0.9)n^{-1/2}<1$ for every $n\geq2$.
+
+Define
+\begin{equation}\label{eq:criticalparams}
+ b_0=-\frac1{|K(i\omega_0)|}<0,
+ \qquad b_0e^{-i\delta}K(i\omega_0)=1.
+\end{equation}
+The phase can be selected in $(0,2\pi)$; asymptotically it is $3\pi/4+O(\omega_0^{-1})$. From this point onward, \emph{$\delta$ is fixed}. The physical delay will be $d=\delta/\omega$, not an independently translated variable in the Banach-space map.
+
+\subsection{The full nonlinear periodic equation}
+Write the centered density as $P(w)+q(\theta,w)$, with $\theta=\omega t$, and put $n(\theta)=Cq(\theta)$. Under~\eqref{eq:threshold-family}, the physical drift in centered coordinates is
+\[
+ -w+b\{N(t-d)-N_0\}=-w+b n(\theta-\delta).
+\]
+The full periodic equation is therefore
+\begin{equation}\label{eq:nonlinearF}
+ F(q,b,\omega):=\omega q_\theta-A_0q
+       +b(Cq)(\theta-\delta)(P'+q_w)=0.
+\end{equation}
+It includes the original nonlinear feedback, not only its linearization.
+
+The map $F:Y\times\R\times(0,\infty)\to X$ is smooth (in fact real analytic). To verify the only nontrivial mapping assertion, $Cq\in H^{5/4}(\T)\subset H^1(\T)$ and $q_w\in H^1(\T;\HH)$. The one-dimensional vector-valued $H^1$ product inequality bounds their product in $H^1(\T;\HH)$. Both $\int P'=0$ and $\int q_w=0$, so the forcing has zero mass. Translation by the fixed $\delta$ is a bounded linear operator on every time Sobolev space. No differentiability of a variable-delay translation is being assumed.
+
+At $(0,b_0,\omega_0)$ the derivative in $q$ is
+\[
+ \mathcal Lq=\omega_0q_\theta-A_0q
+             -b_0f(Cq)(\theta-\delta).
+\]
+It is a compact perturbation of~\eqref{eq:periodiciso}, by the compact trace map following~\eqref{eq:time-trace}; hence it is Fredholm of index zero. The $n$th Fourier equation has characteristic factor
+\begin{equation}\label{eq:charfactor}
+ D_n=1-b_0e^{-in\delta}K(in\omega_0).
+\end{equation}
+Only $n=1,-1$ vanish. For $n=0$ this follows from $b_0<0<K(0)$, and for $|n|\geq2$ from~\eqref{eq:harmonic-separation} and complex conjugation.
+
+Let
+\[
+ R=(i\omega_0-A_0)^{-1},\qquad
+ e=\frac{Rf}{K(i\omega_0)},\qquad Ce=1,
+ \qquad \ell=CR.
+\]
+The real kernel is spanned by the real and imaginary parts of $e^{i\theta}e$. Moreover, $\ell$ annihilates the first Fourier coefficient of every $\mathcal Lq$ and $\ell(f)=K(i\omega_0)\ne0$. The range is therefore exactly
+\[
+ Z=\{h\in X:\ell(h_1)=0\},
+\]
+where a complex equation denotes two real conditions. Indeed, this subspace has real codimension two, and the Fredholm index and the two-dimensional kernel give the same codimension for the range. On the complementary domain
+\[
+ Y_c=\{q\in Y:Cq_1=0\},
+\]
+$\mathcal L:Y_c\to Z$ is an isomorphism.
+
+Choose the bounded projection $\Pi:X\to Z$ that subtracts
+\[
+ e^{i\theta}f\,\frac{\ell(h_1)}{K(i\omega_0)}
+ +e^{-i\theta}f\,\overline{\frac{\ell(h_1)}{K(i\omega_0)}}
+\]
+from a real $h$. Seek
+\begin{equation}\label{eq:branchansatz}
+ q=\kappa\{e^{i\theta}e+e^{-i\theta}\bar e\}+y,
+ \qquad y\in Y_c,\quad\kappa\in\R.
+\end{equation}
+The implicit function theorem applied to $\Pi F=0$ gives a smooth
+$y=y(\kappa,b,\omega)$ near $(0,b_0,\omega_0)$, with
+\[
+ y(0,b,\omega)=0,\qquad y_\kappa(0,b_0,\omega_0)=0.
+\]
+The remaining equation is the single complex equation
+\[
+ g(\kappa,b,\omega):=\ell(F(q,b,\omega)_1)=0.
+\]
+Since $g(0,b,\omega)=0$, division by $\kappa$ extends smoothly to a function $G$ at $\kappa=0$. At the base point $G=0$.
+
+The real two-parameter Jacobian of $G$ is nonsingular. Its two complex column vectors are
+\begin{align}
+ \partial_bG&=\ell(-e^{-i\delta}f)=-\frac1{b_0},\label{eq:jacb}\\
+ \partial_\omega G&=i\,\frac{CR^2f}{K(i\omega_0)}
+          =-i\,\frac{K'(i\omega_0)}{K(i\omega_0)}.\label{eq:jacomega}
+\end{align}
+Terms involving derivatives of $y$ disappear because $\ell$ annihilates the range of $\mathcal L$. In~\eqref{eq:jacomega}, the prime denotes differentiation in the complex resolvent variable. The first column is real and nonzero, while
+\[
+ \Ima\partial_\omega G
+ =-\Rea\frac{K'(i\omega_0)}{K(i\omega_0)}
+ =-\left.\frac{\mathrm d}{\mathrm d\omega}\arg K(i\omega)
+   \right|_{\omega=\omega_0}\ne0.
+\]
+The real implicit function theorem thus supplies $b=b(\kappa)$ and $\omega=\omega(\kappa)$ such that $F=0$ for small $\kappa$. These parameters stay negative and positive, respectively. By the defining complement in~\eqref{eq:branchansatz},
+\begin{equation}\label{eq:nonconstant}
+ (Cq)_1=\kappa.
+\end{equation}
+Every nonzero branch parameter gives a nonconstant firing rate.
+
+\subsection{Positivity is a separate step, not an interior-cone assumption}
+Smallness in the Gaussian Hilbert norm alone does not guarantee $P+q\geq0$ in the far tail. We prove positivity directly.
+
+For a sufficiently small branch parameter,~\eqref{eq:time-trace} and the time Sobolev embedding give
+\begin{equation}\label{eq:smallinput}
+ N(\theta):=N_0+Cq(\theta)\geq N_0/2,
+ \qquad |I(\theta)|:=|b(Cq)(\theta-\delta)|\leq1/2.
+\end{equation}
+Set $r=e^{w^2/4}(P+q)$ and $z=r_-:=\max(-r,0)$. The transformed distributional equation is
+\begin{equation}\label{eq:rPDE}
+ \omega r_\theta=r_{ww}+(1/2-w^2/4)r
+ -I(\theta)(r_w-wr/2)+e^{1/4}N(\theta)\delta_{-1}.
+\end{equation}
+The available graph regularity makes $r$ globally $H^1$ in $w$, with the prescribed derivative jump, and makes the negative-part test legitimate. Its trace is zero at $w=0$. Multiplying~\eqref{eq:rPDE} by $-z$ and integrating gives
+\begin{equation}\label{eq:negativeenergy}
+ \frac\omega2\frac{\mathrm d}{\mathrm d\theta}\|z\|_2^2
+ \leq-\|z_w\|_2^2+\frac12\|z\|_2^2
+       -\frac14\|wz\|_2^2+
+       \frac{I(\theta)}2\int w z^2\dd w.
+\end{equation}
+The reset contribution is $-e^{1/4}N(\theta)z(-1)\leq0$; the constant-in-$w$ transport contribution $-I r_w$ integrates to zero on the negative set.
+
+The Dirichlet half-line oscillator inequality is
+\begin{equation}\label{eq:oscillatorineq}
+ \|z_w\|_2^2+\tfrac14\|wz\|_2^2\geq\tfrac32\|z\|_2^2.
+\end{equation}
+It follows from the first odd oscillator eigenfunction $(-w)e^{-w^2/4}$, or directly by its ground-state factorization. Young's inequality gives
+\[
+ \left|\frac I2\int wz^2\dd w\right|
+ \leq\frac1{16}\|wz\|_2^2+I^2\|z\|_2^2.
+\]
+Subtracting only three quarters of the oscillator form in~\eqref{eq:negativeenergy} leaves a further nonpositive derivative term. Using~\eqref{eq:oscillatorineq} and~\eqref{eq:smallinput},
+\[
+ \frac\omega2\frac{\mathrm d}{\mathrm d\theta}\|z\|_2^2
+ \leq\left(-\frac58+I^2\right)\|z\|_2^2
+ \leq-\frac38\|z\|_2^2.
+\]
+Integrating over a full period forces $z=0$. Thus $P+q\geq0$ for every time.
+
+\subsection{Regularity, flux, moment and the original variables}
+The branch initially lies in $Y=Y_1$. It can be bootstrapped without assuming a semigroup theorem for the nonlinear delay equation. If $q\in Y_s$ with $s\geq1$, the same Fourier interpolation used above gives
+\[
+ Cq\in H^{s+1/4}(\T),\qquad
+ q_w\in H^{s+1/2}(\T;\HH).
+\]
+The one-dimensional Sobolev multiplication rule implies that the right side of
+\[
+ (\omega\partial_\theta-A_0)q
+ =-b(Cq)(\theta-\delta)(P'+q_w)
+\]
+belongs to $H^{s+1/4}(\T;\HH_0)$. The periodic inverse then gives $q\in Y_{s+1/4}$. Iteration gives arbitrarily high time regularity in the graph domain. On each open voltage interval away from the reset, the differential equation then gives arbitrarily high local spatial regularity by ordinary elliptic bootstrapping, applied also to time derivatives. Thus the density is classical away from the reset, continuous at the reset, and has exactly its prescribed derivative jump.
+
+The mass is one because $q(\theta)\in\HH_0$. Uniform boundedness of $P+q$ in $\HH$ implies
+\[
+ \sup_\theta\int_{-\infty}^0(1+w^2)|P(w)+q(\theta,w)|\dd w<\infty
+\]
+by Cauchy--Schwarz with the Gaussian reciprocal weight. For the flux, the transformed graph domain has $r$ and $r_w$ bounded on the lower half-line; consequently
+\[
+ (-w+I)(P+q)-(P+q)_w
+ =e^{-w^2/4}\{(-w/2+I)r-r_w\}\longrightarrow0
+ \quad(w\to-\infty).
+\]
+This verifies the lower-boundary flux condition.
+
+Finally, for a fixed small nonzero branch parameter define
+\begin{equation}\label{eq:reconstruction}
+ p(t,v)=P(v-bN_0)+q(\omega t,v-bN_0),
+ \qquad N(t)=N_0+Cq(\omega t).
+\end{equation}
+With~\eqref{eq:threshold-family}, $d=\delta/\omega$ and $T=2\pi/\omega$, the drift identity preceding~\eqref{eq:nonlinearF} shows that~\eqref{eq:reconstruction} solves the original equations, not a forced or reduced model. The fixed finite voltage translation preserves the second-moment bound. The flux identity at the firing boundary, the reset jump and periodicity are already built into the construction. Nonconstancy follows from~\eqref{eq:nonconstant}. This completes the proposed proof of Theorem~\ref{thm:nnlif}.
+
+\begin{remark}[What this construction does not establish]
+It does not assert stability of the periodic branch, uniqueness, existence for a prescribed biological parameter set, or a large-delay asymptotic description. None of these is needed for the existential catalogue statement. The small amplitude is selected after the large but finite $\omega_0$ and $b_0$, so the requirements $|b n|\leq1/2$ and $N_0+n>0$ are compatible.
+\end{remark}
+
+\newpage
+\section{A known single-entropy counterexample: excluded from the novel count}
+The literal single-convex-entropy nonuniqueness entry~\cite{entropyentry} permits an elementary example. This is not a newly solved open problem: one entropy inequality need not select the entropy solution for a nonconvex scalar flux, a distinction explicitly discussed in~\cite{lefran}.
+
+On $\mathcal U=(-2,2)\times(-1,1)$ let
+\[
+ F(r,z)=(r^3,13z),\qquad
+ \eta(r,z)=\tfrac12(r^2+z^2),\qquad
+ Q(r,z)=\tfrac34r^4+\tfrac{13}{2}z^2.
+\]
+The eigenvalues $3r^2$ and $13$ are distinct on $\mathcal U$, and $D^2\eta=I$. The entropy-flux compatibility $DQ=D\eta\,DF$ holds.
+
+Use Riemann data $r=-1$ for $x<0$ and $r=1$ for $x>0$, with $z=0$. One solution is a single shock of speed $1$. Another is $r(t,x)=R(x/t)$, where
+\[
+ R(\xi)=
+ \begin{cases}
+ -1,&\xi<3/4,\\
+ \sqrt{\xi/3},&3/4<\xi<3,\\
+ 1,&\xi>3.
+ \end{cases}
+\]
+It consists of a shock from $-1$ to $1/2$, of speed $3/4$, followed by a rarefaction. Across a shock from $a$ to $b$, the quadratic entropy production is
+\[
+ [Q]-s[\eta]=\frac14(b-a)^3(a+b),\qquad s=a^2+ab+b^2.
+\]
+For $-1\to1$, it is zero; for $-1\to1/2$, it is $-27/64$. Thus both solutions satisfy the displayed convex entropy inequality, have strong local $L^1$ initial trace, and stay in the compact range $[-1,1]\times\{0\}$. They are distinct.
+
+The first characteristic field is not genuinely nonlinear at $r=0$. Hence this example must not be silently transferred to a formulation requiring genuine nonlinearity, or to one requiring all scalar convex entropy inequalities. It is included to expose the admissibility distinction, not to inflate the number of new solutions.
+
+\section{Eight additional selected targets not solved here}\label{sec:remaining}
+Together with the two targets treated above, these are ten selected targets examined in the attempt. The entries in this section are \textbf{not solutions}. They identify concrete deductions or obstructions and the exact step that remains absent. The wider category contains other targets as well~\cite{catalogue}.
+
+\subsection{The unit ABC fast-dynamo target (218)}
+\href{https://raw.githubusercontent.com/MColbrook/AIM/main/problems/218-abc-fast-dynamo.md}{Exact repository statement}, consulted 2 October 2026.\par
+For the unit ABC field
+\[
+ u=(\sin z+\cos y,\sin x+\cos z,\sin y+\cos x)
+\]
+and the magnetic induction operator
+$L_\nu B=\nu\Delta B+\nabla\times(u\times B)$,
+one has $L_\nu u=-\nu u$. Hence the spectral bound is at least $-\nu$. For any eigenfunction in the mean-zero divergence-free space, the energy identity gives
+\[
+ \Rea\lambda\leq\sup_x\lambda_{\max}(\operatorname{sym}\nabla u(x))-\nu.
+\]
+The displayed supremum is exactly $\sqrt2$. For a real unit vector $a$, maximizing $a^T(\operatorname{sym}\nabla u)a$ separately in $x,y,z$ gives
+\[
+ \sum_{j=1}^3 |a_j|\sqrt{1-a_j^2}\leq\sqrt2,
+\]
+with equality for $|a_j|=1/\sqrt3$ and an appropriate common phase. Thus
+\[
+ -\nu\leq s(\nu)\leq\sqrt2-\nu.
+\]
+These estimates do not yield the required strictly positive lower bound as $\nu\downarrow0$. A growing wave packet or a nonnormal quasimode would not, on its own, establish that spectral lower bound.
+
+\subsection{A single cubic-NLS orbit with unbounded higher norm (226)}
+\href{https://raw.githubusercontent.com/MColbrook/AIM/main/problems/226-cubic-nls-unbounded-orbit.md}{Exact repository statement}, consulted 2 October 2026.\par
+The mass and defocusing energy bound the $H^1$ norm, not $H^2$. More importantly, constructions of the form
+\[
+ \text{for every }M\text{ there exist }u_{0,M},t_M
+ \text{ with }\|u_M(t_M)\|_{H^2}>M
+\]
+do not supply one smooth $u_0$ for which the norm is unbounded along an unbounded time sequence. The spatial disjoint-patching proof used for Burgers cannot simply be transplanted to the torus, and the required infinite-orbit shadowing or density argument has not been proved here.
+
+\subsection{Finite-time BV blow-up for the pressure law $p(v)=v^{-\gamma}$ (229)}
+\href{https://raw.githubusercontent.com/MColbrook/AIM/main/problems/229-p-system-finite-time-bv.md}{Exact repository statement}, consulted 2 October 2026.\par
+The familiar interaction sign can be evaluated explicitly:
+\[
+ 3(p'')^2-2p'p'''=
+ \gamma^2(\gamma+1)(\gamma-1)v^{-2\gamma-4}>0
+ \qquad(\gamma>1).
+\]
+This identifies a possible small-wave amplification mechanism. It does not construct an exact mechanically entropy-admissible solution with bounded state range, initially finite total variation, and total variation diverging at a finite time. Controlling the accumulating exact shock--rarefaction interactions is the missing step; an approximate front-tracking pattern is not that solution.
+
+\subsection{The nonsymmetric Schr\"odinger-map threshold (355)}
+\href{https://raw.githubusercontent.com/MColbrook/AIM/main/problems/355-schrodinger-map-threshold.md}{Exact repository statement}, consulted 2 October 2026.\par
+An energy/topological accounting argument becomes useful only after a suitable concentration decomposition and a no-concentration continuation theorem have been established for the unrestricted flow. Neither was proved here. Results restricted to small critical norm or to equivariant maps do not establish the catalogue's assertion for every degree-zero datum below the full energy threshold.
+
+\subsection{Three-dimensional Zakharov finite-time collapse (356)}
+\href{https://raw.githubusercontent.com/MColbrook/AIM/main/problems/356-zakharov-three-dimensional-collapse.md}{Exact repository statement}, consulted 2 October 2026.\par
+For the normalization in the entry,
+\[
+ n_{tt}-\Delta n=-\Delta|u|^2.
+\]
+The exact difference $r=n-|u|^2$ satisfies
+\[
+ r_{tt}-\Delta r=-\partial_{tt}|u|^2.
+\]
+Replacing $n$ by $|u|^2$ is therefore not an exact reduction to focusing NLS and is especially unjustified in a proposed collapse regime, where the omitted time derivative may be large. The proof of a finite-time energy-norm singularity for Schwartz data remains absent here.
+
+\subsection{The ancient Coulomb--Landau Liouville target (363)}
+\href{https://raw.githubusercontent.com/MColbrook/AIM/main/problems/363-landau-ancient-liouville.md}{Exact repository statement}, consulted 2 October 2026.\par
+The target assumes $0\leq f\leq1$ and finiteness of $\int f(v)\langle v\rangle^{-1}\dd v$, not finiteness of ordinary mass or entropy. The test function $(1+|v|^2)^{-p/2}$, with $2<p\leq3$, shows that this integrability distinction is real; it is not being claimed to solve the Landau equation. A proof based on conserved finite mass and finite entropy would consequently add hypotheses not present in the question. No argument removing that gap, or smooth bounded ancient counterexample, is supplied here.
+
+\subsection{Macroscopic-data-only Coulomb--Landau smoothing (364)}
+\href{https://raw.githubusercontent.com/MColbrook/AIM/main/problems/364-landau-macroscopic-smoothing.md}{Exact repository statement}, consulted 2 October 2026.\par
+The desired constant may depend only on the stated macroscopic bounds and positive waiting time, not on an uncontrolled higher moment or on an initial Fisher-information bound. A local ellipticity or smoothing estimate with constants deteriorating at high velocity does not produce that universal global $L^\infty$ bound. This uniform high-velocity step was not proved.
+
+\subsection{Ionization-coupled laser-envelope global regularity (441)}
+\href{https://raw.githubusercontent.com/MColbrook/AIM/main/problems/441-ionization-laser-envelope-global-regularity.md}{Exact repository statement}, consulted 2 October 2026.\par
+For a sufficiently decaying classical solution of the catalogue system, put $s=|u|^2$. Direct multiplication by $\bar u$ gives
+\[
+ \partial_t s+c_g\partial_z s+
+ 2\varepsilon\nabla\!\cdot\!\Ima(\bar u\nabla u)
+ =-2c\,\partial_t\rho.
+\]
+Hence
+\[
+ \int_{\R^3}|u(t)|^2\dd x+2c\int_{\R^3}\rho(t)\dd x
+ =\int_{\R^3}|u_0|^2\dd x+2c\int_{\R^3}\rho_0\dd x.
+\]
+This is a useful mass/ionization balance, but it does not bound all the high Sobolev norms required for global classical continuation. No such bound, and no qualifying blow-up counterexample, was obtained.
+
+\section*{Conclusion}
+The Burgers construction supplies one direct complete argument. The delayed-NNLIF section supplies a substantially longer proposed proof with explicit functional-analytic and positivity steps, but no independent verification is claimed. The elementary single-entropy example is excluded as a known admissibility issue. The other eight selected targets remain unresolved in this work. These distinctions, and the inability of a literature search to certify the absence of all announcements, are essential limitations of the result delivered here.
+
+\begin{thebibliography}{99}
+\bibitem{catalogue} M. Colbrook, \emph{AIM catalogue}, category ``Nonlinear waves, fluids and kinetic equations'', consulted 2 October 2026. \href{https://github.com/MColbrook/AIM/blob/main/CATALOG.md}{Repository catalogue}.
+\bibitem{burgersentry} M. Colbrook, \emph{Can every bounded entire Burgers profile recur at late times?}, repository file \texttt{351-burgers-entire-limits.md}, consulted 2 October 2026; status check dated 22 September 2026. \href{https://raw.githubusercontent.com/MColbrook/AIM/main/problems/351-burgers-entire-limits.md}{Exact statement}.
+\bibitem{gs} T. Gallay and A. Scheel, \emph{Viscous shocks and long-time behavior of scalar conservation laws}, Communications on Pure and Applied Analysis 23 (2024), 1448--1482; \href{https://arxiv.org/html/2306.13341v1}{arXiv:2306.13341v1}. See the conjecture following Proposition 6.2.
+\bibitem{nnlifentry} M. Colbrook, \emph{A genuinely periodic firing pattern in the delayed noisy integrate-and-fire PDE}, repository file \texttt{353-delayed-nnlif-periodic.md}, consulted 2 October 2026; status check dated 22 September 2026. \href{https://raw.githubusercontent.com/MColbrook/AIM/main/problems/353-delayed-nnlif-periodic.md}{Exact statement}.
+\bibitem{ccr} M. J. C\'aceres, J. A. Ca\~nizo and A. Ramos-Lora, \emph{On the asymptotic behavior of the NNLIF neuron model for general connectivity strength}, Communications in Mathematical Physics 406 (2025), article 115; \href{https://arxiv.org/html/2401.13534v1}{arXiv:2401.13534v1}. Linear stability and instability are distinct from nonlinear periodic existence.
+\bibitem{rs} C. Rieutord and D. Salort, \emph{Asymptotic dynamics of inhibitory networks for the NNLIF Model in the large-delay limit}, \href{https://arxiv.org/html/2606.17611v2}{arXiv:2606.17611v2}, 2026. The finite-window large-delay result is not a periodic orbit at fixed finite delay.
+\bibitem{crsurvey} J. A. Carrillo and P. Roux, \emph{Nonlinear partial differential equations in neuroscience: from modelling to mathematical theory}, Mathematical Models and Methods in Applied Sciences 35 (2025), 403--584; \href{https://arxiv.org/html/2501.06015v1}{arXiv:2501.06015v1}, Section 1.7.2.
+\bibitem{dlmf} NIST Digital Library of Mathematical Functions, \href{https://dlmf.nist.gov/5.11}{Section 5.11: Gamma-function asymptotic expansions}, especially the ratio expansions.
+\bibitem{entropyentry} M. Colbrook, \emph{One-dimensional convex-entropy nonuniqueness}, repository file \texttt{361-one-dimensional-convex-entropy-nonuniqueness.md}, consulted 2 October 2026. \href{https://raw.githubusercontent.com/MColbrook/AIM/main/problems/361-one-dimensional-convex-entropy-nonuniqueness.md}{Exact statement}.
+\bibitem{lefran} P. G. LeFloch and H. Ranocha, \emph{Kinetic functions for nonclassical shocks, entropy stability, and discrete summation by parts}, \href{https://arxiv.org/html/2007.08780v1}{arXiv:2007.08780v1}, 2020. The discussion of a single entropy for a nonconvex scalar flux is the relevant prior-known distinction.
+\end{thebibliography}
+\end{document}

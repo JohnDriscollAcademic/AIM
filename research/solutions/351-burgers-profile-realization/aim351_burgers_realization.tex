@@ -1,0 +1,234 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=25mm]{geometry}
+\usepackage{microtype,enumitem,booktabs,longtable,array}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Burgers profile realization}
+\fancyhead[R]{\small Matthew J. Colbrook}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}\newcommand{\C}{\mathbb C}\newcommand{\T}{\mathbb T}
+\newcommand{\HH}{\mathcal H}\newcommand{\DD}{\mathcal D}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Rea}{Re}
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\Ker}{ker}
+\DeclareMathOperator{\Ran}{ran}
+\DeclareMathOperator{\PV}{PV}
+\emergencystretch=2em
+\hypersetup{pdftitle={Realization of entire Burgers profiles by spatial patching},pdfauthor={Matthew J. Colbrook}}
+\title{\textbf{Realization of entire Burgers profiles\\by spatial patching}}
+\author{Matthew J. Colbrook\\[3pt]
+\small Department of Applied Mathematics and Theoretical Physics\\
+\small University of Cambridge, Cambridge CB3 0WA, United Kingdom\\
+\small \href{mailto:m.colbrook@damtp.cam.ac.uk}{m.colbrook@damtp.cam.ac.uk}}
+\date{2 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct bounded initial data for the viscous Burgers equation whose translated late-time limits contain any prescribed profile represented by a compactly supported probability measure. A uniform fixed-time locality estimate for the Cole--Hopf formula allows backward histories to be placed in disjoint spatial windows. The construction also produces a single initial datum realizing every probability-measure profile in a fixed value interval.
+\end{abstract}
+\smallskip
+\noindent\textbf{Submission.} AIM 351 at repository revision \texttt{fa98b7525fa3}; solution claim awaiting pull-request review.
+
+\section{Statement and result}\label{sec:burgers}
+
+Fix $\alpha<\beta$ and a Borel probability measure $\mu$ supported in $[\alpha,\beta]$. Write
+\begin{equation}\label{eq:profile}
+ \phi_\mu(x)=\frac{\displaystyle\int z e^{-zx/2}\dd\mu(z)}
+ {\displaystyle\int e^{-zx/2}\dd\mu(z)}.
+\end{equation}
+The target permits arbitrary observation shifts $x_k$ and imposes no prescribed tails, monotonicity or spatial recurrence on the initial datum~\cite{burgersentry,gs}. That freedom is decisive.
+
+\begin{theorem}\label{thm:burgers}
+There exists $u_0\in L^\infty(\R)$, with $\alpha\leq u_0\leq\beta$ almost everywhere, such that the solution of
+\[
+ u_t+u u_x=u_{xx},\qquad u(0,\cdot)=u_0,
+\]
+has a sequence of observation points $x_k$ satisfying
+\[
+ \sup_{|x|\leq k}|u(k,x_k+x)-\phi_\mu(x)|<\frac1k,
+ \qquad k\geq1.
+\]
+Consequently $u(k,x_k+\cdot)\to\phi_\mu$ uniformly on every compact interval.
+\end{theorem}
+
+\section{A bounded entire history}
+Define, for every real $s$ and $x$,
+\begin{equation}\label{eq:entirehistory}
+ H(s,x)=\int e^{-zx/2+z^2s/4}\dd\mu(z),\qquad
+ U(s,x)=-2\frac{H_x(s,x)}{H(s,x)}.
+\end{equation}
+Compact support permits differentiation to every order on compact $(s,x)$-sets. Moreover, $H>0$ and $H_s=H_{xx}$. A direct differentiation of the logarithmic derivative gives
+\[
+ U_s+UU_x=U_{xx}.
+\]
+The same formula writes $U(s,x)$ as a positive weighted average of $z\in[\alpha,\beta]$, hence
+\begin{equation}\label{eq:entirebounds}
+ \alpha\leq U(s,x)\leq\beta \quad(s,x\in\R),
+ \qquad U(0,x)=\phi_\mu(x).
+\end{equation}
+No finiteness or discreteness assumption on the support of $\mu$ was used.
+
+\section{A uniform fixed-time locality lemma}
+For $g\in L^\infty(\R)$ set
+\[
+ h_g(y)=\exp\left(-\frac12\int_0^y g(z)\dd z\right),\qquad
+ W_g(t,x)=\int_\R G_t(x-y)h_g(y)\dd y,
+\]
+where $G_t(z)=(4\pi t)^{-1/2}e^{-z^2/(4t)}$. Define
+\begin{equation}\label{eq:semigroup}
+ S_tg(x)=-2\frac{\partial_xW_g(t,x)}{W_g(t,x)}.
+\end{equation}
+The Gaussian dominates the at-most-exponential growth of $h_g$, so these expressions and their positive-time derivatives exist.
+
+For completeness, $h_g'=-g h_g/2$ almost everywhere. Integration by parts, whose boundary term vanishes by Gaussian decay, gives
+\begin{equation}\label{eq:average}
+ S_tg(x)=\frac{\int G_t(x-y)g(y)h_g(y)\dd y}
+ {\int G_t(x-y)h_g(y)\dd y}.
+\end{equation}
+Thus $\alpha\leq S_tg\leq\beta$ whenever $\alpha\leq g\leq\beta$. The heat equation and logarithmic differentiation give the Burgers equation. The approximate-identity property gives the initial trace at Lebesgue points and in $L^1_{\rm loc}$. This is the bounded Burgers solution; bounded well-posedness and the Cole--Hopf representation are recalled in~\cite{gs,hopf,cole}.
+
+\begin{lemma}[Uniform locality]\label{lem:locality}
+For every $M,t,L,\varepsilon>0$, there exists $R>0$ such that, whenever
+\[
+ \|g\|_\infty,\|h\|_\infty\leq M,
+ \qquad g=h\ \hbox{almost everywhere on }[-R,R],
+\]
+one has
+\[
+ \sup_{|x|\leq L}|S_tg(x)-S_th(x)|<\varepsilon.
+\]
+The radius depends only on $M,t,L,\varepsilon$, not on the exterior values of either datum.
+\end{lemma}
+\begin{proof}
+The normalization at zero is important. It gives
+\[
+ e^{-M|y|/2}\leq h_g(y),h_h(y)\leq e^{M|y|/2},
+ \qquad h_g=h_h\quad\hbox{on }[-R,R].
+\]
+For $j=0,1$,
+\begin{equation}\label{eq:heat-tail}
+ |\partial_x^j(W_g-W_h)(t,x)|
+ \leq 2\int_{|y|>R}|\partial_x^jG_t(x-y)|e^{M|y|/2}\dd y.
+\end{equation}
+For fixed $t,L,M$, the right side tends to zero uniformly for $|x|\leq L$. Indeed, the Gaussian, multiplied by the polynomial arising from its first derivative and by $e^{M|y|/2}$, has an integrable majorant uniform on that compact $x$-interval.
+
+There is also a uniform positive lower bound on both denominators. Restricting the heat integral to $-1\leq y\leq1$ yields
+\begin{equation}\label{eq:denom}
+ W_g(t,x),W_h(t,x)\geq
+ m:=\frac{2}{\sqrt{4\pi t}}
+ \exp\left(-\frac{(L+1)^2}{4t}-\frac M2\right)>0.
+\end{equation}
+Also
+\[
+ |\partial_xW_h(t,x)|\leq
+ B:=\sup_{|x|\leq L}\int|\partial_xG_t(x-y)|e^{M|y|/2}\dd y<\infty.
+\]
+Therefore
+\[
+ |S_tg-S_th|
+ \leq \frac{2|\partial_x(W_g-W_h)|}{m}
+      +\frac{2B|W_g-W_h|}{m^2}.
+\]
+Choosing $R$ so that both Gaussian tails in~\eqref{eq:heat-tail} are sufficiently small proves the lemma.
+\end{proof}
+
+\section{Patching the backward histories into one datum}
+\begin{proof}[Proof of Theorem~\ref{thm:burgers}]
+Put $M=\max(|\alpha|,|\beta|)>0$ and $g_k(x)=U(-k,x)$. By~\eqref{eq:entirebounds}, all $g_k$ take values in $[\alpha,\beta]$.
+
+The semigroup identity needed here can be checked directly, without an appeal to uniqueness. The normalized Cole--Hopf datum of $g_k$ is
+\[
+ h_{g_k}(x)=\frac{H(-k,x)}{H(-k,0)}.
+\]
+For $z\in[\alpha,\beta]$,
+\[
+ G_k*e^{-z(\cdot)/2}(x)=e^{-zx/2+z^2k/4}.
+\]
+Tonelli's theorem in~\eqref{eq:entirehistory} therefore gives
+\[
+ G_k*h_{g_k}(x)=\frac{H(0,x)}{H(-k,0)},
+ \qquad S_kg_k=\phi_\mu.
+\]
+
+Use Lemma~\ref{lem:locality} with $t=k$, $L=k$ and $\varepsilon=1/k$ to obtain a finite radius $R_k$. Choose centers $x_k$ so that the intervals
+\[
+ I_k=[x_k-R_k,x_k+R_k]
+\]
+are pairwise disjoint; for example, choose them recursively from left to right with gaps of length one. Fix any $c\in[\alpha,\beta]$ and define the single measurable function
+\begin{equation}\label{eq:patched-data}
+ u_0(y)=
+ \begin{cases}
+ g_k(y-x_k),&y\in I_k,\\
+ c,&y\notin\bigcup_{k\geq1}I_k.
+ \end{cases}
+\end{equation}
+
+\begin{figure}[ht]
+\centering
+\setlength{\unitlength}{1pt}
+\begin{picture}(370,69)
+\put(10,18){\vector(1,0){350}}
+\put(30,18){\line(0,1){9}}\put(100,18){\line(0,1){9}}
+\put(145,18){\line(0,1){9}}\put(245,18){\line(0,1){9}}
+\put(65,14){\line(0,1){8}}\put(195,14){\line(0,1){8}}
+\put(30,42){\makebox(70,10){$U(-k,\,\cdot-x_k)$}}
+\put(145,42){\makebox(100,10){$U(-(k+1),\,\cdot-x_{k+1})$}}
+\put(40,1){\makebox(50,10){$x_k$}}
+\put(165,1){\makebox(60,10){$x_{k+1}$}}
+\put(112,27){\makebox(20,10){$c$}}\put(267,27){\makebox(40,10){$\cdots$}}
+\put(353,2){\makebox(10,10){$y$}}
+\end{picture}
+\caption{Disjoint initial-data windows on the real line, with constant datum $c$ between them. Each radius is selected after its observation time. The drawing is schematic and is not to scale.}
+\label{fig:patches}
+\end{figure}
+
+It satisfies the required pointwise bounds. For each $k$, the translated datum $y\mapsto u_0(x_k+y)$ agrees with $g_k$ on $[-R_k,R_k]$. Translation invariance and the locality lemma yield
+\[
+ \sup_{|x|\leq k}|S_ku_0(x_k+x)-S_kg_k(x)|<1/k.
+\]
+Since $S_kg_k=\phi_\mu$, this is exactly the claimed estimate.
+\end{proof}
+
+\begin{remark}[The order of the choices]
+The radius $R_k$ is allowed to be very large. It is chosen after the observation time $k$, not before it. Only then is the $k$th spatial window placed. There is no claim that heat propagation has finite speed, and there is no need to exchange a large-time limit with a large-radius limit. Uniform control of all possible exterior patches is precisely the content of Lemma~\ref{lem:locality}.
+\end{remark}
+
+\section{A universal initial datum}
+\begin{corollary}[Universal realization]\label{cor:universal}
+For fixed $\alpha<\beta$, one bounded initial datum can be chosen so that every $\phi_\mu$, with $\mu$ a probability measure on $[\alpha,\beta]$, occurs as a translated late-time limit.
+\end{corollary}
+\begin{proof}
+Choose a sequence $(\mu_k)$ in the compact metrizable space of probability measures on $[\alpha,\beta]$ such that every measure is a subsequential limit along indices tending to infinity. For example, enumerate a countable dense subset in successive repeated finite blocks. At stage $k$, patch the backward history $U_{\mu_k}(-k,\cdot)$, using the same tolerances as above. Then
+\[
+ \sup_{|x|\leq k}|u(k,x_k+x)-\phi_{\mu_k}(x)|<1/k.
+\]
+Weak convergence of measures implies convergence of the numerator and denominator in~\eqref{eq:profile}, uniformly on compact $x$-intervals. This follows from compactness of the $z$-support, uniform equicontinuity in $x$, and a uniform positive lower bound for the denominator. Passing to an appropriate subsequence proves the assertion.
+\end{proof}
+
+
+
+\begin{thebibliography}{99}
+\bibitem{burgersentry} M. Colbrook, \emph{AIM 351: Can every bounded entire Burgers profile recur at late times?}, repository revision \texttt{fa98b7525fa3}, consulted 2 October 2026. \href{https://github.com/MColbrook/AIM/blob/fa98b7525fa3f78317536a8825f9cfa0ae1c369c/problems/351-burgers-entire-limits.md}{Pinned problem statement}.
+
+\bibitem{gs} T. Gallay and A. Scheel, \emph{Viscous shocks and long-time behavior of scalar conservation laws}, Communications on Pure and Applied Analysis 23(10) (2024), 1448--1482. \href{https://arxiv.org/html/2306.13341v1}{arXiv:2306.13341v1}. \href{https://doi.org/10.3934/cpaa.2023119}{doi:10.3934/cpaa.2023119}. See the conjecture following Proposition 6.2.
+
+\bibitem{hopf} E. Hopf, \emph{The partial differential equation $u_t+uu_x=\mu u_{xx}$}, Communications on Pure and Applied Mathematics 3 (1950), 201--230. \href{https://doi.org/10.1002/cpa.3160030302}{doi:10.1002/cpa.3160030302}.
+\bibitem{cole} J. D. Cole, \emph{On a quasi-linear parabolic equation occurring in aerodynamics}, Quarterly of Applied Mathematics 9(3) (1951), 225--236. \href{https://doi.org/10.1090/qam/42889}{doi:10.1090/qam/42889}.
+\end{thebibliography}
+\end{document}

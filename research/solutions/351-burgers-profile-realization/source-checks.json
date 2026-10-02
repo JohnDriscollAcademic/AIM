@@ -1,0 +1,34 @@
+{
+  "checked_on": "2026-10-02",
+  "checked_by": "OpenAI Codex (AI)",
+  "citation_keys": [
+    "burgersentry",
+    "cole",
+    "gs",
+    "hopf"
+  ],
+  "bibliography_keys": [
+    "burgersentry",
+    "gs",
+    "hopf",
+    "cole"
+  ],
+  "missing_citation_keys": [],
+  "uncited_bibliography_keys": [],
+  "label_count": 13,
+  "cross_reference_count": 6,
+  "missing_label_references": [],
+  "duplicate_labels": [],
+  "original_upload_sha256_matches": true,
+  "target_id": "351",
+  "target_commit": "fa98b7525fa3f78317536a8825f9cfa0ae1c369c",
+  "catalogue_modified_by_submission": false,
+  "author_added": "Matthew J. Colbrook",
+  "affiliation_and_email_added": true,
+  "bibliography_additions": [
+    "hopf",
+    "cole"
+  ],
+  "external_figures_required": false,
+  "source_validation_passed": true
+}

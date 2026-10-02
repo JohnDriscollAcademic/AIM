@@ -1,0 +1,37 @@
+{
+  "checked_on": "2026-10-02",
+  "checked_by": "OpenAI Codex (AI)",
+  "citation_keys": [
+    "ccr",
+    "crsurvey",
+    "dlmf",
+    "ikeda",
+    "nnlifentry",
+    "rs"
+  ],
+  "bibliography_keys": [
+    "nnlifentry",
+    "ikeda",
+    "ccr",
+    "rs",
+    "crsurvey",
+    "dlmf"
+  ],
+  "missing_citation_keys": [],
+  "uncited_bibliography_keys": [],
+  "label_count": 42,
+  "cross_reference_count": 34,
+  "missing_label_references": [],
+  "duplicate_labels": [],
+  "original_upload_sha256_matches": true,
+  "target_id": "353",
+  "target_commit": "fa98b7525fa3f78317536a8825f9cfa0ae1c369c",
+  "catalogue_modified_by_submission": false,
+  "author_added": "Matthew J. Colbrook",
+  "affiliation_and_email_added": true,
+  "bibliography_additions": [
+    "ikeda"
+  ],
+  "external_figures_required": false,
+  "source_validation_passed": true
+}

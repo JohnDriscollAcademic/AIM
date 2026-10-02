@@ -1,0 +1,29 @@
+{
+  "checked_on": "2026-10-02",
+  "source": "aim351_burgers_realization.tex",
+  "pdf": "aim351_burgers_realization.pdf",
+  "compiler": "MiKTeX pdfTeX 1.40.25 (MiKTeX 23.5), LaTeX2e 2023-06-01",
+  "native_editor_compilation": "Unavailable on this host: Unable to find standard directories for platform",
+  "fallback_compilation": "Successful using the existing installed MiKTeX distribution; no TeX installation performed",
+  "command": "pdflatex --disable-installer -interaction=nonstopmode -halt-on-error aim351_burgers_realization.tex",
+  "passes": 4,
+  "final_log_warnings": [],
+  "page_count": 4,
+  "pdf_author": "Matthew J. Colbrook",
+  "pdf_title": "Realization of entire Burgers profiles by spatial patching",
+  "source_sha256": "9560a9ff895e20deeaf0e0fd475fbf034c3228a7732359aafe7f40cc30fa6b96",
+  "pdf_sha256": "aa03bc82c73dd9fb112a882024652179c61b4b30828641d8d03a45cd1062a7ae",
+  "visual_inspection": {
+    "renderer": "Poppler pdftoppm, PNG at 95 dpi",
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "title_author_affiliation_email": "checked",
+    "equations_cross_references_bibliography": "checked",
+    "figure": "Disjoint initial-data patching windows",
+    "clipping_overlap_or_missing_glyphs_found": false
+  }
+}

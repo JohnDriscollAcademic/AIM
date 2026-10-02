@@ -1,0 +1,21 @@
+{
+  "original_filename": "aim_nonlinear_waves_research_notes.tex",
+  "original_sha256": "3aa938fb06940f0005af77970af8d8804db62928c694713f8e8e31b6444dac26",
+  "extracted_argument": "Section 1 (Burgers), including universal-datum corollary",
+  "target_id": "351",
+  "target_commit": "fa98b7525fa3f78317536a8825f9cfa0ae1c369c",
+  "target_path": "problems/351-burgers-entire-limits.md",
+  "author": "Matthew J. Colbrook",
+  "affiliation": "Department of Applied Mathematics and Theoretical Physics, University of Cambridge, Cambridge CB3 0WA, United Kingdom",
+  "email": "m.colbrook@damtp.cam.ac.uk",
+  "author_information_sources": [
+    "https://www.damtp.cam.ac.uk/user/mjc249/home.html",
+    "https://www.damtp.cam.ac.uk/user/mjc249/Talks.html"
+  ],
+  "prepared_on": "2026-10-02",
+  "submission_status": "Solution claimed; awaiting pull-request review",
+  "catalogue_status": "Open; unchanged by this submission",
+  "checks_by": "OpenAI Codex (AI), mathematical and editorial pre-submission check",
+  "independent_review_claimed": false,
+  "proof_assistant_verification_claimed": false
+}
