@@ -1,0 +1,300 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\hypersetup{pdftitle={Smooth-gradient approximation of finite-Fisher-information scores},pdfsubject={A heat-semigroup proof of AIM 665, original Problem 618},pdfauthor={Matthew J. Colbrook}}
+\setlength{\parskip}{3pt}
+\setlength{\parindent}{0pt}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Finite-Fisher-information scores}
+\fancyhead[R]{\small AIM 665 (original 618)}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\dV}{\dd V_g}
+\newcommand{\I}{\mathcal I}
+\newcommand{\normrho}[1]{\left\lVert #1\right\rVert_{L^2(\rho\,\mathrm{d}V_g)}}
+\newcommand{\iprho}[2]{\left\langle #1,#2\right\rangle_{L^2(\rho\,\mathrm{d}V_g)}}
+\title{\vspace{-10mm}\textbf{Smooth-gradient approximation of\\ finite-Fisher-information scores}\\[5pt]\large A heat-semigroup proof of AIM 665 (original 618)}
+\author{Matthew J. Colbrook}
+\date{2 October 2026}
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\Large\bfseries Smooth-gradient approximation of\\[2pt]
+finite-Fisher-information scores}\par
+\vspace{6pt}
+{\large A heat-semigroup proof of AIM 665 (original 618)}\par
+\vspace{8pt}
+Matthew J. Colbrook\par
+{\small Department of Applied Mathematics and Theoretical Physics,\par
+University of Cambridge, Cambridge CB3 0WA, United Kingdom\par
+\href{mailto:m.colbrook@damtp.cam.ac.uk}{\texttt{m.colbrook@damtp.cam.ac.uk}}}\par
+\vspace{8pt}
+2 October 2026
+\end{center}
+\vspace{2pt}
+\begin{abstract}
+Let $M$ be a smooth compact Riemannian manifold, possibly with smooth boundary, and let $\rho$ be a nonnegative probability density with $\sqrt\rho\in H^1(M)$. We prove that its score is in the $L^2(\rho\,\mathrm{d}V_g)$ closure of smooth gradients. An explicit approximation is
+\[
+ \varphi_\tau=P_\tau\log(P_\tau\rho+\tau),\qquad \tau\downarrow0,
+\]
+where $P_\tau$ is the Neumann heat semigroup. These potentials are smooth up to the boundary and have zero normal derivative. The proof uses a short-time heat-semigroup gradient estimate, an exact mixed-product identity, and lower semicontinuity of the square-root Dirichlet energy. It does not assume strict positivity or boundedness of $\rho$, or convexity of the boundary.
+\end{abstract}
+
+\section{Statement and analytic input}
+The target is original Problem 618 of the AIM catalogue, now archive 665 \cite{AIM}, corresponding to the conjecture following Theorem 4 of Casteras--Flaim--Monsaingeon \cite{CFM}. A different proof using extension to a closed manifold is already recorded in AIM \cite{Earlier}. This note presents an additional heat-semigroup argument and makes no claim of priority over that recorded resolution.
+
+\begin{theorem}\label{thm:main}
+Let $(M,g)$ be a smooth compact Riemannian manifold, possibly disconnected and possibly with smooth boundary. Suppose
+\[
+ \rho\geq0,\qquad \int_M\rho\dV=1,\qquad u:=\sqrt\rho\in H^1(M).
+\]
+Set
+\[
+ s_\rho=\begin{cases}2\nabla u/u,&u>0,\\0,&u=0,\end{cases}
+ \qquad \I(\rho)=4\int_M|\nabla u|_g^2\dV.
+\]
+Let $P_\tau=\exp(\tau\Delta_N)$ be the heat semigroup with homogeneous Neumann boundary condition; on a boundaryless manifold use the ordinary heat semigroup. Then
+\begin{equation}\label{eq:construction}
+ \varphi_\tau=P_\tau\!\left[\log\big(P_\tau\rho+\tau\big)\right]
+ \in C^\infty(M),\qquad \tau>0,
+\end{equation}
+where smoothness is understood up to the boundary, and
+\begin{equation}\label{eq:conclusion}
+ \lim_{\tau\downarrow0}\int_M|\nabla\varphi_\tau-s_\rho|_g^2\rho\dV=0.
+\end{equation}
+Moreover, $\partial_\nu\varphi_\tau=0$ on $\partial M$. In particular, $\varphi_j:=\varphi_{1/j}$ supplies the sequence requested by the catalogue problem.
+\end{theorem}
+
+We write $\Delta=\operatorname{div}\nabla$, so $\Delta_N$ is nonpositive on $L^2(M)$. The nontrivial analytic input is the following established estimate: there are $\tau_0>0$ and a function $c:(0,\tau_0]\to[1,\infty)$, independent of $f$, such that
+\begin{equation}\label{eq:GE}
+ |\nabla P_\tau f|_g^2\leq c(\tau)P_\tau(|\nabla f|_g^2),
+ \qquad f\in C^1(M),\qquad \lim_{\tau\downarrow0}c(\tau)=1.
+\end{equation}
+For a smooth nonconvex boundary this is Sturm's Theorem 1.1(iii), with $p=2$, and Remark 1.2 \cite{Sturm}. If the second fundamental form is bounded below by $-S$, one can take, for small $\tau$,
+\[
+ c(\tau)=\exp\!\left(4S\sqrt{\tau/\pi}+C\tau\right)
+\]
+with $C\geq0$ depending on the geometry. On a closed manifold the usual Ricci-lower-bound estimate gives $c(\tau)=e^{2K\tau}$. The factor above is obtained by squaring the $p=2$ estimate and renaming its geometry-dependent $O(\tau)$ constant. The requisite geometric lower bounds exist by smoothness and compactness; on the finitely many connected components one takes common bounds. No convexity is required. Estimate \eqref{eq:GE} is also recorded as (GE) in \cite[Section 3]{CFM}.
+
+We use the standard Neumann heat-semigroup properties (see \cite{Davies} for heat-kernel and semigroup background, and \cite[Section 3]{CFM} for this smooth compact geometry): positivity, preservation of constants, self-adjointness with respect to $\mathrm{d}V_g$, strong continuity on $L^1(M)$, and smoothing up to the boundary at positive times. Also
+\begin{equation}\label{eq:commute}
+ \Delta_N P_\tau h=P_\tau\Delta_N h\qquad (h\in D(\Delta_N)).
+\end{equation}
+Importantly, the functions $h$ to which \eqref{eq:commute} is applied below are smooth and satisfy the Neumann condition.
+
+\section{Proof}
+Throughout the proof norms and scalar products of tangent vectors are taken with respect to $g$.
+
+\subsection{Sobolev identities for the original density}
+The product rule for Sobolev functions (see \cite[Chapter 2]{Ziemer}, applied in local charts) implies
+\begin{equation}\label{eq:rhoW11}
+ \rho=u^2\in W^{1,1}(M),\qquad \nabla\rho=2u\nabla u\in L^1(M;TM).
+\end{equation}
+For completeness, if $u_n\to u$ in $H^1(M)$ with $u_n$ smooth, then
+\[
+ \|u_n^2-u^2\|_{L^1}
+ \leq(\|u_n\|_{L^2}+\|u\|_{L^2})\|u_n-u\|_{L^2}\longrightarrow0,
+\]
+and
+\begin{align*}
+ \|u_n\nabla u_n-u\nabla u\|_{L^1}
+ &\leq\|u_n-u\|_{L^2}\|\nabla u_n\|_{L^2}
+       +\|u\|_{L^2}\|\nabla u_n-\nabla u\|_{L^2}\\
+ &\longrightarrow0.
+\end{align*}
+This proves \eqref{eq:rhoW11} distributionally. The locality property of Sobolev gradients \cite[Chapter 2]{Ziemer} gives $\nabla u=0$ almost everywhere on $\{u=0\}$. Consequently,
+\begin{equation}\label{eq:scoreidentity}
+ \rho s_\rho=\nabla\rho,\qquad
+ \normrho{s_\rho}^{\,2}=4\int_M|\nabla u|^2\dV=\I(\rho).
+\end{equation}
+No assertion that $\log\rho$ belongs to an unweighted Sobolev space is being made or used.
+
+For every smooth $\psi$ satisfying $\partial_\nu\psi=0$, Green's identity gives
+\begin{equation}\label{eq:weakgreen}
+ \int_M\rho s_\rho\cdot\nabla\psi\dV
+ =\int_M\nabla\rho\cdot\nabla\psi\dV
+ =-\int_M\rho\Delta\psi\dV.
+\end{equation}
+This remains valid for $\rho\in W^{1,1}$: it follows either from the trace form of Green's identity or by using $u_n^2\to\rho$ in $W^{1,1}$ as above. No boundary condition on $\rho$ is needed.
+
+\subsection{Regularization and the exact mixed product}
+Fix $\tau>0$ and set
+\[
+ r_\tau=P_\tau\rho,\qquad q_\tau=r_\tau+\tau,
+ \qquad h_\tau=\log q_\tau,\qquad \varphi_\tau=P_\tau h_\tau.
+\]
+The function $r_\tau$ is smooth and nonnegative, and $q_\tau\geq\tau>0$. Thus $h_\tau$ and $\varphi_\tau$ are smooth up to the boundary. Furthermore,
+\[
+ \partial_\nu r_\tau=0,
+ \qquad \partial_\nu h_\tau=
+ \frac{\partial_\nu r_\tau}{r_\tau+\tau}=0,
+ \qquad \partial_\nu\varphi_\tau=0.
+\]
+In particular $h_\tau\in D(\Delta_N)$, so \eqref{eq:commute} applies.
+
+Define two finite nonnegative quantities
+\begin{equation}\label{eq:AB}
+ A_\tau=\int_M\frac{|\nabla r_\tau|^2}{r_\tau+\tau}\dV,
+ \qquad B_\tau=\int_M\rho|\nabla\varphi_\tau|^2\dV.
+\end{equation}
+The key identity is
+\begin{equation}\label{eq:mixed}
+ \iprho{s_\rho}{\nabla\varphi_\tau}=A_\tau.
+\end{equation}
+Indeed, using \eqref{eq:weakgreen}, commutation, and self-adjointness successively,
+\begin{align*}
+ \int_M\rho s_\rho\cdot\nabla\varphi_\tau\dV
+ &=\int_M\nabla\rho\cdot\nabla P_\tau h_\tau\dV\\
+ &=-\int_M\rho\Delta P_\tau h_\tau\dV\\
+ &=-\int_M\rho P_\tau\Delta h_\tau\dV\\
+ &=-\int_M r_\tau\Delta h_\tau\dV\\
+ &=\int_M\nabla r_\tau\cdot\nabla h_\tau\dV\\
+ &=\int_M\frac{|\nabla r_\tau|^2}{r_\tau+\tau}\dV=A_\tau.
+\end{align*}
+The first integration by parts uses $\partial_\nu\varphi_\tau=0$; the second uses $\partial_\nu h_\tau=0$. Self-adjointness here is valid in the $L^1$--$L^\infty$ pairing, since $\rho\in L^1$ and $\Delta h_\tau$ is bounded for each fixed $\tau$.
+
+\subsection{The fixed-weight norm bound}
+Applying \eqref{eq:GE} to $h_\tau$, multiplying by the \emph{original} density $\rho$, and integrating yields
+\begin{align}
+ B_\tau
+ &\leq c(\tau)\int_M\rho P_\tau(|\nabla h_\tau|^2)\dV\notag\\
+ &=c(\tau)\int_M r_\tau|\nabla h_\tau|^2\dV\notag\\
+ &=c(\tau)\int_M\frac{r_\tau|\nabla r_\tau|^2}{(r_\tau+\tau)^2}\dV\notag\\
+ &\leq c(\tau)A_\tau.\label{eq:Bbound}
+\end{align}
+Uniformity of $c(\tau)$ in the input function is essential, since $h_\tau$ depends on $\tau$.
+
+Write $I=\I(\rho)$. By \eqref{eq:scoreidentity}, \eqref{eq:mixed}, and Cauchy--Schwarz in $L^2(\rho\,\mathrm{d}V_g)$,
+\[
+ A_\tau^2\leq I B_\tau\leq I c(\tau)A_\tau.
+\]
+If $A_\tau>0$, division by $A_\tau$ gives $A_\tau\leq c(\tau)I$. The same conclusion is immediate if $A_\tau=0$. We have proved
+\begin{equation}\label{eq:Abound}
+ 0\leq A_\tau\leq c(\tau)I.
+\end{equation}
+This bound was obtained directly from the original finite Fisher information; it does not presuppose the approximation theorem.
+
+\subsection{Convergence of the regularized square-root energies}
+Set $v_\tau=\sqrt{r_\tau+\tau}$. Strong continuity of $P_\tau$ on $L^1(M)$ gives
+\[
+ \|r_\tau-\rho\|_{L^1}\longrightarrow0.
+\]
+Since $|\sqrt a-\sqrt b|^2\leq|a-b|$ for $a,b\geq0$,
+\begin{equation}\label{eq:L2}
+ \|v_\tau-u\|_{L^2}^2
+ \leq\|r_\tau+\tau-\rho\|_{L^1}
+ \leq\|r_\tau-\rho\|_{L^1}+\tau\operatorname{Vol}_g(M)
+ \longrightarrow0.
+\end{equation}
+On the other hand,
+\begin{equation}\label{eq:energy}
+ 4\int_M|\nabla v_\tau|^2\dV=A_\tau\leq c(\tau)I.
+\end{equation}
+Thus $v_\tau$ is bounded in $H^1(M)$ for small $\tau$. Weak lower semicontinuity of its Dirichlet energy, together with \eqref{eq:L2}, implies
+\[
+ I=4\int_M|\nabla u|^2\dV\leq\liminf_{\tau\downarrow0}A_\tau.
+\]
+Explicitly, apply weak compactness to any sequence of times realizing the lower limit; its weak $H^1$ limit is $u$ by the strong $L^2$ convergence. Conversely, \eqref{eq:Abound} and $c(\tau)\to1$ imply
+\[
+ \limsup_{\tau\downarrow0}A_\tau\leq I.
+\]
+Therefore
+\begin{equation}\label{eq:Aconvergence}
+ A_\tau\longrightarrow I.
+\end{equation}
+
+\subsection{Strong convergence in the required weighted space}
+Expand the squared error using \eqref{eq:mixed}:
+\begin{align*}
+ \normrho{\nabla\varphi_\tau-s_\rho}^{\,2}
+ &=B_\tau+I-2A_\tau\\
+ &\leq I+\big(c(\tau)-2\big)A_\tau.
+\end{align*}
+By \eqref{eq:Aconvergence} and $c(\tau)\to1$, the right-hand side tends to zero. The left-hand side is nonnegative, so \eqref{eq:conclusion} follows. All asserted smoothness and boundary properties were established above. This proves Theorem~\ref{thm:main}. \qed
+
+\section{Scope, mechanism, and a flux consequence}
+\subsection{Why none of the excluded assumptions has been reintroduced}
+The shift $+\tau$ is applied only to the regularization, not to the given density. It makes the logarithm well-defined even on a connected component carrying zero mass. It also permits arbitrary vacuum regions in the original density.
+
+An upper bound on $\rho$ is never used. The only facts needed to handle the original density are $\rho\in W^{1,1}$, the identity $\rho s_\rho=\nabla\rho$, and $s_\rho\in L^2(\rho\,\mathrm{d}V_g)$. Every smooth function used in an integration by parts is fixed at a positive heat time.
+
+Nonconvexity is handled solely through the factor $c(\tau)=1+O(\sqrt\tau)$. The proof requires that this factor tends to one, not that it is identically one or has an $O(\tau)$ error. The input density has no imposed boundary condition. The homogeneous Neumann condition belongs to the constructed test potentials and is allowed by the problem.
+
+\subsection{Why the second application of the heat semigroup matters}
+Regularizing $\rho$ alone controls expressions weighted by $P_\tau\rho$, whereas the requested convergence is weighted by $\rho$. The outer $P_\tau$ in \eqref{eq:construction} makes self-adjointness transfer the regularized weight back to the original one in \eqref{eq:Bbound}; it also gives the exact mixed product \eqref{eq:mixed}. No general weighted-mollification density assertion is used.
+
+The double-regularization calculation is suggested by the proof of Theorem 2 in \cite{CFM}. The conclusion here follows by retaining the mixed product, combining it with Cauchy--Schwarz, and applying lower semicontinuity before expanding the fixed-weight error.
+
+\begin{corollary}[The score annihilates invisible fluxes]\label{cor:flux}
+Under the hypotheses of Theorem~\ref{thm:main}, let $z\in L^2(\rho\,\mathrm{d}V_g;TM)$ satisfy
+\[
+ \int_M\rho z\cdot\nabla\psi\dV=0
+ \qquad\text{for every }\psi\in C^1(M).
+\]
+Then
+\[
+ \int_M\rho z\cdot s_\rho\dV=0.
+\]
+\end{corollary}
+\begin{proof}
+For the potentials from Theorem~\ref{thm:main},
+\begin{align*}
+ \left|\int_M\rho z\cdot s_\rho\dV\right|
+ &=\left|\int_M\rho z\cdot(s_\rho-\nabla\varphi_j)\dV\right|\\
+ &\leq\normrho{z}\,\normrho{s_\rho-\nabla\varphi_j}
+ \longrightarrow0.
+\end{align*}
+\end{proof}
+Thus two finite-action velocities defining the same weak flux divergence and zero normal flux have the same pairing with the score. In particular, the additional gradient-closure hypothesis in the second conclusion of \cite[Theorem 4]{CFM} is automatic under its finite-Fisher-information assumptions. This is a consequence for the smooth geometry in that theorem; no assertion about the separate rough Lipschitz-domain chain-rule problem is made here.
+
+\paragraph{Verification status.}
+The supplied manuscript was edited and checked by OpenAI Codex (AI) for this submission. These checks are not independent human peer review or formal verification. This additional proof is submitted for review; it does not replace the previously recorded proof or change the catalogue status.
+
+\begin{thebibliography}{9}
+\bibitem{AIM}
+MColbrook/AIM, \emph{Smooth-gradient approximation of finite-Fisher-information scores}, original Problem 618 at revision \texttt{aa776a0}, now archive 665 at revision \texttt{fa98b75}. Accessed 2 October 2026.\newline
+\href{https://github.com/MColbrook/AIM/blob/aa776a01d7d48a79f93251af11fde9454b0aea95/problems/618-fisher-score-gradient-closure.md}{Pinned original statement};
+\href{https://github.com/MColbrook/AIM/blob/fa98b7525fa3f78317536a8825f9cfa0ae1c369c/research/resolved/665-fisher-score-gradient-closure.md}{Current archive record}.
+
+\bibitem{Earlier}
+MColbrook/AIM, \emph{Smooth-gradient approximation of Fisher scores by extension to a closed manifold}, submitted in PR \#4 by George Stepaniants; proof preparation attributed in the source to OpenAI Codex. Recorded 2 October 2026.\newline
+\href{https://github.com/MColbrook/AIM/blob/fa98b7525fa3f78317536a8825f9cfa0ae1c369c/research/solutions/618-fisher-score/PROOF.md}{Pinned proof};
+\href{https://github.com/MColbrook/AIM/blob/fa98b7525fa3f78317536a8825f9cfa0ae1c369c/research/solution_reviews/2026-10-02/618-review.md}{Recorded review}.
+
+\bibitem{CFM}
+J.-B. Casteras, M. Flaim, and L. Monsaingeon,
+\emph{Entropy and Fisher information in non-convex domains: one chain to rule them all},
+\href{https://arxiv.org/abs/2512.05826v2}{arXiv:2512.05826v2}, 2026.
+Conjecture following Theorem 4; Section 3, estimate (GE) and proof of Theorem 2; Lemma A.3.
+
+\bibitem{Sturm}
+K.-T. Sturm,
+\emph{Gradient and Transport Estimates for Heat Flow on Nonconvex Domains},
+\href{https://arxiv.org/abs/2502.01915v1}{arXiv:2502.01915v1}, 2025.
+Theorem 1.1(iii), Remark 1.2, and Remark 1.3.
+\bibitem{Davies}
+E. B. Davies,
+\emph{Heat Kernels and Spectral Theory},
+Cambridge Tracts in Mathematics 92, Cambridge University Press, 1989.
+Chapters 1, 4 and 5 provide semigroup, boundary and Riemannian-manifold background.
+\href{https://doi.org/10.1017/CBO9780511566158}{doi:10.1017/CBO9780511566158}.
+
+\bibitem{Ziemer}
+W. P. Ziemer,
+\emph{Weakly Differentiable Functions: Sobolev Spaces and Functions of Bounded Variation},
+Graduate Texts in Mathematics 120, Springer, 1989.
+Chapter 2, ``Sobolev Spaces and Their Basic Properties'', pp. 42--111.
+\href{https://doi.org/10.1007/978-1-4612-1015-3}{doi:10.1007/978-1-4612-1015-3}.
+\end{thebibliography}
+\end{document}
