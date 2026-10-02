@@ -1,0 +1,71 @@
+Validation record
+Date: 2026-10-02
+Baseline: 37a25361f243be77daea0ae0b3c5167b57f1b5f3
+Branch: codex/606-optimal-observation-time
+Evidence: analytic proof with finite floating-point diagnostics, not formal verification.
+
+Environment
+Python 3.13.0
+NumPy 2.5.3
+SciPy 1.18.1
+cmarkgfm 2025.10.22
+MathJax mathjax-full 3.2.2
+Temporary Python environment: /private/tmp/aim-research-venv
+Temporary MathJax installation: /private/tmp/aim606-mathjax
+
+Numerical reproduction
+Command (from repository root):
+  /private/tmp/aim-research-venv/bin/python research/solutions/606-mixed-wave-observation/check_606.py --output /private/tmp/aim606-reproduced.json
+Exit: 0
+Output:
+  PASS: 48 spectral cases; modal/Gram normalization checked.
+  Computed 120 full-observation Gram minima and 10 packet diagnostics.
+  Results: /private/tmp/aim606-reproduced.json
+The reproduced JSON matched the contributed results.json byte for byte.
+Maximum mass orthonormality discrepancy: 5.828670879282072e-14
+Relative discrepancy between analytic observation Gram and direct time quadrature:
+  6.424346946449536e-11
+The Gram formula is analytic but its numerical evaluation is floating point.
+
+Repository structure
+Command:
+  python3 scripts/catalogue.py --check
+Exit: 0
+Output:
+  Validated 652 unique problems, metadata, required sections, math delimiters, local links, and freshness of README.md, CATALOG.md, RESOLVED.md.
+No catalogue machinery or metadata changed, so regeneration was unnecessary.
+
+Full repository mathematics rendering
+Command:
+  NODE_PATH=/private/tmp/aim606-mathjax/node_modules /private/tmp/aim-research-venv/bin/python scripts/check_math.py
+Exit: 1
+Output summary:
+  GFM preserved all 11926 equations across 866 Markdown files.
+  MathJax attempted all equations and reported exactly these two errors:
+  research/solutions/593-analytic-bandwidth/PROOF.md:66: \tag not allowed in aligned environment
+  research/solutions/593-analytic-bandwidth/PROOF.md:93: \tag not allowed in aligned environment
+Both errors occur in the unchanged baseline file. They were checked against
+git show 37a25361f243be77daea0ae0b3c5167b57f1b5f3:research/solutions/593-analytic-bandwidth/PROOF.md.
+No unrelated files were changed to remove those existing errors.
+
+Contributed package mathematics rendering
+The same check_math.RenderedMath parser, markdown_math.expressions extraction,
+cmarkgfm renderer and scripts/check_math.js validator were run with the file
+set restricted to research/solutions/606-mixed-wave-observation/**/*.md.
+Exit: 0
+Output:
+  GFM preserved all 197 equations across 9 contributed Markdown files.
+  MathJax rendered all 197 equations without errors.
+
+Integrity
+statement.md was compared byte for byte with the target at the baseline commit.
+The final proof was compared with the hash pinned by both complete AI reviews:
+  4f8f8221548fc5c050ba95fe0a1aaea60173200e0a31014d402e92e700476135
+Both comparisons passed.
+
+Limits
+The catalogue and rendering checks validate document structure, links, and TeX.
+The finite numerical checks can detect errors in sampled identities and formulas.
+Neither kind of check proves a uniform mathematical theorem. The proposed proof
+and the AI review records provide the mathematical argument; external review
+remains outstanding.
