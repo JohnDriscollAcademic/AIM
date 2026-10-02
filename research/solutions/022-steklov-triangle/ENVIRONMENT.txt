@@ -1,0 +1,32 @@
+Verification environments, 2 October 2026
+
+Certified computation (certify/main.py), run in two environments with identical
+output apart from the environment line:
+
+  A) Python 3.12.14, python-flint 0.9.0, macOS 15.7.7 arm64 (uv-managed venv)
+     -> logs/certify.log
+  B) Python 3.9.23, python-flint 0.6.0, macOS x86_64 (Anaconda)
+     -> logs/certify_python3.9_flint0.6.0.log
+
+The certified computation needs only python-flint (FLINT/Arb). It uses no NumPy,
+no SciPy and no floating-point arithmetic: the trial coefficients are exact
+rationals in certify/trial_coeffs.json.
+
+Review and exploration scripts (review/, numerics/, certify/make_trial_coeffs.py)
+additionally use NumPy, SciPy and mpmath. They were run in environment A with
+NumPy 2.5.3, SciPy 1.18.1, mpmath 1.4.1 and python-flint 0.9.0. They are not part
+of the proof; their floating-point digits may differ across platforms.
+
+Commands, from this folder:
+
+    python3 -m pip install -r requirements.txt
+    python3 certify/main.py > logs/certify.log
+
+    python3 -m pip install -r requirements-review.txt
+    python3 review/mutation_tests.py   > logs/review_mutation.log
+    python3 review/selfcheck_local.py  > logs/review_selfcheck_local.log
+    (cd numerics && python3 moduli_map.py > ../logs/numerics_moduli_map.log)
+    (cd numerics && python3 local_num.py  > ../logs/numerics_local.log)
+
+Run time of certify/main.py: about 20 s, dominated by the exact 408 x 408 integer
+characteristic polynomial.

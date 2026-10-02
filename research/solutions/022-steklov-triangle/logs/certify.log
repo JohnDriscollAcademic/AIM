@@ -1,0 +1,35 @@
+python 3.12.14, python-flint 0.9.0, platform macOS-15.7.7-arm64-arm-64bit
+==============================================================================
+STEP 1  rho <= sigma_3(E): Crouzeix-Raviart FEM + exact inertia (Lemma 2)
+mesh n=16: 256 equilateral elements, 408 CR dofs, max boundary edges per element = 2
+mu = 49/25 : inertia of q*Kint - p*N3 (p/q = 49/800) = (neg 3, zero 0, pos 405)
+=> discrete CR eigenvalues: lambda_{h,3} >= mu (certified, exact integer arithmetic)
+C_h^2 in [0.20981553491306422149 +/- 8.24e-22] ; rho = mu/(1+C_h^2 mu) in [1.3888510493609662702 +/- 1.66e-20]
+CERTIFIED: sigma_3(E) >= rho_lo = [1.388851049360966270183425 +/- 1.64e-25] >= rho_q = 1388851/1000000
+==============================================================================
+STEP 2  sigma_1(E) enclosure (Temple), eigenvector/moment enclosures (Lemmas 3-5)
+trial function: 17 exact rational coefficients (degrees <= 25, odd E-type sector) from trial_coeffs.json
+boundary mean of w~1 = [+/- 1.94e-36] (must be 0 by oddness)
+Rayleigh quotient lambda~ = [0.745255581581972542092411648839 +/- 1.97e-31]
+residual eps^2 = ||Lf-lam f||^2/||f||^2 = [1.604598889e-24 +/- 2.28e-34]
+CERTIFIED: sigma_1(E) in [[0.745255581581972542092409155659 +/- 3.26e-31], [0.745255581581972542092411648839 +/- 1.97e-31]]
+delta0 >= ||g||_dE = [3.2533e-12 +/- 2.40e-17] ; delta1 >= ||grad G||_E = [3.8340e-12 +/- 2.67e-17]
+check ||w~2||^2_dE = [2.73220957374487 +/- 1.33e-16] vs ||w~1||^2 = [2.73220957374487 +/- 1.33e-16]; <w~1,w~2> = [+/- 2.41e-32]
+Enclosures for the exact orthonormal pair (w1,w2):
+  X = [[[0.50767656753 +/- 4.24e-12], [+/- 4.01e-12]], [[+/- 4.01e-12], [-0.50767656753 +/- 4.24e-12]]]
+  Y = [[[+/- 4.01e-12], [0.50767656753 +/- 4.24e-12]], [[0.50767656753 +/- 4.24e-12], [+/- 4.01e-12]]]
+  B_0 = [[[0.26070322685 +/- 6.18e-12], [0.12579903460 +/- 6.78e-12]], [.., [0.40596343982 +/- 3.35e-12]]]  b_0 = ([-0.46827677146 +/- 2.95e-12], [0.27035972006 +/- 5.12e-12])
+  B_1 = [[[0.47859354631 +/- 4.40e-12], [+/- 2.22e-12]], [.., [0.18807312036 +/- 3.38e-12]]]  b_1 = ([+/- 2.60e-12], [-0.54071944011 +/- 7.55e-12])
+  B_2 = [[[0.26070322685 +/- 6.18e-12], [-0.12579903460 +/- 6.78e-12]], [.., [0.40596343982 +/- 3.35e-12]]]  b_2 = ([0.46827677146 +/- 2.95e-12], [0.27035972006 +/- 5.12e-12])
+==============================================================================
+STEP 3  local region 0 < |S| <= 3/5 (Lemma 6)
+local region 0<r<=3/5: 8412 boxes verified (det(M'/r)<0 or tr(M'/r)<0), 404 splits, max depth 2
+CERTIFIED: sigma_1(T_S)Per(T_S) < sigma_1(E)Per(E) for all 0 < |S| <= 3/5
+==============================================================================
+STEP 4  far region |S| >= 11/20 (Lemma 7)
+Bfar(11/20) in [3.19262378424102 +/- 4.80e-15] ; Per(E)*sigma_lo in [3.8724615957728065693 +/- 4.13e-20]
+CERTIFIED: sigma_1(T_S)Per(T_S) < sigma_1(E)Per(E) for all |S| >= 11/20
+==============================================================================
+Coverage: (0, 3/5] U [11/20, oo) = (0, oo) since 11/20 <= 3/5.
+THEOREM: for every non-equilateral triangle T, sigma_1(T)Per(T) < sigma_1(E)Per(E).
+ALL CERTIFIED CHECKS PASSED
