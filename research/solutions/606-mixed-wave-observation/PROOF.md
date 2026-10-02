@@ -6,7 +6,9 @@
 
 **Date:** 2026-10-02.
 
-**Authorship:** AI-generated proof developed by collaborating Codex agents. No human authorship or human mathematical review is claimed.
+**Author:** Marcus Webb, with assistance from OpenAI Codex.
+
+**AI assistance:** Collaborating Codex agents developed the argument, drafted the proof, and performed the recorded AI reviews. Independent human mathematical review remains outstanding.
 
 This note claims that the threshold in Problem 606 equals $`2`$ for every admissible potential. It proves uniform observation for every $`T>2`$ and failure for every $`0<T<2`$. It makes no assertion about observation at the endpoint $`T=2`$.
 

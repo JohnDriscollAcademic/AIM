@@ -1,5 +1,7 @@
 # Research workflow for the observation time solution
 
+**Author of the contribution:** Marcus Webb, with assistance from OpenAI Codex. The account below records the AI assistance used to develop, draft, and check the proof.
+
 This session adapted the research workflow in H. Lin, D. P. Woodruff, Y. Deng, J. Mao, S. Zuo and V. Mirrokni, [Stellar Colosseum](https://arxiv.org/html/2609.15983v2), especially Sections 3–4. The user supplied a three-hour budget on 2 October 2026. The run used at most four concurrent Codex agents. It was a small adaptation of the paper's workflow, not an execution of its released harness or its full population and random aggregation configurations.
 
 ## Exploration and choice

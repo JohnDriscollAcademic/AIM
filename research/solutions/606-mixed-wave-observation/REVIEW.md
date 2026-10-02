@@ -2,13 +2,13 @@
 
 **Date:** 2026-10-02. **Evidence status:** Solution claimed, awaiting external mathematical review.
 
-The reviewed [proof](PROOF.md) has SHA-256
+The AI reviewers checked the proof at commit `47b5f594f6b12d3040d2a295c0c965d376efe818`, with SHA-256
 
 ```text
 4f8f8221548fc5c050ba95fe0a1aaea60173200e0a31014d402e92e700476135
 ```
 
-All reviews below concern that complete revision and the [pinned statement](statement.md), problem 606 at `37a25361f243be77daea0ae0b3c5167b57f1b5f3`.
+All reviews below concern that complete revision and the [pinned statement](statement.md), problem 606 at `37a25361f243be77daea0ae0b3c5167b57f1b5f3`. The current [proof](PROOF.md) credits Marcus Webb as author with assistance from OpenAI Codex. That attribution update changes only the authorship and AI-assistance disclosure; the mathematical text is byte-for-byte identical to the reviewed revision. The current file hashes are recorded in [SHA256SUMS](SHA256SUMS).
 
 ## Reviewers and scope
 
@@ -18,7 +18,7 @@ The argument was developed by the primary Codex agent and a PDE research agent. 
 | --- | --- | --- |
 | Codex `scout_approximation` | [Complete review](reviews/approximation.md) | Independently recalculated all proof sections and checked the source hypotheses and normalization. Found no mathematical gap in the identified revision. |
 | Codex `scout_algebra` | [Complete review](reviews/algebra.md) | Checked the full target, matrix inequalities, Fourier bounds, insertion constants, both time directions and coarse meshes. Found no unresolved mathematical objection. Also authored the separate numerical diagnostics. |
-| Primary Codex agent | This record and integrated proof | Independently derived the gap calculation, supplied the direct cosine-kernel bounds and explicit sequence used in the final manuscript, checked the completed argument, and reproduced the numerical diagnostics. This is author self-review. |
+| Primary Codex agent | This record and integrated proof | Independently derived the gap calculation, supplied the direct cosine-kernel bounds and explicit sequence used in the final manuscript, checked the completed argument, and reproduced the numerical diagnostics. This is a check by an AI contributor to the argument. |
 
 The linked reviewer records are preserved as written by the reviewers. Each identifies its own scope and limits. They check the use of published results; they do not claim to reprove the entire Castro–Micu paper.
 

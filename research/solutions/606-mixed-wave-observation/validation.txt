@@ -59,9 +59,23 @@ Output:
 
 Integrity
 statement.md was compared byte for byte with the target at the baseline commit.
-The final proof was compared with the hash pinned by both complete AI reviews:
+The original proof at commit 47b5f594f6b12d3040d2a295c0c965d376efe818 was
+compared with the hash pinned by both complete AI reviews:
   4f8f8221548fc5c050ba95fe0a1aaea60173200e0a31014d402e92e700476135
 Both comparisons passed.
+
+Attribution update (2026-10-02)
+The proof and contribution documents now credit Marcus Webb as author with
+assistance from OpenAI Codex.
+Current proof SHA-256:
+  e76ed45199c8ab49ea9b4b69f2101dc0bf50f972ece67f2c449dbfd90d76a7de
+A byte comparison against commit 47b5f594f6b12d3040d2a295c0c965d376efe818
+confirmed that PROOF.md differs only in the authorship and AI-assistance
+disclosure. Its mathematical text is unchanged. Both original reviewer records
+are byte-for-byte unchanged, and their original proof hash remains recorded.
+python3 scripts/catalogue.py --check: passed (652 unique problems).
+git diff --check: passed.
+No numerical or mathematics-rendering rerun was needed for this prose-only edit.
 
 Limits
 The catalogue and rendering checks validate document structure, links, and TeX.

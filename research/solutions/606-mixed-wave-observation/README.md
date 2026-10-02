@@ -4,7 +4,9 @@
 
 **Status:** Solution claimed, awaiting independent mathematical review.
 
-**Prepared:** 2 October 2026 by OpenAI Codex, with separate AI research and review agents in the same preparation session. No human review or proof-assistant verification is claimed.
+**Author:** Marcus Webb, with assistance from OpenAI Codex.
+
+**Prepared:** 2 October 2026. Codex assisted with developing the argument, drafting the proof, numerical diagnostics, and separate AI reviews in the same preparation session. Independent human review and proof-assistant verification remain outstanding.
 
 The [proposed proof](PROOF.md) establishes
 
