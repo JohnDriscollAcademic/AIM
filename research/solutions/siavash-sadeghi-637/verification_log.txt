@@ -1,0 +1,39 @@
+AIM 637 reviewed-package verification, 2026-10-02
+
+exact normal: PASS, exit 0, 49.6 seconds
+exact optimized: PASS, exit 0, 36.72 seconds
+numeric normal: PASS, exit 0, 26.3 seconds
+numeric optimized: PASS, exit 0, 24.68 seconds
+tests normal: PASS, exit 0, 1.15 seconds
+tests optimized: PASS, exit 0, 1.51 seconds
+
+Per mode: 5001 rigorous grid checks + 14 analytic checks; 20024 supplementary numerical checks; 7 regression tests.
+Exact verifier and result values unchanged from supplied package.
+Repository catalogue --check: PASS (651 unique problems).
+PDF: eight pages; both compilation passes exit 0; final pass has no warnings; all pages visually inspected.
+Normal and optimized regression test logs:
+test_certificate_parameters_match_exact_code (test_verifiers.VerifierTests.test_certificate_parameters_match_exact_code) ... ok
+test_complete_record_accepted (test_verifiers.VerifierTests.test_complete_record_accepted) ... ok
+test_incomplete_or_malformed_records_rejected (test_verifiers.VerifierTests.test_incomplete_or_malformed_records_rejected) ... ok
+test_interval_boundaries_and_domains (test_verifiers.VerifierTests.test_interval_boundaries_and_domains) ... ok
+test_invalid_cli_ranges_rejected (test_verifiers.VerifierTests.test_invalid_cli_ranges_rejected) ... ok
+test_partial_cli_does_not_claim_global_proof (test_verifiers.VerifierTests.test_partial_cli_does_not_claim_global_proof) ... ok
+test_signed_rational_arithmetic (test_verifiers.VerifierTests.test_signed_rational_arithmetic) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.898s
+
+OK
+
+test_certificate_parameters_match_exact_code (test_verifiers.VerifierTests.test_certificate_parameters_match_exact_code) ... ok
+test_complete_record_accepted (test_verifiers.VerifierTests.test_complete_record_accepted) ... ok
+test_incomplete_or_malformed_records_rejected (test_verifiers.VerifierTests.test_incomplete_or_malformed_records_rejected) ... ok
+test_interval_boundaries_and_domains (test_verifiers.VerifierTests.test_interval_boundaries_and_domains) ... ok
+test_invalid_cli_ranges_rejected (test_verifiers.VerifierTests.test_invalid_cli_ranges_rejected) ... ok
+test_partial_cli_does_not_claim_global_proof (test_verifiers.VerifierTests.test_partial_cli_does_not_claim_global_proof) ... ok
+test_signed_rational_arithmetic (test_verifiers.VerifierTests.test_signed_rational_arithmetic) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.260s
+
+OK

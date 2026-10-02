@@ -1,0 +1,341 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
+\usepackage{xcolor}
+\usepackage[hyphens]{url}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,citecolor=blue!45!black]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 637: stationary Elo ratings}
+\fancyhead[R]{\small Proposed counterexample}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\E}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\sech}{\operatorname{sech}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\dimH}{\operatorname{dim}_{\mathrm H}}
+\newcommand{\Lip}{\operatorname{Lip}}
+\title{A singular continuous stationary law\newline for the binary logistic Elo chain}
+\author{Siavash Sadeghi\thanks{AI-assisted research note and reproducible certificate; independent mathematical review pending.}}
+\date{2 October 2026}
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+\begin{abstract}
+We give a computer-assisted counterexample to the universal absolute-continuity assertion in AIM Problem 637. The admissible parameters are two equally skilled players, logistic scale $c=1/2$, and update size $K=9/10$. The stationary law is singular continuous, has full support on the zero-sum line, and has measure Hausdorff dimension at most $10\log 2/7<1$. The central finite certificate verifies an explicit drift inequality at 5,001 rational points using integer interval arithmetic. Analytic curvature and tail estimates turn this into a global inequality. A self-contained martingale and covering argument then proves the dimension bound; no histogram, numerical Lyapunov exponent, differential-entropy assumption, or compact-support hypothesis is used.
+
+\textbf{Review status.} This is a complete proposed computer-assisted disproof, not an independently audited or proof-assistant-verified resolution. The source code and exact results are part of the proof package.
+\end{abstract}
+
+\section{The target and the explicit parameters}
+The active repository entry \cite{aim} is marked \emph{Partial}: existence, uniqueness and several other stationary properties are established, while the discrete binary-score density assertion remains unresolved. The density question also appears in Cortez--Tossounian \cite{ct}, Section 6 (arXiv v2, p.~25; published version, p.~3417). The target is the nonlinear chain, not a diffusion approximation or a truncated rating model.
+
+For $N\ge2$, $\sum_i\rho_i=0$, $c,K>0$ and $Kc<1$, the chain chooses a uniform ordered pair $i\ne j$, draws a fresh binary score with
+\[
+\PP(S=1\mid i,j)=\frac{1+\tanh(c(\rho_i-\rho_j))}{2},
+\]
+and replaces $(X_i,X_j)$ by
+\[
+\bigl(X_i+K[S-\tanh(c(X_i-X_j))],\;
+X_j-K[S-\tanh(c(X_i-X_j))]\bigr).
+\]
+The question is whether its invariant probability is always absolutely continuous on $Z_N=\{x:\sum_i x_i=0\}$.
+
+Choose exactly
+\begin{equation}\label{eq:parameters}
+N=2,\qquad \rho=(0,0),\qquad c=\frac12,\qquad K=\frac9{10}.
+\end{equation}
+These satisfy $Kc=9/20<1$. Write the state as $(x,-x)$ and set $\kappa=9/10$. Its first coordinate evolves by
+\begin{equation}\label{eq:maps}
+X_{n+1}=F_{\epsilon_{n+1}}(X_n),\qquad
+F_\pm(x)=T(x)\pm\kappa,\qquad T(x)=x-\kappa\tanh x,
+\end{equation}
+where the signs are independent and fair. Reversing the ordered pair just reverses the fair score: there are two distinct maps, not four. Both maps are increasing analytic bijections of $\R$, and
+\begin{equation}\label{eq:derivative}
+d(x):=F_\pm'(x)=\frac1{10}+\frac9{10}\tanh^2 x\in[1/10,1),
+\qquad g(x):=\log d(x).
+\end{equation}
+Let $P\varphi=(\varphi\circ F_++\varphi\circ F_-)/2$ be the Markov operator.
+
+For a probability $\mu$, use the convention
+\[
+\dimH\mu=\inf\{\dimH A:A\text{ is Borel and }\mu(A)=1\}.
+\]
+This is the dimension of a full-measure carrier, not the dimension of the topological support.
+
+\begin{theorem}\label{thm:main}
+The chain \eqref{eq:maps} has a unique invariant probability $\mu$. It satisfies
+\[
+\supp\mu=\R,\qquad \mu\{x\}=0\quad(x\in\R),\qquad
+\dimH\mu\le\frac{10\log2}{7}<1.
+\]
+In particular, $\mu$ is purely singular continuous. Its image under $x\mapsto(x,-x)$ is the invariant Elo law for \eqref{eq:parameters} and is singular with respect to one-dimensional Lebesgue measure on $Z_2$. This disproves the universal assertion in Problem 637.
+\end{theorem}
+
+Existence, uniqueness, moment bounds and full support are known in greater generality \cite{ct}; short proofs for this example are supplied to make the argument self-contained. The proposed new conclusion is singularity for the explicit binary logistic parameters.
+
+\section{Existence, uniqueness and the moment needed below}
+\begin{lemma}\label{lem:moment}
+There is a unique invariant probability $\mu$, and $\int e^{|x|}\,d\mu(x)\le325$.
+\end{lemma}
+\begin{proof}
+Let $W(x)=e^{|x|}$. If $|x|\ge2$, both images in \eqref{eq:maps} have the sign of $x$. Also $\tanh2>9/10$, since $e^4>1+4+4^2/2+4^3/6>19$. Thus
+\[
+\frac{PW(x)}{W(x)}=e^{-\kappa|\tanh x|}\cosh\kappa
+<\frac12(e^{9/100}+e^{-171/100})
+<\frac12\left(\frac{100}{91}+\frac14\right)
+=\frac{491}{728}<\frac34.
+\]
+Here $e^u\le(1-u)^{-1}$ for $0\le u<1$, and
+$e^{171/100}>1+171/100+(171/100)^2/2>4$.
+For $|x|\le2$, one has $|F_\pm(x)|<4$ and $PW(x)<e^4<81$. Consequently
+\begin{equation}\label{eq:Wdrift}
+PW\le\tfrac34W+81.
+\end{equation}
+Starting at zero gives $\sup_n\E W(X_n)\le325$. The Ces\`aro averages of the laws of $X_n$ are therefore tight. The maps are continuous, so $P$ is Feller. A weak limit of these averages is invariant: for bounded continuous $\varphi$, the difference between its integrals against the averaged law and its one-step image is $O(1/n)$. Lower semicontinuity of the nonnegative $W$ gives the stated moment bound.
+
+For uniqueness, start any coupling of two invariant marginals and use the same signs in both coordinates. Ces\`aro averaging produces an invariant coupling, since fixed probability marginals make the joint laws tight and the paired process is Feller. For every $x\ne y$,
+\[
+|F_\pm(x)-F_\pm(y)|=|T(x)-T(y)|<|x-y|
+\]
+by \eqref{eq:derivative}. The bounded function $r\mapsto r/(1+r)$ of the coupled distance strictly decreases off the diagonal. Its expectation cannot decrease under an invariant coupling. That coupling is therefore concentrated on the diagonal, so the invariant marginals agree.
+\end{proof}
+
+\section{A globally certified drift inequality}
+Every terminating decimal coefficient below denotes the exact rational number with denominator $10^4$. Define the even auxiliary function
+\begin{align}\label{eq:h}
+h(x)={}&15.2316x^2-65.0393\log\cosh x
+       +23.7867\tanh^2x-5.4616\tanh^4x\notag\\
+      &+14.9840\tanh^6x-3.1596\tanh^8x.
+\end{align}
+It is smooth, bounded below, and $|h(x)|\le C(1+x^2)$. In particular $h\in L^2(\mu)$ by Lemma~\ref{lem:moment}. Set $\beta=7/10$ and
+\begin{equation}\label{eq:R}
+R(x)=g(x)+\beta-h(x)+Ph(x).
+\end{equation}
+
+\begin{lemma}[global certificate]\label{lem:drift}
+For every real $x$,
+\begin{equation}\label{eq:drift}
+g(x)+\frac7{10}\le h(x)-Ph(x).
+\end{equation}
+More precisely, $R(x)\le-1/2500$ for $|x|\le5$, and
+$R(x)\le7/10-2555547/500000<0$ for $|x|\ge5$.
+\end{lemma}
+
+\subsection{Analytic control between the certificate nodes}
+Write $t=\tanh x$. The absolute values of the six coefficients in \eqref{eq:h} are bounded by $16,66,24,6,15,4$, respectively. Since $|t|\le1$ and $0<t'=\sech^2 x\le1$, for even $m\ge2$,
+\[
+|(t^m)'|\le m,\qquad
+|(t^m)''|\le m(m-1)+2m=m(m+1).
+\]
+It follows that, on $|y|\le7$,
+\begin{align*}
+|h'(y)|&\le 2(16)(7)+66+2(24)+4(6)+6(15)+8(4)=484,\\
+|h''(y)|&\le 32+66+6(24)+20(6)+42(15)+72(4)=1280.
+\end{align*}
+Further,
+\[
+|d'|\le\frac95,\qquad |d''|\le\frac{18}{5},\qquad
+|g''|\le \frac{18/5}{1/10}+\frac{(9/5)^2}{(1/10)^2}=360.
+\]
+For $|x|\le5$ the images $F_\pm(x)$ lie in $(-7,7)$. Applying the chain rule to \eqref{eq:R} gives
+\begin{equation}\label{eq:curvature}
+|R''(x)|\le360+2(1280)+\tfrac95(484)
+=\frac{18956}{5}<4000.
+\end{equation}
+The integer-interval calculation described below proves the finite list
+\begin{equation}\label{eq:grid}
+R(j/1000)<-9/10000\qquad(j=0,1,\ldots,5000).
+\end{equation}
+For a twice differentiable function with $|R''|\le M$, its difference from linear interpolation on an interval of length $\Delta$ has absolute value at most $M\Delta^2/8$. Equations \eqref{eq:curvature}--\eqref{eq:grid} therefore give
+\[
+R(x)\le-\frac9{10000}+\frac{4000}{8\cdot1000^2}
+=-\frac1{2500}\qquad(0\le x\le5).
+\]
+Evenness gives the bound on $[-5,5]$. Thus this proof is not an inference from a numerical grid without inter-node control.
+
+\subsection{Analytic tail bound}
+For $x\ge5$, the inequality
+\[
+e^{10}>1+10+10^2/2+10^3/6=683/3>199
+\]
+implies $\tanh x>99/100$. The exact identity
+\[
+(I-P)x^2=2\kappa x\tanh x-\kappa^2(1+\tanh^2x)
+\]
+then gives $(I-P)x^2\ge729/100$. The function $\log\cosh x$ is 1-Lipschitz, and the average of $|F_\pm(x)-x|$ is $\kappa$, so
+\[
+|(I-P)\log\cosh x|\le9/10.
+\]
+Also $0\le\tanh^{2j}x\le1$ entails $|(I-P)\tanh^{2j}x|\le1$. Substitution in \eqref{eq:h} yields
+\begin{align*}
+h(x)-Ph(x)
+&\ge15.2316(7.29)-65.0393(0.9)\\
+&\hspace{8mm}-(23.7867+5.4616+14.9840+3.1596)\\
+&=\frac{2555547}{500000}>\frac7{10}.
+\end{align*}
+Since $g\le0$, this proves the desired tail bound. Evenness covers $x\le-5$.
+
+\subsection{The finite certificate and its arithmetic}
+The accompanying \texttt{verify\_exact.py} proves \eqref{eq:grid}. It uses no floating-point decisions or library transcendental functions. An interval is represented by a pair of integers $(l,u)$ denoting $[l2^{-192},u2^{-192}]$. Rational inputs, addition, subtraction, multiplication, division and squaring are rounded outwards using integer floor and ceiling. Reciprocals are only taken for intervals excluding zero.
+
+Exponentials are evaluated monotonically at endpoints. For a nonnegative endpoint, power-of-two range reduction gives $0\le r\le1/8$. The sum of the terms $r^j/j!$ for $0\le j\le40$ encloses the truncated series, and the remaining tail obeys
+\[
+0\le\sum_{j\ge41}\frac{r^j}{j!}
+\le\frac{2(1/8)^{41}}{41!}<2^{-192}.
+\]
+Adding one dyadic unit to the upper endpoint and then repeatedly squaring gives a certified exponential. Negative arguments are handled by reciprocation.
+
+For a positive logarithm argument, power-of-two normalization gives $y\in[1,2]$. Use
+\[
+\log y=2\sum_{j\ge0}\frac{v^{2j+1}}{2j+1},\qquad
+v=\frac{y-1}{y+1}.
+\]
+The code verifies that the interval for $v$ lies in $[0,2/5]$. After the first 100 terms the tail is bounded by
+\[
+2\sum_{j\ge100}\frac{v^{2j+1}}{2j+1}
+\le4(2/5)^{201}<2^{-192}.
+\]
+The same construction at $v=1/3$ bounds $\log2$, needed to undo the normalization. All displayed tail comparisons are checked as integer inequalities.
+
+The hyperbolic functions in the residual are evaluated via
+\[
+\tanh x=\frac{e^{2x}-1}{e^{2x}+1},\qquad
+\log\cosh x=\log(e^{2x}+1)-x-\log2.
+\]
+Every one of the 5,001 certified upper endpoints is below $-9/10000$. The largest grid upper endpoint occurs at $j=394$, where the outward decimal display is
+\begin{equation}\label{eq:worst}
+-0.0010033787264028412967530
+\;\le R(394/1000)\le\;
+-0.0010033787264028412967529.
+\end{equation}
+This is not asserted to be the maximum over the entire interval; the interpolation argument, not that assertion, proves the global bound. Equations \eqref{eq:grid}, \eqref{eq:curvature} and the tail calculation complete the proof of Lemma~\ref{lem:drift}.
+
+\section{From stationary drift to contraction along most paths}
+Integrating \eqref{eq:drift} against $\mu$ gives $\int g\,d\mu\le-7/10$. To turn this into a pathwise probabilistic estimate without assuming an ergodic theorem or an invariant density, start \eqref{eq:maps} with $X_0\sim\mu$, independently of the signs. Put
+\[
+M_{j+1}=h(X_{j+1})-Ph(X_j),\qquad
+S_n=\sum_{j=0}^{n-1}g(X_j).
+\]
+The $M_j$ are square-integrable martingale differences. Stationarity and conditional variance imply
+\[
+\E\left(\sum_{j=0}^{n-1}M_{j+1}\right)^2
+=\sum_{j=0}^{n-1}\E M_{j+1}^2
+\le n\int h^2\,d\mu.
+\]
+Summing the drift inequality gives
+\begin{equation}\label{eq:mart}
+S_n\le-\frac7{10}n+h(X_0)-h(X_n)+\sum_{j=0}^{n-1}M_{j+1}.
+\end{equation}
+After division by $n$, the terms after $-7/10$ converge to zero in $L^2$: the first difference has $L^2$ norm at most $2\|h\|_2/n$, and the martingale term has norm at most $\|h\|_2/\sqrt n$. Consequently, for every $\varepsilon>0$,
+\begin{equation}\label{eq:typical}
+\PP\left\{S_n>-(7/10-\varepsilon)n\right\}\longrightarrow0.
+\end{equation}
+For a sign word $w=(\epsilon_1,\ldots,\epsilon_n)$, let
+$\Phi_w=F_{\epsilon_n}\circ\cdots\circ F_{\epsilon_1}$. The chain rule identifies $S_n=\log\Phi_w'(X_0)$. Equation \eqref{eq:typical} is the contraction estimate needed next.
+
+\section{A self-contained Hausdorff covering argument}
+From \eqref{eq:derivative} and $|d'|\le9/5$ one gets
+\begin{equation}\label{eq:lipg}
+\Lip(g)\le18.
+\end{equation}
+The maps $F_\pm$ are nonexpanding. Therefore, for any fixed word $w$ of length $n$ and any starting points $x,y$,
+\begin{equation}\label{eq:distortion}
+|\log\Phi_w'(x)-\log\Phi_w'(y)|
+\le18n|x-y|.
+\end{equation}
+Indeed, the distance between the two trajectories driven by the same word never exceeds $|x-y|$, and their log derivatives are sums of $n$ values of $g$.
+
+Fix $0<\varepsilon<7/20$, put $a=7/10-2\varepsilon>0$, and choose $0<\delta\le\varepsilon/18$. For an integer $R\ge1$, partition $[-R,R]$ into finitely many closed intervals $J$ of length at most $\delta$; sharing endpoints is harmless. Let their number be $M$.
+
+Call a pair $(J,w)$ good if some $x\in J$ satisfies
+\[
+\log\Phi_w'(x)\le-(7/10-\varepsilon)n.
+\]
+For a good pair, \eqref{eq:distortion} shows that $\Phi_w'(y)\le e^{-an}$ for every $y\in J$. Its image is consequently an interval of length at most $\delta e^{-an}$. Let $E_n$ be the union of all these good image intervals. It consists of at most $M2^n$ intervals.
+
+Whenever $X_0\in[-R,R]$ and the contraction event in \eqref{eq:typical} holds, the observed pair of starting interval and sign word is good, so $X_n\in E_n$. Stationarity now gives
+\begin{equation}\label{eq:masscover}
+\mu(E_n)\ge\mu([-R,R])-o(1).
+\end{equation}
+For any $s>\log2/a$,
+\[
+\sum_{n\ge1}M2^n(\delta e^{-an})^s<\infty.
+\]
+The image intervals for $n\ge N$ cover $\limsup_n E_n$, have diameters tending uniformly to zero as $N\to\infty$, and have total $s$-power diameter tending to zero. Hence
+\[
+\dimH(\limsup_n E_n)\le\frac{\log2}{a}.
+\]
+The elementary reverse-Fatou inequality for bounded indicators and \eqref{eq:masscover} give
+\[
+\mu(\limsup_nE_n)\ge\limsup_n\mu(E_n)\ge\mu([-R,R]).
+\]
+Taking the union of these Borel sets over integer $R$ gives a full-$\mu$-measure set of dimension at most $\log2/a$. Finally, repeat the construction for a sequence $\varepsilon\downarrow0$ and intersect the resulting full-measure sets. Countable stability of Hausdorff dimension under unions, and monotonicity under taking subsets, prove
+\begin{equation}\label{eq:dimension}
+\dimH\mu\le\frac{\log2}{7/10}=\frac{10\log2}{7}<1.
+\end{equation}
+The strict inequality is also certified by the integer logarithm enclosure in the code. A Borel subset of $\R$ of Hausdorff dimension below one has Lebesgue measure zero. Thus \eqref{eq:dimension} proves \emph{pure singularity}, not just failure of some density regularity condition. The linear embedding $x\mapsto(x,-x)$ is bi-Lipschitz and preserves both nullity and the dimension bound on the zero-sum line.
+
+\section{No atoms, despite full support}
+\begin{proposition}\label{prop:properties}
+The invariant probability $\mu$ has no atoms and has topological support $\R$.
+\end{proposition}
+\begin{proof}
+Suppose there is an atom. The maximal atomic mass $m>0$ is attained: only finitely many atoms can exceed half of a positive supremum. Let $A$ be the finite nonempty set of atoms of mass $m$. For each $x\in A$, stationarity and bijectivity give
+\[
+m=\frac12\mu\{F_+^{-1}(x)\}+\frac12\mu\{F_-^{-1}(x)\}.
+\]
+Both terms on the right are at most $m$, so both predecessors lie in $A$. Thus $F_+^{-1}$ maps $A$ injectively into itself and hence permutes it. But $F_+(x)=x+\kappa(1-\tanh x)>x$ for all finite $x$, which makes a permutation of a finite nonempty set impossible. There are no atoms.
+
+For full support, put $S=\supp\mu$. It is nonempty and closed; continuity and positive branch probabilities give $F_\pm(S)\subseteq S$. Fix $x_0\in S$ and define $q_n=F_+^n(x_0)$. Then $q_n\to+\infty$, since otherwise its increasing limit would be a fixed point of $F_+$. Also
+\[
+q_{n+1}-q_n=\kappa(1-\tanh q_n)\longrightarrow0.
+\]
+Given $b\in\R$ and $\delta>0$, choose $N$ so all these gaps for $n\ge N$ are less than $\delta$. Repeated application of $F_-$ sends every finite point to $-\infty$ by the analogous no-fixed-point argument. Choose $m$ so $F_-^m(q_N)<b$. For fixed $m$, the map $F_-^m$ is increasing, onto and nonexpanding. Thus $F_-^m(q_n)\to+\infty$, and successive gaps for $n\ge N$ are less than $\delta$. The first point of this sequence crossing $b$ lies within $\delta$ of $b$. All these points belong to $S$. Since $S$ is closed and $\delta$ is arbitrary, $b\in S$. This proves $S=\R$.
+\end{proof}
+The proposition and \eqref{eq:dimension} finish Theorem~\ref{thm:main}. In particular, full support does not conflict with singularity: a dense Borel null set can carry all of the probability. The theorem does not claim that the topological support has dimension less than one.
+
+\section{Reproduction, scope, and review status}
+The main proof is computer-assisted only at the finite certificate \eqref{eq:grid}. The coefficient search was exploratory numerical optimization; reproducing that search is not required to verify the rational coefficients it produced. Every implication from the certified inequality to the theorem is given above.
+
+The supplied programs use Python 3.10 or later and only its standard library:
+\begin{verbatim}
+python3 verify_exact.py --output exact_results.json
+python3 verify_numeric.py --output numeric_results.json
+\end{verbatim}
+The default exact run checks all 5,001 nodes, plus 14 rational constants and remainder comparisons. A partial run using \texttt{--start} or \texttt{--end} is explicitly marked as a partial grid check and does not claim the global inequality. Proof decisions do not use Python \texttt{assert}, so optimization mode does not disable them.
+
+The separate \texttt{verify\_numeric.py} does not import the interval implementation. It uses 80-digit decimal exponentials and logarithms, direct hyperbolic formulas, explicit derivatives, and 10,001 points including the certificate midpoints. It also compares ten values with the rigorous intervals, checks six second derivatives by finite differences, and samples six tail points. Its 20,024 supporting checks pass. These are supplementary approximations, not interval certificates or independent mathematical review.
+
+The construction is an exact instance of the original binary-score logistic model. It does not add continuous score noise, truncate the state space, round ratings to a lattice, or replace the nonlinear drift by a linearization. It gives an admissible counterexample, not a parameter-wide classification. In particular, no conclusion is claimed here about absolute continuity for all sufficiently small $Kc$, about every other $K$, or about $N>2$.
+
+A dated target and submission audit is included separately. The reviewed repository revision is \texttt{fa98b7525fa3f78317536a8825f9cfa0ae1c369c}, where the active target is Problem 637. No matching Elo solution was found in the inspected main-branch files, all-state pull-request listing, public pull-request branch diffs, or targeted search. This is a bounded public-record check, not a guarantee about unindexed or private work.
+
+\textbf{Evidence classification.} The repository's rules \cite{contrib} classify a complete argument awaiting independent review as \emph{Solution claimed}. The supplied AI-assisted proof and code were reviewed and reproduced by Codex for this submission; this is not an independent human audit or proof-assistant verification. The contribution is the certified singular stationary example and its dimension bound. Previously known existence, uniqueness, support and moment theory is credited to \cite{ct}. See the accompanying review and resolution reports for the checks and their limitations.
+
+\begin{thebibliography}{9}
+\bibitem{aim}
+M.~Colbrook et al., \emph{AIM}, active problem 637, ``Absolute continuity of stationary Elo ratings.'' Pinned repository text accessed 2 October 2026; repository last-checked field 24 September 2026.\newline
+\url{https://github.com/MColbrook/AIM/blob/fa98b7525fa3f78317536a8825f9cfa0ae1c369c/problems/637-elo-density.md}
+
+\bibitem{ct}
+R.~Cortez and H.~Tossounian, \emph{Convergence and stationary distribution of Elo rating systems}, Annals of Applied Probability \textbf{36}(4) (2026), 3395--3418, DOI 10.1214/26-AAP2306. Author manuscript arXiv:2410.09180v2, submitted 26 January 2026; manuscript title-page date 28 January 2026. The density question is in Section 6, p.~25 of that manuscript and p.~3417 of the published article.\newline
+\url{https://arxiv.org/abs/2410.09180v2}
+
+\bibitem{contrib}
+M.~Colbrook et al., \emph{AIM contribution and evidence rules}, same pinned repository revision, accessed 2 October 2026.\newline
+\url{https://github.com/MColbrook/AIM/blob/fa98b7525fa3f78317536a8825f9cfa0ae1c369c/CONTRIBUTING.md}
+\end{thebibliography}
+\end{document}

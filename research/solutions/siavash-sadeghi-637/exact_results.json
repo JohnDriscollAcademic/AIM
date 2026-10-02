@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "scope": "complete global certificate",
+  "global_drift_inequality_certified": true,
+  "bits": 192,
+  "grid_start": 0,
+  "grid_end": 5000,
+  "grid_checks": 5001,
+  "analytic_constant_checks": {
+    "checks": 14,
+    "passed": [
+      "all six coefficient bounds",
+      "h first derivative bound",
+      "h second derivative bound",
+      "log derivative second derivative bound",
+      "residual curvature bound",
+      "compact interpolation margin",
+      "tanh(5) lower bound via exponential Taylor sum",
+      "global tail margin",
+      "tanh(2) lower bound",
+      "exponential moment bound: exp(1.71)>4",
+      "exponential moment contraction",
+      "exp Taylor remainder below one dyadic unit",
+      "log Taylor remainder below one dyadic unit",
+      "strict dimension gap: log(2)<7/10"
+    ],
+    "residual_curvature_bound": "18956/5",
+    "compact_residual_upper_bound": "-1/2500",
+    "tail_lower_bound_on_h_minus_Ph": "2555547/500000"
+  },
+  "pointwise_threshold": "-9/10000",
+  "largest_upper_endpoint_at_grid_index": 394,
+  "enclosure_at_that_index": [
+    "-0.0010033787264028412967530",
+    "-0.0010033787264028412967529"
+  ],
+  "ln2_enclosure": [
+    "0.6931471805599453094172321",
+    "0.6931471805599453094172322"
+  ],
+  "sample_residual_enclosures": {
+    "0": {
+      "lower_numerator": "-605223878570770493311531744044541025563012608703900142659",
+      "upper_numerator": "-605223878570770493311531744044541025563012608703900009841"
+    },
+    "1": {
+      "lower_numerator": "-605208296744296122886788603852261846500683579701239344228",
+      "upper_numerator": "-605208296744296122886788603852261846500683579701239204554"
+    },
+    "394": {
+      "lower_numerator": "-6298310344753352665119886863292618536693104375516783515",
+      "upper_numerator": "-6298310344753352665119886863292618536693104375516553691"
+    },
+    "500": {
+      "lower_numerator": "-20889947793270722210330025135931524094330838572094113003",
+      "upper_numerator": "-20889947793270722210330025135931524094330838572093869305"
+    },
+    "1000": {
+      "lower_numerator": "-14635646098305794411160261818134794572224589838437214468",
+      "upper_numerator": "-14635646098305794411160261818134794572224589838436585107"
+    },
+    "2000": {
+      "lower_numerator": "-292684986701896210240206094645795096747512833788405471508",
+      "upper_numerator": "-292684986701896210240206094645795096747512833788403335498"
+    },
+    "3000": {
+      "lower_numerator": "-42634344270844212165481697203349466027743089629957518858346",
+      "upper_numerator": "-42634344270844212165481697203349466027743089629957513676630"
+    },
+    "4000": {
+      "lower_numerator": "-170444882366352111315902252323392655594697934655390179652645",
+      "upper_numerator": "-170444882366352111315902252323392655594697934655390171683770"
+    },
+    "4999": {
+      "lower_numerator": "-334818328361344192300544139019404184007623863815412550385245",
+      "upper_numerator": "-334818328361344192300544139019404184007623863815412491027101"
+    },
+    "5000": {
+      "lower_numerator": "-334988000860181786044212765364435860486996742189577413677364",
+      "upper_numerator": "-334988000860181786044212765364435860486996742189577379816429"
+    }
+  }
+}
