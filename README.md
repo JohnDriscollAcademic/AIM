@@ -2,6 +2,8 @@
 
 A sourced collection of precise mathematical research problems in spectral theory, operator theory, applied mathematics, and related fields. Each entry has a self-contained statement, a discussion of applications or mathematical significance, references, and a dated literature-status review.
 
+This project is not affiliated with the [American Institute of Mathematics (AIM)](https://aimath.org/).
+
 After discussions with mathematicians from different areas, we started this collection with several motivations:
 
 - AI tools are increasingly being used to search the literature and tackle conjectures. We would like our community to help shape this work, solve problems and understand their consequences.
