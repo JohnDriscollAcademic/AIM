@@ -1,0 +1,5 @@
+4 October 2026. Built-in compiler unavailable: Unable to find standard directories for platform.
+Fallback: existing MiKTeX; no installation or updates performed.
+Pass 1: exit 0
+Pass 2: exit 0
+Final diagnostics: no LaTeX warnings or box warnings.

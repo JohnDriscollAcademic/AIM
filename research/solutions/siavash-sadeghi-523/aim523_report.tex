@@ -1,0 +1,203 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={AIM 523: research submission},
+ pdfauthor={Siavash Sadeghi; AI-assisted research note}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 523 / Siavash Sadeghi}
+\fancyhead[R]{\small Research note / 4 October 2026}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\setcounter{tocdepth}{1}
+\allowdisplaybreaks
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\gen}{\mathfrak g}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\sech}{\operatorname{sech}}
+
+\begin{document}
+\title{A logarithmic lower bound for Nystr\"om estimates}
+\author{Siavash Sadeghi}
+\date{4 October 2026}
+\maketitle
+\begin{abstract}
+A fixed smooth amplitude on a smooth closed curve with a straight arc gives growth of order square root of log k. This addresses the arbitrary smooth amplitudes and general parametrizations allowed in the target; it does not assert a counterexample for every physical boundary-integral kernel.
+\end{abstract}
+\textbf{Provenance and review.} Separated and polished from the supplied AI-assisted research note prepared with ChatGPT. Codex reviewed the mathematical argument and accompanying checks. This is a research claim awaiting independent mathematical review; no independent human audit or formal proof verification is claimed.
+\medskip
+\section{Entry 523: the square-root logarithm is necessary}\label{sec:nystrom}
+
+We use exactly the general-amplitude formulation in catalogue entry 523~\cite{repo523}. The original paper and its fourth version retain the general-curve conjecture~\cite{galkowski}. It is enough to disprove the estimate at $s=0$.
+
+For clarity, the target uses
+\[
+ L_{1,k}(t,\tau)=k\int_{S^1}e^{ik\langle\gamma(t)-\gamma(\tau),\omega\rangle}
+ f_k(\omega,t,\tau)\,\mathrm dS(\omega),\qquad
+ \widehat L_{1,k,m}(t)=\frac1{\sqrt{2\pi}}\int_0^{2\pi}e^{-im\tau}L_{1,k}(t,\tau)\,\mathrm d\tau.
+\]
+All amplitude derivatives must be uniformly bounded in $k$. It suffices to
+disprove the asserted bound at $s=0$, where the target quantity is
+$k^{-1}\sum_{0<|m|\le(1-\eps)N}\|\widehat L_{1,k,m}\|_{L^2(\Gamma)}$.
+The construction uses a single smooth amplitude independent of $k$ and the
+admissible choices $\eps=1/2$ and $N=4\lceil k\rceil$.
+
+\subsection{A fixed smooth curve and a fixed amplitude}
+
+Choose a smooth embedded closed curve containing a straight horizontal arc, with a smooth periodic parametrization satisfying, on $|t|<1/4$,
+\begin{equation}\label{eq:localcurve}
+ \gamma(t)=(\sigma(t),0),\qquad \sigma(t)=t+\frac12t^2.
+\end{equation}
+Such a curve is obtained by smoothly completing a line segment away from this chart and then making a positive smooth reparametrization. The local speed is $1+t>0$; the global speed is smooth, bounded above, and bounded away from zero. No positive-curvature or unit-speed hypothesis is imposed by the repository target.
+
+Let $\chi$ be a smooth periodic cutoff supported in $(-1/4,1/4)$ and equal to one on $[-1/8,1/8]$. Parametrize a neighbourhood of $(-1,0)\in S^1$ by
+\[
+ \omega(\theta)=(-\cos\theta,\sin\theta).
+\]
+Choose a nonnegative even smooth cutoff $\psi$, supported in $|\theta|<\theta_0$ for a sufficiently small fixed $\theta_0>0$, and equal to one near zero. Define, independently of $k$,
+\begin{equation}\label{eq:amp}
+ f_k(\omega(\theta),t,\tau)=\psi(\theta)\chi(t)\chi(\tau),
+\end{equation}
+and extend by zero on the rest of the circle. This is a fixed smooth amplitude; every derivative required in the question is uniformly bounded in $k$.
+
+Put $\rho=m/k$ and restrict it to
+\[
+ J=\left[1-\frac1{32},1+\frac1{32}\right].
+\]
+For $\theta_0$ small enough, $\tau_\theta=\rho/\cos\theta-1$ lies in the region where $\chi(\tau)=1$, uniformly for $\rho\in J$.
+
+\subsection{Reduction to a nearly degenerate one-dimensional integral}
+
+Using the local coordinate and interchanging the two compact integrals,
+\begin{equation}\label{eq:Lhat}
+ \widehat L_{1,k,m}(t)=\frac{k\chi(t)}{\sqrt{2\pi}}
+ \int\psi(\theta)e^{-ik\sigma(t)\cos\theta}
+ \int\chi(\tau)e^{ik[\sigma(\tau)\cos\theta-\rho\tau]}
+ \dd\tau\dd\theta.
+\end{equation}
+The inner phase is exactly quadratic in $\tau$, has critical point $\tau_\theta$, and has second derivative $\cos\theta>0$. Since the cutoff is identically one near the critical point, quadratic stationary phase, with integration by parts away from that point, gives for every $B>0$ a remainder $O(k^{-B})$, uniformly in the parameters. With $u=1+t$, the result is
+\begin{equation}\label{eq:stationtau}
+ \widehat L_{1,k,m}(t)=\chi(t)\sqrt{k}\,e^{i\pi/4}
+ \int \frac{\psi(\theta)}{\sqrt{\cos\theta}}
+ e^{ik\Psi(u,\rho,\theta)}\dd\theta+O(k^{-B}),
+\end{equation}
+where
+\begin{equation}\label{eq:Psi}
+ \Psi(u,\rho,\theta)=\rho-\frac12u^2\cos\theta
+ -\frac{\rho^2}{2\cos\theta}.
+\end{equation}
+All constants here concern the one fixed curve and amplitude.
+
+Choose a fixed small $\delta_0>0$, for example $1/32$, and take
+\[
+ t=\rho-1-\delta,\qquad k^{-1/4}\le\delta\le\delta_0.
+\]
+These $t$ lie in the plateau of $\chi$. Also $u=\rho-\delta<\rho$. The angular phase has just one stationary point on the support, at zero, and
+\[
+ \Psi_{\theta\theta}(u,\rho,0)=-A,
+ \qquad A=\frac{\rho^2-u^2}{2}
+       =\frac{\delta(2\rho-\delta)}2\asymp\delta.
+\]
+The degeneration $A\downarrow0$ as $t\uparrow\rho-1$ is responsible for the logarithm.
+
+\subsection{Uniform stationary phase on the required range}
+
+For completeness, we justify uniformity as $A$ tends to zero with $k$. Let
+\[
+ g(\theta)=\Psi(u,\rho,0)-\Psi(u,\rho,\theta),\qquad
+ b(\theta)=\frac{\psi(\theta)}{\sqrt{\cos\theta}}.
+\]
+For $|\theta|<\theta_0<\pi/2$,
+\begin{equation}\label{eq:gsecond}
+ g''(\theta)=\frac{\rho^2}{2\cos\theta}
+ -\frac{u^2\cos\theta}{2}
+ +\frac{\rho^2\sin^2\theta}{\cos^3\theta}\ge A>0.
+\end{equation}
+Further,
+\[
+ g(\theta)=\frac{A\theta^2}{2}+O(\theta^4),
+\]
+with the remainder uniform in $u,\rho$ in the present compact ranges. Rescale $\zeta=\sqrt{kA}\,\theta$. On each bounded $\zeta$ interval,
+\[
+ kg\!\left(\frac\zeta{\sqrt{kA}}\right)
+ =\frac{\zeta^2}{2}+O\!\left(\frac{\zeta^4}{kA^2}\right),
+ \qquad b\!\left(\frac\zeta{\sqrt{kA}}\right)\to1
+\]
+uniformly, because $kA^2\gtrsim k^{1/2}\to\infty$.
+
+The tails of this rescaled integral are also uniform. On the positive half-line, the derivative of the rescaled phase is increasing and is at least $\zeta$ by~\eqref{eq:gsecond}; the negative half-line is analogous. The amplitudes have uniformly bounded total variation. Integration by parts therefore bounds either tail $|\zeta|>R$ by $C/R$, uniformly in $k,A,u,\rho$. First letting $k\to\infty$ on a bounded interval and then $R\to\infty$ proves
+\begin{equation}\label{eq:uniformfresnel}
+ \int b(\theta)e^{ik\Psi(u,\rho,\theta)}\dd\theta
+ =\frac{e^{ik\Psi(u,\rho,0)}}{\sqrt{kA}}
+ \left(\sqrt{2\pi}e^{-i\pi/4}+o(1)\right)
+\end{equation}
+uniformly for $\rho\in J$ and $k^{-1/4}\le\delta\le\delta_0$.
+
+Combining~\eqref{eq:stationtau} and~\eqref{eq:uniformfresnel} gives
+\begin{equation}\label{eq:nystromasymp}
+ \widehat L_{1,k,m}(\rho-1-\delta)
+ =\sqrt{\frac{2\pi}{A}}\,e^{ik\Psi(u,\rho,0)}(1+o(1)).
+\end{equation}
+In particular, for all sufficiently large $k$,
+\[
+ \abs{\widehat L_{1,k,m}(\rho-1-\delta)}^2\ge\frac{c_1}{\delta}
+\]
+with $c_1>0$ uniform in the specified ranges.
+
+\subsection{The logarithmic lower bound}
+
+On this arc, arclength measure is $\dd s=(1+t)\dd t=u\dd t$, with $u$ bounded above and below by positive constants. Thus, uniformly for integers $m$ with $m/k\in J$,
+\begin{align}
+ \norm{\widehat L_{1,k,m}}_{L^2(\Gamma)}^2
+ &\ge c_2\int_{k^{-1/4}}^{\delta_0}\frac{\dd\delta}{\delta}
+ \ge c_3\log k
+\end{align}
+for sufficiently large $k$. There are at least $c_4k$ such positive integers $m$.
+
+Choose $\eps=1/2$ and $N=4\lceil k\rceil$. The prescribed sum includes all these integers, and at $s=0$ its extra weight is one. Hence
+\begin{equation}\label{eq:loglower}
+ \frac1k\sum_{0<|m|\le(1-\eps)N}
+ \norm{\widehat L_{1,k,m}}_{H_k^0(\Gamma)}
+ \ge c_5\sqrt{\log k}\longrightarrow\infty.
+\end{equation}
+
+\begin{theorem}
+The constant bound in the repository's general smooth-amplitude formulation of entry 523 is false. A fixed smooth curve, a fixed smooth nonconstant-speed parametrization, and a fixed smooth amplitude already force the square-root logarithmic loss.
+\end{theorem}
+
+\begin{remark}
+The amplitude localization in~\eqref{eq:amp} is explicitly permitted by the repository statement. This argument does not identify that amplitude with every particular physical single- or double-layer kernel. It also does not contradict the positive-curvature, unit-speed result, since the construction has a flat arc and variable speed.
+\end{remark}
+
+
+
+\begin{thebibliography}{9}
+\bibitem{repo523}
+M. Colbrook, AIM catalogue, \href{https://github.com/MColbrook/AIM/blob/59a8f0c2957dd272f56bcf282dfe0c066a15f441/problems/523-nystrom-logarithmic-loss.md}{entry 523: Removing the logarithmic loss in Helmholtz Nystr\"om estimates}. Repository statement checked 4 October 2026.
+
+\bibitem{galkowski}
+J. Galkowski, M. Rachh, and E. A. Spence, \emph{Helmholtz boundary integral methods and the pollution effect}, \href{https://arxiv.org/abs/2507.22797v4}{arXiv:2507.22797v4} (2026), equations (9.3)--(9.6), Lemmas 11.1 and 11.3, and Conjecture 11.4.
+\end{thebibliography}
+\end{document}
