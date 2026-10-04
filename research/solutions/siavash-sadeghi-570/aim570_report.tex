@@ -1,0 +1,140 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={AIM 570: research submission},
+ pdfauthor={Siavash Sadeghi; AI-assisted research note}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 570 / Siavash Sadeghi}
+\fancyhead[R]{\small Research note / 4 October 2026}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\setcounter{tocdepth}{1}
+\allowdisplaybreaks
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\gen}{\mathfrak g}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\sech}{\operatorname{sech}}
+
+\begin{document}
+\title{Continuous reconstruction on Banach unit balls}
+\author{Siavash Sadeghi}
+\date{4 October 2026}
+\maketitle
+\begin{abstract}
+One fixed inclusion from $\ell_1([0,1])$ to $\ell_2([0,1])$ disproves every universal continuity-cost constant over arbitrary real Banach spaces. The construction uses nonseparable spaces and does not settle a separable variant.
+\end{abstract}
+\textbf{Provenance and review.} Separated and polished from the supplied AI-assisted research note prepared with ChatGPT. Codex reviewed the mathematical argument and accompanying checks. This is a research claim awaiting independent mathematical review; no independent human audit or formal proof verification is claimed.
+\medskip
+\section{Entry 570: no universal cost of continuous decoding}\label{sec:decoder}
+
+The quantification in entry 570 is over arbitrary real Banach spaces, with no separability assumption~\cite{repo570}. This distinction is decisive. The compact-input factor-two theorem in the cited source~\cite{knu} does not apply to the following unit ball.
+
+Write $B_X$ for the closed unit ball. The quantity $e_n(S)$ is the infimum of
+$\sup_{x\in B_X}\|Sx-\varphi(N(x))\|_Y$ over continuous encoders
+$N:B_X\to\R^n$ and arbitrary decoders $\varphi:\R^n\to Y$.
+The quantity $\delta_n(S)$ is the same infimum with $\varphi$ also continuous.
+The decoder is defined on all of $\R^n$, as required by the target.
+
+\begin{theorem}\label{thm:decoder}
+Let
+\[
+ I=[0,1],\qquad X=\ell_1(I),\qquad Y=\ell_2(I),
+\]
+and let $S:X\to Y$ be the canonical inclusion. Then, for every finite $n\ge1$,
+\[
+ \delta_n(S)=1,
+\]
+whereas for every integer $K\ge1$,
+\[
+ e_{2K}(S)\le\frac1{\sqrt{K+1}}.
+\]
+Therefore no universal finite constant $C$ can satisfy $\delta_n(S)\le Ce_n(S)$ in the stated class. In particular, $C=2$ already fails for this operator at $n=8$.
+\end{theorem}
+
+\subsection{A continuous encoder with a discontinuous accurate decoder}
+
+Every element of $\ell_1(I)$ or $\ell_2(I)$ has countable support. The inclusion $S$ is bounded with norm one. Fix $K\ge1$ and put $\tau=1/(K+1)$. Define coordinatewise soft thresholding by
+\[
+ (T_\tau x)_t=\sgn(x_t)(|x_t|-\tau)_+.
+\]
+This map is $1$-Lipschitz on $\ell_1(I)$. If $\norm{x}_1\le1$, then $T_\tau x$ has at most $K$ nonzero coordinates: $K+1$ coordinates strictly larger than $\tau$ in magnitude would have total $\ell_1$ norm greater than one. Also,
+\begin{equation}\label{eq:soft-error}
+ \norm{x-T_\tau x}_2^2
+ =\sum_{t\in I}\min(|x_t|,\tau)^2
+ \le\tau\sum_{t\in I}|x_t|\le\tau.
+\end{equation}
+
+Use $2K$ real moments of the thresholded vector as the encoder:
+\begin{equation}\label{eq:momentencoder}
+ N_K(x)_j=\sum_{t\in[0,1]}t^j(T_\tau x)_t,
+ \qquad j=0,1,\ldots,2K-1.
+\end{equation}
+Here $t^0=1$, including at $t=0$. Every coordinate is continuous, indeed $1$-Lipschitz in the $\ell_1$ norm, because $|t^j|\le1$. Thus $N_K:B_X\to\R^{2K}$ is an admissible nonadaptive continuous encoder.
+
+The moment map in~\eqref{eq:momentencoder} is injective on vectors supported on at most $K$ indices. To prove this, subtract two such vectors with the same moments. Their difference has support $\{t_1,\ldots,t_r\}$, where $r\le2K$, and its coefficients $c_i$ satisfy
+\[
+ \sum_{i=1}^r c_i t_i^j=0,\qquad j=0,\ldots,r-1.
+\]
+The Vandermonde matrix of distinct nodes $t_i$ is invertible; hence all $c_i=0$.
+
+Define a decoder on all of $\R^{2K}$ by returning the unique at-most-$K$-sparse vector having the given moments whenever one exists, and returning zero otherwise. No continuity is required for $e_{2K}$. On the encoder image it returns $T_\tau x$ exactly. Equation~\eqref{eq:soft-error} proves
+\[
+ e_{2K}(S)\le\sqrt\tau=(K+1)^{-1/2}.
+\]
+
+\subsection{Every continuous decoder misses a coordinate}
+
+Let $\phi:\R^n\to\ell_2(I)$ be any continuous decoder. Its image is separable, since $\R^n$ is separable. More explicitly, choose a countable dense subset of its image and let $J\subset I$ be the union of the supports of those countably many vectors. Each support is countable, so $J$ is countable. Since $\ell_2(J)$ is closed in $\ell_2(I)$,
+\[
+ \phi(\R^n)\subset\ell_2(J).
+\]
+Choose $t\in I\setminus J$ and take the unit vector $e_t\in B_X$. For every encoder $N$, regardless of its form,
+\[
+ \norm{Se_t-\phi(N(e_t))}_2^2
+ =1+\norm{\phi(N(e_t))}_2^2\ge1.
+\]
+Thus $\delta_n(S)\ge1$. The zero decoder gives the reverse inequality, because $\norm S=1$.
+
+For any putative universal $C$, choose $K+1>C^2$. Then
+\[
+ C e_{2K}(S)\le\frac{C}{\sqrt{K+1}}<1=\delta_{2K}(S).
+\]
+For $C=2$, take $K=4$, giving $2e_8(S)\le2/\sqrt5<1$.
+
+\begin{remark}
+The same fixed operator supplies the counterexample for every proposed constant. Both its domain and codomain are nonseparable. No conclusion about the still-interesting variant restricted to separable Banach spaces is claimed.
+\end{remark}
+
+
+
+\begin{thebibliography}{9}
+\bibitem{repo570}
+M. Colbrook, AIM catalogue, \href{https://github.com/MColbrook/AIM/blob/59a8f0c2957dd272f56bcf282dfe0c066a15f441/problems/570-continuous-decoder-banach-balls.md}{entry 570: The cost of continuous reconstruction on Banach unit balls}. Repository statement checked 4 October 2026.
+
+\bibitem{knu}
+D. Krieg, E. Novak, and M. Ullrich, \emph{How many continuous measurements are needed to learn a vector?}, \href{https://arxiv.org/abs/2412.06468v2}{arXiv:2412.06468v2}, 22 September 2026. Theorem 1, Section 3, Lemma 9, and the discussion of Banach unit balls.
+\end{thebibliography}
+\end{document}
