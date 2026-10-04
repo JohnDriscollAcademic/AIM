@@ -2,9 +2,9 @@
 
 **Area:** Information-based complexity and approximation theory
 
-**Status:** 🔵 OPEN
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-24
+**Last checked:** 2026-10-04
 
 ## Problem statement
 
@@ -22,7 +22,7 @@ where, for every fixed history, $`\lambda_{j,y_1,\ldots,y_{j-1}}:\mathbb R^m\to\
 
 Determine $`N(m)`$, or its sharp asymptotic growth as $`m\to\infty`$. In particular, is $`N(m)`$ unbounded, or can an absolute constant number of such measurements achieve arbitrary precision in every dimension?
 
-The known bounds are
+At the time of listing, the published bounds were
 
 ```math
 2\le N(m)\le \lceil\log_2 m\rceil+1.
@@ -41,6 +41,15 @@ This question identifies the information complexity of adaptive nonlinear sensin
 
 ## Status review
 
-The revision posted two days before this check improves the constructive upper bound but explicitly retains the lower-bound question. Its construction even uses Lipschitz continuous measurements, while the lower-bound target permits arbitrary continuous measurements. The Borsuk–Ulam obstruction gives the lower bound of two. Requiring the entire adaptive encoder or reconstruction to be continuous would change the problem.
+**Resolution:** The sharp-asymptotic alternative in the target is established:
 
-No matching solution announcement was found in the current literature, author publication lists, public GitHub issue/repository searches, or Palomar's continuous-measurement search. Zenodo's API denied access; indexed Zenodo searches found no matching announcement. The evidence and access limits are recorded in the accompanying numerical-journal review.
+```math
+\lfloor\log_2m\rfloor+1\le N(m)\le\lceil\log_2m\rceil+1,
+\qquad N(m)\sim\log_2m.
+```
+
+The lower bound applies to the full stated adaptive model: every algorithm using $`n`$ measurements has infinite worst-case error on $`\mathbb R^m`$ when $`m\ge2^n`$. It assumes continuity only in the input along each fixed history; history dependence and decoding remain unrestricted. The upper bound is [2, Theorem 1].
+
+[PR #30](https://github.com/MColbrook/AIM/pull/30) supplies the [proof](../research/solutions/siavash-sadeghi-553/aim553_report.pdf) and [editable source](../research/solutions/siavash-sadeghi-553/aim553_report.tex). A [fresh independent AI audit](../research/solution_reviews/2026-10-04-active-prs/553-review.md) on 4 October 2026 checked the complete argument against this target and found no blocking mathematical defect. No independent human audit or formal verification is claimed.
+
+Exact values at powers of two follow, $`N(2^r)=r+1`$. The one-integer gap at other dimensions, including $`2\le N(3)\le3`$, remains open. The solved label records the expressly permitted sharp-asymptotic resolution and does not claim every exact value is determined.

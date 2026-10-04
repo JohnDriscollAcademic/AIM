@@ -2,9 +2,9 @@
 
 **Area:** Numerical PDE analysis and free-boundary limits
 
-**Status:** 🔵 OPEN
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-23
+**Last checked:** 2026-10-04
 
 ## Problem statement
 
@@ -62,8 +62,8 @@ This one-sided control of the discrete pressure Laplacian would supply compactne
 
 ## Status review
 
-Reference [1] explicitly leaves the discrete estimate open for general $`\gamma>1`$ and general pressure-dependent $`G`$. Its Theorem 2.3 treats linear $`G`$ with $`\gamma=1`$ and a calculation denoted $`\gamma\approx\infty`$; the latter is not a quantified theorem covering all sufficiently large finite $`\gamma`$.
+**Resolution:** The uniform estimate is false for the stated upwind scheme. With fixed $`X=T=p_H=1`$, $`G(p)=1-p`$ and $`C_0=10`$, the counterexample chooses finite exponents after each mesh and makes $`-\gamma t w_i(t)`$ unbounded. The proof preserves the reflected Neumann ghosts and all four initial-data bounds; no uniform exponent-selection rate is assumed.
 
-References [2]–[4] establish estimates for different graph, particle, or Wasserstein time discretizations of the source-free porous-medium equation. Reference [5] uses a different variational time step with explicit mobility and implicit pressure. Their statements do not supply the estimate for the scheme above.
+[PR #28](https://github.com/MColbrook/AIM/pull/28) supplies the [proof](../research/solutions/siavash-sadeghi-505/aim505_report.pdf) and [editable source](../research/solutions/siavash-sadeghi-505/aim505_report.tex). A [fresh independent AI audit](../research/solution_reviews/2026-10-04-active-prs/505-review.md) on 4 October 2026 checked the complete argument against this target and found no blocking mathematical defect. No independent human audit or formal verification is claimed.
 
-Searches on 23 September 2026, including indexed arXiv, Zenodo, GitHub and Palomar checks, located no matching resolution or announcement.
+David–Ruan [1] treated linear growth at exponent one and a formal stiff limit. The submitted counterexample concerns the precise quantified finite-exponent target above, which is not supplied by the other discretizations in [2]–[5].

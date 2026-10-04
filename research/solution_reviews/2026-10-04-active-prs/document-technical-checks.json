@@ -1,0 +1,132 @@
+[
+  {
+    "pr": 28,
+    "problem": 505,
+    "pages": 5,
+    "pdf_metadata": {
+      "/Producer": "MiKTeX pdfTeX-1.40.28",
+      "/Author": "Siavash Sadeghi; AI-assisted research note",
+      "/Title": "AIM 505: research submission",
+      "/Subject": "",
+      "/Creator": "LaTeX with hyperref",
+      "/Keywords": "",
+      "/CreationDate": "D:20261004132643+01'00'",
+      "/ModDate": "D:20261004132643+01'00'",
+      "/Trapped": "/False",
+      "/PTEX.Fullbanner": "This is MiKTeX-pdfTeX 4.23.0 (1.40.28)"
+    },
+    "missing_refs": [],
+    "duplicate_labels": [],
+    "missing_cites": [],
+    "unused_bibitems": [],
+    "bibitems": [
+      "repo505",
+      "davidruan"
+    ],
+    "first_page": "Upwind Aronson–Bénilan counterexample\nSiavash Sadeghi\n4 October 2026\nAbstract\nThe uniform estimate fails with fixed data bounds and G(p)=1-p. The proof selects\ngamma after the mesh; the numerical experiments are corroboration, not a uniform choice of\ngamma.\nProvenance and review.Separated and polished from the supplied AI-assisted research note\nprepared with ChatGPT. Codex reviewed the mathematical argument and accompanying checks.\nThis is a research claim awaiting independent mathematical review; no independent human audit\nor formal proof verification is claimed.\n1 Entry 505: a counterexample to the uniform upwind estimate\nThe exact scheme and initial-data assumptions used here are those of catalogue entry 505 [1];\nthe originating scheme is David–Ruan [2]. Set\nX=T=p H = 1, G(p) = 1−p.\nThusG(1) = 0and G′=−1. We prove that a single fixed initial-data boundC0 cannot yield a\nconstant independent of bothhandγin\nwi(t) := pi+1−2pi +pi−1\nh2 + 1−pi≥−C\nγt.(1)\nOn the gridi=−M,...,M,h= 1/M, the exact density equation is\n˙ni = F(ni,ni+1)−F(ni−1,ni)\nh2 +ni(1−pi), F(a,b) = max(a,b)(b γ−aγ), p i =n γ\ni.\nThe reflected ghosts aren−M−1=n−M+1andnM+1 =nM−1. The admissible initial data satisfy\n0≤pi(0)≤1and one fixed boundC0 on each of\nh\n∑\ni\nni(0), h\n∑\ni\npi(0),\nM−1∑\ni=−M\n|ni+1(0)−ni(0)|, h\n∑\ni\n|˙ni(0)|.\nUnrestricted sums include both endpoints. The proof below constructs such data withC0 = 10\nalong a sequence of even meshes and finite exponents.\n1.1 A positive pressure profile on a fixed core\nLetM"
+  },
+  {
+    "pr": 29,
+    "problem": 523,
+    "pages": 4,
+    "pdf_metadata": {
+      "/Producer": "MiKTeX pdfTeX-1.40.28",
+      "/Author": "Siavash Sadeghi; AI-assisted research note",
+      "/Title": "AIM 523: research submission",
+      "/Subject": "",
+      "/Creator": "LaTeX with hyperref",
+      "/Keywords": "",
+      "/CreationDate": "D:20261004133025+01'00'",
+      "/ModDate": "D:20261004133025+01'00'",
+      "/Trapped": "/False",
+      "/PTEX.Fullbanner": "This is MiKTeX-pdfTeX 4.23.0 (1.40.28)"
+    },
+    "missing_refs": [],
+    "duplicate_labels": [],
+    "missing_cites": [],
+    "unused_bibitems": [],
+    "bibitems": [
+      "repo523",
+      "galkowski"
+    ],
+    "first_page": "A logarithmic lower bound for Nyström estimates\nSiavash Sadeghi\n4 October 2026\nAbstract\nA fixed smooth amplitude on a smooth closed curve with a straight arc gives growth\nof order square root of log k. This addresses the arbitrary smooth amplitudes and general\nparametrizations allowed in the target; it does not assert a counterexample for every physical\nboundary-integral kernel.\nProvenance and review.Separated and polished from the supplied AI-assisted research note\nprepared with ChatGPT. Codex reviewed the mathematical argument and accompanying checks.\nThis is a research claim awaiting independent mathematical review; no independent human audit\nor formal proof verification is claimed.\n1 Entry 523: the square-root logarithm is necessary\nWe use exactly the general-amplitude formulation in catalogue entry 523 [1]. The original paper\nand its fourth version retain the general-curve conjecture [2]. It is enough to disprove the estimate\nats= 0.\nFor clarity, the target uses\nL1,k(t,τ) =k\n∫\nS1\neik⟨γ(t)−γ(τ),ω⟩fk(ω,t,τ) dS(ω), ˆL1,k,m(t) = 1√\n2π\n∫ 2π\n0\ne−imτL1,k(t,τ) dτ.\nAll amplitude derivatives must be uniformly bounded ink. It suffices to disprove the asserted\nbound ats = 0, where the target quantity isk−1∑\n0<|m|≤(1−ε)N∥ˆL1,k,m∥L2(Γ). The construction\nuses a single smooth amplitude independent ofk and the admissible choicesε= 1/2and\nN= 4⌈k⌉.\n1.1 A fixed smooth curve and a fixed amplitude\nChoose a smooth embedded closed curve containing a straight horizontal arc, with a smooth\nperiod"
+  },
+  {
+    "pr": 30,
+    "problem": 553,
+    "pages": 3,
+    "pdf_metadata": {
+      "/Producer": "MiKTeX pdfTeX-1.40.28",
+      "/Author": "Siavash Sadeghi; AI-assisted research note",
+      "/Title": "AIM 553: research submission",
+      "/Subject": "",
+      "/Creator": "LaTeX with hyperref",
+      "/Keywords": "",
+      "/CreationDate": "D:20261004132652+01'00'",
+      "/ModDate": "D:20261004132652+01'00'",
+      "/Trapped": "/False",
+      "/PTEX.Fullbanner": "This is MiKTeX-pdfTeX 4.23.0 (1.40.28)"
+    },
+    "missing_refs": [],
+    "duplicate_labels": [],
+    "missing_cites": [],
+    "unused_bibitems": [],
+    "bibitems": [
+      "repo553",
+      "knu"
+    ],
+    "first_page": "Continuous adaptive measurements: a sharp asymptotic bound\nSiavash Sadeghi\n4 October 2026\nAbstract\nThe bounds are⌊log2m⌋+ 1 ≤N(m)≤⌈log2m⌉+ 1. This gives the sharp leading\nasymptotic and exact values at powers of two. It does not determine everyN (m), including\nN(3).\nProvenance and review.Separated and polished from the supplied AI-assisted research note\nprepared with ChatGPT. Codex reviewed the mathematical argument and accompanying checks.\nThis is a research claim awaiting independent mathematical review; no independent human audit\nor formal proof verification is claimed.\n1 Entry 553: sharp logarithmic measurement growth\nWe retain precisely the information model of entry 553 [1]: each branch functional is continuous\nin the input, while the dependence on the preceding exact measurements and the final decoder\nmay be arbitrary. The known upper bound is Theorem 1 of Krieg–Novak–Ullrich, version 2 [2].\nHere N (m)is the least number of adaptive measurements allowing, for everyε >0, recovery\nof everyx∈Rm with worst-case error at mostε. The first measurement is continuous onRm;\nafter any fixed history, the next measurement is again continuous as a function of the input.\nNeither its dependence on the history nor the final reconstruction is required to be continuous.\nThe lower bound below applies to this full model and to any norm onRm, by equivalence of\nfinite-dimensional norms.\nTheorem 1.1.Form≥2,\n⌊log2m⌋+ 1≤N(m)≤⌈log2m⌉+ 1.\nConsequentlyN (m) = log2m +O(1)and N (m)∼log2m. At powers "
+  },
+  {
+    "pr": 31,
+    "problem": 570,
+    "pages": 3,
+    "pdf_metadata": {
+      "/Producer": "MiKTeX pdfTeX-1.40.28",
+      "/Author": "Siavash Sadeghi; AI-assisted research note",
+      "/Title": "AIM 570: research submission",
+      "/Subject": "",
+      "/Creator": "LaTeX with hyperref",
+      "/Keywords": "",
+      "/CreationDate": "D:20261004132656+01'00'",
+      "/ModDate": "D:20261004132656+01'00'",
+      "/Trapped": "/False",
+      "/PTEX.Fullbanner": "This is MiKTeX-pdfTeX 4.23.0 (1.40.28)"
+    },
+    "missing_refs": [],
+    "duplicate_labels": [],
+    "missing_cites": [],
+    "unused_bibitems": [],
+    "bibitems": [
+      "repo570",
+      "knu"
+    ],
+    "first_page": "Continuous reconstruction on Banach unit balls\nSiavash Sadeghi\n4 October 2026\nAbstract\nOne fixed inclusion fromℓ1([0, 1])to ℓ2([0, 1])disproves every universal continuity-cost\nconstant over arbitrary real Banach spaces. The construction uses nonseparable spaces and\ndoes not settle a separable variant.\nProvenance and review.Separated and polished from the supplied AI-assisted research note\nprepared with ChatGPT. Codex reviewed the mathematical argument and accompanying checks.\nThis is a research claim awaiting independent mathematical review; no independent human audit\nor formal proof verification is claimed.\n1 Entry 570: no universal cost of continuous decoding\nThe quantification in entry 570 is over arbitrary real Banach spaces, with no separability\nassumption [1]. This distinction is decisive. The compact-input factor-two theorem in the cited\nsource [2] does not apply to the following unit ball.\nWriteBX for the closed unit ball. The quantityen(S)is the infimum ofsupx∈BX∥Sx−φ(N (x))∥Y\nover continuous encodersN :BX→Rn and arbitrary decodersφ: Rn→Y. The quantityδn(S)\nis the same infimum withφalso continuous. The decoder is defined on all ofRn, as required by\nthe target.\nTheorem 1.1.Let\nI= [0,1], X=ℓ 1(I), Y=ℓ 2(I),\nand letS:X→Ybe the canonical inclusion. Then, for every finiten≥1,\nδn(S) = 1,\nwhereas for every integerK≥1,\ne2K(S)≤ 1√\nK+ 1 .\nTherefore no universal finite constantC can satisfyδn(S)≤Cen(S)in the stated class. In\nparticular,C= 2already fails for this operator atn= 8"
+  },
+  {
+    "pr": 32,
+    "problem": 641,
+    "pages": 5,
+    "pdf_metadata": {
+      "/Producer": "MiKTeX pdfTeX-1.40.28",
+      "/Author": "Siavash Sadeghi; AI-assisted research note",
+      "/Title": "AIM 641: research submission",
+      "/Subject": "",
+      "/Creator": "LaTeX with hyperref",
+      "/Keywords": "",
+      "/CreationDate": "D:20261004133031+01'00'",
+      "/ModDate": "D:20261004133031+01'00'",
+      "/Trapped": "/False",
+      "/PTEX.Fullbanner": "This is MiKTeX-pdfTeX 4.23.0 (1.40.28)"
+    },
+    "missing_refs": [],
+    "duplicate_labels": [],
+    "missing_cites": [],
+    "unused_bibitems": [],
+    "bibitems": [
+      "repo641",
+      "bos"
+    ],
+    "first_page": "The cubic Fejér inequality in every dimension\nSiavash Sadeghi\n4 October 2026\nAbstract\nThis is a claimed proof of the cubic Fejer assertion only. The three quartic assertions\ngrouped in entry 641 are outside the result, so this is a partial resolution of the catalogue\nentry.\nProvenance and review.Separated and polished from the supplied AI-assisted research note\nprepared with ChatGPT. Codex reviewed the mathematical argument and accompanying checks.\nThis is a research claim awaiting independent mathematical review; no independent human audit\nor formal proof verification is claimed.\n1 Entry 641: the cubic Fejér inequality in every dimension\nWe settle the cubic assertion within entry 641 [1]. Bos proved it through dimension 28 and\ndescribed a dimension-by-dimension degree-elevation test [2]. The point here is to carry out the\ninduction symbolically in the dimension, reducing all remaining dimensions to 45 exact coefficient\ntypes.\nIn barycentric coordinates the prescribed node set consists of the verticesei, the ordered edge\nnodes tei + (1−t)ej for i̸=j, wheret = (1 + 1/\n√\n5)/2, and the face centroids(ei +ej +ek)/3\nfor i<j <k . There are\n(d+3\n3\n)\nnodes. Hereℓ(3,d)\nx denotes the cubic cardinal polynomial equal to\none atxand zero at every other node.\nTheorem 1.1.For every nondegenerate reald-simplex, d≥1, Bos’s cubic node setF3,d satisfies\n∑\nx∈F3,d\n|ℓ(3,d)\nx (z)|2≤1 (z∈Sd).\n1.1 A dimension-independent symmetric deficit\nLetM =d + 1be the number of barycentric coordinates. Work homog"
+  }
+]

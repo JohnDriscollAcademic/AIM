@@ -1,0 +1,762 @@
+[
+  {
+    "z_power": 1,
+    "partition": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "coefficient": "120960*M**5 - 90720*M**4",
+    "shifted_coefficients_ascending": [
+      3592028160,
+      2291466240,
+      584478720,
+      74511360,
+      4747680,
+      120960
+    ]
+  },
+  {
+    "z_power": 1,
+    "partition": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "coefficient": "56160*M**5 - 64560*M**4",
+    "shifted_coefficients_ascending": [
+      1575813120,
+      1017937920,
+      262748160,
+      33876480,
+      2181840,
+      56160
+    ]
+  },
+  {
+    "z_power": 1,
+    "partition": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "coefficient": "23664*M**5 - 56208*M**4",
+    "shifted_coefficients_ascending": [
+      545193984,
+      369524736,
+      99575808,
+      13346304,
+      890352,
+      23664
+    ]
+  },
+  {
+    "z_power": 1,
+    "partition": [
+      2,
+      2,
+      2,
+      1
+    ],
+    "coefficient": "8496*M**5 - 47232*M**4",
+    "shifted_coefficients_ascending": [
+      84934656,
+      77266944,
+      25362432,
+      3926016,
+      292608,
+      8496
+    ]
+  },
+  {
+    "z_power": 1,
+    "partition": [
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "coefficient": "21024*M**5 - 17808*M**4",
+    "shifted_coefficients_ascending": [
+      615972864,
+      394100736,
+      100804608,
+      12885504,
+      823152,
+      21024
+    ]
+  },
+  {
+    "z_power": 1,
+    "partition": [
+      3,
+      2,
+      1,
+      1
+    ],
+    "coefficient": "8688*M**5 - 22576*M**4",
+    "shifted_coefficients_ascending": [
+      192217088,
+      131694592,
+      35813376,
+      4837888,
+      324944,
+      8688
+    ]
+  },
+  {
+    "z_power": 1,
+    "partition": [
+      3,
+      2,
+      2
+    ],
+    "coefficient": "3056*M**5 - 20512*M**4",
+    "shifted_coefficients_ascending": [
+      16121856,
+      20578304,
+      7770112,
+      1299456,
+      101728,
+      3056
+    ]
+  },
+  {
+    "z_power": 1,
+    "partition": [
+      3,
+      3,
+      1
+    ],
+    "coefficient": "3696*M**5 - 10032*M**4",
+    "shifted_coefficients_ascending": [
+      80019456,
+      55148544,
+      15071232,
+      2044416,
+      137808,
+      3696
+    ]
+  },
+  {
+    "z_power": 1,
+    "partition": [
+      4,
+      1,
+      1,
+      1
+    ],
+    "coefficient": "5544*M**5 - 4008*M**4",
+    "shifted_coefficients_ascending": [
+      165249024,
+      105332736,
+      26846208,
+      3419904,
+      217752,
+      5544
+    ]
+  },
+  {
+    "z_power": 1,
+    "partition": [
+      4,
+      2,
+      1
+    ],
+    "coefficient": "2616*M**5 - 6112*M**4",
+    "shifted_coefficients_ascending": [
+      60686336,
+      41058304,
+      11046912,
+      1478656,
+      98528,
+      2616
+    ]
+  },
+  {
+    "z_power": 1,
+    "partition": [
+      4,
+      3
+    ],
+    "coefficient": "1560*M**5 - 2160*M**4",
+    "shifted_coefficients_ascending": [
+      42270720,
+      27525120,
+      7157760,
+      929280,
+      60240,
+      1560
+    ]
+  },
+  {
+    "z_power": 1,
+    "partition": [
+      5,
+      1,
+      1
+    ],
+    "coefficient": "888*M**5 - 1576*M**4",
+    "shifted_coefficients_ascending": [
+      22642688,
+      14958592,
+      3941376,
+      517888,
+      33944,
+      888
+    ]
+  },
+  {
+    "z_power": 1,
+    "partition": [
+      5,
+      2
+    ],
+    "coefficient": "608*M**5 - 1408*M**4",
+    "shifted_coefficients_ascending": [
+      14155776,
+      9568256,
+      2572288,
+      344064,
+      22912,
+      608
+    ]
+  },
+  {
+    "z_power": 1,
+    "partition": [
+      6,
+      1
+    ],
+    "coefficient": "120*M**5 - 480*M**4",
+    "shifted_coefficients_ascending": [
+      1966080,
+      1474560,
+      430080,
+      61440,
+      4320,
+      120
+    ]
+  },
+  {
+    "z_power": 1,
+    "partition": [
+      7
+    ],
+    "coefficient": "48*M**5 - 48*M**4",
+    "shifted_coefficients_ascending": [
+      1376256,
+      884736,
+      227328,
+      29184,
+      1872,
+      48
+    ]
+  },
+  {
+    "z_power": 2,
+    "partition": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "coefficient": "77760*M**5 - 84240*M**4 - 115200*M**3",
+    "shifted_coefficients_ascending": [
+      2144010240,
+      1397882880,
+      363018240,
+      46955520,
+      3026160,
+      77760
+    ]
+  },
+  {
+    "z_power": 2,
+    "partition": [
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "coefficient": "35856*M**5 - 56808*M**4 - 90144*M**3",
+    "shifted_coefficients_ascending": [
+      896090112,
+      600680448,
+      159604992,
+      21039840,
+      1377432,
+      35856
+    ]
+  },
+  {
+    "z_power": 2,
+    "partition": [
+      2,
+      2,
+      1,
+      1
+    ],
+    "coefficient": "14536*M**5 - 44232*M**4 - 49776*M**3",
+    "shifted_coefficients_ascending": [
+      269656064,
+      197553152,
+      56244608,
+      7837840,
+      537208,
+      14536
+    ]
+  },
+  {
+    "z_power": 2,
+    "partition": [
+      2,
+      2,
+      2
+    ],
+    "coefficient": "4632*M**5 - 34272*M**4 - 21456*M**3",
+    "shifted_coefficients_ascending": [
+      417792,
+      20554752,
+      10040448,
+      1846320,
+      151008,
+      4632
+    ]
+  },
+  {
+    "z_power": 2,
+    "partition": [
+      3,
+      1,
+      1,
+      1
+    ],
+    "coefficient": "13824*M**5 - 15672*M**4 - 40128*M**3",
+    "shifted_coefficients_ascending": [
+      368246784,
+      243314688,
+      63797760,
+      8305728,
+      537288,
+      13824
+    ]
+  },
+  {
+    "z_power": 2,
+    "partition": [
+      3,
+      2,
+      1
+    ],
+    "coefficient": "5680*M**5 - 14912*M**4 - 13920*M**3",
+    "shifted_coefficients_ascending": [
+      117915648,
+      83113984,
+      23021312,
+      3144096,
+      212288,
+      5680
+    ]
+  },
+  {
+    "z_power": 2,
+    "partition": [
+      3,
+      3
+    ],
+    "coefficient": "2872*M**5 - 3656*M**4 + 1392*M**3",
+    "shifted_coefficients_ascending": [
+      79847424,
+      51598336,
+      13334144,
+      1722480,
+      111224,
+      2872
+    ]
+  },
+  {
+    "z_power": 2,
+    "partition": [
+      4,
+      1,
+      1
+    ],
+    "coefficient": "3516*M**5 - 3580*M**4 - 10152*M**3",
+    "shifted_coefficients_ascending": [
+      95350784,
+      62726656,
+      16383552,
+      2125528,
+      137060,
+      3516
+    ]
+  },
+  {
+    "z_power": 2,
+    "partition": [
+      4,
+      2
+    ],
+    "coefficient": "1844*M**5 - 2788*M**4 - 648*M**3",
+    "shifted_coefficients_ascending": [
+      48672768,
+      31930880,
+      8355136,
+      1090296,
+      70972,
+      1844
+    ]
+  },
+  {
+    "z_power": 2,
+    "partition": [
+      5,
+      1
+    ],
+    "coefficient": "516*M**5 - 1140*M**4 - 1272*M**3",
+    "shifted_coefficients_ascending": [
+      11587584,
+      7988736,
+      2173632,
+      292488,
+      19500,
+      516
+    ]
+  },
+  {
+    "z_power": 2,
+    "partition": [
+      6
+    ],
+    "coefficient": "108*M**5 - 180*M**4 + 72*M**3",
+    "shifted_coefficients_ascending": [
+      2838528,
+      1857024,
+      485568,
+      63432,
+      4140,
+      108
+    ]
+  },
+  {
+    "z_power": 3,
+    "partition": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "coefficient": "26880*M**5 - 38880*M**4 - 87360*M**3 - 108480*M**2",
+    "shifted_coefficients_ascending": [
+      669880320,
+      452367360,
+      120490560,
+      15871680,
+      1036320,
+      26880
+    ]
+  },
+  {
+    "z_power": 3,
+    "partition": [
+      2,
+      1,
+      1,
+      1
+    ],
+    "coefficient": "12360*M**5 - 24528*M**4 - 58440*M**3 - 19488*M**2",
+    "shifted_coefficients_ascending": [
+      273377280,
+      191367168,
+      52442400,
+      7067064,
+      469872,
+      12360
+    ]
+  },
+  {
+    "z_power": 3,
+    "partition": [
+      2,
+      2,
+      1
+    ],
+    "coefficient": "4888*M**5 - 16128*M**4 - 25032*M**3 + 7632*M**2",
+    "shifted_coefficients_ascending": [
+      81781760,
+      62392064,
+      18240272,
+      2587192,
+      179392,
+      4888
+    ]
+  },
+  {
+    "z_power": 3,
+    "partition": [
+      3,
+      1,
+      1
+    ],
+    "coefficient": "4840*M**5 - 6768*M**4 - 22360*M**3 + 8032*M**2",
+    "shifted_coefficients_ascending": [
+      119941120,
+      81097728,
+      21653280,
+      2858664,
+      186832,
+      4840
+    ]
+  },
+  {
+    "z_power": 3,
+    "partition": [
+      3,
+      2
+    ],
+    "coefficient": "2064*M**5 - 3624*M**4 - 2072*M**3 + 9808*M**2",
+    "shifted_coefficients_ascending": [
+      52356096,
+      34607872,
+      9136144,
+      1202920,
+      78936,
+      2064
+    ]
+  },
+  {
+    "z_power": 3,
+    "partition": [
+      4,
+      1
+    ],
+    "coefficient": "1180*M**5 - 1576*M**4 - 4756*M**3 + 4216*M**2",
+    "shifted_coefficients_ascending": [
+      30045696,
+      20093056,
+      5326488,
+      700012,
+      45624,
+      1180
+    ]
+  },
+  {
+    "z_power": 3,
+    "partition": [
+      5
+    ],
+    "coefficient": "188*M**5 - 352*M**4 - 404*M**3 + 568*M**2",
+    "shifted_coefficients_ascending": [
+      4548096,
+      3060864,
+      818264,
+      108652,
+      7168,
+      188
+    ]
+  },
+  {
+    "z_power": 4,
+    "partition": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "coefficient": "6720*M**5 - 11880*M**4 - 32016*M**3 - 56640*M**2 + 69504*M",
+    "shifted_coefficients_ascending": [
+      152079360,
+      106311552,
+      29019456,
+      3888624,
+      256920,
+      6720
+    ]
+  },
+  {
+    "z_power": 4,
+    "partition": [
+      2,
+      1,
+      1
+    ],
+    "coefficient": "3090*M**5 - 6884*M**4 - 17418*M**3 - 2844*M**2 + 28272*M",
+    "shifted_coefficients_ascending": [
+      64182400,
+      45823280,
+      12756468,
+      1739894,
+      116716,
+      3090
+    ]
+  },
+  {
+    "z_power": 4,
+    "partition": [
+      2,
+      2
+    ],
+    "coefficient": "1222*M**5 - 3380*M**4 - 3630*M**3 + 11316*M**2 + 10896*M",
+    "shifted_coefficients_ascending": [
+      25150848,
+      17599312,
+      4882916,
+      670290,
+      45500,
+      1222
+    ]
+  },
+  {
+    "z_power": 4,
+    "partition": [
+      3,
+      1
+    ],
+    "coefficient": "1210*M**5 - 1900*M**4 - 5594*M**3 + 7396*M**2 + 5104*M",
+    "shifted_coefficients_ascending": [
+      29516928,
+      19938992,
+      5338740,
+      708006,
+      46500,
+      1210
+    ]
+  },
+  {
+    "z_power": 4,
+    "partition": [
+      4
+    ],
+    "coefficient": "295*M**5 - 454*M**4 - 1235*M**3 + 1738*M**2 - 344*M",
+    "shifted_coefficients_ascending": [
+      7283136,
+      4902152,
+      1308162,
+      173037,
+      11346,
+      295
+    ]
+  },
+  {
+    "z_power": 5,
+    "partition": [
+      1,
+      1,
+      1
+    ],
+    "coefficient": "1344*M**5 - 2700*M**4 - 7536*M**3 - 13020*M**2 + 44472*M - 7776",
+    "shifted_coefficients_ascending": [
+      28637280,
+      20384760,
+      5650596,
+      766224,
+      51060,
+      1344
+    ]
+  },
+  {
+    "z_power": 5,
+    "partition": [
+      2,
+      1
+    ],
+    "coefficient": "618*M**5 - 1398*M**4 - 3222*M**3 + 1590*M**2 + 15756*M - 3888",
+    "shifted_coefficients_ascending": [
+      13098672,
+      9216108,
+      2551590,
+      347562,
+      23322,
+      618
+    ]
+  },
+  {
+    "z_power": 5,
+    "partition": [
+      3
+    ],
+    "coefficient": "242*M**5 - 386*M**4 - 1102*M**3 + 1610*M**2 + 932*M - 1296",
+    "shifted_coefficients_ascending": [
+      5893776,
+      3980740,
+      1065978,
+      141426,
+      9294,
+      242
+    ]
+  },
+  {
+    "z_power": 6,
+    "partition": [
+      1,
+      1
+    ],
+    "coefficient": "224*M**5 - 486*M**4 - 1288*M**3 - 1806*M**2 + 12812*M - 5616",
+    "shifted_coefficients_ascending": [
+      4671216,
+      3328812,
+      927538,
+      126520,
+      8474,
+      224
+    ]
+  },
+  {
+    "z_power": 6,
+    "partition": [
+      2
+    ],
+    "coefficient": "103*M**5 - 215*M**4 - 497*M**3 + 251*M**2 + 3166*M - 2808",
+    "shifted_coefficients_ascending": [
+      2278584,
+      1580878,
+      433123,
+      58543,
+      3905,
+      103
+    ]
+  },
+  {
+    "z_power": 7,
+    "partition": [
+      1
+    ],
+    "coefficient": "32*M**5 - 72*M**4 - 176*M**3 - 216*M**2 + 2160*M - 1728",
+    "shifted_coefficients_ascending": [
+      665280,
+      472816,
+      131752,
+      18000,
+      1208,
+      32
+    ]
+  },
+  {
+    "z_power": 8,
+    "partition": [],
+    "coefficient": "4*M**5 - 9*M**4 - 22*M**3 - 27*M**2 + 270*M - 216",
+    "shifted_coefficients_ascending": [
+      83160,
+      59102,
+      16469,
+      2250,
+      151,
+      4
+    ]
+  }
+]

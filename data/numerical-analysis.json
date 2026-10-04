@@ -12,8 +12,11 @@
     "title": "A discrete Aronson–Bénilan estimate for an upwind growth scheme",
     "area": "Numerical PDE analysis and free-boundary limits",
     "file": "problems/505-upwind-discrete-aronson-benilan.md",
-    "status": "Open",
-    "last_checked": "2026-09-23"
+    "status": "Solved",
+    "last_checked": "2026-10-04",
+    "outcome": "Uniform estimate disproved",
+    "proof": "research/solutions/siavash-sadeghi-505/aim505_report.pdf",
+    "review": "research/solution_reviews/2026-10-04-active-prs/505-review.md"
   },
   {
     "id": "517",
@@ -52,8 +55,11 @@
     "title": "Removing the logarithmic loss in Helmholtz Nyström estimates",
     "area": "Numerical PDEs and boundary integral equations",
     "file": "problems/523-nystrom-logarithmic-loss.md",
-    "status": "Partially resolved",
-    "last_checked": "2026-09-24"
+    "status": "Solved",
+    "last_checked": "2026-10-04",
+    "outcome": "General-amplitude bound disproved",
+    "proof": "research/solutions/siavash-sadeghi-523/aim523_report.pdf",
+    "review": "research/solution_reviews/2026-10-04-active-prs/523-review.md"
   },
   {
     "id": "527",
@@ -92,8 +98,11 @@
     "title": "Minimum number of continuous adaptive measurements for vector recovery",
     "area": "Information-based complexity and approximation theory",
     "file": "problems/553-continuous-adaptive-measurement-complexity.md",
-    "status": "Open",
-    "last_checked": "2026-09-24"
+    "status": "Solved",
+    "last_checked": "2026-10-04",
+    "outcome": "Sharp asymptotic established",
+    "proof": "research/solutions/siavash-sadeghi-553/aim553_report.pdf",
+    "review": "research/solution_reviews/2026-10-04-active-prs/553-review.md"
   },
   {
     "id": "554",
@@ -151,8 +160,11 @@
     "title": "The cost of continuous reconstruction on Banach unit balls",
     "area": "Information-based complexity and nonlinear approximation",
     "file": "problems/570-continuous-decoder-banach-balls.md",
-    "status": "Open",
-    "last_checked": "2026-09-24"
+    "status": "Solved",
+    "last_checked": "2026-10-04",
+    "outcome": "Universal bound disproved",
+    "proof": "research/solutions/siavash-sadeghi-570/aim570_report.pdf",
+    "review": "research/solution_reviews/2026-10-04-active-prs/570-review.md"
   },
   {
     "id": "578",
@@ -219,7 +231,7 @@
     "area": "Multivariate approximation and optimal experimental design",
     "file": "problems/641-bos-simplex-interpolation-nodes.md",
     "status": "Partially resolved",
-    "last_checked": "2026-09-24"
+    "last_checked": "2026-10-04"
   },
   {
     "id": "651",

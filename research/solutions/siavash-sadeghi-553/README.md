@@ -2,7 +2,9 @@
 
 Author/submitting contributor: **Siavash Sadeghi**. Reviewed 4 October 2026.
 
-**Solution claimed; awaiting independent review.** The bounds are floor(log2 m)+1 <= N(m) <= ceil(log2 m)+1. This gives the sharp leading asymptotic and exact values at powers of two. It does not determine every N(m), including N(3).
+**Accepted after independent AI review; AIM 553 is solved for its stated target.** The bounds are floor(log2 m)+1 <= N(m) <= ceil(log2 m)+1. This gives the sharp leading asymptotic and exact values at powers of two. It does not determine every N(m), including N(3).
+
+**Maintainer review, 4 October 2026:** see the [dated independent AI audit](../../solution_reviews/2026-10-04-active-prs/553-review.md) and [current problem page](../../../problems/553-continuous-adaptive-measurement-complexity.md). The paper and preparation reports retain their original submission-time wording. No independent human or formal verification is claimed.
 
 Read the [paper](aim553_report.pdf) or its [editable source](aim553_report.tex), the [target comparison and review](REVIEW_REPORT.md), and the [dated submission audit](TARGET_AUDIT.md).
 

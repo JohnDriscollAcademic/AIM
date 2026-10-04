@@ -1,0 +1,20 @@
+COMMAND ['C:\\Users\\MatthewColbrook\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe', '-B', 'C:\\Users\\MatthewColbrook\\.codex\\visualizations\\2026\\10\\01\\01a0f88a-46a6-73c1-ae0f-23d167c70a94\\active-solution-pr-review-2026-10-04\\final-review-snapshot\\research\\solution_reviews\\2026-10-04-active-prs\\641-independent-checks\\independent_checks.py']
+EXIT 0
+Python 3.12.14 SymPy 1.14.0
+INPUT aim641_report.tex sha256 9fd94d8f8a79e63048511d56f1dd868603f6a9299770c25992717ec4afd6d4ea LF_sha256 9a31cba0a79133cfda34a135405a99293a89e7932979f0ceea7aceb2fc30c03a
+INPUT verify_cubic.py sha256 71b6c654348d8a586003a3ef8f03af1965e49791d35a76459a2c08f2461c76e0 LF_sha256 f2b27079f02e53ba70ae2736a431d43a8a7e87b290515b03e196173f79e01a9f
+INPUT check_printed_table.py sha256 3fe76a50179350608dd4577ca20f07bf433abf5bb3858e975f4083ae4d2947fd LF_sha256 5e3244d30c2bec30cf16803778bc1376d65a895b1beae08684597b10851483c1
+INPUT crosscheck_cubic.py sha256 29019df3a31df3b95779ba9716e2514afde98d31945e18bdcccd809c530b2c8d LF_sha256 226315b8dd9c14b2cce78cf9fbdb07e5669bca19420fa05c112eea86a2d58cc7
+INPUT test_verifier.py sha256 cf4c41ddff34d1afb7b0c60266722d51e804edfd5084c98dc4b06f5ecd22edaa LF_sha256 d656b8ca423f848d0072056eacd9876713ac4e8b41be583777e6e7179a090ecd
+INPUT cubic_certificate.json sha256 34997d9751d15dc8d7cf1156bd8801952a3fb761425d888d9de7efcf78cc5e62 LF_sha256 b50438d39b25ce617950d577777265729da6a9de1d8694f4945611c838934efe
+CARDINAL_MATRIX 2 4 identity
+CARDINAL_MATRIX 3 10 identity
+CARDINAL_MATRIX 4 20 identity
+KERNEL_GROUPING exact vertex + unordered-edge-pair + face expansion
+BASE_DIMENSIONS_1_2 49 elevated E monomials minimum 81
+FINITE_INDUCTION 4 elevation 8 nonzero_monomials 560 nonzero_types 123 minimum 51/256
+FINITE_INDUCTION 5 elevation 5 nonzero_monomials 1001 nonzero_types 94 minimum 1146/3125
+FINITE_INDUCTION 6 elevation 3 nonzero_monomials 1287 nonzero_types 60 minimum 35/72
+FINITE_INDUCTION 7 elevation 3 nonzero_monomials 3003 nonzero_types 64 minimum 9606/16807
+UNIFORM_DIRECT_SYMBOLIC_EXPANSION 3432 mu-z monomials 45 coefficient types, each agrees as a polynomial in M; all shifted coefficients strictly positive
+ALL INDEPENDENT EXACT CHECKS PASSED

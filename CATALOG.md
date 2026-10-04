@@ -2,7 +2,7 @@
 
 [Repository overview](README.md) · [Solved and claimed solutions](RESOLVED.md)
 
-**642 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
+**638 open targets**, grouped by subject with solved problems listed immediately below each open list. Open and Partial entries are counted once each; Solved and Lean verified entries count in the Solved column. Every linked page gives the precise statement, an application where one is identified or a note on its mathematical significance, references, known cases, and its own literature-review date. See the [status legend](README.md#problem-status) and the [resolution archive](RESOLVED.md).
 
 ## Browse by subject
 
@@ -13,7 +13,7 @@
 | [Inverse problems, control and dynamics](#inverse-problems-control-and-dynamics) | [28](#inverse-open) | [0](#inverse-solved) |
 | [PDEs, fluids and materials](#pdes-fluids-and-materials) | [31](#pdes-materials-open) | [1](#pdes-materials-solved) |
 | [Probability, statistics and learning](#probability-statistics-and-learning) | [42](#probability-statistics-open) | [4](#probability-statistics-solved) |
-| [Numerical analysis and scientific computing](#numerical-analysis-and-scientific-computing) | [26](#numerical-analysis-open) | [3](#numerical-analysis-solved) |
+| [Numerical analysis and scientific computing](#numerical-analysis-and-scientific-computing) | [22](#numerical-analysis-open) | [7](#numerical-analysis-solved) |
 | [Geometry and topology](#geometry-and-topology) | [77](#geometry-topology-open) | [2](#geometry-topology-solved) |
 | [Combinatorics, optimization and information theory](#combinatorics-optimization-and-information-theory) | [26](#optimization-information-open) | [0](#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](#waves-quantum-systems-and-spectral-geometry) | [32](#spectral2-open) | [0](#spectral2-solved) |
@@ -286,23 +286,19 @@ No solved problems are currently recorded in this subject.
 | ID | Problem | Status | Area |
 | --- | --- | --- | --- |
 | 496 | [Global uniqueness of fine-mesh semilinear Galerkin solutions](problems/496-semilinear-galerkin-global-uniqueness.md) | 🟡 PARTIAL | Numerical PDEs and optimal control |
-| 505 | [A discrete Aronson–Bénilan estimate for an upwind growth scheme](problems/505-upwind-discrete-aronson-benilan.md) | 🔵 OPEN | Numerical PDE analysis and free-boundary limits |
 | 517 | [Sharp local approximation widths for rough elliptic equations](problems/517-sharp-local-elliptic-widths.md) | 🔵 OPEN | Numerical PDE analysis and multiscale approximation |
 | 518 | [Removing the logarithmic loss in the Li–Wu KdV integrator](problems/518-kdv-integrator-logarithmic-loss.md) | 🔵 OPEN | Numerical PDE analysis and dispersive equations |
 | 519 | [Universal identities for Euclidean mechanical Lie brackets](problems/519-euclidean-mechanical-lie-algebra.md) | 🔵 OPEN | Geometric numerical integration and numerical PDEs |
 | 522 | [Linear inverse bounds for four-diamond scattering](problems/522-four-diamond-scattering-inverse.md) | 🔵 OPEN | Numerical PDEs and acoustic scattering |
-| 523 | [Removing the logarithmic loss in Helmholtz Nyström estimates](problems/523-nystrom-logarithmic-loss.md) | 🟡 PARTIAL | Numerical PDEs and boundary integral equations |
 | 527 | [Existence for adaptive porous flow with a negative drag jump](problems/527-negative-jump-adaptive-flow.md) | 🔵 OPEN | Numerical PDEs and porous-media flow |
 | 536 | [Optimal star-discrepancy lower bound for infinite sequences](problems/536-star-discrepancy-sequence-lower-bound.md) | 🔵 OPEN | Uncertainty quantification and quasi-Monte Carlo integration |
 | 541 | [Low-degree convergence of relaxed minimal-deformation surface elements](problems/541-low-degree-relaxed-minimal-deformation.md) | 🔵 OPEN | Numerical analysis of evolving surfaces |
 | 542 | [Optimal stable manifold widths of Besov balls](problems/542-stable-manifold-widths-besov.md) | 🟡 PARTIAL | Stable nonlinear approximation and numerical analysis |
-| 553 | [Minimum number of continuous adaptive measurements for vector recovery](problems/553-continuous-adaptive-measurement-complexity.md) | 🔵 OPEN | Information-based complexity and approximation theory |
 | 554 | [Sharp asymptotic constant for rational approximation of fractional inverse powers](problems/554-stieltjes-rational-asymptotic-constant.md) | 🔵 OPEN | Rational approximation and numerical analysis |
 | 555 | [Maximal gain from randomization with nonadaptive linear measurements](problems/555-nonadaptive-randomization-gain.md) | 🔵 OPEN | Information-based complexity and randomized approximation |
 | 556 | [Does integration of uniformly derivative-bounded analytic functions suffer the dimensional curse?](problems/556-smooth-integration-dimensional-curse.md) | 🔵 OPEN | Numerical integration and information-based complexity |
 | 568 | [Sharp permutation bound for triangular parts of correlation matrices](problems/568-sor-permutation-sharp-constant.md) | 🔵 OPEN | Numerical linear algebra and iterative methods |
 | 569 | [A sharp Galerkin projection bound on nonobtuse triangles](problems/569-nonobtuse-galerkin-projection-constant.md) | 🔵 OPEN | Finite element approximation and numerical PDEs |
-| 570 | [The cost of continuous reconstruction on Banach unit balls](problems/570-continuous-decoder-banach-balls.md) | 🔵 OPEN | Information-based complexity and nonlinear approximation |
 | 578 | [A real nearest matrix with spectrum in the closed left half-plane](problems/578-nearest-hurwitz-real-minimizer.md) | 🔵 OPEN | Numerical linear algebra and matrix optimization |
 | 581 | [Infinitely many obstacle resonances in a fixed strip under trapping](problems/581-modified-lax-phillips-trapping.md) | 🟡 PARTIAL | Scattering theory and numerical wave propagation |
 | 582 | [Full Sobolev invertibility range for Hausdorff-measure screen operators](problems/582-fractal-screen-sobolev-invertibility.md) | 🟡 PARTIAL | Boundary integral equations and numerical scattering |
@@ -318,7 +314,11 @@ No solved problems are currently recorded in this subject.
 
 | ID | Problem | Status | Outcome | Proof | Review |
 | --- | --- | --- | --- | --- | --- |
+| 505 | [A discrete Aronson–Bénilan estimate for an upwind growth scheme](problems/505-upwind-discrete-aronson-benilan.md) | ✅ SOLVED | Uniform estimate disproved | [Proof](research/solutions/siavash-sadeghi-505/aim505_report.pdf) | [Review](research/solution_reviews/2026-10-04-active-prs/505-review.md) |
+| 523 | [Removing the logarithmic loss in Helmholtz Nyström estimates](problems/523-nystrom-logarithmic-loss.md) | ✅ SOLVED | General-amplitude bound disproved | [Proof](research/solutions/siavash-sadeghi-523/aim523_report.pdf) | [Review](research/solution_reviews/2026-10-04-active-prs/523-review.md) |
+| 553 | [Minimum number of continuous adaptive measurements for vector recovery](problems/553-continuous-adaptive-measurement-complexity.md) | ✅ SOLVED | Sharp asymptotic established | [Proof](research/solutions/siavash-sadeghi-553/aim553_report.pdf) | [Review](research/solution_reviews/2026-10-04-active-prs/553-review.md) |
 | 561 | [A fixed-time lower bound for Trotter splitting of the hydrogen ground state](problems/561-hydrogen-trotter-lower-bound.md) | ✅ SOLVED | Disproved lower bound | [Proof](research/solutions/562-hydrogen-trotter-disproof/PROOF.md) | [Review](research/solution_reviews/2026-10-02-active-prs/561-review.md) |
+| 570 | [The cost of continuous reconstruction on Banach unit balls](problems/570-continuous-decoder-banach-balls.md) | ✅ SOLVED | Universal bound disproved | [Proof](research/solutions/siavash-sadeghi-570/aim570_report.pdf) | [Review](research/solution_reviews/2026-10-04-active-prs/570-review.md) |
 | 605 | [Optimal uniform observation time for mixed finite element waves](problems/605-mixed-wave-optimal-observation-time.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/606-mixed-wave-observation/PROOF.md) | [Review](research/solution_reviews/2026-10-02-active-prs/605-review.md) |
 | 664 | [Logarithmic controlled bandwidth for locally analytic functions](research/resolved/664-analytic-controlled-bandwidth.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/593-analytic-bandwidth/PROOF.md) | [Review](research/solution_reviews/2026-10-02/593-review.md) |
 
@@ -976,7 +976,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | September 2026 expansion — batch 6 | 10 | 2026-09-19 |
 | September 22 expansion — PDE emphasis | 134 | 2026-09-22 |
 | September 2026 expansion — remaining accepted drafts | 6 | 2026-09-23 |
-| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 155 | 2026-09-23–2026-09-24 |
+| Systematic expansion across numerical PDEs, statistics, uncertainty and topology | 151 | 2026-09-23–2026-10-04 |
 
 ## Maintaining the collection
 

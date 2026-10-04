@@ -1,0 +1,6 @@
+COMMAND ['C:\\Users\\MatthewColbrook\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe', 'C:\\Users\\MatthewColbrook\\.codex\\visualizations\\2026\\10\\01\\01a0f88a-46a6-73c1-ae0f-23d167c70a94\\active-solution-pr-review-2026-10-04\\pr32\\research\\solutions\\siavash-sadeghi-641\\crosscheck_cubic.py']
+EXIT 0
+STDOUT
+Independent polynomial-ring expansion: all 3432 nonzero monomials and all 45 types agree exactly at M=8.
+
+STDERR

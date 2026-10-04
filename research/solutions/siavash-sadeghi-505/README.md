@@ -2,7 +2,9 @@
 
 Author/submitting contributor: **Siavash Sadeghi**. Reviewed 4 October 2026.
 
-**Solution claimed; awaiting independent review.** The uniform estimate fails with fixed data bounds and G(p)=1-p. The proof selects gamma after the mesh; the numerical experiments are corroboration, not a uniform choice of gamma.
+**Accepted after independent AI review; AIM 505 is solved for its stated target.** The uniform estimate fails with fixed data bounds and G(p)=1-p. The proof selects gamma after the mesh; the numerical experiments are corroboration, not a uniform choice of gamma.
+
+**Maintainer review, 4 October 2026:** see the [dated independent AI audit](../../solution_reviews/2026-10-04-active-prs/505-review.md) and [current problem page](../../../problems/505-upwind-discrete-aronson-benilan.md). The paper and preparation reports retain their original submission-time wording. No independent human or formal verification is claimed.
 
 Read the [paper](aim505_report.pdf) or its [editable source](aim505_report.tex), the [target comparison and review](REVIEW_REPORT.md), and the [dated submission audit](TARGET_AUDIT.md).
 

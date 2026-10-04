@@ -1,0 +1,6 @@
+COMMAND ['C:\\Users\\MatthewColbrook\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe', '-O', 'C:\\Users\\MatthewColbrook\\.codex\\visualizations\\2026\\10\\01\\01a0f88a-46a6-73c1-ae0f-23d167c70a94\\active-solution-pr-review-2026-10-04\\pr32\\research\\solutions\\siavash-sadeghi-641\\check_printed_table.py']
+EXIT 0
+STDOUT
+PASS: all 45 printed coefficient polynomials agree exactly with the certificate.
+
+STDERR

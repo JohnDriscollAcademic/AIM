@@ -2,7 +2,9 @@
 
 Author/submitting contributor: **Siavash Sadeghi**. Reviewed 4 October 2026.
 
-**Partial result: cubic claim awaiting independent review.** This is a claimed proof of the cubic Fejer assertion only. The three quartic assertions grouped in entry 641 are outside the result, so this is a partial resolution of the catalogue entry.
+**Accepted after independent AI review: cubic result proved in every dimension; AIM 641 remains partially resolved.** This proves the cubic Fejer assertion only. The three quartic assertions grouped in entry 641 are outside the result, so this is a partial resolution of the catalogue entry.
+
+**Maintainer review, 4 October 2026:** see the [dated independent AI audit](../../solution_reviews/2026-10-04-active-prs/641-review.md) and [current problem page](../../../problems/641-bos-simplex-interpolation-nodes.md). The paper and preparation reports retain their original submission-time wording. No independent human or formal verification is claimed.
 
 Read the [paper](aim641_report.pdf) or its [editable source](aim641_report.tex), the [target comparison and review](REVIEW_REPORT.md), and the [dated submission audit](TARGET_AUDIT.md).
 

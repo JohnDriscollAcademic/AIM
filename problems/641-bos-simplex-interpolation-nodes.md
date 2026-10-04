@@ -4,7 +4,7 @@
 
 **Status:** 🟡 PARTIAL
 
-**Last checked:** 2026-09-24
+**Last checked:** 2026-10-04
 
 ## Problem statement
 
@@ -63,6 +63,8 @@ Explicit extremal interpolation nodes support stable polynomial approximation on
 
 ## Status review
 
-**Known cases:** The cubic Fejér property holds for $`1\le d\le28`$. The quartic Fejér property holds for $`d\le2`$, but fails for $`d\ge4`$: the source gives a violation at the four-dimensional centroid, which persists on faces in higher dimensions. The quartic Fekete and fourth-power questions remain meaningful in those dimensions.
+**Known cases:** The cubic Fejér property is now proved for every $`d\ge1`$. [PR #32](https://github.com/MColbrook/AIM/pull/32) supplies the [proof](../research/solutions/siavash-sadeghi-641/aim641_report.pdf) and [editable source](../research/solutions/siavash-sadeghi-641/aim641_report.tex). A [fresh independent AI audit](../research/solution_reviews/2026-10-04-active-prs/641-review.md) on 4 October 2026 checked the complete argument against this target and found no blocking mathematical defect. No independent human audit or formal verification is claimed. The proof uses a dimension-independent symmetric deficit, exact low-dimensional bases, and 45 coefficient types checked symbolically in the dimension. A separately written symbolic expansion reproduces the uniform identity; normal and optimized runs and controlled corruption checks pass.
 
-**Remaining target:** Settle the cubic assertion for $`d\ge29`$ and the three stated quartic assertions beyond their known cases. These questions are kept together to retain their logical relationships. Targeted literature, arXiv, GitHub, Zenodo and Palomar checks found no matching solution announcement; no equivalent catalogue entry was found. The full source article was read for discovery.
+The quartic Fejér property holds for $`d\le2`$ but fails for $`d\ge4`$: Bos's four-dimensional centroid violation persists on faces in higher dimensions. These published cases are unchanged.
+
+**Remaining target:** The quartic Fejér property in dimension three, the quartic Fekete property in every dimension, and the quartic fourth-power bound in every dimension remain outside this result. The grouped entry therefore stays partially resolved; no quartic conclusion is inferred from the cubic proof.

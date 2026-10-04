@@ -2,7 +2,9 @@
 
 Author/submitting contributor: **Siavash Sadeghi**. Reviewed 4 October 2026.
 
-**Solution claimed; awaiting independent review.** One fixed inclusion from l1([0,1]) to l2([0,1]) disproves every universal continuity-cost constant over arbitrary real Banach spaces. The construction uses nonseparable spaces and does not settle a separable variant.
+**Accepted after independent AI review; AIM 570 is solved for its stated target.** One fixed inclusion from l1([0,1]) to l2([0,1]) disproves every universal continuity-cost constant over arbitrary real Banach spaces. The construction uses nonseparable spaces and does not settle a separable variant.
+
+**Maintainer review, 4 October 2026:** see the [dated independent AI audit](../../solution_reviews/2026-10-04-active-prs/570-review.md) and [current problem page](../../../problems/570-continuous-decoder-banach-balls.md). The paper and preparation reports retain their original submission-time wording. No independent human or formal verification is claimed.
 
 Read the [paper](aim570_report.pdf) or its [editable source](aim570_report.tex), the [target comparison and review](REVIEW_REPORT.md), and the [dated submission audit](TARGET_AUDIT.md).
 

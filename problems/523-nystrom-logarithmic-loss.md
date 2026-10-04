@@ -2,9 +2,9 @@
 
 **Area:** Numerical PDEs and boundary integral equations
 
-**Status:** 🟡 PARTIAL
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-24
+**Last checked:** 2026-10-04
 
 ## Problem statement
 
@@ -42,6 +42,8 @@ These coefficients control Kress quadrature for Helmholtz boundary integral equa
 
 ## Status review
 
-**Known cases:** Lemma 11.3 proves the bound for unit-speed convex curves with nonvanishing curvature. Lemma 11.1 gives the general smooth-curve estimate with a square-root logarithmic loss.
+**Resolution:** The displayed general smooth-amplitude bound is false. One fixed smooth amplitude and one fixed smooth closed curve with a flat arc and a variable-speed parametrization make the target quantity grow at least as $`c\sqrt{\log k}`$ at $`s=0`$, with admissible integer cutoffs.
 
-**Remaining target:** Establish the displayed constant bound for general smooth curves, with the stated uniformity in frequency and cutoffs. The current preprint explicitly retains this conjecture. Searches for the estimate, Kress quadrature, Nyström pollution and later work by the authors found no matching solution or announcement as of the check date. Indexed arXiv, Zenodo, GitHub and Palomar searches were included. Fixed-frequency convergence and conditional discrete-stability results do not establish the target.
+[PR #29](https://github.com/MColbrook/AIM/pull/29) supplies the [proof](../research/solutions/siavash-sadeghi-523/aim523_report.pdf) and [editable source](../research/solutions/siavash-sadeghi-523/aim523_report.tex). A [fresh independent AI audit](../research/solution_reviews/2026-10-04-active-prs/523-review.md) on 4 October 2026 checked the complete argument against this target and found no blocking mathematical defect. No independent human audit or formal verification is claimed.
+
+This resolves the arbitrary smooth-amplitude formulation stated here. The example is not identified with a physical single-layer or double-layer Helmholtz kernel and does not establish a numerical oversampling lower bound for every Nyström method. The positive-curvature unit-speed case remains valid. The [28 September 2026 revision of the primary paper](https://arxiv.org/abs/2507.22797v4) retains Conjecture 11.4; the audit checks both cited versions and the precise scope distinction.

@@ -2,7 +2,9 @@
 
 Author/submitting contributor: **Siavash Sadeghi**. Reviewed 4 October 2026.
 
-**Solution claimed; awaiting independent review.** A fixed smooth amplitude on a smooth closed curve with a straight arc gives growth of order square root of log k. This addresses the arbitrary smooth amplitudes and general parametrizations allowed in the target; it does not assert a counterexample for every physical boundary-integral kernel.
+**Accepted after independent AI review; AIM 523 is solved for its stated target.** A fixed smooth amplitude on a smooth closed curve with a straight arc gives growth of order square root of log k. This addresses the arbitrary smooth amplitudes and general parametrizations allowed in the target; it does not assert a counterexample for every physical boundary-integral kernel.
+
+**Maintainer review, 4 October 2026:** see the [dated independent AI audit](../../solution_reviews/2026-10-04-active-prs/523-review.md) and [current problem page](../../../problems/523-nystrom-logarithmic-loss.md). The paper and preparation reports retain their original submission-time wording. No independent human or formal verification is claimed.
 
 Read the [paper](aim523_report.pdf) or its [editable source](aim523_report.tex), the [target comparison and review](REVIEW_REPORT.md), and the [dated submission audit](TARGET_AUDIT.md).
 

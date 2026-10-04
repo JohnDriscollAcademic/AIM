@@ -2,9 +2,9 @@
 
 **Area:** Information-based complexity and nonlinear approximation
 
-**Status:** 🔵 OPEN
+**Status:** ✅ SOLVED
 
-**Last checked:** 2026-09-24
+**Last checked:** 2026-10-04
 
 ## Problem statement
 
@@ -37,8 +37,14 @@ Finite-dimensional representations of functions and solutions are useful only wh
 
 ## Status review
 
-For continuous solution maps on compact metric input sets, the corresponding inequality holds with factor $`2`$. Banach unit balls in their norm topology generally lack this compactness. The source explicitly leaves such a bound for Banach unit balls unresolved; for operators between Hilbert spaces the two errors are equal.
+**Resolution:** No universal finite constant exists over the arbitrary real Banach spaces specified here. For the single inclusion $`S:\ell_1([0,1])\to\ell_2([0,1])`$, with the index set understood as discrete for sequence-space sums,
 
-The latest revision [2] retains compactness in Lemma 9 and expressly notes that its compact-set theorem does not cover infinite-dimensional Banach unit balls. Results about adaptive measurements or uniformly Lipschitz encoders and decoders concern different restrictions.
+```math
+\delta_n(S)=1\quad(n\ge1),\qquad e_{2K}(S)\le(K+1)^{-1/2}\quad(K\ge1).
+```
 
-No matching resolution or announcement was found in current literature, arXiv, public GitHub and native Palomar checks. Native Zenodo access returned HTTP 403; indexed searches found no matching announcement. The existing Besov stable-manifold-width problem prescribes uniform Lipschitz bounds and is distinct from this universal continuity question.
+The encoder uses continuous soft-thresholded moments and an arbitrary globally defined decoder. Every continuous decoder has range supported in a countable set of coordinates, which gives the lower bound even when its encoder is optimized. Thus the same operator refutes every proposed constant; $`C=2`$ already fails at $`n=8`$.
+
+[PR #31](https://github.com/MColbrook/AIM/pull/31) supplies the [proof](../research/solutions/siavash-sadeghi-570/aim570_report.pdf) and [editable source](../research/solutions/siavash-sadeghi-570/aim570_report.tex). A [fresh independent AI audit](../research/solution_reviews/2026-10-04-active-prs/570-review.md) on 4 October 2026 checked the complete argument against this target and found no blocking mathematical defect. No independent human audit or formal verification is claimed.
+
+Both spaces in the counterexample are nonseparable. A variant restricted to separable Banach spaces remains unaddressed. The compact-input factor-two result and Hilbert-space equality in the primary references remain consistent with this example; the audit checks the original Acta Numerica definitions and question directly.

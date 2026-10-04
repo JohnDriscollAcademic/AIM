@@ -17,9 +17,9 @@ Contributions made with or without AI are welcome.
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**642 open targets** (531 open, 111 partial) · **23 solved entries** · **0 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
+**638 open targets** (528 open, 110 partial) · **27 solved entries** · **0 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
 
-**[Browse all 642 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
+**[Browse all 638 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 
 ## Browse by subject
 
@@ -30,7 +30,7 @@ If a problem here is resolved, we encourage you to improve the proof, explain it
 | [Inverse problems, control and dynamics](CATALOG.md#inverse-problems-control-and-dynamics) | [28](CATALOG.md#inverse-open) | [0](CATALOG.md#inverse-solved) |
 | [PDEs, fluids and materials](CATALOG.md#pdes-fluids-and-materials) | [31](CATALOG.md#pdes-materials-open) | [1](CATALOG.md#pdes-materials-solved) |
 | [Probability, statistics and learning](CATALOG.md#probability-statistics-and-learning) | [42](CATALOG.md#probability-statistics-open) | [4](CATALOG.md#probability-statistics-solved) |
-| [Numerical analysis and scientific computing](CATALOG.md#numerical-analysis-and-scientific-computing) | [26](CATALOG.md#numerical-analysis-open) | [3](CATALOG.md#numerical-analysis-solved) |
+| [Numerical analysis and scientific computing](CATALOG.md#numerical-analysis-and-scientific-computing) | [22](CATALOG.md#numerical-analysis-open) | [7](CATALOG.md#numerical-analysis-solved) |
 | [Geometry and topology](CATALOG.md#geometry-and-topology) | [77](CATALOG.md#geometry-topology-open) | [2](CATALOG.md#geometry-topology-solved) |
 | [Combinatorics, optimization and information theory](CATALOG.md#combinatorics-optimization-and-information-theory) | [26](CATALOG.md#optimization-information-open) | [0](CATALOG.md#optimization-information-solved) |
 | [Waves, quantum systems and spectral geometry](CATALOG.md#waves-quantum-systems-and-spectral-geometry) | [32](CATALOG.md#spectral2-open) | [0](CATALOG.md#spectral2-solved) |
@@ -54,8 +54,12 @@ Complete resolutions recorded in this collection, including counterexamples to t
 | 351 | [Can every bounded entire Burgers profile recur at late times?](problems/351-burgers-entire-limits.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/351-burgers-profile-realization/aim351_burgers_realization.pdf) | [Review](research/solution_reviews/2026-10-02-active-prs/351-review.md) |
 | 353 | [A genuinely periodic firing pattern in the delayed noisy integrate-and-fire PDE](problems/353-delayed-nnlif-periodic.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/353-delayed-nnlif-periodic-branch/aim353_delayed_nnlif_periodic.pdf) | [Review](research/solution_reviews/2026-10-02-active-prs/353-review.md) |
 | 489 | [Global attraction in D-stable Lotka–Volterra systems](problems/489-lotka-volterra-d-stable-global-attraction.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/490-lotka-volterra-counterexample/PROOF.md) | [Review](research/solution_reviews/2026-10-02-active-prs/489-review.md) |
+| 505 | [A discrete Aronson–Bénilan estimate for an upwind growth scheme](problems/505-upwind-discrete-aronson-benilan.md) | ✅ SOLVED | Uniform estimate disproved | [Proof](research/solutions/siavash-sadeghi-505/aim505_report.pdf) | [Review](research/solution_reviews/2026-10-04-active-prs/505-review.md) |
+| 523 | [Removing the logarithmic loss in Helmholtz Nyström estimates](problems/523-nystrom-logarithmic-loss.md) | ✅ SOLVED | General-amplitude bound disproved | [Proof](research/solutions/siavash-sadeghi-523/aim523_report.pdf) | [Review](research/solution_reviews/2026-10-04-active-prs/523-review.md) |
 | 534 | [Triangle inequality for the pullback distance of verbose persistence barcodes](problems/534-verbose-persistence-pullback-triangle.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-544/aim544_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02-active-prs/534-review.md) |
+| 553 | [Minimum number of continuous adaptive measurements for vector recovery](problems/553-continuous-adaptive-measurement-complexity.md) | ✅ SOLVED | Sharp asymptotic established | [Proof](research/solutions/siavash-sadeghi-553/aim553_report.pdf) | [Review](research/solution_reviews/2026-10-04-active-prs/553-review.md) |
 | 561 | [A fixed-time lower bound for Trotter splitting of the hydrogen ground state](problems/561-hydrogen-trotter-lower-bound.md) | ✅ SOLVED | Disproved lower bound | [Proof](research/solutions/562-hydrogen-trotter-disproof/PROOF.md) | [Review](research/solution_reviews/2026-10-02-active-prs/561-review.md) |
+| 570 | [The cost of continuous reconstruction on Banach unit balls](problems/570-continuous-decoder-banach-balls.md) | ✅ SOLVED | Universal bound disproved | [Proof](research/solutions/siavash-sadeghi-570/aim570_report.pdf) | [Review](research/solution_reviews/2026-10-04-active-prs/570-review.md) |
 | 605 | [Optimal uniform observation time for mixed finite element waves](problems/605-mixed-wave-optimal-observation-time.md) | ✅ SOLVED | Affirmative proof | [Proof](research/solutions/606-mixed-wave-observation/PROOF.md) | [Review](research/solution_reviews/2026-10-02-active-prs/605-review.md) |
 | 637 | [Absolute continuity of stationary Elo ratings](problems/637-elo-density.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/siavash-sadeghi-637/aim637_counterexample.pdf) | [Review](research/solution_reviews/2026-10-02-active-prs/637-review.md) |
 | 652 | [The Robin fundamental gap conjecture](research/resolved/652-robin-fundamental-gap.md) | ✅ SOLVED | Counterexample | [Proof](research/solutions/021-robin-gap-counterexample/robin_gap_021.pdf) | [Review](research/solution_reviews/2026-10-02/021-review.md) |

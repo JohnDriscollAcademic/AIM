@@ -1,0 +1,17 @@
+[
+  {
+    "script": "505-independent-checks/independent_checks.py",
+    "exit": 0,
+    "log": "505-independent-checks-independent_checks-relocated.log"
+  },
+  {
+    "script": "641-independent-checks/independent_checks.py",
+    "exit": 0,
+    "log": "641-independent-checks-independent_checks-relocated.log"
+  },
+  {
+    "script": "641-independent-checks/review_runner.py",
+    "exit": 0,
+    "log": "641-independent-checks-review_runner-relocated.log"
+  }
+]
