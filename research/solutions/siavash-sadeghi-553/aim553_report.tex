@@ -1,0 +1,182 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={AIM 553: research submission},
+ pdfauthor={Siavash Sadeghi; AI-assisted research note}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 553 / Siavash Sadeghi}
+\fancyhead[R]{\small Research note / 4 October 2026}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\setcounter{tocdepth}{1}
+\allowdisplaybreaks
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\gen}{\mathfrak g}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\sech}{\operatorname{sech}}
+
+\begin{document}
+\title{Continuous adaptive measurements: a sharp asymptotic bound}
+\author{Siavash Sadeghi}
+\date{4 October 2026}
+\maketitle
+\begin{abstract}
+The bounds are $\lfloor\log_2m\rfloor+1\le N(m)\le\lceil\log_2m\rceil+1$. This gives the sharp leading asymptotic and exact values at powers of two. It does not determine every $N(m)$, including $N(3)$.
+\end{abstract}
+\textbf{Provenance and review.} Separated and polished from the supplied AI-assisted research note prepared with ChatGPT. Codex reviewed the mathematical argument and accompanying checks. This is a research claim awaiting independent mathematical review; no independent human audit or formal proof verification is claimed.
+\medskip
+\section{Entry 553: sharp logarithmic measurement growth}\label{sec:adaptive}
+
+We retain precisely the information model of entry 553~\cite{repo553}: each branch functional is continuous in the input, while the dependence on the preceding exact measurements and the final decoder may be arbitrary. The known upper bound is Theorem~1 of Krieg--Novak--Ullrich, version 2~\cite{knu}.
+
+Here $N(m)$ is the least number of adaptive measurements allowing, for every
+$\eps>0$, recovery of every $x\in\R^m$ with worst-case error at most $\eps$.
+The first measurement is continuous on $\R^m$; after any fixed history, the
+next measurement is again continuous as a function of the input. Neither its
+dependence on the history nor the final reconstruction is required to be
+continuous. The lower bound below applies to this full model and to any norm
+on $\R^m$, by equivalence of finite-dimensional norms.
+
+\begin{theorem}\label{thm:adaptive}
+For $m\ge2$,
+\[
+ \boxed{\lfloor\log_2m\rfloor+1\le N(m)
+ \le\lceil\log_2m\rceil+1.}
+\]
+Consequently $N(m)=\log_2m+O(1)$ and $N(m)\sim\log_2m$. At powers of two, $N(2^r)=r+1$ for $r\ge1$.
+
+More strongly, if $m\ge2^n$, every deterministic algorithm using at most $n$ adaptive continuous real-valued measurements has infinite worst-case error on $\R^m$.
+\end{theorem}
+
+\subsection{An antipodal index and its elementary properties}
+
+For a nonempty compact antipodally invariant subset $K$ of a Euclidean sphere, define its genus $\gen(K)$ to be the least integer $r\ge1$ for which there exists a continuous odd map
+\[
+ K\longrightarrow\R^r\setminus\{0\}.
+\]
+Set $\gen(\varnothing)=0$. The Borsuk--Ulam theorem implies
+\begin{equation}\label{eq:gensphere}
+ \gen(S_R^{m-1})=m.
+\end{equation}
+The upper bound uses the inclusion into $\R^m\setminus\{0\}$. A smaller odd map would contradict Borsuk--Ulam.
+
+We will use three facts, proving the two fiber facts explicitly. First, an odd map from a compact symmetric subset $A\subset K$ to a sphere extends to an odd nonvanishing map on some invariant open neighbourhood of $A$ in $K$. To see this, extend its coordinates to $K$ by the Tietze extension theorem and antisymmetrize:
+\[
+ F(x)=\frac{F_0(x)-F_0(-x)}2.
+\]
+This agrees with the original map on $A$. By compactness it is nonzero on an invariant neighbourhood, where it can be normalized.
+
+\begin{lemma}[Odd zero sets]\label{lem:oddzero}
+If $h:K\to\R$ is continuous and odd and $Z=h^{-1}(0)$, then
+\[
+ \gen(Z)\ge\gen(K)-1.
+\]
+\end{lemma}
+\begin{proof}
+If $Z=\varnothing$, $h$ itself gives $\gen(K)\le1$. Otherwise let $r=\gen(Z)$ and extend a nonvanishing odd map on $Z$ to a continuous odd map $F:K\to\R^r$ by the preceding extension argument. The map
+\[
+ x\longmapsto(F(x),h(x))
+\]
+is odd and nowhere zero: on $Z$ its first component is nonzero, and outside $Z$ its last component is nonzero. Thus $\gen(K)\le r+1$.
+\end{proof}
+
+\begin{lemma}[Fibers of an even real function]\label{lem:evenfiber}
+If $f:K\to\R$ is continuous and even, some fiber satisfies
+\[
+ \gen(f^{-1}(y))\ge\left\lceil\frac{\gen(K)}2\right\rceil.
+\]
+\end{lemma}
+\begin{proof}
+The empty-set case is immediate. For nonempty $K$, it suffices to show that if every fiber has genus at most $r$, then $\gen(K)\le2r$. Here necessarily $r\ge1$. For each $y\in f(K)$, the compact invariant fiber $f^{-1}(y)$ has an invariant open neighbourhood $U_y$ admitting an odd map to $S^{r-1}$. Compactness of $K$ yields an open interval $I_y$ around $y$ with
+\[
+ f^{-1}(I_y)\subset U_y.
+\]
+Indeed, otherwise a sequence outside $U_y$ with $f(x_j)\to y$ would have a limit in $f^{-1}(y)\setminus U_y$.
+
+Choose a finite interval cover of the compact set $f(K)$ from these $I_y$. Refine it by sufficiently short, overlapping intervals on a regular grid, and give consecutive grid intervals alternating colors zero and one. The mesh can be chosen smaller than a Lebesgue number of the original cover. Each refined interval, intersected with $f(K)$, then lies in an original interval, and intervals of the same color are pairwise disjoint.
+
+Let $V_0,V_1\subset K$ be the preimages of the two unions. They are invariant open sets covering $K$. On each component interval of a fixed color, use the odd map inherited from the relevant $U_y$. Since those component preimages are disjoint open sets, the maps together give continuous odd maps
+\[
+ v_j:V_j\to S^{r-1},\qquad j=0,1.
+\]
+Take a continuous even partition of unity $\alpha_0,\alpha_1$ subordinate to this two-set cover. Such a partition is obtained by averaging an ordinary subordinate partition with its antipodal pullback. Then
+\[
+ x\longmapsto\bigl(\alpha_0(x)v_0(x),\alpha_1(x)v_1(x)\bigr)
+\]
+with each product extended by zero outside its $V_j$ is continuous, odd, and nonvanishing. Continuity of the zero extension follows because $v_j$ is bounded and $\alpha_j$ vanishes on the boundary. This is the required map into $\R^{2r}\setminus\{0\}$.
+\end{proof}
+
+\begin{lemma}[One continuous measurement]\label{lem:onefiber}
+For any continuous $\lambda:K\to\R$, there exist $y\in\R$ and a compact invariant set $K'\subset K$ such that
+\[
+ \lambda(x)=y\quad(x\in K'),\qquad
+ \gen(K')\ge\left\lfloor\frac{\gen(K)}2\right\rfloor.
+\]
+\end{lemma}
+\begin{proof}
+The function $h(x)=\lambda(x)-\lambda(-x)$ is odd. On its zero set $Z$, the restriction of $\lambda$ is even. Apply Lemmas~\ref{lem:oddzero} and~\ref{lem:evenfiber}, obtaining
+\[
+ \gen(K')\ge\left\lceil\frac{\gen(K)-1}{2}\right\rceil
+ =\left\lfloor\frac{\gen(K)}2\right\rfloor.
+\]
+The chosen fiber inside $Z$ is compact and invariant.
+\end{proof}
+
+\subsection{An adversarial transcript}
+
+Fix any algorithm with $n$ measurements, and suppose $m\ge2^n$. An algorithm that sometimes stops earlier can be padded with zero measurements, so it is enough to consider exactly $n$ stages. Fix an arbitrary radius $R>0$ and start with $K_0=S_R^{m-1}$.
+
+Apply Lemma~\ref{lem:onefiber} to the first measurement. This chooses a value $y_1$ and a compact invariant set $K_1$ whose points all produce that value. For the second step, the preceding history is now fixed, so the algorithm selects one particular continuous function. Apply the same lemma to that function restricted to $K_1$. Continue for the first $n-1$ stages. We obtain a fixed transcript $y_1,\ldots,y_{n-1}$ and a compact invariant set $K_{n-1}$ producing it, with
+\[
+ \gen(K_{n-1})\ge
+ \left\lfloor\frac{m}{2^{n-1}}\right\rfloor\ge2.
+\]
+For the final, now fixed, branch functional $\lambda_n$, the odd function
+\[
+ x\longmapsto\lambda_n(x)-\lambda_n(-x)
+\]
+has a zero on $K_{n-1}$; otherwise it would give an odd map into $\R\setminus\{0\}$, contradicting genus at least two. Hence some antipodal pair $x,-x$ of norm $R$ produces the same complete transcript.
+
+The decoder returns the same vector $z$ on that transcript. By the triangle inequality,
+\[
+ \max\{\norm{x-z}_2,\norm{-x-z}_2\}\ge R.
+\]
+Since $R$ was arbitrary, the worst-case error is infinite. In particular, $n=\lfloor\log_2m\rfloor$ cannot suffice. Combining the resulting lower bound with the cited upper bound proves Theorem~\ref{thm:adaptive}.
+
+\begin{remark}
+The proof fixes one branch at a time. It never assumes continuity in the history, continuity of the whole adaptive encoder, or continuity of the decoder. The one-integer gap for non-powers of two remains; in particular this does not decide $N(3)$.
+\end{remark}
+
+
+
+\begin{thebibliography}{9}
+\bibitem{repo553}
+M. Colbrook, AIM catalogue, \href{https://github.com/MColbrook/AIM/blob/59a8f0c2957dd272f56bcf282dfe0c066a15f441/problems/553-continuous-adaptive-measurement-complexity.md}{entry 553: Minimum number of continuous adaptive measurements for vector recovery}. Repository statement checked 4 October 2026.
+
+\bibitem{knu}
+D. Krieg, E. Novak, and M. Ullrich, \emph{How many continuous measurements are needed to learn a vector?}, \href{https://arxiv.org/abs/2412.06468v2}{arXiv:2412.06468v2}, 22 September 2026. Theorem 1, Section 3, Lemma 9, and the discussion of Banach unit balls.
+\end{thebibliography}
+\end{document}
