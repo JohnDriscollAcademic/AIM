@@ -1,0 +1,1 @@
+Independent polynomial-ring expansion: all 3432 nonzero monomials and all 45 types agree exactly at M=8.

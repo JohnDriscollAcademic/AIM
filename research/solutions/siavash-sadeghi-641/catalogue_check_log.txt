@@ -1,0 +1,2 @@
+4 October 2026; base 59a8f0c2957dd272f56bcf282dfe0c066a15f441; research packages added.
+Validated 651 unique problems, metadata, required sections, math delimiters, local links, and freshness of README.md, CATALOG.md, RESOLVED.md.
