@@ -252,6 +252,7 @@ def render_readme(entries, manifest):
     lines = [
         "# AIM — Open Applied Problems", "",
         "A sourced collection of precise mathematical research problems in spectral theory, operator theory, applied mathematics, and related fields. Each entry has a self-contained statement, a discussion of applications or mathematical significance, references, and a dated literature-status review.", "",
+        "This project is not affiliated with the [American Institute of Mathematics (AIM)](https://aimath.org/).", "",
         "After discussions with mathematicians from different areas, we started this collection with several motivations:", "",
         "- AI tools are increasingly being used to search the literature and tackle conjectures. We would like our community to help shape this work, solve problems and understand their consequences.",
         "- These changes can bring excitement, uncertainty or a sense of loss. We hope this project will create opportunities for mathematicians, especially early-career researchers, to gain recognition for understanding, explaining, improving and extending proofs.",
