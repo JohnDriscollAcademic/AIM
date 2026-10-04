@@ -1,0 +1,297 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={AIM 505: research submission},
+ pdfauthor={Siavash Sadeghi; AI-assisted research note}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 505 / Siavash Sadeghi}
+\fancyhead[R]{\small Research note / 4 October 2026}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\setcounter{tocdepth}{1}
+\allowdisplaybreaks
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\gen}{\mathfrak g}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\sech}{\operatorname{sech}}
+
+\begin{document}
+\title{Upwind Aronson--B\'enilan counterexample}
+\author{Siavash Sadeghi}
+\date{4 October 2026}
+\maketitle
+\begin{abstract}
+The uniform estimate fails with fixed data bounds and G(p)=1-p. The proof selects gamma after the mesh; the numerical experiments are corroboration, not a uniform choice of gamma.
+\end{abstract}
+\textbf{Provenance and review.} Separated and polished from the supplied AI-assisted research note prepared with ChatGPT. Codex reviewed the mathematical argument and accompanying checks. This is a research claim awaiting independent mathematical review; no independent human audit or formal proof verification is claimed.
+\medskip
+\section{Entry 505: a counterexample to the uniform upwind estimate}\label{sec:ab}
+
+The exact scheme and initial-data assumptions used here are those of catalogue entry 505~\cite{repo505}; the originating scheme is David--Ruan~\cite{davidruan}. Set
+\[
+ X=T=p_H=1,\qquad G(p)=1-p.
+\]
+Thus $G(1)=0$ and $G'=-1$. We prove that a single fixed initial-data bound $C_0$ cannot yield a constant independent of both $h$ and $\gamma$ in
+\begin{equation}\label{eq:abtarget}
+ w_i(t):=\frac{p_{i+1}-2p_i+p_{i-1}}{h^2}+1-p_i
+ \ge -\frac{C}{\gamma t}.
+\end{equation}
+
+On the grid $i=-M,\ldots,M$, $h=1/M$, the exact density equation is
+\[
+ \dot n_i=\frac{F(n_i,n_{i+1})-F(n_{i-1},n_i)}{h^2}+n_i(1-p_i),
+ \quad F(a,b)=\max(a,b)(b^\gamma-a^\gamma),\quad p_i=n_i^\gamma.
+\]
+The reflected ghosts are $n_{-M-1}=n_{-M+1}$ and $n_{M+1}=n_{M-1}$.
+The admissible initial data satisfy $0\le p_i(0)\le1$ and one fixed bound
+$C_0$ on each of
+\[
+ h\sum_i n_i(0),\quad h\sum_i p_i(0),\quad
+ \sum_{i=-M}^{M-1}|n_{i+1}(0)-n_i(0)|,\quad h\sum_i|\dot n_i(0)|.
+\]
+Unrestricted sums include both endpoints. The proof below constructs such data
+with $C_0=10$ along a sequence of even meshes and finite exponents.
+
+\subsection{A positive pressure profile on a fixed core}
+
+Let $M$ be even, $M\ge4$, $h=1/M$, $K=M/2$, and
+\[
+ I_h=\{-K,\ldots,K\}.
+\]
+The full computational grid is $\{-M,\ldots,M\}$. First consider a Dirichlet problem on the smaller core, with pressure zero at $\pm(K+1)$. Write
+\[
+ \eta_h=\operatorname{arcosh}(1+h^2/2),\qquad
+ P_i^h=1-\frac{\cosh(\eta_h i)}{\cosh(\eta_h(K+1))},\quad i\in I_h.
+\]
+Direct substitution gives
+\begin{equation}\label{eq:linprofile}
+ \Delta_hP_i^h+1-P_i^h=0,\qquad P^h_{\pm(K+1)}=0.
+\end{equation}
+This profile is positive, strictly less than one, symmetric, and strictly decreasing from the centre to the right endpoint. Moreover, with $c=\tanh(1/2)>0$,
+\begin{equation}\label{eq:edgeasymp}
+ \frac{P_K^h}{h}\longrightarrow c,\qquad
+ \frac{P_{K-1}^h}{P_K^h}\longrightarrow2,\qquad
+ \frac{P_{K-1}^h-P_K^h}{h}\longrightarrow c.
+\end{equation}
+Indeed, $\eta_h=h+O(h^3)$ and $(K+1)\eta_h\to1/2$.
+
+For a positive core pressure $p$, with zero Dirichlet neighbours outside the core, define
+\begin{equation}\label{eq:Dgamma}
+ D_{\gamma,h}(p)_i=
+ \Delta_hp_i+\frac1{h^2}\sum_{\substack{j=i\pm1\\p_j>p_i}}
+ \left[\left(\frac{p_j}{p_i}\right)^{1/\gamma}-1\right](p_j-p_i).
+\end{equation}
+This is precisely the upwind diffusion term in the density equation divided by $n_i=p_i^{1/\gamma}$. Lower-pressure neighbours contribute only to $\Delta_hp_i$.
+
+For each fixed $h$, there exists a positive profile $P^{h,\gamma}$ for every sufficiently large $\gamma$ such that
+\begin{equation}\label{eq:nonlinearprofile}
+ D_{\gamma,h}(P^{h,\gamma})_i+1-P_i^{h,\gamma}=0,
+ \qquad P^{h,\gamma}\longrightarrow P^h\quad(\gamma\to\infty).
+\end{equation}
+Here and below, a limit with $h$ fixed is a finite-dimensional limit. To justify existence, put $\nu=1/\gamma$. The left side of~\eqref{eq:nonlinearprofile} is continuously differentiable in $(\nu,p)$ near $(0,P^h)$. At a tie $p_j=p_i$, its additional term is of the form
+\[
+ (p_j-p_i)_+\left[\exp\!\left(\nu\log\frac{p_j}{p_i}\right)-1\right],
+\]
+which is $C^1$ and is quadratic to leading order in the difference of the pressures. At $\nu=0$, the derivative with respect to $p$ is the invertible Dirichlet matrix $\Delta_h-I$. The implicit-function theorem applies. By closeness to $P^h$ and local uniqueness, $P^{h,\gamma}$ is symmetric, lies strictly between zero and one, and is strictly decreasing away from the centre for sufficiently large $\gamma$.
+
+\subsection{An exact solution on the pinned core}
+
+Fix
+\[
+ a=\frac34,\qquad q=\frac12,\qquad t_0=-\log a>0.
+\]
+Take the full-grid initial data
+\begin{equation}\label{eq:abinitial}
+ n_i(0)=
+ \begin{cases}
+ a(P_i^{h,\gamma})^{1/\gamma},&i\in I_h,\\
+ 0,&i\notin I_h.
+ \end{cases}
+\end{equation}
+If the exterior densities are artificially pinned to zero, the core has the exact solution
+\begin{align}
+ p_i^D(t)&=\theta_\gamma(t)P_i^{h,\gamma},\label{eq:corepressure}\\
+ n_i^D(t)&=\theta_\gamma(t)^{1/\gamma}(P_i^{h,\gamma})^{1/\gamma},\label{eq:coredensity}\\
+ \theta_\gamma(t)&=\frac1{1+(a^{-\gamma}-1)e^{-\gamma t}}.
+ \label{eq:theta}
+\end{align}
+Indeed, $D_{\gamma,h}$ is homogeneous of degree one in the pressure, so~\eqref{eq:nonlinearprofile} gives
+\[
+ D_{\gamma,h}(\theta P^{h,\gamma})+1-\theta P^{h,\gamma}=1-\theta.
+\]
+The density equation becomes $\dot n_i^D=(1-\theta)n_i^D$, equivalent to $\theta'=\gamma\theta(1-\theta)$. Its initial value is $a^\gamma$.
+
+For fixed $t<t_0$, $\theta_\gamma(t)\to0$, whereas for fixed $t>t_0$, $\theta_\gamma(t)\to1$ and $\theta_\gamma'(t)\to0$. The waiting time $t_0$ is independent of the mesh.
+
+\subsection{Control of the full, unpinned scheme}
+
+We now use the actual reflected Neumann ghost values at $\pm M$, as required by the target. The scalar face flux is
+\[
+ F(n,m)=\max(n,m)(m^\gamma-n^\gamma).
+\]
+It is nondecreasing in its second argument. Thus the finite ODE system is cooperative. The maximum principle gives $0\le n_i\le1$, and comparison with the zero-extended pinned-core solution gives
+\begin{equation}\label{eq:comparison}
+ n_i(t)\ge n_i^D(t),\qquad i\in I_h.
+\end{equation}
+The extension is a subsolution outside the core because all fluxes entering a zero-density cell are nonnegative.
+
+Fix $h$ for now and make $\gamma$ so large that $\min_{i\in I_h}n_i^D(0)>q$. This is possible because that minimum tends to $a>q$. Since $n^D$ is increasing in time, all core densities then exceed $q$.
+
+Bootstrap on the condition that all exterior densities are at most $q$. Define the nonnegative discrepancy
+\[
+ D(t)=\sum_{i\in I_h}(n_i(t)-n_i^D(t)).
+\]
+Internal face fluxes cancel when the density equations are summed. At each core boundary, the upwind density is the core density. As $n\ge n^D$ and $p\ge p^D$, the difference of the outgoing boundary terms is bounded above, in the discrepancy equation, by $n p_{\rm out}\le q^\gamma$. Also,
+\[
+ [n-n^{\gamma+1}]-[n^D-(n^D)^{\gamma+1}]\le n-n^D.
+\]
+Consequently,
+\begin{equation}\label{eq:D-bound}
+ D'(t)\le D(t)+\frac{2q^\gamma}{h^2},\qquad
+ 0\le D(t)\le \frac{2(e^t-1)}{h^2}q^\gamma.
+\end{equation}
+In particular, because $n\mapsto n^\gamma$ is $\gamma$-Lipschitz on $[0,1]$,
+\begin{equation}\label{eq:pdiff}
+ 0\le p_i(t)-p_i^D(t)\le C_h\gamma q^\gamma\quad(i\in I_h,
+ \ 0\le t\le1)
+\end{equation}
+while the bootstrap condition holds. Here $C_h$ is independent of $\gamma$; its dependence on the fixed mesh is harmless at this stage.
+
+To control the exterior, use weights $\omega_{\pm M}=1/2$ and $\omega_i=1$ at all other nodes, and set
+\[
+ E(t)=\sum_{i\notin I_h}\omega_i n_i(t).
+\]
+These half-weights exactly cancel the factor two generated by the reflected boundary stencil. Hence
+\[
+ E'(t)\le E(t)+\frac{p_K(t)+p_{-K}(t)}{h^2},\qquad E(0)=0.
+\]
+Equations~\eqref{eq:corepressure} and~\eqref{eq:pdiff} imply
+\begin{equation}\label{eq:Ebound}
+ E(t)\le \frac{2P_K^{h,\gamma}}{h^2}
+ \int_0^t e^{t-s}\theta_\gamma(s)\dd s+C_h\gamma q^\gamma.
+\end{equation}
+Each exterior density is at most $2E(t)$.
+
+Choose the observation time
+\begin{equation}\label{eq:th}
+ t_h=t_0+\log\left(1+\frac{q h^2}{8P_K^h}\right).
+\end{equation}
+For small $h$, it lies below $T=1$, and $t_h\to t_0$. For fixed $h$, dominated convergence gives
+\[
+ \int_0^{t_h}e^{t_h-s}\theta_\gamma(s)\dd s
+ \longrightarrow e^{t_h-t_0}-1=\frac{q h^2}{8P_K^h}.
+\]
+Thus the right side of~\eqref{eq:Ebound}, at $t=t_h$, tends to $q/4$. The convolution in that estimate is nondecreasing in $t$. It follows that, for all sufficiently large $\gamma$, the estimate gives $2E(t)<q$ throughout the interval up to any putative first exit time from the bootstrap condition. Such a first exit is impossible. The estimates therefore hold on the entire interval $[0,t_h]$.
+
+Besides $p(t_h)\to P^h$ on the core, we need the pressure derivative to converge to zero. This is not inferred merely from convergence of the pressures. On $[0,1]$, each internal density flux has Lipschitz constant at most $C_h\gamma$. At a core/exterior face, where the exterior density is at most $q$, the flux discrepancy is bounded by
+\[
+ (\gamma+1)|n_i-n_i^D|+q^\gamma.
+\]
+Using~\eqref{eq:D-bound} in the actual density equations therefore gives
+\[
+ |\dot n_i-\dot n_i^D|\le C_h\gamma q^\gamma.
+\]
+For $\gamma\ge2$, $n\mapsto n^{\gamma-1}$ is $(\gamma-1)$-Lipschitz on $[0,1]$, and $|\dot n_i^D|\le1$. Consequently,
+\begin{equation}\label{eq:derivdiff}
+ |\dot p_i-\dot p_i^D|\le C_h\gamma^2q^\gamma.
+\end{equation}
+At the fixed time $t_h>t_0$, $\dot p_i^D(t_h)=\theta_\gamma'(t_h)P_i^{h,\gamma}\to0$. We have proved
+\begin{equation}\label{eq:corelimits}
+ p_i(t_h)\longrightarrow P_i^h,\qquad
+ \dot p_i(t_h)\longrightarrow0,\qquad i\in I_h.
+\end{equation}
+
+\subsection{The negative defect and uniform admissibility}
+
+At the right core endpoint $K$, the only higher-pressure neighbour is $K-1$ when $\gamma$ is sufficiently large. The exact pressure equation is
+\begin{equation}\label{eq:pressureidentity}
+ \frac{\dot p_K}{\gamma p_K}
+ =w_K+\frac1{h^2}
+ \left[\left(\frac{p_{K-1}}{p_K}\right)^{1/\gamma}-1\right]
+ (p_{K-1}-p_K).
+\end{equation}
+Multiply by $\gamma$ and use~\eqref{eq:corelimits}. For each fixed $h$,
+\begin{equation}\label{eq:scaledlimit}
+ \lim_{\gamma\to\infty}\gamma w_K(t_h)=-A_h,\qquad
+ A_h=\frac{P_{K-1}^h-P_K^h}{h^2}
+ \log\frac{P_{K-1}^h}{P_K^h}.
+\end{equation}
+Equation~\eqref{eq:edgeasymp} yields
+\begin{equation}\label{eq:Aasymp}
+ A_h\sim\frac{\tanh(1/2)\log2}{h}.
+\end{equation}
+In particular, $t_hA_h\to\infty$.
+
+The initial data meet every stated uniform bound. Both $n_i(0)$ and $p_i(0)$ are at most one, so their $h$-weighted sums are at most three. Symmetry and monotonicity of the core profile give total variation at most $2a$. Inside the core, the exact initial derivative is
+\[
+ \dot n_i(0)=(1-a^\gamma)n_i(0)\ge0.
+\]
+There are just two nonzero initial exterior derivatives, each at most $a^{\gamma+1}/h^2$. Thus
+\begin{equation}\label{eq:initderiv}
+ h\sum_i|\dot n_i(0)|\le3+\frac{2a^{\gamma+1}}h.
+\end{equation}
+Choose a sequence of even $M\to\infty$, and for each corresponding $h$ choose a finite integer $\gamma_h$ sufficiently large that all preceding estimates apply,
+\[
+ \gamma_h w_K(t_h)\le-\frac12A_h,
+ \qquad \frac{a^{\gamma_h+1}}h\le1.
+\]
+All four initial bounds hold with the same $C_0=10$, while
+\[
+ -\gamma_h t_hw_K(t_h)\ge\frac12t_hA_h\longrightarrow\infty.
+\]
+This contradicts any constant in~\eqref{eq:abtarget} depending only on the permitted fixed parameters.
+
+\begin{theorem}
+The uniform estimate asked for in entry 505 is false under its stated assumptions, including the reflected Neumann ghost values and all four uniform initial-data bounds.
+\end{theorem}
+
+\subsection{A numerical check, not used in the proof}
+
+The accompanying script solves the stationary core problem and integrates the full ODE with a stiff solver. For $\gamma=500M$, it gives:
+\begin{center}
+\begin{tabular}{@{}rrrrr@{}}
+\toprule
+$M$ & $\gamma$ & $\gamma w_K(t_h)$ & $-A_h$ & $-\gamma t_hw_K(t_h)$\\
+\midrule
+10 & 5000 & $-2.31735$ & $-2.31723$ & $0.69618$\\
+20 & 10000 & $-5.46771$ & $-5.46736$ & $1.60877$\\
+40 & 20000 & $-11.84682$ & $-11.84617$ & $3.44751$\\
+80 & 40000 & $-24.64579$ & $-24.64478$ & $7.13147$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The proof selects $\gamma_h$ by the rigorous fixed-$h$ limit and does not assume that the particular numerical choice $500M$ works at every mesh size.
+
+
+
+\begin{thebibliography}{9}
+\bibitem{repo505}
+M. Colbrook, AIM catalogue, \href{https://github.com/MColbrook/AIM/blob/59a8f0c2957dd272f56bcf282dfe0c066a15f441/problems/505-upwind-discrete-aronson-benilan.md}{entry 505: A discrete Aronson--B\'enilan estimate for an upwind growth scheme}. Repository statement checked 4 October 2026.
+
+\bibitem{davidruan}
+N. David and X. Ruan, \emph{An asymptotic preserving scheme for a tumor growth model of porous medium type}, ESAIM: Mathematical Modelling and Numerical Analysis \textbf{56} (2022), 121--150. \href{https://doi.org/10.1051/m2an/2021080}{doi:10.1051/m2an/2021080}.
+\end{thebibliography}
+\end{document}
