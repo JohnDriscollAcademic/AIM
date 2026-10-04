@@ -1,3 +1,10 @@
 __pycache__/
 *.pyc
 .DS_Store
+.lake/
+.venv/
+.cache/
+*.olean
+*.ilean
+*.olean.private
+*.olean.server

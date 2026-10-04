@@ -1,0 +1,89 @@
+name: Lean statements
+
+on:
+  pull_request:
+    paths:
+      - 'lean-statements/**'
+      - 'tools/lean/**'
+      - '.github/workflows/lean-statements.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'lean-statements/**'
+      - 'tools/lean/**'
+      - '.github/workflows/lean-statements.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lean-statements-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: leanprover/lean-action@96e06131c0e9943c780388fd166f55d1e2fa0433
+        with:
+          lake-package-directory: lean-statements
+          auto-config: false
+          build: false
+          test: false
+          lint: false
+          use-mathlib-cache: false
+          use-github-cache: false
+      - name: Fetch pinned dependencies and build statements with rejection controls
+        working-directory: lean-statements
+        run: |
+          lake exe cache get
+          lake build
+          git diff --exit-code -- lean-toolchain lakefile.toml lake-manifest.json
+
+  comparator-smoke:
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16 # v6
+        with:
+          go-version: '1.27.1'
+          cache: false
+      - uses: leanprover/lean-action@96e06131c0e9943c780388fd166f55d1e2fa0433
+        with:
+          lake-package-directory: lean-statements
+          auto-config: false
+          build: false
+          test: false
+          lint: false
+          use-mathlib-cache: false
+          use-github-cache: false
+      - name: Prepare unprivileged Linux isolation
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y bubblewrap dbus-user-session
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+          sudo loginctl enable-linger "$(id -un)"
+          sudo systemctl start "user@$(id -u).service"
+          echo "XDG_RUNTIME_DIR=/run/user/$(id -u)" >> "$GITHUB_ENV"
+          echo "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus" >> "$GITHUB_ENV"
+      - name: Verify infrastructure certificate with fresh Comparator and kernel checks
+        run: |
+          ulimit -n 65536
+          tools/lean/bootstrap.sh "$RUNNER_TEMP/aim-statement-tools"
+          tools/lean/verify.sh lean-statements "$RUNNER_TEMP/aim-statement-tools"
+      - name: Retain infrastructure evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: lean-statement-infrastructure
+          path: ${{ runner.temp }}/aim-statement-tools/logs/
+          if-no-files-found: warn
