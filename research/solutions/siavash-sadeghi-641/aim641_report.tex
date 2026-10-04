@@ -1,0 +1,265 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue,
+ pdftitle={AIM 641: research submission},
+ pdfauthor={Siavash Sadeghi; AI-assisted research note}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small AIM 641 / Siavash Sadeghi}
+\fancyhead[R]{\small Research note / 4 October 2026}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parskip}{4pt}
+\setlength{\parindent}{0pt}
+\setcounter{tocdepth}{1}
+\allowdisplaybreaks
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\gen}{\mathfrak g}
+\newcommand{\dd}{\,\mathrm d}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\sech}{\operatorname{sech}}
+
+\begin{document}
+\title{The cubic Fej\'er inequality in every dimension}
+\author{Siavash Sadeghi}
+\date{4 October 2026}
+\maketitle
+\begin{abstract}
+This is a claimed proof of the cubic Fejer assertion only. The three quartic assertions grouped in entry 641 are outside the result, so this is a partial resolution of the catalogue entry.
+\end{abstract}
+\textbf{Provenance and review.} Separated and polished from the supplied AI-assisted research note prepared with ChatGPT. Codex reviewed the mathematical argument and accompanying checks. This is a research claim awaiting independent mathematical review; no independent human audit or formal proof verification is claimed.
+\medskip
+\section{Entry 641: the cubic Fej\'er inequality in every dimension}\label{sec:cubic}
+
+We settle the cubic assertion within entry 641~\cite{repo641}. Bos proved it through dimension 28 and described a dimension-by-dimension degree-elevation test~\cite{bos}. The point here is to carry out the induction symbolically in the dimension, reducing all remaining dimensions to 45 exact coefficient types.
+
+In barycentric coordinates the prescribed node set consists of the vertices
+$e_i$, the ordered edge nodes $t e_i+(1-t)e_j$ for $i\ne j$, where
+$t=(1+1/\sqrt5)/2$, and the face centroids $(e_i+e_j+e_k)/3$ for $i<j<k$.
+There are $\binom{d+3}{3}$ nodes. Here $\ell_x^{(3,d)}$ denotes the cubic
+cardinal polynomial equal to one at $x$ and zero at every other node.
+
+\begin{theorem}\label{thm:cubic}
+For every nondegenerate real $d$-simplex, $d\ge1$, Bos's cubic node set $F_{3,d}$ satisfies
+\[
+ \sum_{x\in F_{3,d}}|\ell_x^{(3,d)}(z)|^2\le1
+ \qquad(z\in S_d).
+\]
+\end{theorem}
+
+\subsection{A dimension-independent symmetric deficit}
+
+Let $M=d+1$ be the number of barycentric coordinates. Work homogeneously with nonnegative $x_1,\ldots,x_M$ and write
+\[
+ S=\sum_i x_i,\qquad p_j=\sum_i x_i^j.
+\]
+The homogeneous cubic cardinal polynomials are
+\begin{align}
+ \ell_i&=\frac{x_i}{2}(12x_i^2-12Sx_i+3S^2-p_2),\label{eq:cubicvertex}\\
+ \ell_{ij}&=5x_ix_j\left(\frac{3+\sqrt5}{2}x_i+
+                 \frac{3-\sqrt5}{2}x_j-S\right),\quad i\ne j,
+                 \label{eq:cubicedge}\\
+ \ell_{ijk}&=27x_ix_jx_k,\quad i<j<k.\label{eq:cubicface}
+\end{align}
+Direct substitution at the three node types verifies cardinality. These are the homogenized polynomials from Bos's construction. Their squared sum, denoted $\mathcal K_M$, is
+\begin{align}\label{eq:Ksym}
+ \mathcal K_M={}&54p_6+78Sp_5+29S^2p_4-\frac{391}{2}p_2p_4
+ -18S^3p_3-144Sp_2p_3+50p_3^2\notag\\
+ &+\frac94S^4p_2+\frac{47}{2}S^2p_2^2+\frac{487}{4}p_2^3.
+\end{align}
+For example, the face contribution follows from
+\[
+ 729\sum_{i<j<k}x_i^2x_j^2x_k^2
+ =\frac{243}{2}p_2^3-\frac{729}{2}p_2p_4+243p_6.
+\]
+The vertex and edge contributions are obtained by the same direct expansion. Formula~\eqref{eq:Ksym} is also independently checked in six variables by the accompanying exact-arithmetic script. This suffices in every dimension: both sides are symmetric homogeneous polynomials of degree six, stable under appending zero coordinates. Every degree-six monomial has support in at most six variables, so its coefficient is determined by a six-variable restriction.
+
+Define the homogeneous deficit
+\[
+ H_M(x)=S^6-\mathcal K_M(x).
+\]
+The desired inequality is $H_M\ge0$ on the nonnegative orthant, followed by restriction to $S=1$. Appending a zero coordinate leaves the formula unchanged:
+\[
+ H_M(x_1,\ldots,x_{M-1},0)=H_{M-1}(x_1,\ldots,x_{M-1}).
+\]
+
+\subsection{One induction step covers the whole orthant}
+
+By symmetry, permute any nonnegative $x$ so that $x_M=\min_i x_i$. Set
+\[
+ z=Mx_M,\qquad \mu_i=x_i-x_M\ge0\quad(1\le i<M).
+\]
+Then
+\begin{equation}\label{eq:centroidsub}
+ x_i=\mu_i+z/M\ (i<M),\qquad x_M=z/M.
+\end{equation}
+Thus the centroid-to-facet substitution does not omit any point of the orthant.
+
+Put $q_j=\sum_{i=1}^{M-1}\mu_i^j$. Under~\eqref{eq:centroidsub},
+\begin{equation}\label{eq:pq}
+ p_j=\sum_{i=1}^j\binom ji q_i(z/M)^{j-i}+\frac{z^j}{M^{j-1}},
+ \qquad 1\le j\le6,
+\end{equation}
+so $S=q_1+z$. Form the degree-eight polynomial
+\begin{equation}\label{eq:Q}
+ Q_M(\mu,z)=4M^5(q_1+z)^2
+ \left[H_M(\mu_1+z/M,\ldots,\mu_{M-1}+z/M,z/M)
+       -H_{M-1}(\mu)\right].
+\end{equation}
+It is divisible by $z$. Because it is symmetric in the $\mu$ variables, the coefficient of $z^k\mu^\alpha$ depends only on the partition $\alpha$ of $8-k$ consisting of its positive exponents. There are
+\[
+ p(7)+p(6)+\cdots+p(0)=15+11+7+5+3+2+1+1=45
+\]
+possible types. For $M\ge8$, every such partition fits within the available $M-1$ variables.
+
+The exact coefficient certificate in Appendix~\ref{app:certificate} establishes that all 45 coefficients are positive for every real $M\ge8$. In particular,
+\[
+ Q_M(\mu,z)\ge0\qquad(M\ge8,\ \mu,z\ge0).
+\]
+Except at the origin, the multiplier $4M^5(q_1+z)^2$ is positive. Therefore
+\begin{equation}\label{eq:inductionH}
+ H_M(\mu+z/M,z/M)\ge H_{M-1}(\mu).
+\end{equation}
+At the origin both sides vanish.
+
+The cases $1\le d\le6$ are already among Bos's proved cases. The accompanying script checks them again exactly, including the one- and two-dimensional bases and degree elevations $8,5,3,3$ for dimensions $3,4,5,6$, respectively. Starting at $M=7$ and applying~\eqref{eq:inductionH} for $M=8,9,\ldots$ proves Theorem~\ref{thm:cubic}.
+
+\subsection{What the exact verifier checks}
+
+The file \texttt{verify\_cubic.py} uses only exact SymPy expressions and integers or rational numbers in checks that remain active with Python optimization enabled. It checks the direct cardinal-polynomial squared-sum identity; the one-dimensional identity
+\[
+ H_2(u,v)=12uv(u^2-3uv+v^2)^2;
+\]
+the two-dimensional positive-coefficient base decomposition; all coefficient types in the four remaining low-dimensional induction steps; and all 45 coefficient polynomials in symbolic $M$ after $M=u+8$.
+
+Its output is:
+\begin{quote}\ttfamily\small
+PASS: direct cardinal sum-of-squares identity (six variables).\\
+PASS: base cases, dimensions one and two.\\
+PASS: dimension 3, elevation 8, 123 coefficient types.\\
+PASS: dimension 4, elevation 5, 94 coefficient types.\\
+PASS: dimension 5, elevation 3, 60 coefficient types.\\
+PASS: dimension 6, elevation 3, 64 coefficient types.\\
+PASS: all 45 symbolic coefficient types are nonnegative for M >= 8.\\
+ALL EXACT CHECKS PASSED.
+\end{quote}
+
+
+
+\appendix
+\section{Complete cubic coefficient certificate}\label{app:certificate}
+
+For a partition $\alpha\vdash8-k$, let $C_{k,\alpha}(M)$ be the coefficient of $z^k\mu_1^{\alpha_1}\cdots\mu_r^{\alpha_r}$ in~\eqref{eq:Q}. The table gives a positive factor $F_{k,\alpha}(M)$ and an array $(a_0,\ldots,a_s)$ such that the following is an exact polynomial identity:
+\begin{equation}\label{eq:tablemeaning}
+ C_{k,\alpha}(8+u)=F_{k,\alpha}(8+u)\sum_{j=0}^s a_j u^j.
+\end{equation}
+Every displayed $a_j$ is positive, and each displayed $F(M)$ is positive for $M\ge8$. The empty partition is denoted $\varnothing$; exponents on parts denote repetitions.
+
+\begingroup
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.13}
+\footnotesize
+\begin{longtable}{@{}rlll@{}}
+\toprule
+$k$ & $\alpha$ & $F_{k,\alpha}(M)$ & $(a_0,a_1,\ldots)$\\
+\midrule
+\endfirsthead
+\toprule
+$k$ & $\alpha$ & $F_{k,\alpha}(M)$ & $(a_0,a_1,\ldots)$\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+1 & $(7)$ & $48 M^{4} \left(M - 1\right)$ & $(1)$\\
+1 & $(6,1)$ & $120 M^{4}$ & $(4,1)$\\
+1 & $(5,2)$ & $32 M^{4}$ & $(108,19)$\\
+1 & $(5,1^{2})$ & $8 M^{4}$ & $(691,111)$\\
+1 & $(4,3)$ & $120 M^{4}$ & $(86,13)$\\
+1 & $(4,2,1)$ & $8 M^{4}$ & $(1852,327)$\\
+1 & $(4,1^{3})$ & $24 M^{4}$ & $(1681,231)$\\
+1 & $(3^{2},1)$ & $528 M^{4}$ & $(37,7)$\\
+1 & $(3,2^{2})$ & $16 M^{4}$ & $(246,191)$\\
+1 & $(3,2,1^{2})$ & $16 M^{4}$ & $(2933,543)$\\
+1 & $(3,1^{4})$ & $48 M^{4}$ & $(3133,438)$\\
+1 & $(2^{3},1)$ & $144 M^{4}$ & $(144,59)$\\
+1 & $(2^{2},1^{3})$ & $48 M^{4}$ & $(2773,493)$\\
+1 & $(2,1^{5})$ & $240 M^{4}$ & $(1603,234)$\\
+1 & $(1^{7})$ & $30240 M^{4}$ & $(29,4)$\\
+2 & $(6)$ & $36 M^{3} \left(M - 1\right)$ & $(22,3)$\\
+2 & $(5,1)$ & $12 M^{3}$ & $(1886,593,43)$\\
+2 & $(4,2)$ & $4 M^{3}$ & $(23766,6679,461)$\\
+2 & $(4,1^{2})$ & $4 M^{3}$ & $(46558,13169,879)$\\
+2 & $(3^{2})$ & $8 M^{3}$ & $(19494,5287,359)$\\
+2 & $(3,2,1)$ & $16 M^{3}$ & $(14394,4748,355)$\\
+2 & $(3,1^{3})$ & $24 M^{3}$ & $(29968,8563,576)$\\
+2 & $(2^{3})$ & $24 M^{3}$ & $(34,1660,193)$\\
+2 & $(2^{2},1^{2})$ & $8 M^{3}$ & $(65834,23543,1817)$\\
+2 & $(2,1^{4})$ & $72 M^{3}$ & $(24308,7179,498)$\\
+2 & $(1^{6})$ & $720 M^{3}$ & $(5816,1611,108)$\\
+3 & $(5)$ & $4 M^{2} \left(M - 1\right)$ & $(2538,711,47)$\\
+3 & $(4,1)$ & $4 M^{2}$ & $(117366,49147,6686,295)$\\
+3 & $(3,2)$ & $8 M^{2}$ & $(102258,42029,5739,258)$\\
+3 & $(3,1^{2})$ & $8 M^{2}$ & $(234260,99829,13674,605)$\\
+3 & $(2^{2},1)$ & $8 M^{2}$ & $(159730,81927,12648,611)$\\
+3 & $(2,1^{3})$ & $24 M^{2}$ & $(177980,80093,11338,515)$\\
+3 & $(1^{5})$ & $480 M^{2}$ & $(21806,9274,1263,56)$\\
+4 & $(4)$ & $M \left(M - 1\right)$ & $(130056,52702,6921,295)$\\
+4 & $(3,1)$ & $2 M$ & $(1844808,1015586,206723,18410,605)$\\
+4 & $(2^{2})$ & $2 M$ & $(1571928,903466,192249,17862,611)$\\
+4 & $(2,1^{2})$ & $2 M$ & $(4011400,2362530,501963,45998,1545)$\\
+4 & $(1^{4})$ & $24 M$ & $(792080,454696,94306,8465,280)$\\
+5 & $(3)$ & $2 \left(M - 1\right)$ & $(420984,224198,44113,3800,121)$\\
+5 & $(2,1)$ & $6$ & $(2183112,1536018,425265,57927,3887,103)$\\
+5 & $(1^{3})$ & $12$ & $(2386440,1698730,470883,63852,4255,112)$\\
+6 & $(2)$ & $M - 1$ & $(325512,179338,36255,3184,103)$\\
+6 & $(1^{2})$ & $2$ & $(2335608,1664406,463769,63260,4237,112)$\\
+7 & $(1)$ & $8 \left(M - 3\right) \left(M - 1\right)$ & $(2376,874,103,4)$\\
+8 & $\varnothing$ & $\left(M - 3\right) \left(M - 1\right)$ & $(2376,874,103,4)$\\
+\end{longtable}
+\endgroup
+
+Here is an exact way of checking the table without expanding in an unbounded number of variables. Treat $q_1,\ldots,q_6,z,M$ as formal indeterminates and substitute~\eqref{eq:pq} into~\eqref{eq:Q}. For a product $q_{b_1}\cdots q_{b_s}$, define
+\[
+ T((b_1,\ldots,b_s),\alpha)
+ =[\mu^\alpha]\prod_{j=1}^s\left(\sum_i\mu_i^{b_j}\right).
+\]
+It is computed by the finite recursion
+\begin{align*}
+ T((),\alpha)&=\mathbf1_{\alpha=0},\\
+ T((b_1,\ldots,b_s),\alpha)
+ &=\sum_{i:\alpha_i\ge b_1}
+ T((b_2,\ldots,b_s),\alpha-b_1e_i).
+\end{align*}
+This counts all assignments of the power-sum factors to the target monomial's variables, including the correct multiplicities for repeated factors. Apply it to each formal monomial in $Q_M$. The resulting coefficients are the 45 polynomials represented in the table. The accompanying JSON file also gives the full coefficients of each $C_{k,\alpha}(8+u)$ without factor removal.
+
+The script \path{check_printed_table.py} also compares the printed table symbolically with the generated certificate. The separate file \path{crosscheck_cubic.py} expands the polynomial directly in a multivariate polynomial ring at $M=8$. All 3,432 nonzero monomial coefficients agree exactly with the 45-type certificate. This cross-check does not use the power-sum coefficient recursion.
+
+The all-dimensional argument is a uniform symbolic certificate, not a check at a finite list of large dimensions. The quartic conjectures in the same catalogue entry are not part of Theorem~\ref{thm:cubic}.
+
+\begin{thebibliography}{9}
+\bibitem{repo641}
+M. Colbrook, AIM catalogue, \href{https://github.com/MColbrook/AIM/blob/59a8f0c2957dd272f56bcf282dfe0c066a15f441/problems/641-bos-simplex-interpolation-nodes.md}{entry 641: Bos's cubic and quartic simplex interpolation nodes}. Repository statement checked 4 October 2026.
+
+\bibitem{bos}
+L. Bos, \emph{On Fekete points for a real simplex}, Indagationes Mathematicae \textbf{34} (2023), 274--293. \href{https://arxiv.org/abs/2205.06498}{arXiv:2205.06498}; \href{https://doi.org/10.1016/j.indag.2022.11.003}{doi:10.1016/j.indag.2022.11.003}. Section 3 and Proposition 3.1.
+\end{thebibliography}
+\end{document}
