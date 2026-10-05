@@ -1,0 +1,8 @@
+Date: 2026-10-05
+Host: local macOS; not authoritative Linux verifier.
+Command: /Users/sholden/.elan/bin/lake build AIM.P114.MixtureProof
+
+✔ [3643/3643] Built AIM.P114.MixtureProof (11s)
+Build completed successfully (3643 jobs).
+
+Exit code: 0

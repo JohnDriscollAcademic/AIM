@@ -8,7 +8,7 @@
 - Complete informal argument: `../../solutions/114-nodal-surplus-counterexample/submitted/short_proof-v0.3.pdf`, revised v0.3, 2026-10-02, six pages.
 - PDF SHA-256: `74185c70e83d9c6448d6a97e74411bfe39e5f500e217bc07df605055bbb24aa6`.
 - Mathematical author: **Sidney Holden**, supplied by the user. Formalization implementation: Codex for Sidney Holden (AI assisted).
-- Scope is **partial**. None of these three theorems resolves AIM 114 or establishes its advertised non-Gaussian limit.
+- Scope is **partial**. The combined package contains the initial three algebraic results, five prescribed-length transfer results, and three actual Gaussian-mixture results. They do not establish the graph's convergence to that mixture or resolve AIM 114 in Lean.
 
 ## Original target, preserved without weakening
 
@@ -27,10 +27,11 @@ variance is v(R), with v(r) = 1/2 - P(|C1-C2| < |r|C3 < C1+C2)/4,
 Cj = sqrt(1+Xj^2), and independent standard Cauchy Xj. These graph,
 distributional, and limiting objects are currently **not defined in Lean**.
 
-## The complete advertised Lean target list
+## The initial three algebraic results
 
-There are exactly three advertised results; `comparator.json` must list all
-three. All numbers and computations use exact real arithmetic. No numerical
+This initial block has exactly three results. The additional reviewed blocks
+are listed below; `comparator.json` must list every result from all blocks.
+All numbers and computations use exact real arithmetic. No numerical
 certificate, rounding tolerance, sample, truncation, or asymptotic estimate
 is used in these three results.
 
@@ -81,11 +82,33 @@ This uses actual integrals and expands the centered second moment on a
 probability space. The positive mean makes division legitimate. Neither
 0<V<1/2 nor a particular Cauchy-derived V is required for this general
 inequality. The factor 3 is the exact standard-normal fourth moment, but this
-theorem **does not** construct a Gaussian random variable, prove mixture
-moment identities, establish nonconstancy of the manuscript's V, or prove
-non-Gaussianity of its standardized limit. Those connections remain explicit
-formalization gaps. In particular the positive-variance hypothesis is not
-claimed to have been discharged for the graph construction.
+theorem by itself does not construct a Gaussian random variable or prove its
+moment identities. The actual mixture block below now supplies those results
+and law nonequality for an abstract bounded nonconstant mixing variable.
+The positive-variance hypothesis is still not discharged for the graph's
+specific mixing variable.
+
+## Prescribed-length transfer extension
+
+The exact definitions, five signatures, and independently reviewed source
+correspondence are frozen in [TRANSFER_TARGETS.md](TRANSFER_TARGETS.md) and
+[TransferChallenge.lean](TransferChallenge.lean). They prove the explicit
+prime-root core fraction bound, probability status of the genuine convex
+mixture, a bounded-observable estimate, and convergence to zero of the actual
+standardized second/fourth-moment contamination errors. The spectral
+identification of the input laws remains outside this extension.
+
+## Actual Gaussian-mixture extension
+
+The exact definition and three signatures are frozen in
+[MIXTURE_TARGETS.md](MIXTURE_TARGETS.md) and
+[MixtureChallenge.lean](MixtureChallenge.lean). They construct the pushforward
+of an actual product probability space, prove its first/second/fourth
+integrability and moments, and prove it differs from the standard Gaussian
+when the bounded positive mixing variable is not almost everywhere constant.
+No mixture moment or positive variance formula is assumed. Identification
+of the graph's particular mixing variable and convergence to the law remain
+outside this extension.
 
 ## Unformalized links to the source target
 
@@ -98,8 +121,11 @@ claimed to have been discharged for the graph construction.
    full support, ratio convergence and the nonconstancy of v(R).
 4. Empirical-process tightness, functional CLT, moment/tail bounds, and
    independence of the Gaussian process and stable vector.
-5. Random evaluation, Gaussian-mixture distribution and moments, transfer
-   from the pendant edge law to actual lengths, and standardized limit.
+5. Random evaluation, identification of the concrete mixing variable with
+   the inputs of the proved Gaussian-mixture theorem, the spectral mixture
+   equality needed to apply the proved moment-transfer calculation, and the
+   standardized graph-surplus limit. The abstract mixture law and its moments
+   and the conditional moment-error calculation are now formalized.
 
 Theorems here must never be substituted for these missing links or advertised
 as a Lean proof of the counterexample. The frozen Challenge contains deliberate

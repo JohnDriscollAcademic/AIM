@@ -1,0 +1,4 @@
+$ /Users/sholden/.elan/bin/lake build AIM.P114.TransferProof
+Build completed successfully (3230 jobs).
+
+exit_code=0

@@ -1,0 +1,11 @@
+Date: 2026-10-05
+Host: macOS.
+Command: lake env lean /tmp/aim114-review/TransferAxioms.lean
+The command file imports AIM.P114.TransferProof and prints the axioms of its five advertised results.
+'AIM.P114.core_weight_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.contaminated_law_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.contamination_integral_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.surplus_moment_contamination_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.surplus_moment_contamination_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Exit code: 0

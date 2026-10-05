@@ -1,0 +1,11 @@
+Independent AI source-signature comparison; 2026-10-05.
+This source comparison does not replace the authoritative Comparator.
+core_weight_bound: equal after whitespace normalization and alpha-renaming _hB/_hk: True
+contaminated_law_probability: equal after whitespace normalization and alpha-renaming _hB/_hk: True
+contamination_integral_bound: equal after whitespace normalization and alpha-renaming _hB/_hk: True
+surplus_moment_contamination_bound: equal after whitespace normalization and alpha-renaming _hB/_hk: True
+surplus_moment_contamination_tendsto: equal after whitespace normalization and alpha-renaming _hB/_hk: True
+e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08  AIM/P114/TransferDefinitions.lean
+c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c  AIM/P114/TransferProof.lean
+48d4e6a969b304dd89145bf8be6df2697db220b6e8a51ed458c6631047a544d1  TransferChallenge.lean
+6deb2147a2742f8cefbbdec369932b654d6153227d59b6686c4887bc71b69538  TRANSFER_TARGETS.md
