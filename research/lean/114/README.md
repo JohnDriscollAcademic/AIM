@@ -48,14 +48,15 @@ referees inspect the actual proofs and separately rebuild, re-elaborate, and
 print their transitive axioms. Reports identify their exact scope and source
 hashes in [reviews/](reviews/).
 
-The expanded combined build and axiom audit pass for all 31 declarations.
-Individual-block builds and independent audits likewise pass, using only
-the permitted standard axioms (`propext`, `Classical.choice`, and
-`Quot.sound`); the parallel-edge result needs only the first and third. The earlier isolated Linux
-[verification](verification/linux-2026-10-05/README.md) covers the initial three
-results only; it is historical evidence, not a certificate for the new
-extensions. See the [verification record](verification/README.md) for the
-current gate status. No whole-problem Lean-verified status is claimed.
+The combined local build and axiom audit pass for all 31 declarations. The
+unmodified [isolated Linux workflow](https://github.com/sidneyholden1/AIM/actions/runs/37365344243) also accepts this exact scope at
+`56afd77d2456af3da7934947699ee86735494010`. Its [retained evidence](verification/linux-2026-10-05-final-31/README.md)
+includes original artifacts, an immutable source archive, every input hash,
+and an independent operational audit. Only permitted standard axioms occur;
+the parallel-edge result uses `propext` and `Quot.sound`, and the other 30
+also use `Classical.choice`. The [verification record](verification/README.md)
+separates the final 31-result run from historical 25- and 3-result checks. No
+whole-problem Lean-verified status is claimed.
 
 The pinned project uses Lean 4.33.1, Mathlib, LeanCert, and immutable transitive
 dependencies. To build locally from this directory:

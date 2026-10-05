@@ -3,6 +3,13 @@
 **Resumed on 2026-10-05 at the user's explicit request.** The text below
 retains the state at the pause; current verification records supersede it.
 
+**Current publication checkpoint:** PR #33 now contains 31 independently reviewed
+supporting results. The final isolated Linux run [37365344243](https://github.com/sidneyholden1/AIM/actions/runs/37365344243) passed at
+`56afd77d2456af3da7934947699ee86735494010`, with original evidence and an independent operational audit retained.
+The mathematical files are unchanged after that proof revision. PR #34 remains
+the separate catalogue fix. The full spectral/stable/process argument remains
+unformalized; the historical pause instructions below are not an active pause.
+
 Paused immediately at the user's explicit request. All working agents were
 interrupted. Do not resume mathematical work, builds, CI, or publication until
 the user requests resumption. This is a local work-in-progress checkpoint,

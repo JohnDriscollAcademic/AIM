@@ -52,11 +52,11 @@ automation:
     claim is made. Pure algebra and integral identities use Mathlib proof terms; no numerical interval
     certificate is needed.
 status:
-  scope: Partial supporting results only. Thirty-one declarations in eight separately reviewed blocks.
-    All individual and combined local proof checks pass, with only permitted standard axioms. Isolated
-    Linux verification for this exact31-result scope is pending. Historical isolated Linux run 37344385173
-    at 4c780fd5f95407e9a6a7c55dcb7c0f4c04bfaa2e covers only the original three. The catalogue must
-    not be promoted to Lean verified because the full spectral and probabilistic links remain unformalized.
+  scope: Partial supporting results only. Thirty-one declarations in eight separately reviewed blocks
+    pass local checks and unmodified isolated Linux verification, run 37365344243 at immutable source
+    56afd77d2456af3da7934947699ee86735494010. Every result uses only permitted standard axioms. Historical
+    25-result and original 3-result records remain separate. The full metric spectral and stable/process
+    connections remain unformalized; the catalogue is not Lean verified.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms:
@@ -327,8 +327,8 @@ fidelity:
     with spectral laws remains an external mathematical obligation. The moment bound relaxes ((2m-1)/(2
     sqrt m))^(2k) to m^k. None of these changes the original problem target.
 review:
-  status: Two independent boundary and final proof approvals per block; combined31-result local build
-    and axiom audit passed; corresponding Linux check pending
+  status: Two independent boundary and final proof approvals per block; combined 31-result local and
+    isolated Linux acceptance; independent operational evidence audit passed
   reviewers:
   - 'OpenAI Codex AI agent /root/spectral_review: independent initial, Transfer and Mixture referee;
     Inertia and Graph implementer'
@@ -342,10 +342,13 @@ review:
     implementation and successful typechecks. Independent final proof reports and logs bind exact
     source hashes; no implementer counts as a final referee for their own proof. The combined Challenge
     preserves all thirty-one reviewed signatures; its deliberate placeholders never enter Solution.
-    Historical Linux evidence in verification/linux-2026-10-05/ applies only to the original three
-    declarations. A fresh run is required for the expanded scope. No human review or source-author
-    endorsement of the implementation is claimed. Implementation attribution is corrected here: lean_feasibility
-    implemented the initial three results; root integrated them. Earlier25-result metadata incorrectly
+    The final 31-result isolated Linux run 37365344243 at 56afd77d2456af3da7934947699ee86735494010
+    is retained with exact source/input hashes, original artifacts, and an independent operational
+    audit in verification/linux-2026-10-05-final-31/. Earlier 25-result and initial 3-result evidence
+    is preserved separately. Subsequent administrative evidence/status edits do not change the recorded
+    verified revision or mathematical proof bytes. No human review or source-author endorsement of
+    the implementation is claimed. Implementation attribution is corrected here: lean_feasibility
+    implemented the initial three results; root integrated them. Earlier 25-result metadata incorrectly
     assigned that implementation to root. The initial independent referees remain spectral_review
     and probability_review; no proof or review-independence claim changes.'
 alignment:

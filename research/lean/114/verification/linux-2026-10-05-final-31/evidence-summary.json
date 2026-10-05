@@ -1,0 +1,18 @@
+{
+  "run_id": 37365344243,
+  "source_commit": "56afd77d2456af3da7934947699ee86735494010",
+  "artifacts": {
+    "lean-114": {
+      "id": 11368511818,
+      "sha256": "a5ac1a395a6094e28d3d675c5c541739de0a58c353583893d72acb729171b3ba"
+    },
+    "lean-checker-controls": {
+      "id": 11368063043,
+      "sha256": "c201dae5aa511ece91ffb2d132a8dad773a1f712f3b4ca8da12f0c7482ade3b3"
+    }
+  },
+  "source_archive_sha256": "ee357a709802b3162f8a8de782fb7dcec5da72bcc5a5beb135f9d0de5e0dbc4f",
+  "input_file_count": 306,
+  "declaration_count": 31,
+  "verify_directory": "lean-114/verify-20261005T195646Z-3965"
+}

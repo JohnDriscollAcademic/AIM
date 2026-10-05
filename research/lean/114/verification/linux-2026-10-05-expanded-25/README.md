@@ -42,8 +42,8 @@ checker-controls job also passes its own self-test.
 
 ## Audit and scope
 
-An independent operational audit is being retained separately from mathematical
-proof reviews. No raw log or immutable source has been edited. Historical
+The independent [operational audit](OPERATIONAL-REVIEW.md) accepts the evidence
+for this exact 25-result revision, separately from mathematical proof reviews. No raw log or immutable source has been edited. Historical
 25-result metadata misattributed implementation of the initial three proofs
 to root; current metadata corrects that role to `lean_feasibility`, with root
 as integrator. The original independent referees were `spectral_review` and
