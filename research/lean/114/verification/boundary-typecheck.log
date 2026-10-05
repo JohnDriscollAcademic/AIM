@@ -1,0 +1,15 @@
+Date: 2026-10-05
+Host: local macOS; not authoritative Linux verifier.
+Command: GIT_CONFIG_GLOBAL=/dev/null /Users/sholden/.elan/bin/lake build Challenge
+Working directory: research/lean/114
+
+✔ [3226/3228] Built AIM.P114.Definitions (12s)
+⚠ [3227/3228] Built Challenge (4.9s)
+warning: Challenge.lean:14:8: declaration uses `sorry`
+warning: Challenge.lean:21:8: declaration uses `sorry`
+warning: Challenge.lean:30:8: declaration uses `sorry`
+Build completed successfully (3228 jobs).
+Exit code: 0
+
+The three warnings are deliberate statement placeholders in the isolated Challenge.
+This typechecks statements and proves none of them.

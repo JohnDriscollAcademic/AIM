@@ -1,0 +1,7 @@
+Independent reviewer: spectral_review
+UTC: 2026-10-05T16:49:06.563179+00:00
+Working directory: /Users/sholden/Projects/AIM/research/lean/114
+Command: /Users/sholden/.elan/bin/lake env lean --version
+Exit code: 0
+
+Lean (version 4.33.1, arm64-apple-darwin24.6.0, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)

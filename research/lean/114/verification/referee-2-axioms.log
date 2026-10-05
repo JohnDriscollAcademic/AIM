@@ -1,0 +1,20 @@
+Independent AI referee probability_review; 2026-10-05
+Command: /Users/sholden/.elan/bin/lake env lean Solution.lean
+Working directory: /Users/sholden/Projects/AIM/research/lean/114
+Input SHA-256:
+0c29c3c5b0cec95e1463ca190792b26a8d42733cdcca5b99796f84bd03a854ff  AIM/P114/Definitions.lean
+b4412ae1ae9f8f7bc26279c565e3e4799b203eb1a3f3d191b95aa4a239b69797  AIM/P114/Proof.lean
+762965dcaab9eff7d0fca577597a1b900a7acde8899928eceb38d9a0c0c740fe  Challenge.lean
+40cecf7e29a88f5756d10385648ca2fee0b33da8124c1d31bdde08b52321f0b4  Solution.lean
+a248e229221f1e857a46b7aa542cef687a546a63ec2a4a5607a53c087951b889  NUMERICAL_TARGETS.md
+ab020c73ee0d63c891ebc96dba9cdc7ff00c9ce48d59b006e12f8fe3de164a30  comparator.json
+aa76173343a28a5f7696a9a7c2cbac1afa3a4138b061c6828a37d13e4f6ccefa  lakefile.toml
+f7f0c63c8e5bfc1b885e90ae8157be1f13f6a4385b6a5211c226fe026336cd48  lake-manifest.json
+3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71  lean-toolchain
+
+'AIM.P114.module_count_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.sign_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.variance_mixture_kurtosis' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Exit code: 0
+Source hashes unchanged during review run: True

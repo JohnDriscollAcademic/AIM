@@ -1,0 +1,9 @@
+Independent reviewer: spectral_review
+UTC: 2026-10-05T16:49:41.411380+00:00
+Working directory: /Users/sholden/Projects/AIM/research/lean/114
+Command: /Users/sholden/.elan/bin/lake env lean Solution.lean
+Exit code: 0
+
+'AIM.P114.module_count_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.sign_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.variance_mixture_kurtosis' depends on axioms: [propext, Classical.choice, Quot.sound]

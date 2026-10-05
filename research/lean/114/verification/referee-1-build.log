@@ -1,0 +1,11 @@
+Independent reviewer: spectral_review
+UTC: 2026-10-05T16:49:12.609043+00:00
+Working directory: /Users/sholden/Projects/AIM/research/lean/114
+Command: /Users/sholden/.elan/bin/lake build Solution
+Exit code: 0
+
+ℹ [3228/3229] Replayed Solution
+info: Solution.lean:3:0: 'AIM.P114.module_count_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:4:0: 'AIM.P114.sign_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:5:0: 'AIM.P114.variance_mixture_kurtosis' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3229 jobs).

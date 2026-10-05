@@ -1,0 +1,9 @@
+Date: 2026-10-05
+Host: local macOS; not authoritative Linux verifier.
+Command: /Users/sholden/.elan/bin/lake env lean Solution.lean
+
+'AIM.P114.module_count_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.sign_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.variance_mixture_kurtosis' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Exit code: 0
