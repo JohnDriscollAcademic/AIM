@@ -1,0 +1,17 @@
+{
+  "AIM/P114/Definitions.lean": "0c29c3c5b0cec95e1463ca190792b26a8d42733cdcca5b99796f84bd03a854ff",
+  "AIM/P114/Proof.lean": "b4412ae1ae9f8f7bc26279c565e3e4799b203eb1a3f3d191b95aa4a239b69797",
+  "AIM/P114/TransferDefinitions.lean": "e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08",
+  "AIM/P114/TransferProof.lean": "c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c",
+  "AIM/P114/MixtureDefinitions.lean": "63573393a3e5521a4276e822717f307bbabd4c327540e22895c99a1c0fab7652",
+  "AIM/P114/MixtureProof.lean": "2a5d65beeeb576efad8eaf9940ebe0b5cd81cd52e402807e004444ca2e9e6bcf",
+  "AIM/P114/InertiaDefinitions.lean": "d40bb849d050150f4688bee02ba4f2a88341593f1c37114d253c79b2651b0795",
+  "AIM/P114/InertiaProof.lean": "d0acd2dfda515f792ca12195be04b1b07d0ca76e75e7cb20b1afd0e09e06345d",
+  "Challenge.lean": "50b8837f4c80d91614a3dedf5b3eaa0577dfedfb2bde6921418926ce26e56e16",
+  "Solution.lean": "124d6dfc15f78ac5e9c9658dcc0888dc438060527f480af93372189cdd96ef46",
+  "comparator.json": "3e0ee4f63600984bf299704b3e5108a469f62de8b3e666e38982d95dc7c7fd47",
+  "NUMERICAL_TARGETS.md": "d7e9a67218b2210bc2ab380080916ad496dd8ee1e031f93e28af21a1629e90b0",
+  "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+  "lakefile.toml": "aa76173343a28a5f7696a9a7c2cbac1afa3a4138b061c6828a37d13e4f6ccefa",
+  "lake-manifest.json": "f7f0c63c8e5bfc1b885e90ae8157be1f13f6a4385b6a5211c226fe026336cd48"
+}

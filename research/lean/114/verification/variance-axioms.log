@@ -1,0 +1,11 @@
+Date: 2026-10-05
+Host: local macOS; not authoritative Linux verifier.
+Command: /Users/sholden/.elan/bin/lake env lean verification/variance-axiom-audit.lean
+
+'AIM.P114.actual_nodal_variance_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.actual_nodal_variance_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.actual_nodal_variance_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.actual_nodal_variance_mixture_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.actual_nodal_variance_mixture_not_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Exit code: 0

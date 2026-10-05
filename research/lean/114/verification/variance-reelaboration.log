@@ -1,0 +1,6 @@
+Date: 2026-10-05
+Host: local macOS; not authoritative Linux verifier.
+Command: /Users/sholden/.elan/bin/lake env lean AIM/P114/VarianceProof.lean
+
+
+Exit code: 0

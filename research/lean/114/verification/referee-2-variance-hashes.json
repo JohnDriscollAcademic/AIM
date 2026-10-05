@@ -1,0 +1,17 @@
+{
+  "reviewer": "probability_review, independent OpenAI Codex AI",
+  "date": "2026-10-05",
+  "sha256": {
+    "AIM/P114/VarianceDefinitions.lean": "39448627e15c3dc5b6d0a9c825928abe8f79a6b92fed300cf40313bc9b5ef3aa",
+    "AIM/P114/VarianceProof.lean": "3a160951c60be915a49a2b9dedb1495e76e6f35007339ab7f30d03901e33e6c2",
+    "VarianceChallenge.lean": "6b77c1f2e4debf3ac27f7264ab36ee8431a59c060e3e98ac99824160a21be0b5",
+    "VARIANCE_TARGETS.md": "a215fb1019cd18812094ad0adac10aef5427e2346af39e9004db38e01cca14fb",
+    "VARIANCE_PROOF.md": "575013a6e37c97e76b59f35a65db749812ec8f576f00e87bec0eb733546b5c27",
+    "AIM/P114/MixtureDefinitions.lean": "63573393a3e5521a4276e822717f307bbabd4c327540e22895c99a1c0fab7652",
+    "AIM/P114/MixtureProof.lean": "2a5d65beeeb576efad8eaf9940ebe0b5cd81cd52e402807e004444ca2e9e6bcf",
+    "AIM/P114/Definitions.lean": "0c29c3c5b0cec95e1463ca190792b26a8d42733cdcca5b99796f84bd03a854ff",
+    "AIM/P114/Proof.lean": "b4412ae1ae9f8f7bc26279c565e3e4799b203eb1a3f3d191b95aa4a239b69797",
+    "lake-manifest.json": "f7f0c63c8e5bfc1b885e90ae8157be1f13f6a4385b6a5211c226fe026336cd48",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+  }
+}

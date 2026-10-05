@@ -12,7 +12,21 @@
     "AIM.P114.surplus_moment_contamination_tendsto",
     "AIM.P114.standard_gaussian_fourth_moment",
     "AIM.P114.normalized_variance_mixture_moments",
-    "AIM.P114.normalized_variance_mixture_not_gaussian"
+    "AIM.P114.normalized_variance_mixture_not_gaussian",
+    "AIM.P114.core_completion_of_squares",
+    "AIM.P114.core_positive_index",
+    "AIM.P114.actual_nodal_variance_zero",
+    "AIM.P114.actual_nodal_variance_bounds",
+    "AIM.P114.actual_nodal_variance_continuous",
+    "AIM.P114.actual_nodal_variance_mixture_inputs",
+    "AIM.P114.actual_nodal_variance_mixture_not_gaussian",
+    "AIM.P114.counterexample_loopless",
+    "AIM.P114.counterexample_connected",
+    "AIM.P114.counterexample_cardinalities",
+    "AIM.P114.counterexample_parallel_edges",
+    "AIM.P114.counterexample_degrees",
+    "AIM.P114.counterexample_no_degree_two",
+    "AIM.P114.counterexample_euler_count"
   ],
   "definition_names": [],
   "permitted_axioms": [

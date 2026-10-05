@@ -2,7 +2,7 @@
 
 The unmodified AIM verification workflow [passed on 2026-10-05](https://github.com/sidneyholden1/AIM/actions/runs/37344385173), on GitHub-hosted Ubuntu 24.04 in the submitting user's fork. Its exact source revision is [`4c780fd5f95407e9a6a7c55dcb7c0f4c04bfaa2e`](https://github.com/sidneyholden1/AIM/tree/4c780fd5f95407e9a6a7c55dcb7c0f4c04bfaa2e/research/lean/114).
 
-The run proves only the three supporting declarations listed in [comparator.json](../../comparator.json). It does not formally establish the graph counterexample or the original AIM 114 target. [NUMERICAL_TARGETS.md](../../NUMERICAL_TARGETS.md) identifies the missing links.
+The run proves only the three supporting declarations listed in [the original comparator configuration](https://github.com/sidneyholden1/AIM/blob/4c780fd5f95407e9a6a7c55dcb7c0f4c04bfaa2e/research/lean/114/comparator.json). It does not formally establish the graph counterexample or the original AIM 114 target. [NUMERICAL_TARGETS.md](../../NUMERICAL_TARGETS.md) identifies the missing links.
 
 ## Retained original artifacts
 

@@ -1,4 +1,7 @@
+import AIM.P114.GraphDefinitions
+import AIM.P114.VarianceDefinitions
 import AIM.P114.Definitions
+import AIM.P114.InertiaDefinitions
 import AIM.P114.MixtureDefinitions
 import AIM.P114.TransferDefinitions
 
@@ -105,5 +108,98 @@ theorem normalized_variance_mixture_not_gaussian
     (hbound : ∀ᵐ ω ∂μ, (1 / 4 : ℝ) < V ω ∧ V ω < (1 / 2 : ℝ))
     (hnonconstant : ¬ ∃ c : ℝ, V =ᵐ[μ] fun _ => c) :
     normalizedVarianceMixture μ V ≠ gaussianReal 0 1 := by sorry
+
+
+/-- Completing the actual core form by the explicit invertible shear. -/
+theorem core_completion_of_squares (m : ℕ) (a q x : Fin m → ℝ)
+    (ha : ∀ i, a i ≠ 0) :
+    coreQuadraticForm m a q x =
+      (coreDiagonalForm m a q x).comp (coreDiagonalizingEquiv m a q).toLinearMap := by
+  sorry
+
+/-- The actual positive index of the core form, including the possible zero
+residual pivot. Mathlib's `sigPos` counts the maximal dimension of a subspace
+on which the real quadratic form is positive definite. -/
+theorem core_positive_index (m : ℕ) (a q x : Fin m → ℝ)
+    (ha : ∀ i, a i ≠ 0) :
+    sigPos (coreQuadraticForm m a q x) =
+      (Finset.univ.filter (fun i => a i < 0)).card +
+        if 0 < coreSchurValue m a q x then 1 else 0 := by
+  sorry
+
+
+/-- The same strict event formula gives `v(0)=1/2`. -/
+theorem actual_nodal_variance_zero : actualNodalVariance 0 = 1 / 2 := by sorry
+
+/-- Strict source bounds for every finite nonzero real parameter. -/
+theorem actual_nodal_variance_bounds (r : ℝ) (hr : r ≠ 0) :
+    (1 / 4 : ℝ) < actualNodalVariance r ∧ actualNodalVariance r < (1 / 2 : ℝ) := by sorry
+
+/-- The actual Cauchy triangle probability is continuous, including at zero. -/
+theorem actual_nodal_variance_continuous : Continuous actualNodalVariance := by sorry
+
+/-- All hypotheses of the completed mixture theorem, proved for the actual
+source function under any probability law with full support and no atom at zero. -/
+theorem actual_nodal_variance_mixture_inputs
+    (ρ : Measure ℝ) [IsProbabilityMeasure ρ] [Measure.IsOpenPosMeasure ρ]
+    (hzero : ρ {0} = 0) :
+    Measurable actualNodalVariance ∧
+    (∀ᵐ r ∂ρ, (1 / 4 : ℝ) < actualNodalVariance r ∧
+      actualNodalVariance r < (1 / 2 : ℝ)) ∧
+    (¬ ∃ c : ℝ, actualNodalVariance =ᵐ[ρ] fun _ => c) := by sorry
+
+/-- Non-Gaussianity with the manuscript's actual mixing-variance function.
+The eventual law of `R=-A/B` still must be constructed and shown to satisfy
+the intrinsic probability-law hypotheses. -/
+theorem actual_nodal_variance_mixture_not_gaussian
+    (ρ : Measure ℝ) [IsProbabilityMeasure ρ] [Measure.IsOpenPosMeasure ρ]
+    (hzero : ρ {0} = 0) :
+    normalizedVarianceMixture ρ actualNodalVariance ≠ gaussianReal 0 1 := by sorry
+
+
+/-- The actual construction has no loops at any index. -/
+theorem counterexample_loopless (m : ℕ) : (counterexampleGraph m).Loopless := by
+  sorry
+
+/-- For positive module count the actual graph is connected. Only adjacency
+and connectivity use the underlying simple graph; all edge counts retain IDs. -/
+theorem counterexample_connected (m : ℕ) (hm : 1 ≤ m) :
+    (counterexampleGraph m).toSimpleGraph.Connected := by
+  sorry
+
+/-- Cardinalities of the actual multigraph's vertex and edge sets. -/
+theorem counterexample_cardinalities (m : ℕ) :
+    (counterexampleGraph m).vertexSet.ncard = m + 3 ∧
+    (counterexampleGraph m).edgeSet.ncard = 3 * m + 1 := by
+  sorry
+
+/-- The two parallel edges in every module remain distinct actual links. -/
+theorem counterexample_parallel_edges (m : ℕ) (i : Fin m) :
+    (some (i, (0 : Fin 3)) : CounterexampleEdge m) ≠ some (i, (1 : Fin 3)) ∧
+    (counterexampleGraph m).IsLink (some (i, 0)) (graphU m) (graphW i) ∧
+    (counterexampleGraph m).IsLink (some (i, 1)) (graphU m) (graphW i) := by
+  sorry
+
+/-- Exact incident-edge counts, hence multigraph degrees once looplessness
+is established. Parallel edges are counted separately. -/
+theorem counterexample_degrees (m : ℕ) :
+    ((counterexampleGraph m).incidenceSet (graphU m)).ncard = 2 * m + 1 ∧
+    ((counterexampleGraph m).incidenceSet (graphV m)).ncard = m ∧
+    ((counterexampleGraph m).incidenceSet (graphT m)).ncard = 1 ∧
+    ∀ i : Fin m, ((counterexampleGraph m).incidenceSet (graphW i)).ncard = 3 := by
+  sorry
+
+/-- In the manuscript's graph range no vertex has degree two. -/
+theorem counterexample_no_degree_two (m : ℕ) (hm : 3 ≤ m) :
+    ∀ v : CounterexampleVertex m,
+      ((counterexampleGraph m).incidenceSet v).ncard ≠ 2 := by
+  sorry
+
+/-- The integer Euler expression for the actual multigraph. This theorem
+does not identify it with a homology or cycle-space dimension. -/
+theorem counterexample_euler_count (m : ℕ) :
+    ((counterexampleGraph m).edgeSet.ncard : ℤ) -
+      ((counterexampleGraph m).vertexSet.ncard : ℤ) + 1 = 2 * (m : ℤ) - 1 := by
+  sorry
 
 end AIM.P114

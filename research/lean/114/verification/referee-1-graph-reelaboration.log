@@ -1,0 +1,4 @@
+Independent root reviewer; macOS; 2026-10-05
+Command: lake env lean AIM/P114/GraphProof.lean
+
+Exit code: 0

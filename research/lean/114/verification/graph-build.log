@@ -1,0 +1,5 @@
+$ /Users/sholden/.elan/bin/lake build AIM.P114.GraphProof
+✔ [3028/3028] Built AIM.P114.GraphProof (4.8s)
+Build completed successfully (3028 jobs).
+
+exit_code=0

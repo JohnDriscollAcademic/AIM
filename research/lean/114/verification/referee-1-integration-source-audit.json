@@ -1,0 +1,214 @@
+{
+  "blocks": {
+    "original3": [
+      "module_count_identity",
+      "sign_second_moment",
+      "variance_mixture_kurtosis"
+    ],
+    "Transfer": [
+      "core_weight_bound",
+      "contaminated_law_probability",
+      "contamination_integral_bound",
+      "surplus_moment_contamination_bound",
+      "surplus_moment_contamination_tendsto"
+    ],
+    "Mixture": [
+      "standard_gaussian_fourth_moment",
+      "normalized_variance_mixture_moments",
+      "normalized_variance_mixture_not_gaussian"
+    ],
+    "Inertia": [
+      "core_completion_of_squares",
+      "core_positive_index"
+    ],
+    "Variance": [
+      "actual_nodal_variance_zero",
+      "actual_nodal_variance_bounds",
+      "actual_nodal_variance_continuous",
+      "actual_nodal_variance_mixture_inputs",
+      "actual_nodal_variance_mixture_not_gaussian"
+    ],
+    "Graph": [
+      "counterexample_loopless",
+      "counterexample_connected",
+      "counterexample_cardinalities",
+      "counterexample_parallel_edges",
+      "counterexample_degrees",
+      "counterexample_no_degree_two",
+      "counterexample_euler_count"
+    ]
+  },
+  "count": 25,
+  "frozen_signature_text_exact": true,
+  "config_names_match": true,
+  "metadata_names_match": true,
+  "solution_axiom_print_names_match": true,
+  "original_problem_statement_unchanged": true,
+  "original_problem_statement_sha256": "750a9081ab8fa765cad49d26a1838428ce5685b25e0911e61b7c714c6f2d22fc",
+  "source_hashes": {
+    "Challenge.lean": "82f9549d7586ca765de58e195c20c292b798f739845087b73969351920cf8903",
+    "Solution.lean": "18c976f941f59a69f208505294ee1f576c1b5a9fcf868aa3848a35f0a0753e8e",
+    "comparator.json": "4449dd71aa3d02b7144fd88d260d500e5d56c56c95092ead6303c8a448276820",
+    "formalization.yaml": "eed91e24dc0f2dbd492db5cf449c65e5d42d30918433f6161744686c6d515806",
+    "lakefile.toml": "aa76173343a28a5f7696a9a7c2cbac1afa3a4138b061c6828a37d13e4f6ccefa",
+    "lake-manifest.json": "f7f0c63c8e5bfc1b885e90ae8157be1f13f6a4385b6a5211c226fe026336cd48",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "AIM/P114/TransferDefinitions.lean": "e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08",
+    "AIM/P114/VarianceDefinitions.lean": "39448627e15c3dc5b6d0a9c825928abe8f79a6b92fed300cf40313bc9b5ef3aa",
+    "AIM/P114/Definitions.lean": "0c29c3c5b0cec95e1463ca190792b26a8d42733cdcca5b99796f84bd03a854ff",
+    "AIM/P114/GraphProof.lean": "75232119b42e3cffb5829d959fc38842acc1381eeb409da33d9baef9faae95ea",
+    "AIM/P114/GraphDefinitions.lean": "07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca",
+    "AIM/P114/TransferProof.lean": "c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c",
+    "AIM/P114/MixtureProof.lean": "2a5d65beeeb576efad8eaf9940ebe0b5cd81cd52e402807e004444ca2e9e6bcf",
+    "AIM/P114/InertiaProof.lean": "d0acd2dfda515f792ca12195be04b1b07d0ca76e75e7cb20b1afd0e09e06345d",
+    "AIM/P114/Proof.lean": "b4412ae1ae9f8f7bc26279c565e3e4799b203eb1a3f3d191b95aa4a239b69797",
+    "AIM/P114/MixtureDefinitions.lean": "63573393a3e5521a4276e822717f307bbabd4c327540e22895c99a1c0fab7652",
+    "AIM/P114/VarianceProof.lean": "3a160951c60be915a49a2b9dedb1495e76e6f35007339ab7f30d03901e33e6c2",
+    "AIM/P114/InertiaDefinitions.lean": "d40bb849d050150f4688bee02ba4f2a88341593f1c37114d253c79b2651b0795",
+    "TransferChallenge.lean": "48d4e6a969b304dd89145bf8be6df2697db220b6e8a51ed458c6631047a544d1",
+    "MixtureChallenge.lean": "edd2f69de4e8ba1552189d57856ae4bd7f35a4b9c73a53c0d2e1de81c5a3570a",
+    "InertiaChallenge.lean": "0c4fc841423c270b32cfe8761ec6258df1e30e8946ac4c396bfcbd94c1505e72",
+    "VarianceChallenge.lean": "6b77c1f2e4debf3ac27f7264ab36ee8431a59c060e3e98ac99824160a21be0b5",
+    "GraphChallenge.lean": "d08288b79567924d4e54853b48b48735dd4f37bc15a31e1162c525617f4f68b7",
+    "README.md": "32c1577362c60fa3a94f7c5bef884cd07e15bcf133bf2dc9c300b565ffd2542e",
+    "NUMERICAL_TARGETS.md": "3183b3be4e567bee912bd415bd1529556ae6d10504355c92e60a07b31ee02b30",
+    "verification/README.md": "dd69bb3dba798cd814bf78cc982a985551e84b031fd4efb500a3cafc560ec3c7"
+  },
+  "actual_axioms": {
+    "AIM.P114.module_count_identity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.sign_second_moment": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.variance_mixture_kurtosis": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.core_weight_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.contaminated_law_probability": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.contamination_integral_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.surplus_moment_contamination_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.surplus_moment_contamination_tendsto": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.standard_gaussian_fourth_moment": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.normalized_variance_mixture_moments": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.normalized_variance_mixture_not_gaussian": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.core_completion_of_squares": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.core_positive_index": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.actual_nodal_variance_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.actual_nodal_variance_bounds": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.actual_nodal_variance_continuous": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.actual_nodal_variance_mixture_inputs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.actual_nodal_variance_mixture_not_gaussian": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.counterexample_loopless": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.counterexample_connected": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.counterexample_cardinalities": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.counterexample_parallel_edges": [
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.counterexample_degrees": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.counterexample_no_degree_two": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "AIM.P114.counterexample_euler_count": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "manuscript_provenance_hashes_match": true,
+  "separate_environment_comparison": {
+    "declarations": 25,
+    "referenced_constants": 32932,
+    "solution_imported_modules": 5199,
+    "challenge_in_solution": false,
+    "scope": "local trusted-olean comparison; not isolated exported kernel verification"
+  },
+  "canonical_page_sha256": "2954c6a15b32ed16256c2c2c19c99720e11ac80ce4ca92f0035aa82b6562c326",
+  "extension_review_reports": 20,
+  "review_table_hash_comparisons": 79
+}

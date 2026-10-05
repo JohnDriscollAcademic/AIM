@@ -1,0 +1,18 @@
+{
+  "Challenge.lean": "82f9549d7586ca765de58e195c20c292b798f739845087b73969351920cf8903",
+  "Solution.lean": "18c976f941f59a69f208505294ee1f576c1b5a9fcf868aa3848a35f0a0753e8e",
+  "comparator.json": "4449dd71aa3d02b7144fd88d260d500e5d56c56c95092ead6303c8a448276820",
+  "formalization.yaml": "504d2593e1798e012bd8339f510db3c5172f36fbdc4278f255806e7363dd6d22",
+  "AIM/P114/Definitions.lean": "0c29c3c5b0cec95e1463ca190792b26a8d42733cdcca5b99796f84bd03a854ff",
+  "AIM/P114/GraphDefinitions.lean": "07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca",
+  "AIM/P114/GraphProof.lean": "75232119b42e3cffb5829d959fc38842acc1381eeb409da33d9baef9faae95ea",
+  "AIM/P114/InertiaDefinitions.lean": "d40bb849d050150f4688bee02ba4f2a88341593f1c37114d253c79b2651b0795",
+  "AIM/P114/InertiaProof.lean": "d0acd2dfda515f792ca12195be04b1b07d0ca76e75e7cb20b1afd0e09e06345d",
+  "AIM/P114/MixtureDefinitions.lean": "63573393a3e5521a4276e822717f307bbabd4c327540e22895c99a1c0fab7652",
+  "AIM/P114/MixtureProof.lean": "2a5d65beeeb576efad8eaf9940ebe0b5cd81cd52e402807e004444ca2e9e6bcf",
+  "AIM/P114/Proof.lean": "b4412ae1ae9f8f7bc26279c565e3e4799b203eb1a3f3d191b95aa4a239b69797",
+  "AIM/P114/TransferDefinitions.lean": "e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08",
+  "AIM/P114/TransferProof.lean": "c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c",
+  "AIM/P114/VarianceDefinitions.lean": "39448627e15c3dc5b6d0a9c825928abe8f79a6b92fed300cf40313bc9b5ef3aa",
+  "AIM/P114/VarianceProof.lean": "3a160951c60be915a49a2b9dedb1495e76e6f35007339ab7f30d03901e33e6c2"
+}

@@ -1,0 +1,3 @@
+$ /Users/sholden/.elan/bin/lake env lean AIM/P114/GraphProof.lean
+
+exit_code=0

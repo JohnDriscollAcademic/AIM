@@ -1,0 +1,10 @@
+$ /Users/sholden/.elan/bin/lake env lean verification/graph-axiom-audit.lean
+'AIM.P114.counterexample_loopless' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.counterexample_connected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.counterexample_cardinalities' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.counterexample_parallel_edges' depends on axioms: [propext, Quot.sound]
+'AIM.P114.counterexample_degrees' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.counterexample_no_degree_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.counterexample_euler_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+exit_code=0

@@ -1,12 +1,13 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/99c678e569c7c4c0772db297c5ddd5e4c9b6322e/schema/v0.4.schema.json
 version: v0.4
 project:
-  name: 'AIM 114: algebra, Gaussian mixture, and prescribed-length transfer'
-  description: Partial formalization of supporting blocks in Sidney Holden's non-Gaussian
-    nodal-surplus counterexample. Includes local sign algebra, an actual normalized Gaussian
-    variance-mixture law with proved moments and non-Gaussianity, and the exact prime-root
-    length fraction and actual second/fourth-moment contamination error tending to zero. The
-    full spectral reduction, concrete mixing law, and graph-surplus convergence remain unformalized.
+  name: 'AIM 114: graph, inertia, Cauchy variance, Gaussian mixture, and length transfer'
+  description: Partial formalization of supporting blocks in Sidney Holden's non-Gaussian nodal-surplus
+    counterexample. Includes the actual finite multigraph, local sign algebra, core quadratic-form
+    diagonalization and positive index, the actual Cauchy-defined variance function, a normalized
+    Gaussian variance-mixture law with proved moments and non-Gaussianity, and the prescribed prime-root
+    weight and second/fourth-moment contamination error tending to zero. The full spectral reduction,
+    stable ratio law, and graph-surplus convergence remain unformalized.
   authors:
   - OpenAI Codex (AI-generated implementation for Sidney Holden)
   license: Apache-2.0
@@ -18,14 +19,14 @@ sources:
   - Sidney Holden
   id: https://github.com/sidneyholden1/AIM/blob/f02e5534d3a21c98171606ef04266f4c6f07dd88/research/solutions/114-nodal-surplus-counterexample/submitted/short_proof-v0.3.pdf
   type: manuscript
-  location: Sections 2 and 3 local sign identities; Section 5 actual mixture inference and
-    prescribed-length moment transfer
+  location: Section 1 finite multigraph; Sections 2 and 3 local algebra, inertia and actual variance
+    function; Section 5 Gaussian mixture and prescribed-length moment transfer
   relationship: formalizes
   author_endorsement: not-contacted
-  note: Authorship was confirmed by the submitting user. The source PDF has no author line
-    and is preserved unchanged. User authorization to prepare a PR is not reported as endorsement
-    of the final generated Lean code. Only the supporting blocks specified in NUMERICAL_TARGETS.md
-    and its extension boundaries are formalized.
+  note: Authorship was confirmed by the submitting user. The source PDF has no author line and is
+    preserved unchanged. User authorization to prepare a PR is not reported as endorsement of the
+    final generated Lean code. Only the supporting blocks specified in NUMERICAL_TARGETS.md and its
+    extension boundaries are formalized.
 - title: 'AIM 114: A universal central limit law for quantum-graph nodal surplus'
   id: https://github.com/MColbrook/AIM/blob/8eff4c7f8516ce38dd5a8aa31d78b6f44b95cf88/problems/114-quantum-graph-nodal-clt.md
   type: web-post
@@ -33,28 +34,27 @@ sources:
   relationship: formalizes
   author_endorsement: not-contacted
   note: Context for a partial formalization only. The retained target has two universal assertions.
-    The informal submission refutes the Gaussian one; the universal variance assertion remains
-    open. Neither is proved or refuted by these supporting declarations alone.
+    The informal submission refutes the Gaussian one; the universal variance assertion remains open.
+    Neither is proved or refuted by these supporting declarations alone.
 automation:
   methods:
   - method: agent
     framework: OpenAI Codex
-    tool_setup: Separate implementing and reviewing AI agents; pinned Lean 4.33.1 and Mathlib;
-      independent mathematical-boundary reviews and type-checking before proofs; separate
-      Challenge and Solution environments.
-    prompting_notes: Preserve Sidney Holden's mathematical authorship, exact source target,
-      and all unformalized links. Do not replace the graph limit theorem by its supporting
-      lemmas or treat cited informal theorems as Lean axioms.
-  notes: No human peer review, source-author endorsement of the implementation, or unmeasured
-    time/cost claim is made. Pure algebra and integral identities use Mathlib proof terms;
-    no numerical interval certificate is needed.
+    tool_setup: Separate implementing and reviewing AI agents; pinned Lean 4.33.1 and Mathlib; independent
+      mathematical-boundary reviews and type-checking before proofs; separate Challenge and Solution
+      environments.
+    prompting_notes: Preserve Sidney Holden's mathematical authorship, exact source target, and all
+      unformalized links. Do not replace the graph limit theorem by its supporting lemmas or treat
+      cited informal theorems as Lean axioms.
+  notes: No human peer review, source-author endorsement of the implementation, or unmeasured time/cost
+    claim is made. Pure algebra and integral identities use Mathlib proof terms; no numerical interval
+    certificate is needed.
 status:
-  scope: Partial supporting results only. Eleven declarations locally built and re-elaborated
-    with exactly the standard axiom set. The original three passed isolated Linux run 37344385173
-    at 4c780fd5f95407e9a6a7c55dcb7c0f4c04bfaa2e; that historical run does not certify the
-    eight new declarations. Expanded-scope isolated Linux verification is pending. The catalogue
-    must not be promoted to Lean verified because the full spectral and probabilistic links
-    remain unformalized.
+  scope: Partial supporting results only. Twenty-five declarations in six separately reviewed blocks;
+    combined local build and axiom audit pass. Expanded isolated Linux verification is pending. The
+    original three passed isolated Linux run 37344385173 at 4c780fd5f95407e9a6a7c55dcb7c0f4c04bfaa2e;
+    that historical run does not certify the twenty-two new declarations. The catalogue must not
+    be promoted to Lean verified because the full spectral and probabilistic links remain unformalized.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms:
@@ -161,31 +161,130 @@ status:
     - Quot.sound
     comparator_config: comparator.json
     literature_dependencies: []
+  - declaration: AIM.P114.core_completion_of_squares
+    file: Solution.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.core_positive_index
+    file: Solution.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.actual_nodal_variance_zero
+    file: Solution.lean
+    sorry_count: 0
+    axioms: &id001
+    - propext
+    - Classical.choice
+    - Quot.sound
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.actual_nodal_variance_bounds
+    file: Solution.lean
+    sorry_count: 0
+    axioms: *id001
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.actual_nodal_variance_continuous
+    file: Solution.lean
+    sorry_count: 0
+    axioms: *id001
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.actual_nodal_variance_mixture_inputs
+    file: Solution.lean
+    sorry_count: 0
+    axioms: *id001
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.actual_nodal_variance_mixture_not_gaussian
+    file: Solution.lean
+    sorry_count: 0
+    axioms: *id001
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.counterexample_loopless
+    file: Solution.lean
+    sorry_count: 0
+    axioms: *id001
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.counterexample_connected
+    file: Solution.lean
+    sorry_count: 0
+    axioms: *id001
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.counterexample_cardinalities
+    file: Solution.lean
+    sorry_count: 0
+    axioms: *id001
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.counterexample_parallel_edges
+    file: Solution.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Quot.sound
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.counterexample_degrees
+    file: Solution.lean
+    sorry_count: 0
+    axioms: *id001
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.counterexample_no_degree_two
+    file: Solution.lean
+    sorry_count: 0
+    axioms: *id001
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.counterexample_euler_count
+    file: Solution.lean
+    sorry_count: 0
+    axioms: *id001
+    comparator_config: comparator.json
+    literature_dependencies: []
 fidelity:
-  divergences: The initial local sign algebra generalizes to arbitrary nonzero real inputs
-    and excludes triangle boundary equalities. The mixture theorem now constructs an actual
-    product-space law and proves its moments and non-Gaussianity from measurable, bounded,
-    intrinsically nonconstant V; the source-specific V=v(R) and its hypotheses remain unformalized.
-    The prescribed prime-root length fraction and actual contamination moment errors are proved,
-    conditionally on abstract input probability laws with the source support. Identifying
-    these with the spectral laws remains an external mathematical obligation. The moment bound
-    uses the documented relaxation from ((2m-1)/(2 sqrt m))^(2k) to m^k. None of these changes
-    the original problem target.
+  divergences: The initial sign algebra generalizes to arbitrary nonzero real inputs and excludes
+    triangle boundary equalities. The graph block preserves actual parallel-edge identifiers; degrees
+    are loopless incidence counts and the Euler result is an integer expression, not a formal homology-dimension
+    identification. The mixture theorem constructs an actual product-space law and proves its moments
+    and non-Gaussianity. The actual Cauchy-defined variance function now satisfies its hypotheses
+    under any full-support real probability law with no atom at zero; construction and verification
+    of the source's stable ratio law remain missing. Prime-root length weights and actual contamination
+    moment errors are proved conditionally on probability laws with the source support. Identifying
+    these with spectral laws remains an external mathematical obligation. The moment bound relaxes
+    ((2m-1)/(2 sqrt m))^(2k) to m^k. None of these changes the original problem target.
 review:
-  status: independently reviewed boundary extensions; expanded local builds passed; expanded
-    Linux verification pending
+  status: Two independent boundary and final proof approvals per block; combined25-result local build
+    and axiom audit passed; expanded Linux verification pending
   reviewers:
-  - 'OpenAI Codex AI agent /root/spectral_review: independent statement, final proof, and
-    Linux evidence referee 1'
-  - 'OpenAI Codex AI agent /root/probability_review: independent statement and final proof
-    referee 2'
-  notes: The original three results and both extensions have separate frozen statement boundaries
-    with two independent approvals before implementation and successful typechecks. The combined
-    Challenge preserves those eleven reviewed signatures; its deliberate placeholders never
-    enter Solution. Separate final proof reports and local logs bind the actual source hashes.
-    The historical Linux verification remains in verification/linux-2026-10-05/ and applies
-    only to the original three declarations. A fresh run is required for the expanded scope.
-    No human review or source-author endorsement of the implementation is claimed.
+  - 'OpenAI Codex AI agent /root/spectral_review: independent initial, Transfer and Mixture referee;
+    Inertia and Graph implementer'
+  - 'OpenAI Codex AI agent /root/probability_review: independent statement and final proof referee
+    across blocks'
+  - 'Root OpenAI Codex agent: initial and Transfer implementer; independent Inertia, Variance and
+    Graph referee'
+  - 'OpenAI Codex AI agent /root/lean_feasibility: Mixture and Variance implementer'
+  notes: Each block has a separate frozen statement boundary with two independent approvals before
+    implementation and successful typechecks. Independent final proof reports and logs bind exact
+    source hashes; no implementer counts as a final referee for their own proof. The combined Challenge
+    preserves all twenty-five reviewed signatures; its deliberate placeholders never enter Solution.
+    Historical Linux evidence in verification/linux-2026-10-05/ applies only to the original three
+    declarations. A fresh run is required for the expanded scope. No human review or source-author
+    endorsement of the implementation is claimed.
 alignment:
 - source: Manuscript Section 2, three module sign counts minus one pivot
   declarations:
@@ -208,10 +307,30 @@ alignment:
   - AIM.P114.standard_gaussian_fourth_moment
   - AIM.P114.normalized_variance_mixture_moments
   - AIM.P114.normalized_variance_mixture_not_gaussian
-acknowledgements: Mathematical manuscript by Sidney Holden. Formalization generated with OpenAI
-  Codex. Mathlib, Lean, LeanCert, Lean Comparator, and the AIM/NLA verification infrastructure
-  retain their respective attribution and licenses. The local Apache-2.0 license covers the
-  new formalization files, not the submitted PDF.
+- source: Manuscript Lemma 1, actual core quadratic form and pivot count
+  declarations:
+  - AIM.P114.core_completion_of_squares
+  - AIM.P114.core_positive_index
+- source: Manuscript Eq. (3) and Section 5, actual Cauchy-defined variance and mixture inputs
+  declarations:
+  - AIM.P114.actual_nodal_variance_zero
+  - AIM.P114.actual_nodal_variance_bounds
+  - AIM.P114.actual_nodal_variance_continuous
+  - AIM.P114.actual_nodal_variance_mixture_inputs
+  - AIM.P114.actual_nodal_variance_mixture_not_gaussian
+- source: Manuscript Section 1, actual finite multigraph admissibility and Euler expression
+  declarations:
+  - AIM.P114.counterexample_loopless
+  - AIM.P114.counterexample_connected
+  - AIM.P114.counterexample_cardinalities
+  - AIM.P114.counterexample_parallel_edges
+  - AIM.P114.counterexample_degrees
+  - AIM.P114.counterexample_no_degree_two
+  - AIM.P114.counterexample_euler_count
+acknowledgements: Mathematical manuscript by Sidney Holden. Formalization generated with OpenAI Codex.
+  Mathlib, Lean, LeanCert, Lean Comparator, and the AIM/NLA verification infrastructure retain their
+  respective attribution and licenses. The local Apache-2.0 license covers the new formalization
+  files, not the submitted PDF.
 toolchain:
   lean: leanprover/lean4:v4.33.1
   leancert: 621a43d7cf21f87872392a01e874f2f1dbddc926

@@ -1,6 +1,6 @@
 # Verification record: supporting results only
 
-Date: 2026-10-05. The current package advertises eleven supporting results,
+Date: 2026-10-05. The current package advertises 25 supporting results,
 not the full AIM 114 counterexample. [NUMERICAL_TARGETS.md](../NUMERICAL_TARGETS.md)
 identifies the exact scope and remaining gaps.
 
@@ -8,17 +8,23 @@ identifies the exact scope and remaining gaps.
 
 The initial three statements and each extension had two independent boundary
 approvals and successful typechecks before proofs. [TransferChallenge.lean](../TransferChallenge.lean)
-and [MixtureChallenge.lean](../MixtureChallenge.lean) retain the frozen extension
+[MixtureChallenge.lean](../MixtureChallenge.lean), [InertiaChallenge.lean](../InertiaChallenge.lean),
+[VarianceChallenge.lean](../VarianceChallenge.lean), and [GraphChallenge.lean](../GraphChallenge.lean) retain the frozen extension
 signatures. Their intentional placeholders are never imported by Solution.
 
-The combined `lake build Challenge Solution` passes with eleven declarations.
-Each uses exactly `propext`, `Classical.choice`, and `Quot.sound`; no `sorryAx`,
-custom axiom, or native-execution axiom supports Solution.
+The combined `lake build Challenge Solution` and axiom audit pass for 25
+declarations: [build log](expanded-25-build.log), [axiom log](expanded-25-axioms.log),
+and [source hashes at execution](expanded-25-source-sha256.json). Separate block checks use only `propext`, `Classical.choice`,
+and `Quot.sound`; the parallel-edge result uses only `propext` and `Quot.sound`.
+No `sorryAx`, custom axiom, or native-execution axiom supports Solution.
 
 | Extension | Author's local evidence | Independent reviews and distinct logs |
 | --- | --- | --- |
 | Prescribed-length transfer | [Build](transfer-build.log), [fresh elaboration](transfer-reelaboration.log), [axioms](transfer-axioms.log), [hashes](transfer-source-sha256.json) | [Referee 1](../reviews/transfer-proof-referee-1.md), [referee 2](../reviews/transfer-proof-referee-2.md) |
 | Actual Gaussian mixture | [Build](mixture-build.log), [fresh elaboration](mixture-reelaboration.log), [axioms](mixture-axioms.log), [hashes](mixture-source-sha256.json) | [Referee 1](../reviews/mixture-proof-referee-1.md), [referee 2](../reviews/mixture-proof-referee-2.md) |
+| Finite core inertia | [Build](inertia-build.log), [fresh elaboration](inertia-reelaboration.log), [axioms](inertia-axioms.log), [hashes](inertia-source-sha256.json) | [Referee 1](../reviews/inertia-proof-referee-1.md), [referee 2](../reviews/inertia-proof-referee-2.md) |
+| Actual Cauchy variance | [Build](variance-build.log), [fresh elaboration](variance-reelaboration.log), [axioms](variance-axioms.log), [hashes](variance-source-sha256.json) | [Referee 1](../reviews/variance-proof-referee-1.md), [referee 2](../reviews/variance-proof-referee-2.md) |
+| Actual multigraph | [Build](graph-build.log), [fresh elaboration](graph-reelaboration.log), [axioms](graph-axioms.log), [hashes](graph-source-sha256.json) | [Referee 1](../reviews/graph-proof-referee-1.md), [referee 2](../reviews/graph-proof-referee-2.md) |
 
 A new isolated Linux run is required for the enlarged theorem set. The
 historical successful run below does not certify any extension added later.

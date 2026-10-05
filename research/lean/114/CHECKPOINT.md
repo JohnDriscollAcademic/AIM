@@ -1,4 +1,7 @@
-# Paused checkpoint — 2026-10-05
+# Historical paused checkpoint — 2026-10-05
+
+**Resumed on 2026-10-05 at the user's explicit request.** The text below
+retains the state at the pause; current verification records supersede it.
 
 Paused immediately at the user's explicit request. All working agents were
 interrupted. Do not resume mathematical work, builds, CI, or publication until
