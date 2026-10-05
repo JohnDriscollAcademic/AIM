@@ -22,7 +22,11 @@ Both [final referee 1](../reviews/proof-referee-1.md) and [final referee 2](../r
 
 ## Isolated Linux check
 
-Pending. An ordinary macOS build is not the repository's authoritative check. From a committed, unchanged checkout on a suitable non-root Linux runner:
+**Passed for all three supporting declarations.** [GitHub Actions run 37344385173](https://github.com/sidneyholden1/AIM/actions/runs/37344385173) used the existing unmodified AIM workflow on Ubuntu 24.04 at immutable revision `4c780fd5f95407e9a6a7c55dcb7c0f4c04bfaa2e`. The run completed on 2026-10-05 with success for project selection/metadata tests, checker controls, and project verification.
+
+The [retained Linux evidence](linux-2026-10-05/README.md) includes both original artifact ZIPs with API-matched hashes, extracted logs, the tool receipt, and the project input hash manifest. The actual Comparator log reports statement/axiom acceptance and default-kernel acceptance of Solution. The controls cover sandbox restrictions, invalid raw proofs, statement/definition mismatch, custom axioms, `sorryAx`, and native-execution trust. Both source and configuration match the reviewed mathematical boundary.
+
+This was remote execution in the submitting user's fork, followed by local inspection of the original logs. The upstream PR's own workflow requires maintainer approval. An ordinary macOS build is not substituted for the Linux result. To reproduce from that committed revision on a suitable non-root Linux runner:
 
 ```sh
 tools/lean/bootstrap.sh /absolute/path/to/aim-lean-tools
@@ -30,4 +34,4 @@ tools/lean/selftest.sh /absolute/path/to/aim-lean-tools
 tools/lean/verify.sh research/lean/114 /absolute/path/to/aim-lean-tools
 ```
 
-The existing GitHub Actions workflow runs the pinned real sandbox, rejection controls, Comparator, and raw-kernel replay. Its eventual acceptance certifies only the three stated supporting results. It cannot supply the missing graph and probability theorems or promote AIM 114 to Lean verified.
+Acceptance certifies only the three stated supporting results. It cannot supply the missing graph and probability theorems or promote AIM 114 to Lean verified. Later commits record evidence and documentation; the immutable proof revision above is the run's exact input.

@@ -14,7 +14,7 @@ This addresses the Gaussian assertion in [AIM 114](../../../problems/114-quantum
 - The [spectral review](reviews/spectral-review.md) and [probability review](reviews/probability-review.md), performed by two independent OpenAI Codex AI agents on 2026-10-05, found no blocking defect in their combined coverage of the complete argument. Their reports identify the source bytes and checks. They are not human peer review or proof-assistant verification.
 - [Exact finite checks](check_algebra.py) and [recorded output](algebra-checks.log): check sign averaging, the response identities, and the sign-count/inertia reduction on explicit rational phase data. They do not establish infinite-dimensional spectral results, null-set assertions, distributional convergence, or non-Gaussianity.
 
-Any accompanying Lean work is supporting lemmas only until every spectral and probabilistic link has been formalized and verified. In particular, a proof of a conditional moment inequality is not a proof that this graph sequence has the required limiting law. No Lean-verified catalogue status is claimed.
+The [Lean package](../../lean/114/README.md) proves three supporting results: the local sign-count identity, finite sign-average formula, and strict integral moment inequality. Its [verification record](../../lean/114/verification/README.md) and [gap list](../../lean/114/NUMERICAL_TARGETS.md) state the precise coverage. These results do not prove that this graph sequence has the required limiting law. No Lean-verified catalogue status is claimed.
 
 ## Reproduce the finite checks
 

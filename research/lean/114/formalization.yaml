@@ -58,9 +58,12 @@ status:
     Partial supporting results only. Full spectral and probabilistic links are
     inventoried in NUMERICAL_TARGETS.md. Local macOS Lean 4.33.1 builds, fresh
     proof re-elaboration, and transitive axiom checks passed, including separate
-    runs by both final proof referees. Authoritative isolated Linux verification
-    is pending. The catalogue must not be promoted to Lean verified on this
-    package's basis even if these three supporting declarations pass that check.
+    runs by both final proof referees. GitHub Actions run 37344385173 accepted
+    all three declarations with real Linux isolation, Comparator statement and
+    axiom checks, default-kernel replay, and rejection controls at immutable
+    revision 4c780fd5f95407e9a6a7c55dcb7c0f4c04bfaa2e. The catalogue must not be
+    promoted to Lean verified on this package's basis: acceptance covers the
+    three supporting declarations only.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: [propext, Classical.choice, Quot.sound]
@@ -93,9 +96,9 @@ fidelity:
     assumes positive mean and variance and does not construct the graph's
     mixing law. This is deliberately incomplete coverage of the original target.
 review:
-  status: "agent-reviewed; local-build-accepted; isolated-Linux-verification-pending"
+  status: "agent-reviewed; isolated-Linux-Comparator-accepted (supporting lemmas only)"
   reviewers:
-    - "OpenAI Codex AI agent /root/spectral_review: independent statement and final proof referee 1"
+    - "OpenAI Codex AI agent /root/spectral_review: independent statement, final proof, and Linux evidence referee 1"
     - "OpenAI Codex AI agent /root/probability_review: independent statement and final proof referee 2"
   notes: >-
     The reports bind exact Definitions, Challenge and NUMERICAL_TARGETS hashes.
@@ -104,8 +107,13 @@ review:
     from proof-development sorry counts; Solution must not import Challenge.
     Both independent final referees inspected the actual proofs, re-elaborated
     Proof, built Solution, and printed the exact transitive axiom sets. Their
-    reports bind the final source hashes. These macOS runs are not represented
-    as authoritative Linux Comparator or isolated raw-kernel replay.
+    reports bind the final source hashes. The separate successful Linux run is
+    https://github.com/sidneyholden1/AIM/actions/runs/37344385173. Its original
+    artifacts, extracted logs, tool receipts, and input hashes are retained in
+    verification/linux-2026-10-05/. The run used the existing unmodified AIM
+    workflow in the submitting user's fork; upstream PR Actions require a
+    maintainer's approval. The recorded proof revision precedes administrative
+    evidence updates; its mathematical source and configuration remain unchanged.
 alignment:
   - source: "Manuscript Section 2, three module sign counts minus one pivot"
     declarations: [AIM.P114.module_count_identity]

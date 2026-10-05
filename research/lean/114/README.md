@@ -39,9 +39,12 @@ are in [reviews/](reviews/). They reviewed both the complete manuscript and
 the canonical source-problem snapshot. The exact boundary typechecked before
 proof implementation; the record is
 [verification/boundary-typecheck.log](verification/boundary-typecheck.log).
-Proof review, local builds, and the authoritative Linux verification are
-separate gates. See [verification/](verification/) for actual run records.
-A local build does not justify labeling AIM 114 “Lean verified.”
+Both independent final proof reviews, local builds, and the isolated Linux
+Comparator/kernel verification passed for these three supporting results.
+See [verification/](verification/) for the run records and
+[retained Linux evidence](verification/linux-2026-10-05/README.md) for the
+verified revision and original artifacts. This partial package does not
+justify labeling AIM 114 “Lean verified.”
 
 The project pins Lean 4.33.1, Mathlib, LeanCert, and all transitive dependencies
 through the committed toolchain and manifest. To build locally from here:
@@ -52,7 +55,7 @@ lake build Challenge Solution
 lake env lean Solution.lean
 ```
 
-The final command prints the transitive axioms for each theorem. The intended
+The final command prints the transitive axioms for each theorem. The verified
 axiom set is `propext`, `Classical.choice`, and `Quot.sound` only. The repository's
 Linux sandbox/Comparator workflow is the authoritative mechanical check;
 see [the setup guide](../../../docs/lean/README.md).
