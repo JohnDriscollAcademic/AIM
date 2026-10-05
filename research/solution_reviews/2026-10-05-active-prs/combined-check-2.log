@@ -1,0 +1,7 @@
+COMMAND ['-O', '-B', 'research/solutions/114-nodal-surplus-counterexample/check_algebra.py']
+EXIT 0
+Exact rational finite checks; these do not verify spectral or distributional limits.
+Sign-average cases: 504
+Graph sign/inertia cases (m, accepted): [(3, 114), (4, 116), (7, 113), (12, 105)]
+Boundary-response cases: 24
+PASS: all exact finite regression checks

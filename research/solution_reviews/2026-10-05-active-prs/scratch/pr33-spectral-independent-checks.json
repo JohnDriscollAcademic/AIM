@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "execution_utc": "2026-10-05T21:18:13.983631+00:00",
+  "python_version": "3.12.14",
+  "arithmetic": "fractions.Fraction; exact rational arithmetic",
+  "graph": {
+    "seed": 11433,
+    "proposed_samples": 1000,
+    "exact_samples_passed": 983,
+    "samples_on_excluded_equations": 17,
+    "m_values": [
+      3,
+      4,
+      7,
+      12
+    ],
+    "checked": "core equations, exact LDL pivots, local sign formula, total surplus identity and range"
+  },
+  "sign_variance": {
+    "independent_sign_variance_cases_passed": 296,
+    "each_sign_patterns": 8
+  }
+}

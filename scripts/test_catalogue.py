@@ -159,6 +159,16 @@ class CatalogueTests(unittest.TestCase):
         source.write_text('[must fail](missing-source-file.md)\n', encoding='utf-8')
         self.run_catalogue(expected=1, message='missing-source-file.md')
 
+    def test_uppercase_markdown_extension_preserves_platform_link_checks(self):
+        source = self.root / 'research' / 'uppercase-regression.MD'
+        source.write_text('[must fail](missing-uppercase-file.md)\n', encoding='utf-8')
+        # Preserve pathlib's former default: Windows matches extensions without
+        # regard to case; POSIX matches their case exactly.
+        if os.name == 'nt':
+            self.run_catalogue(expected=1, message='missing-uppercase-file.md')
+        else:
+            self.run_catalogue()
+
     def run_catalogue(self, mode='--write', expected=0, message=None):
         # Exercise default locale encodings even when the parent enables UTF-8 mode.
         result = subprocess.run([sys.executable, 'scripts/catalogue.py', mode],

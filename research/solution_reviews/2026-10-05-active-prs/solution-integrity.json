@@ -1,0 +1,60 @@
+{
+  "head": "61916d1e9959dc7ed282edb124b51e8118735844",
+  "files": [
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/PROOF.md",
+      "expected": "1a621098125651077fddba39f027e5b8948448d8389f5376d02c701809dd2604",
+      "raw_git_sha256": "1a621098125651077fddba39f027e5b8948448d8389f5376d02c701809dd2604",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/README.md",
+      "expected": "2d9e0ad826949c6e15869b3a33b8c902891540cb4e6b3a5af48b1d62818399c1",
+      "raw_git_sha256": "2d9e0ad826949c6e15869b3a33b8c902891540cb4e6b3a5af48b1d62818399c1",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/REVIEW.md",
+      "expected": "e870e42f5c7a44906378159dcfcd2bad085b12e05bc75520fee588c166d53bc8",
+      "raw_git_sha256": "e870e42f5c7a44906378159dcfcd2bad085b12e05bc75520fee588c166d53bc8",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/algebra-checks.log",
+      "expected": "d3204c27967727396a16cc1b2bfab2ee2dbe4b3e2d684ecc9691f1f3293ee5d1",
+      "raw_git_sha256": "d3204c27967727396a16cc1b2bfab2ee2dbe4b3e2d684ecc9691f1f3293ee5d1",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/check_algebra.py",
+      "expected": "4121434e0f21ca9432b5d15829a8c699e3eae17a5357a3e8987ee8a4f0e91cbb",
+      "raw_git_sha256": "4121434e0f21ca9432b5d15829a8c699e3eae17a5357a3e8987ee8a4f0e91cbb",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/reviews/probability-review.md",
+      "expected": "b2bc0a1aad2205a9f0c82be1498349acfa3d72aa9739a50f45e03579a7db1a3a",
+      "raw_git_sha256": "b2bc0a1aad2205a9f0c82be1498349acfa3d72aa9739a50f45e03579a7db1a3a",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/reviews/spectral-review.md",
+      "expected": "32bfc98a6c5774f4b2a3d0c8ea25f2bab96f176cd29488c9f260bbe5f0642541",
+      "raw_git_sha256": "32bfc98a6c5774f4b2a3d0c8ea25f2bab96f176cd29488c9f260bbe5f0642541",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/statement.md",
+      "expected": "ba20eb2a450b42a26626be50124d93e2b82ca28f81eca942fbe13ccba4ca718f",
+      "raw_git_sha256": "ba20eb2a450b42a26626be50124d93e2b82ca28f81eca942fbe13ccba4ca718f",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/submitted/short_proof-v0.3.pdf",
+      "expected": "74185c70e83d9c6448d6a97e74411bfe39e5f500e217bc07df605055bbb24aa6",
+      "raw_git_sha256": "74185c70e83d9c6448d6a97e74411bfe39e5f500e217bc07df605055bbb24aa6",
+      "matches": true
+    }
+  ],
+  "frozen_problem_statement_matches_main": true
+}

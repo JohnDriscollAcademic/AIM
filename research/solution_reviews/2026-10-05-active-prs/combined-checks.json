@@ -1,0 +1,67 @@
+[
+  {
+    "command": [
+      "-B",
+      "research/solutions/114-nodal-surplus-counterexample/check_algebra.py"
+    ],
+    "exit": 0,
+    "log": "combined-check-1.log"
+  },
+  {
+    "command": [
+      "-O",
+      "-B",
+      "research/solutions/114-nodal-surplus-counterexample/check_algebra.py"
+    ],
+    "exit": 0,
+    "log": "combined-check-2.log"
+  },
+  {
+    "command": [
+      "-B",
+      "scripts/catalogue.py",
+      "--check"
+    ],
+    "exit": 0,
+    "log": "combined-check-3.log"
+  },
+  {
+    "command": [
+      "-B",
+      "tools/lean/validate_manifest.py",
+      "research/lean/114"
+    ],
+    "exit": 0,
+    "log": "combined-check-4.log"
+  },
+  {
+    "command": [
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_lean_verification.py",
+      "-v"
+    ],
+    "exit": 1,
+    "log": "combined-check-5.log"
+  },
+  {
+    "command": [
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/lean",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit": 0,
+    "log": "combined-check-6.log"
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "total_count": 1,
+  "artifacts": [
+    {
+      "id": 11371775965,
+      "node_id": "MDg6QXJ0aWZhY3QxMTM3MTc3NTk2NQ==",
+      "name": "lean-114",
+      "size_in_bytes": 27706,
+      "url": "https://api.github.com/repos/MColbrook/AIM/actions/artifacts/11371775965",
+      "archive_download_url": "https://api.github.com/repos/MColbrook/AIM/actions/artifacts/11371775965/zip",
+      "expired": false,
+      "digest": "sha256:5b38eedba061a468a5db1abbb162e1d6b3b363fe6c74abec5aca18083d79f644",
+      "created_at": "2026-10-05T21:22:41Z",
+      "updated_at": "2026-10-05T21:22:41Z",
+      "expires_at": "2027-01-03T21:05:42Z",
+      "workflow_run": {
+        "id": 37368047705,
+        "repository_id": 1358532510,
+        "head_repository_id": 1406076639,
+        "head_branch": "codex/114-nodal-surplus-counterexample",
+        "head_sha": "61916d1e9959dc7ed282edb124b51e8118735844"
+      }
+    }
+  ]
+}

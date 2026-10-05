@@ -1,0 +1,24 @@
+[
+  {
+    "headRefOid": "61916d1e9959dc7ed282edb124b51e8118735844",
+    "mergeCommit": {
+      "oid": "4e77593932f44ecc206d55a5d9641185323a6ae1"
+    },
+    "mergedAt": "2026-10-05T21:23:11Z",
+    "number": 33,
+    "state": "MERGED",
+    "title": "AIM 114: counterexample audit and partial Lean formalization",
+    "url": "https://github.com/MColbrook/AIM/pull/33"
+  },
+  {
+    "headRefOid": "70212479ac5e4b5808fb6a4dfb86d0f03d675339",
+    "mergeCommit": {
+      "oid": "dbad7c7b19f49a587a220bf2ce55e4db42498f23"
+    },
+    "mergedAt": "2026-10-05T21:18:27Z",
+    "number": 34,
+    "state": "MERGED",
+    "title": "Fix catalogue validation after local Lean setup",
+    "url": "https://github.com/MColbrook/AIM/pull/34"
+  }
+]

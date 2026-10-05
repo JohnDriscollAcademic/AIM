@@ -1,0 +1,3 @@
+COMMAND ['-B', 'tools/lean/validate_manifest.py', 'research/lean/114']
+EXIT 0
+Manifest schema and comparator coverage: PASS (31 declarations)

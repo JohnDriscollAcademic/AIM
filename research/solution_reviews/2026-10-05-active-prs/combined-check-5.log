@@ -1,0 +1,155 @@
+COMMAND ['-B', '-m', 'unittest', 'discover', '-s', 'tests', '-p', 'test_lean_verification.py', '-v']
+EXIT 1
+Manifest schema and comparator coverage: PASS (1 declarations)
+
+test_custom_or_native_trust_is_rejected (test_lean_verification.ManifestTests.test_custom_or_native_trust_is_rejected) ... ok
+test_definition_hole_rejected (test_lean_verification.ManifestTests.test_definition_hole_rejected) ... ok
+test_duplicate_comparator_key_is_rejected (test_lean_verification.ManifestTests.test_duplicate_comparator_key_is_rejected) ... ok
+test_duplicate_nested_yaml_key_is_rejected (test_lean_verification.ManifestTests.test_duplicate_nested_yaml_key_is_rejected) ... ok
+test_duplicate_yaml_status_is_rejected (test_lean_verification.ManifestTests.test_duplicate_yaml_status_is_rejected) ... ok
+test_empty_theorem_list_is_rejected (test_lean_verification.ManifestTests.test_empty_theorem_list_is_rejected) ... ok
+test_missing_required_schema_field (test_lean_verification.ManifestTests.test_missing_required_schema_field) ... ok
+test_nonzero_proof_sorries_rejected (test_lean_verification.ManifestTests.test_nonzero_proof_sorries_rejected) ... ok
+test_result_source_outside_project_rejected (test_lean_verification.ManifestTests.test_result_source_outside_project_rejected) ... ok
+test_result_specific_unchecked_axiom_rejected (test_lean_verification.ManifestTests.test_result_specific_unchecked_axiom_rejected) ... ok
+test_unchecked_export_is_rejected (test_lean_verification.ManifestTests.test_unchecked_export_is_rejected) ... ok
+test_valid_consistent_metadata (test_lean_verification.ManifestTests.test_valid_consistent_metadata) ... ok
+test_active_and_retired_canonical_changes_select_only_corresponding_project (test_lean_verification.ProjectSelectionGitTests.test_active_and_retired_canonical_changes_select_only_corresponding_project) ... ok
+test_all_projects_returns_only_id_and_project_fields (test_lean_verification.ProjectSelectionGitTests.test_all_projects_returns_only_id_and_project_fields) ... ok
+test_base_before_catalogue_infrastructure_is_supported (test_lean_verification.ProjectSelectionGitTests.test_base_before_catalogue_infrastructure_is_supported) ... ok
+test_base_before_lean_infrastructure_is_supported (test_lean_verification.ProjectSelectionGitTests.test_base_before_lean_infrastructure_is_supported) ... ok
+test_complete_project_deletion_fails_selection (test_lean_verification.ProjectSelectionGitTests.test_complete_project_deletion_fails_selection) ... ok
+test_complete_project_rename_fails_selection (test_lean_verification.ProjectSelectionGitTests.test_complete_project_rename_fails_selection) ... ok
+test_new_source_only_project_for_existing_id_is_selected (test_lean_verification.ProjectSelectionGitTests.test_new_source_only_project_for_existing_id_is_selected) ... ok
+test_partial_project_deletion_still_selects_project (test_lean_verification.ProjectSelectionGitTests.test_partial_project_deletion_still_selects_project) ... ok
+test_project_and_registry_entry_deletion_cannot_hide_project (test_lean_verification.ProjectSelectionGitTests.test_project_and_registry_entry_deletion_cannot_hide_project) ... ok
+test_renamed_file_selects_both_surviving_projects (test_lean_verification.ProjectSelectionGitTests.test_renamed_file_selects_both_surviving_projects) ... ok
+test_unicode_quoted_and_newline_filenames_select_project (test_lean_verification.ProjectSelectionGitTests.test_unicode_quoted_and_newline_filenames_select_project) ...
+  test_unicode_quoted_and_newline_filenames_select_project (test_lean_verification.ProjectSelectionGitTests.test_unicode_quoted_and_newline_filenames_select_project) (name='quoted"name.lean') ... ERROR
+  test_unicode_quoted_and_newline_filenames_select_project (test_lean_verification.ProjectSelectionGitTests.test_unicode_quoted_and_newline_filenames_select_project) (name='line\nbreak.lean') ... ERROR
+test_workflow_control_fixture_toolchain_requests_only_controls (test_lean_verification.ProjectSelectionGitTests.test_workflow_control_fixture_toolchain_requests_only_controls) ... ok
+test_workflow_renamed_away_tool_requests_controls (test_lean_verification.ProjectSelectionGitTests.test_workflow_renamed_away_tool_requests_controls) ... ok
+test_workflow_unicode_quoted_newline_tool_changes_request_controls (test_lean_verification.ProjectSelectionGitTests.test_workflow_unicode_quoted_newline_tool_changes_request_controls) ...
+  test_workflow_unicode_quoted_newline_tool_changes_request_controls (test_lean_verification.ProjectSelectionGitTests.test_workflow_unicode_quoted_newline_tool_changes_request_controls) (name='quoted"name.py') ... ERROR
+  test_workflow_unicode_quoted_newline_tool_changes_request_controls (test_lean_verification.ProjectSelectionGitTests.test_workflow_unicode_quoted_newline_tool_changes_request_controls) (name='line\nbreak.py') ... ERROR
+test_archived_record_change_rechecks_its_project (test_lean_verification.ProjectSelectionTests.test_archived_record_change_rechecks_its_project) ... ok
+test_broken_symlinked_project_is_rejected (test_lean_verification.ProjectSelectionTests.test_broken_symlinked_project_is_rejected) ... ERROR
+test_canonical_statement_change_rechecks_its_project (test_lean_verification.ProjectSelectionTests.test_canonical_statement_change_rechecks_its_project) ... ok
+test_control_fixture_toolchain_does_not_rebuild_problem_projects (test_lean_verification.ProjectSelectionTests.test_control_fixture_toolchain_does_not_rebuild_problem_projects) ... ok
+test_discovery_uses_existing_catalogue_and_detects_incomplete_project (test_lean_verification.ProjectSelectionTests.test_discovery_uses_existing_catalogue_and_detects_incomplete_project) ... ok
+test_duplicate_id_across_active_and_retired_is_rejected (test_lean_verification.ProjectSelectionTests.test_duplicate_id_across_active_and_retired_is_rejected) ... ok
+test_four_digit_ids_are_supported_and_sorted_numerically (test_lean_verification.ProjectSelectionTests.test_four_digit_ids_are_supported_and_sorted_numerically) ... ok
+test_invalid_canonical_paths_are_rejected (test_lean_verification.ProjectSelectionTests.test_invalid_canonical_paths_are_rejected) ... ok
+test_invalid_or_noncanonical_ids_are_rejected (test_lean_verification.ProjectSelectionTests.test_invalid_or_noncanonical_ids_are_rejected) ... ok
+test_malformed_retired_mapping_is_rejected (test_lean_verification.ProjectSelectionTests.test_malformed_retired_mapping_is_rejected) ... ok
+test_problem_proof_change_selects_only_that_problem (test_lean_verification.ProjectSelectionTests.test_problem_proof_change_selects_only_that_problem) ... ok
+test_project_file_is_rejected (test_lean_verification.ProjectSelectionTests.test_project_file_is_rejected) ... ok
+test_shared_checker_or_schema_change_rechecks_every_project (test_lean_verification.ProjectSelectionTests.test_shared_checker_or_schema_change_rechecks_every_project) ... ok
+test_source_only_project_cannot_skip_verification (test_lean_verification.ProjectSelectionTests.test_source_only_project_cannot_skip_verification) ... ok
+test_symlinked_project_or_ancestor_is_rejected (test_lean_verification.ProjectSelectionTests.test_symlinked_project_or_ancestor_is_rejected) ...
+  test_symlinked_project_or_ancestor_is_rejected (test_lean_verification.ProjectSelectionTests.test_symlinked_project_or_ancestor_is_rejected) (relative='research') ... ERROR
+  test_symlinked_project_or_ancestor_is_rejected (test_lean_verification.ProjectSelectionTests.test_symlinked_project_or_ancestor_is_rejected) (relative='research/lean') ... ERROR
+  test_symlinked_project_or_ancestor_is_rejected (test_lean_verification.ProjectSelectionTests.test_symlinked_project_or_ancestor_is_rejected) (relative='research/lean/001') ... ERROR
+test_unknown_project_cannot_skip_verification (test_lean_verification.ProjectSelectionTests.test_unknown_project_cannot_skip_verification) ... ok
+test_unrelated_document_does_not_rebuild_proofs (test_lean_verification.ProjectSelectionTests.test_unrelated_document_does_not_rebuild_proofs) ... ok
+
+======================================================================
+ERROR: test_unicode_quoted_and_newline_filenames_select_project (test_lean_verification.ProjectSelectionGitTests.test_unicode_quoted_and_newline_filenames_select_project) (name='quoted"name.lean')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\MatthewColbrook\.codex\visualizations\2026\10\01\01a0f88a-46a6-73c1-ae0f-23d167c70a94\active-pr-review-2026-10-05\pr33\tests\test_lean_verification.py", line 240, in test_unicode_quoted_and_newline_filenames_select_project
+    (self.root / "research/lean/001" / name).write_text("-- changed proof input\n")
+  File "C:\Users\MatthewColbrook\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MatthewColbrook\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument: 'C:\\Users\\MatthewColbrook\\AppData\\Local\\Temp\\tmp11dhrz56\\repo\\research\\lean\\001\\quoted"name.lean'
+
+======================================================================
+ERROR: test_unicode_quoted_and_newline_filenames_select_project (test_lean_verification.ProjectSelectionGitTests.test_unicode_quoted_and_newline_filenames_select_project) (name='line\nbreak.lean')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\MatthewColbrook\.codex\visualizations\2026\10\01\01a0f88a-46a6-73c1-ae0f-23d167c70a94\active-pr-review-2026-10-05\pr33\tests\test_lean_verification.py", line 240, in test_unicode_quoted_and_newline_filenames_select_project
+    (self.root / "research/lean/001" / name).write_text("-- changed proof input\n")
+  File "C:\Users\MatthewColbrook\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MatthewColbrook\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument: 'C:\\Users\\MatthewColbrook\\AppData\\Local\\Temp\\tmp11dhrz56\\repo\\research\\lean\\001\\line\nbreak.lean'
+
+======================================================================
+ERROR: test_workflow_unicode_quoted_newline_tool_changes_request_controls (test_lean_verification.ProjectSelectionGitTests.test_workflow_unicode_quoted_newline_tool_changes_request_controls) (name='quoted"name.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\MatthewColbrook\.codex\visualizations\2026\10\01\01a0f88a-46a6-73c1-ae0f-23d167c70a94\active-pr-review-2026-10-05\pr33\tests\test_lean_verification.py", line 322, in test_workflow_unicode_quoted_newline_tool_changes_request_controls
+    (directory / name).write_text("# shared control fixture\n")
+  File "C:\Users\MatthewColbrook\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MatthewColbrook\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument: 'C:\\Users\\MatthewColbrook\\AppData\\Local\\Temp\\tmp2pernb32\\repo\\tools\\lean\\quoted"name.py'
+
+======================================================================
+ERROR: test_workflow_unicode_quoted_newline_tool_changes_request_controls (test_lean_verification.ProjectSelectionGitTests.test_workflow_unicode_quoted_newline_tool_changes_request_controls) (name='line\nbreak.py')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\MatthewColbrook\.codex\visualizations\2026\10\01\01a0f88a-46a6-73c1-ae0f-23d167c70a94\active-pr-review-2026-10-05\pr33\tests\test_lean_verification.py", line 322, in test_workflow_unicode_quoted_newline_tool_changes_request_controls
+    (directory / name).write_text("# shared control fixture\n")
+  File "C:\Users\MatthewColbrook\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1047, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\MatthewColbrook\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [Errno 22] Invalid argument: 'C:\\Users\\MatthewColbrook\\AppData\\Local\\Temp\\tmp2pernb32\\repo\\tools\\lean\\line\nbreak.py'
+
+======================================================================
+ERROR: test_broken_symlinked_project_is_rejected (test_lean_verification.ProjectSelectionTests.test_broken_symlinked_project_is_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\MatthewColbrook\.codex\visualizations\2026\10\01\01a0f88a-46a6-73c1-ae0f-23d167c70a94\active-pr-review-2026-10-05\pr33\tests\test_lean_verification.py", line 150, in test_broken_symlinked_project_is_rejected
+    project.symlink_to(root / "missing", target_is_directory=True)
+  File "C:\Users\MatthewColbrook\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1386, in symlink_to
+    os.symlink(target, self, target_is_directory)
+OSError: [WinError 1314] A required privilege is not held by the client: 'C:\\Users\\MatthewColbrook\\AppData\\Local\\Temp\\tmpw9qqzreq\\missing' -> 'C:\\Users\\MatthewColbrook\\AppData\\Local\\Temp\\tmpw9qqzreq\\research\\lean\\001'
+
+======================================================================
+ERROR: test_symlinked_project_or_ancestor_is_rejected (test_lean_verification.ProjectSelectionTests.test_symlinked_project_or_ancestor_is_rejected) (relative='research')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\MatthewColbrook\.codex\visualizations\2026\10\01\01a0f88a-46a6-73c1-ae0f-23d167c70a94\active-pr-review-2026-10-05\pr33\tests\test_lean_verification.py", line 140, in test_symlinked_project_or_ancestor_is_rejected
+    project.symlink_to(root / "elsewhere", target_is_directory=True)
+  File "C:\Users\MatthewColbrook\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1386, in symlink_to
+    os.symlink(target, self, target_is_directory)
+OSError: [WinError 1314] A required privilege is not held by the client: 'C:\\Users\\MatthewColbrook\\AppData\\Local\\Temp\\tmp5hqwtzit\\elsewhere' -> 'C:\\Users\\MatthewColbrook\\AppData\\Local\\Temp\\tmp5hqwtzit\\research'
+
+======================================================================
+ERROR: test_symlinked_project_or_ancestor_is_rejected (test_lean_verification.ProjectSelectionTests.test_symlinked_project_or_ancestor_is_rejected) (relative='research/lean')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\MatthewColbrook\.codex\visualizations\2026\10\01\01a0f88a-46a6-73c1-ae0f-23d167c70a94\active-pr-review-2026-10-05\pr33\tests\test_lean_verification.py", line 140, in test_symlinked_project_or_ancestor_is_rejected
+    project.symlink_to(root / "elsewhere", target_is_directory=True)
+  File "C:\Users\MatthewColbrook\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1386, in symlink_to
+    os.symlink(target, self, target_is_directory)
+OSError: [WinError 1314] A required privilege is not held by the client: 'C:\\Users\\MatthewColbrook\\AppData\\Local\\Temp\\tmpwnobkmus\\elsewhere' -> 'C:\\Users\\MatthewColbrook\\AppData\\Local\\Temp\\tmpwnobkmus\\research\\lean'
+
+======================================================================
+ERROR: test_symlinked_project_or_ancestor_is_rejected (test_lean_verification.ProjectSelectionTests.test_symlinked_project_or_ancestor_is_rejected) (relative='research/lean/001')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\MatthewColbrook\.codex\visualizations\2026\10\01\01a0f88a-46a6-73c1-ae0f-23d167c70a94\active-pr-review-2026-10-05\pr33\tests\test_lean_verification.py", line 140, in test_symlinked_project_or_ancestor_is_rejected
+    project.symlink_to(root / "elsewhere", target_is_directory=True)
+  File "C:\Users\MatthewColbrook\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\pathlib.py", line 1386, in symlink_to
+    os.symlink(target, self, target_is_directory)
+OSError: [WinError 1314] A required privilege is not held by the client: 'C:\\Users\\MatthewColbrook\\AppData\\Local\\Temp\\tmpq32pamkw\\elsewhere' -> 'C:\\Users\\MatthewColbrook\\AppData\\Local\\Temp\\tmpq32pamkw\\research\\lean\\001'
+
+----------------------------------------------------------------------
+Ran 43 tests in 81.632s
+
+FAILED (errors=8)

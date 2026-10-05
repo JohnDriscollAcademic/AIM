@@ -38,7 +38,7 @@ def markdown_paths(root):
         subdirectories[:] = [name for name in subdirectories
                              if name not in LOCAL_CACHE_DIRECTORIES]
         for name in filenames:
-            if name.endswith(".md"):
+            if Path(name).match("*.md"):
                 yield Path(directory) / name
 
 

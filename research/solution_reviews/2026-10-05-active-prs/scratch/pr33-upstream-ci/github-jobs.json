@@ -1,0 +1,240 @@
+{
+  "total_count": 3,
+  "jobs": [
+    {
+      "id": 111977029605,
+      "run_id": 37368047705,
+      "workflow_name": "Lean verification",
+      "head_branch": "codex/114-nodal-surplus-counterexample",
+      "run_url": "https://api.github.com/repos/MColbrook/AIM/actions/runs/37368047705",
+      "run_attempt": 2,
+      "node_id": "CR_kwDOUPmPns8AAAAaElnf5Q",
+      "head_sha": "61916d1e9959dc7ed282edb124b51e8118735844",
+      "url": "https://api.github.com/repos/MColbrook/AIM/actions/jobs/111977029605",
+      "html_url": "https://github.com/MColbrook/AIM/actions/runs/37368047705/job/111977029605",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-05T21:05:42Z",
+      "started_at": "2026-10-05T21:11:00Z",
+      "completed_at": "2026-10-05T21:11:11Z",
+      "name": "select",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-05T21:11:01Z",
+          "completed_at": "2026-10-05T21:11:01Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-05T21:11:01Z",
+          "completed_at": "2026-10-05T21:11:04Z"
+        },
+        {
+          "name": "Install metadata validators",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-05T21:11:04Z",
+          "completed_at": "2026-10-05T21:11:07Z"
+        },
+        {
+          "name": "Test project selection and metadata gates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-05T21:11:07Z",
+          "completed_at": "2026-10-05T21:11:09Z"
+        },
+        {
+          "name": "Test pinned harness gates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-05T21:11:09Z",
+          "completed_at": "2026-10-05T21:11:10Z"
+        },
+        {
+          "name": "Select changed projects",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-05T21:11:10Z",
+          "completed_at": "2026-10-05T21:11:10Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-05T21:11:10Z",
+          "completed_at": "2026-10-05T21:11:10Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-05T21:11:10Z",
+          "completed_at": "2026-10-05T21:11:10Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/MColbrook/AIM/check-runs/111977029605",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000000284,
+      "runner_name": "GitHub Actions 1000000284",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 111978833498,
+      "run_id": 37368047705,
+      "workflow_name": "Lean verification",
+      "head_branch": "codex/114-nodal-surplus-counterexample",
+      "run_url": "https://api.github.com/repos/MColbrook/AIM/actions/runs/37368047705",
+      "run_attempt": 2,
+      "node_id": "CR_kwDOUPmPns8AAAAaEnVmWg",
+      "head_sha": "61916d1e9959dc7ed282edb124b51e8118735844",
+      "url": "https://api.github.com/repos/MColbrook/AIM/actions/jobs/111978833498",
+      "html_url": "https://github.com/MColbrook/AIM/actions/runs/37368047705/job/111978833498",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-05T21:11:11Z",
+      "started_at": "2026-10-05T21:16:26Z",
+      "completed_at": "2026-10-05T21:22:44Z",
+      "name": "verify (114, research/lean/114)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-05T21:16:27Z",
+          "completed_at": "2026-10-05T21:16:30Z"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-05T21:16:30Z",
+          "completed_at": "2026-10-05T21:16:34Z"
+        },
+        {
+          "name": "Validate formalization manifest",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-05T21:16:34Z",
+          "completed_at": "2026-10-05T21:16:41Z"
+        },
+        {
+          "name": "Run actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-05T21:16:41Z",
+          "completed_at": "2026-10-05T21:16:50Z"
+        },
+        {
+          "name": "Run leanprover/lean-action@96e06131c0e9943c780388fd166f55d1e2fa0433",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-05T21:16:50Z",
+          "completed_at": "2026-10-05T21:17:04Z"
+        },
+        {
+          "name": "Prepare unprivileged Linux isolation",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-05T21:17:04Z",
+          "completed_at": "2026-10-05T21:17:27Z"
+        },
+        {
+          "name": "Fresh sandboxed statement, axiom and kernel verification",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-05T21:17:27Z",
+          "completed_at": "2026-10-05T21:22:39Z"
+        },
+        {
+          "name": "Retain verification logs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-05T21:22:39Z",
+          "completed_at": "2026-10-05T21:22:41Z"
+        },
+        {
+          "name": "Post Run actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-05T21:22:41Z",
+          "completed_at": "2026-10-05T21:22:41Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-05T21:22:41Z",
+          "completed_at": "2026-10-05T21:22:41Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-05T21:22:41Z",
+          "completed_at": "2026-10-05T21:22:41Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/MColbrook/AIM/check-runs/111978833498",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": 1000000286,
+      "runner_name": "GitHub Actions 1000000286",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 111978834732,
+      "run_id": 37368047705,
+      "workflow_name": "Lean verification",
+      "head_branch": "codex/114-nodal-surplus-counterexample",
+      "run_url": "https://api.github.com/repos/MColbrook/AIM/actions/runs/37368047705",
+      "run_attempt": 2,
+      "node_id": "CR_kwDOUPmPns8AAAAaEnVrLA",
+      "head_sha": "61916d1e9959dc7ed282edb124b51e8118735844",
+      "url": "https://api.github.com/repos/MColbrook/AIM/actions/jobs/111978834732",
+      "html_url": "https://github.com/MColbrook/AIM/actions/runs/37368047705/job/111978834732",
+      "status": "completed",
+      "conclusion": "skipped",
+      "created_at": "2026-10-05T21:11:11Z",
+      "started_at": "2026-10-05T21:11:11Z",
+      "completed_at": "2026-10-05T21:11:11Z",
+      "name": "checker-controls",
+      "steps": [],
+      "check_run_url": "https://api.github.com/repos/MColbrook/AIM/check-runs/111978834732",
+      "labels": [
+        "ubuntu-24.04"
+      ],
+      "runner_id": null,
+      "runner_name": null,
+      "runner_group_id": null,
+      "runner_group_name": null
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+Command: python -B scripts/test_catalogue.py
+Snapshot: PR 34, head 70212479ac5e4b5808fb6a4dfb86d0f03d675339
+Base: 8eff4c7f8516ce38dd5a8aa31d78b6f44b95cf88
+Runtime: Python 3.12.14 on Windows
+
+Ran 57 tests in 695.302s
+OK
+
+This summary records the directly observed terminal completion; it is not a verbatim copy of the complete streamed progress output.

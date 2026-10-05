@@ -1,0 +1,66 @@
+{
+  "submitted_head": "61916d1e9959dc7ed282edb124b51e8118735844",
+  "validated_tree": "397ef46fb039755a6f6a72e206f0e3208a4fc8ba",
+  "original_target_preserved": true,
+  "supporting_lean_project_changes": [],
+  "package_provenance": [
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/PROOF.md",
+      "expected": "1a621098125651077fddba39f027e5b8948448d8389f5376d02c701809dd2604",
+      "staged_sha256": "1a621098125651077fddba39f027e5b8948448d8389f5376d02c701809dd2604",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/README.md",
+      "expected": "7d3e04202953b94beb324f814fa9a82c9a4b15ea15a851b492908a2b52ed11be",
+      "staged_sha256": "7d3e04202953b94beb324f814fa9a82c9a4b15ea15a851b492908a2b52ed11be",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/REVIEW.md",
+      "expected": "e870e42f5c7a44906378159dcfcd2bad085b12e05bc75520fee588c166d53bc8",
+      "staged_sha256": "e870e42f5c7a44906378159dcfcd2bad085b12e05bc75520fee588c166d53bc8",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/algebra-checks.log",
+      "expected": "d3204c27967727396a16cc1b2bfab2ee2dbe4b3e2d684ecc9691f1f3293ee5d1",
+      "staged_sha256": "d3204c27967727396a16cc1b2bfab2ee2dbe4b3e2d684ecc9691f1f3293ee5d1",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/check_algebra.py",
+      "expected": "4121434e0f21ca9432b5d15829a8c699e3eae17a5357a3e8987ee8a4f0e91cbb",
+      "staged_sha256": "4121434e0f21ca9432b5d15829a8c699e3eae17a5357a3e8987ee8a4f0e91cbb",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/reviews/probability-review.md",
+      "expected": "b2bc0a1aad2205a9f0c82be1498349acfa3d72aa9739a50f45e03579a7db1a3a",
+      "staged_sha256": "b2bc0a1aad2205a9f0c82be1498349acfa3d72aa9739a50f45e03579a7db1a3a",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/reviews/spectral-review.md",
+      "expected": "32bfc98a6c5774f4b2a3d0c8ea25f2bab96f176cd29488c9f260bbe5f0642541",
+      "staged_sha256": "32bfc98a6c5774f4b2a3d0c8ea25f2bab96f176cd29488c9f260bbe5f0642541",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/statement.md",
+      "expected": "ba20eb2a450b42a26626be50124d93e2b82ca28f81eca942fbe13ccba4ca718f",
+      "staged_sha256": "ba20eb2a450b42a26626be50124d93e2b82ca28f81eca942fbe13ccba4ca718f",
+      "matches": true
+    },
+    {
+      "path": "research/solutions/114-nodal-surplus-counterexample/submitted/short_proof-v0.3.pdf",
+      "expected": "74185c70e83d9c6448d6a97e74411bfe39e5f500e217bc07df605055bbb24aa6",
+      "staged_sha256": "74185c70e83d9c6448d6a97e74411bfe39e5f500e217bc07df605055bbb24aa6",
+      "matches": true
+    }
+  ],
+  "untracked_drafts_excluded_from_validation": true,
+  "full_catalogue_regression_tests": 58,
+  "full_catalogue_regression_result": "passed",
+  "full_catalogue_regression_seconds": 587.209
+}

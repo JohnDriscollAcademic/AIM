@@ -1,0 +1,3 @@
+COMMAND ['-B', 'scripts/catalogue.py', '--check']
+EXIT 0
+Validated 651 unique problems, metadata, required sections, math delimiters, local links, and freshness of README.md, CATALOG.md, RESOLVED.md.

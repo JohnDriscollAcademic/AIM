@@ -8,6 +8,8 @@ This addresses the Gaussian assertion in [AIM 114](../../../problems/114-quantum
 
 ## Evidence and limitations
 
+PR 33 was accepted on 2026-10-05 after [fresh independent maintainer reviews](../../solution_reviews/2026-10-05-active-prs/README.md) of the complete spectral/probability argument and supporting formalization. The submitted PDF, expanded proof and proof code are retained unchanged. AIM 114 is Partial because the separate universal variance assertion remains unresolved.
+
 - [Unchanged source PDF](submitted/short_proof-v0.3.pdf): the mathematical submission; its author was identified by the submitter as Sidney Holden on 2026-10-05.
 - [Frozen original target](statement.md): byte-for-byte copy from AIM commit `8eff4c7f8516ce38dd5a8aa31d78b6f44b95cf88`.
 - [Expanded mathematical argument](PROOF.md): prepared by OpenAI Codex, retaining the original sequence and limit law.

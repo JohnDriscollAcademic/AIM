@@ -1,0 +1,343 @@
+{
+  "date": "2026-10-05",
+  "reviewer": "OpenAI Codex AI agent /root/pr33_formal_audit",
+  "scope": "31 supporting Lean declarations only; complete AIM114 spectral counterexample remains unformalized",
+  "verdict": "approve exact-head upstream supporting-result evidence",
+  "pr_head": "61916d1e9959dc7ed282edb124b51e8118735844",
+  "proof_commit": "3ecc437c88a801ee3e028b0a34054366b0f8ce10",
+  "checkout_commit_parents": [
+    "8eff4c7f8516ce38dd5a8aa31d78b6f44b95cf88",
+    "61916d1e9959dc7ed282edb124b51e8118735844"
+  ],
+  "checkout_commit_message": "Merge 61916d1e9959dc7ed282edb124b51e8118735844 into 8eff4c7f8516ce38dd5a8aa31d78b6f44b95cf88",
+  "run": {
+    "id": 37368047705,
+    "head_sha": "61916d1e9959dc7ed282edb124b51e8118735844",
+    "head_branch": "codex/114-nodal-surplus-counterexample",
+    "event": "pull_request",
+    "status": "completed",
+    "conclusion": "success",
+    "run_attempt": 2,
+    "html_url": "https://github.com/MColbrook/AIM/actions/runs/37368047705",
+    "path": ".github/workflows/lean-verification.yml"
+  },
+  "jobs": [
+    {
+      "id": 111977029605,
+      "name": "select",
+      "head_sha": "61916d1e9959dc7ed282edb124b51e8118735844",
+      "status": "completed",
+      "conclusion": "success",
+      "labels": [
+        "ubuntu-24.04"
+      ]
+    },
+    {
+      "id": 111978833498,
+      "name": "verify (114, research/lean/114)",
+      "head_sha": "61916d1e9959dc7ed282edb124b51e8118735844",
+      "status": "completed",
+      "conclusion": "success",
+      "labels": [
+        "ubuntu-24.04"
+      ]
+    },
+    {
+      "id": 111978834732,
+      "name": "checker-controls",
+      "head_sha": "61916d1e9959dc7ed282edb124b51e8118735844",
+      "status": "completed",
+      "conclusion": "skipped",
+      "labels": [
+        "ubuntu-24.04"
+      ]
+    }
+  ],
+  "run_checks": {
+    "run_head_is_exact_pr_head": true,
+    "run_completed_success": true,
+    "verify_job_completed_success": true
+  },
+  "artifact_checks": [
+    {
+      "name": "lean-114",
+      "id": 11371775965,
+      "api_digest": "sha256:5b38eedba061a468a5db1abbb162e1d6b3b363fe6c74abec5aca18083d79f644",
+      "download_sha256": "5b38eedba061a468a5db1abbb162e1d6b3b363fe6c74abec5aca18083d79f644",
+      "api_digest_match": true,
+      "member_count": 13
+    }
+  ],
+  "receipt": {
+    "repository_commit": "3ecc437c88a801ee3e028b0a34054366b0f8ce10",
+    "project": "research/lean/114",
+    "config": {
+      "challenge_module": "Challenge",
+      "solution_module": "Solution",
+      "theorem_names": [
+        "AIM.P114.module_count_identity",
+        "AIM.P114.sign_second_moment",
+        "AIM.P114.variance_mixture_kurtosis",
+        "AIM.P114.core_weight_bound",
+        "AIM.P114.contaminated_law_probability",
+        "AIM.P114.contamination_integral_bound",
+        "AIM.P114.surplus_moment_contamination_bound",
+        "AIM.P114.surplus_moment_contamination_tendsto",
+        "AIM.P114.standard_gaussian_fourth_moment",
+        "AIM.P114.normalized_variance_mixture_moments",
+        "AIM.P114.normalized_variance_mixture_not_gaussian",
+        "AIM.P114.core_completion_of_squares",
+        "AIM.P114.core_positive_index",
+        "AIM.P114.actual_nodal_variance_zero",
+        "AIM.P114.actual_nodal_variance_bounds",
+        "AIM.P114.actual_nodal_variance_continuous",
+        "AIM.P114.actual_nodal_variance_mixture_inputs",
+        "AIM.P114.actual_nodal_variance_mixture_not_gaussian",
+        "AIM.P114.counterexample_loopless",
+        "AIM.P114.counterexample_connected",
+        "AIM.P114.counterexample_cardinalities",
+        "AIM.P114.counterexample_parallel_edges",
+        "AIM.P114.counterexample_degrees",
+        "AIM.P114.counterexample_no_degree_two",
+        "AIM.P114.counterexample_euler_count",
+        "AIM.P114.prime_root_lengths_linearIndependent",
+        "AIM.P114.counterexample_metric_lengths_positive",
+        "AIM.P114.counterexample_metric_lengths_linearIndependent",
+        "AIM.P114.actual_graph_core_length_sum",
+        "AIM.P114.actual_graph_total_length_sum",
+        "AIM.P114.actual_graph_core_length_ratio_bound"
+      ],
+      "definition_names": [],
+      "permitted_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    },
+    "source_lock_sha256": "b3833b07916e5db77579b9cc53ca582282f6a841f36d6a60d693e5b02d342b6b",
+    "tool_receipt": {
+      "source_lock_sha256": "b3833b07916e5db77579b9cc53ca582282f6a841f36d6a60d693e5b02d342b6b",
+      "forsythe_commit": "8d1b0c0545a77b40245e84705aa7d273e6c81e62",
+      "ci_sandbox_probe_sha256": "31057195baf238807cacbb4126c5b07f02cec55a4e4437de5f3a755b3fada803",
+      "lean_toolchain": "leanprover/lean4:v4.33.1",
+      "lean_prefix": "/home/runner/.elan/toolchains/leanprover--lean4---v4.33.1",
+      "lean_version": "Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)",
+      "go_version": "go version go1.27.1 linux/amd64",
+      "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+      "executables": {
+        ".tools/comparator/.lake/build/bin/comparator": "189e88f1a3cb68130b581905f7a5d3bde47eb0578904c0ca6fb235a53d0e8bdc",
+        ".tools/lean4export/.lake/build/bin/lean4export": "46f6a14f0f4a364d7698229130d103b67855be42f96cc5ef93929288072f1fa1",
+        ".tools/bin/landrun": "8f41db230d70ddabaf6bcb98a520295274266c90db2d821dedf0b8aa20205bbb"
+      },
+      "env_sha256": "cd61912ba1033aa55f4ed3e64a204083fb16ad807224cc8fb6de106063110aa3"
+    },
+    "result": "comparator-accepted",
+    "semantic_review": "not-performed-by-this-command"
+  },
+  "input_count": 340,
+  "coverage": {
+    "target_count": 31,
+    "challenge_matches": true,
+    "manifest_matches": true,
+    "solution_axiom_commands_match": true,
+    "receipt_configuration_matches_head": true,
+    "definition_names": [],
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "log_checks": {
+    "comparator_kernel_acceptance": true,
+    "comparator_acceptance": true,
+    "comparator_exit_zero": true,
+    "separate_challenge_solution_builds": true,
+    "exported_all_31_targets": true,
+    "axiom_log_count_31": true,
+    "axiom_log_names_match": true,
+    "only_permitted_transitive_axioms": true,
+    "honest_kernel_fixture_accepted": true,
+    "invalid_raw_proof_rejected": true,
+    "quotient_mismatch_rejected": true,
+    "kernel_controls_passed": true,
+    "five_comparator_controls_passed": true,
+    "sorry_rejected": true,
+    "native_axiom_rejected": true,
+    "all_isolation_markers_present": true
+  },
+  "isolation_markers": [
+    "PASS outside .lake write-open: denied",
+    "PASS symlink from .lake to outside write: denied",
+    "PASS user namespace: private",
+    "PASS pid namespace: private",
+    "PASS mnt namespace: private",
+    "PASS net namespace: private",
+    "PASS ipc namespace: private",
+    "PASS uts namespace: private",
+    "PASS host parent: absent from private /proc",
+    "PASS host loopback listener: unreachable",
+    "PASS AF_UNIX socket creation: denied",
+    "PASS effective capabilities: none",
+    "PASS no_new_privs: set",
+    "PASS nested namespace write attempt: rejected",
+    "NEGATIVE unknown option: exit=2",
+    "NEGATIVE unexpected --rw: exit=2",
+    "NEGATIVE unexpected --rwx: exit=2",
+    "NEGATIVE relative --rwx: exit=2",
+    "MODE build: exit=0",
+    "MODE export: exit=0",
+    "EXIT_STATUS=0"
+  ],
+  "receipt_checks": {
+    "source_lock_matches_pr_head": true,
+    "source_lock_matches_prior_independent_upstream_audit": true,
+    "forsythe_commit_unchanged": true,
+    "ci_sandbox_probe_unchanged": true,
+    "lean_toolchain_matches_pr_head": true
+  },
+  "checker_diff_vs_upstream": [],
+  "prior_58_checker_sources_not_refetched": true,
+  "new_local_lean_or_harness_execution": false,
+  "checkout_checker_byte_checks": {
+    "tree_sha": "71f0ecc38c71c62d59edbebf86cbfa1dd7561675",
+    "recursive_tree_complete": true,
+    "count": 18,
+    "all_match": true,
+    "files": [
+      {
+        "path": ".github/workflows/lean-statements.yml",
+        "pr_head_git_blob": "ae4a6656d3df4469c4d5048a0c7bc3363769b18f",
+        "checkout_git_blob": "ae4a6656d3df4469c4d5048a0c7bc3363769b18f",
+        "matches": true
+      },
+      {
+        "path": ".github/workflows/lean-verification.yml",
+        "pr_head_git_blob": "9b8077526c4cf32c4619ec8afcde4624a2a799c8",
+        "checkout_git_blob": "9b8077526c4cf32c4619ec8afcde4624a2a799c8",
+        "matches": true
+      },
+      {
+        "path": "docs/lean/schema/LICENSE",
+        "pr_head_git_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+        "checkout_git_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+        "matches": true
+      },
+      {
+        "path": "docs/lean/schema/README.md",
+        "pr_head_git_blob": "e61bade6af2c59233db4bd1ccc906eafe8d10e5a",
+        "checkout_git_blob": "e61bade6af2c59233db4bd1ccc906eafe8d10e5a",
+        "matches": true
+      },
+      {
+        "path": "docs/lean/schema/v0.4.schema.json",
+        "pr_head_git_blob": "19f4a46a1bc0e4798dca7bcb7ed57281b1c8c996",
+        "checkout_git_blob": "19f4a46a1bc0e4798dca7bcb7ed57281b1c8c996",
+        "matches": true
+      },
+      {
+        "path": "tools/lean/HARNESS.md",
+        "pr_head_git_blob": "64c6311143e9d227d8ac3fcc3511bd268ba971bb",
+        "checkout_git_blob": "64c6311143e9d227d8ac3fcc3511bd268ba971bb",
+        "matches": true
+      },
+      {
+        "path": "tools/lean/LICENSE-APACHE-2.0",
+        "pr_head_git_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+        "checkout_git_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+        "matches": true
+      },
+      {
+        "path": "tools/lean/LICENSE-LANDRUN-MIT",
+        "pr_head_git_blob": "7efcb24904d270788935e4c6c7e36b95f871667c",
+        "checkout_git_blob": "7efcb24904d270788935e4c6c7e36b95f871667c",
+        "matches": true
+      },
+      {
+        "path": "tools/lean/NOTICE.md",
+        "pr_head_git_blob": "96fb3f19356b61d75cabc1a2a79df0eb2d848200",
+        "checkout_git_blob": "96fb3f19356b61d75cabc1a2a79df0eb2d848200",
+        "matches": true
+      },
+      {
+        "path": "tools/lean/bootstrap.sh",
+        "pr_head_git_blob": "70a274044e8d13470a5d2b6d72f77c565ddd46ad",
+        "checkout_git_blob": "70a274044e8d13470a5d2b6d72f77c565ddd46ad",
+        "matches": true
+      },
+      {
+        "path": "tools/lean/harness.py",
+        "pr_head_git_blob": "8feffd06b69cf1989750130a92e6d638fd18aa7e",
+        "checkout_git_blob": "8feffd06b69cf1989750130a92e6d638fd18aa7e",
+        "matches": true
+      },
+      {
+        "path": "tools/lean/projects.py",
+        "pr_head_git_blob": "f5ecabd46a4c0d1d9a7b0c11fce57a4047954aba",
+        "checkout_git_blob": "f5ecabd46a4c0d1d9a7b0c11fce57a4047954aba",
+        "matches": true
+      },
+      {
+        "path": "tools/lean/requirements.txt",
+        "pr_head_git_blob": "1c1b1a8bab053f8c0a746922a673a560f955878f",
+        "checkout_git_blob": "1c1b1a8bab053f8c0a746922a673a560f955878f",
+        "matches": true
+      },
+      {
+        "path": "tools/lean/selftest.sh",
+        "pr_head_git_blob": "4dc2a05185359f431bd3173ee578dfb7231569cb",
+        "checkout_git_blob": "4dc2a05185359f431bd3173ee578dfb7231569cb",
+        "matches": true
+      },
+      {
+        "path": "tools/lean/source-lock.json",
+        "pr_head_git_blob": "27916ca1e378b13ba1a08f1eb3ecb285fde12408",
+        "checkout_git_blob": "27916ca1e378b13ba1a08f1eb3ecb285fde12408",
+        "matches": true
+      },
+      {
+        "path": "tools/lean/test_harness.py",
+        "pr_head_git_blob": "3c1aa72d5c6dec94f6010d943b69da805f7efd24",
+        "checkout_git_blob": "3c1aa72d5c6dec94f6010d943b69da805f7efd24",
+        "matches": true
+      },
+      {
+        "path": "tools/lean/validate_manifest.py",
+        "pr_head_git_blob": "1c17a1aa59b219049f36b3fa6846ed1356d1a1ec",
+        "checkout_git_blob": "1c17a1aa59b219049f36b3fa6846ed1356d1a1ec",
+        "matches": true
+      },
+      {
+        "path": "tools/lean/verify.sh",
+        "pr_head_git_blob": "1007633cf6c47a630bf54c22caa503de23f4a0f5",
+        "checkout_git_blob": "1007633cf6c47a630bf54c22caa503de23f4a0f5",
+        "matches": true
+      }
+    ]
+  },
+  "input_check_summary": {
+    "count": 340,
+    "all_match_pr_head": true,
+    "critical_source_count": 28,
+    "all_critical_match_pr_head": true
+  },
+  "axiom_summary": {
+    "count": 31,
+    "only_permitted": true,
+    "parallel_edge_axioms": [
+      "propext",
+      "Quot.sound"
+    ],
+    "other_results_axioms": [
+      [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ]
+    ]
+  },
+  "detailed_byte_checks": {
+    "file": "upstream-ci-audit-details.json",
+    "sha256": "437d2b90e17cbd05516b2f358e16868b3c544ad7edadc622e31e9ed69bc051d5"
+  }
+}
