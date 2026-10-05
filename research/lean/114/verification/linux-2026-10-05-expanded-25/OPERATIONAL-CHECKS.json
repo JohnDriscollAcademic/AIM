@@ -1,0 +1,84 @@
+{
+  "lean-checker-controls": {
+    "artifact_id": 11367871801,
+    "zip_sha256": "003674685f6459d4ed31bed15ddd042733c30bf96ddd137d5d62b199c85098d9",
+    "all_extracted_members_match": 10,
+    "live_GitHub_digest_match": true
+  },
+  "lean-114": {
+    "artifact_id": 11367338467,
+    "zip_sha256": "0011b7c752a10dc11a30ebed3daccb43941e664766bed59c3aeef78b6609a33f",
+    "all_extracted_members_match": 13,
+    "live_GitHub_digest_match": true
+  },
+  "input_files": {
+    "count": 204,
+    "all_archive_and_immutable_git_hashes_match": true
+  },
+  "source_archive_sha256": "289308fab7eccbea43c8974311689420949a7788b569b852bb382a12f47eacea",
+  "unchanged_infrastructure": {
+    ".github/workflows/lean-verification.yml": {
+      "sha256": "e1c90d7f073eb05288e3f1681468feffbb9b90a6ab0b1b2b31157ed1cf5d7560",
+      "same_as_original_verified_run_and_current": true
+    },
+    "tools/lean/harness.py": {
+      "sha256": "f81767a17973956fbe9e5765c664d4639cce15ddf8c106f70cdcb32151808c2f",
+      "same_as_original_verified_run_and_current": true
+    },
+    "tools/lean/source-lock.json": {
+      "sha256": "b3833b07916e5db77579b9cc53ca582282f6a841f36d6a60d693e5b02d342b6b",
+      "same_as_original_verified_run_and_current": true
+    },
+    "tools/lean/verify.sh": {
+      "sha256": "fb97ffb467b0e9acac302b2bdfc418da12b88e4ae307fb0d580c96fd6b63e997",
+      "same_as_original_verified_run_and_current": true
+    },
+    "tools/lean/bootstrap.sh": {
+      "sha256": "4cb4d6e09ca5d186e1911e51160286fef20fb4d7f61180e07ed684a03d36de8c",
+      "same_as_original_verified_run_and_current": true
+    },
+    "tools/lean/selftest.sh": {
+      "sha256": "1d0459179f9fc4ef30ba322b0cda7286c7a8394c1125a813770a9f10b1fccad9",
+      "same_as_original_verified_run_and_current": true
+    },
+    "docs/lean/ci-toolchain/lean-toolchain": {
+      "sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+      "same_as_original_verified_run_and_current": true
+    }
+  },
+  "lock_and_fetched_checker_source_hashes_match": true,
+  "proof_review_bindings": {
+    "AIM/P114/Proof.lean": {
+      "sha256": "b4412ae1ae9f8f7bc26279c565e3e4799b203eb1a3f3d191b95aa4a239b69797",
+      "independent_report": "proof-referee-2.md",
+      "immutable_and_current_report_contain_hash": true
+    },
+    "AIM/P114/TransferProof.lean": {
+      "sha256": "c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c",
+      "independent_report": "transfer-proof-referee-2.md",
+      "immutable_and_current_report_contain_hash": true
+    },
+    "AIM/P114/MixtureProof.lean": {
+      "sha256": "2a5d65beeeb576efad8eaf9940ebe0b5cd81cd52e402807e004444ca2e9e6bcf",
+      "independent_report": "mixture-proof-referee-2.md",
+      "immutable_and_current_report_contain_hash": true
+    },
+    "AIM/P114/InertiaProof.lean": {
+      "sha256": "d0acd2dfda515f792ca12195be04b1b07d0ca76e75e7cb20b1afd0e09e06345d",
+      "independent_report": "inertia-proof-referee-2.md",
+      "immutable_and_current_report_contain_hash": true
+    },
+    "AIM/P114/VarianceProof.lean": {
+      "sha256": "3a160951c60be915a49a2b9dedb1495e76e6f35007339ab7f30d03901e33e6c2",
+      "independent_report": "variance-proof-referee-2.md",
+      "immutable_and_current_report_contain_hash": true
+    },
+    "AIM/P114/GraphProof.lean": {
+      "sha256": "75232119b42e3cffb5829d959fc38842acc1381eeb409da33d9baef9faae95ea",
+      "independent_report": "graph-proof-referee-2.md",
+      "immutable_and_current_report_contain_hash": true
+    }
+  },
+  "selected_declarations_and_axioms_match": 25,
+  "comparator_success_markers": true
+}

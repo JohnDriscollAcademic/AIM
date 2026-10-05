@@ -1,13 +1,14 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/99c678e569c7c4c0772db297c5ddd5e4c9b6322e/schema/v0.4.schema.json
 version: v0.4
 project:
-  name: 'AIM 114: graph, inertia, Cauchy variance, Gaussian mixture, and length transfer'
+  name: 'AIM 114: actual graph and independent lengths, variance mixture, and transfer'
   description: Partial formalization of supporting blocks in Sidney Holden's non-Gaussian nodal-surplus
-    counterexample. Includes the actual finite multigraph, local sign algebra, core quadratic-form
-    diagonalization and positive index, the actual Cauchy-defined variance function, a normalized
-    Gaussian variance-mixture law with proved moments and non-Gaussianity, and the prescribed prime-root
-    weight and second/fourth-moment contamination error tending to zero. The full spectral reduction,
-    stable ratio law, and graph-surplus convergence remain unformalized.
+    counterexample. Includes the actual finite multigraph with positive jointly rationally independent
+    prescribed edge lengths, local sign algebra, core quadratic-form diagonalization and positive
+    index, the actual Cauchy-defined variance function, a normalized Gaussian variance-mixture law
+    with proved moments and non-Gaussianity, exact actual-edge sum identities linking the graph to
+    the prescribed prime-root weight, and second/fourth-moment contamination error tending to zero.
+    The full spectral reduction, stable ratio law, and graph-surplus convergence remain unformalized.
   authors:
   - OpenAI Codex (AI-generated implementation for Sidney Holden)
   license: Apache-2.0
@@ -19,8 +20,9 @@ sources:
   - Sidney Holden
   id: https://github.com/sidneyholden1/AIM/blob/f02e5534d3a21c98171606ef04266f4c6f07dd88/research/solutions/114-nodal-surplus-counterexample/submitted/short_proof-v0.3.pdf
   type: manuscript
-  location: Section 1 finite multigraph; Sections 2 and 3 local algebra, inertia and actual variance
-    function; Section 5 Gaussian mixture and prescribed-length moment transfer
+  location: Section 1 finite multigraph and actual prescribed lengths; Sections 2 and 3 local algebra,
+    inertia and actual variance function; Section 5 Gaussian mixture and prescribed-length moment
+    transfer
   relationship: formalizes
   author_endorsement: not-contacted
   note: Authorship was confirmed by the submitting user. The source PDF has no author line and is
@@ -50,11 +52,11 @@ automation:
     claim is made. Pure algebra and integral identities use Mathlib proof terms; no numerical interval
     certificate is needed.
 status:
-  scope: Partial supporting results only. Twenty-five declarations in six separately reviewed blocks;
-    combined local build and axiom audit pass. Expanded isolated Linux verification is pending. The
-    original three passed isolated Linux run 37344385173 at 4c780fd5f95407e9a6a7c55dcb7c0f4c04bfaa2e;
-    that historical run does not certify the twenty-two new declarations. The catalogue must not
-    be promoted to Lean verified because the full spectral and probabilistic links remain unformalized.
+  scope: Partial supporting results only. Thirty-one declarations in eight separately reviewed blocks.
+    All individual and combined local proof checks pass, with only permitted standard axioms. Isolated
+    Linux verification for this exact31-result scope is pending. Historical isolated Linux run 37344385173
+    at 4c780fd5f95407e9a6a7c55dcb7c0f4c04bfaa2e covers only the original three. The catalogue must
+    not be promoted to Lean verified because the full spectral and probabilistic links remain unformalized.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms:
@@ -256,6 +258,60 @@ status:
     axioms: *id001
     comparator_config: comparator.json
     literature_dependencies: []
+  - declaration: AIM.P114.prime_root_lengths_linearIndependent
+    file: Solution.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.counterexample_metric_lengths_positive
+    file: Solution.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.counterexample_metric_lengths_linearIndependent
+    file: Solution.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.actual_graph_core_length_sum
+    file: Solution.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.actual_graph_total_length_sum
+    file: Solution.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+    comparator_config: comparator.json
+    literature_dependencies: []
+  - declaration: AIM.P114.actual_graph_core_length_ratio_bound
+    file: Solution.lean
+    sorry_count: 0
+    axioms:
+    - propext
+    - Classical.choice
+    - Quot.sound
+    comparator_config: comparator.json
+    literature_dependencies: []
 fidelity:
   divergences: The initial sign algebra generalizes to arbitrary nonzero real inputs and excludes
     triangle boundary equalities. The graph block preserves actual parallel-edge identifiers; degrees
@@ -263,28 +319,35 @@ fidelity:
     identification. The mixture theorem constructs an actual product-space law and proves its moments
     and non-Gaussianity. The actual Cauchy-defined variance function now satisfies its hypotheses
     under any full-support real probability law with no atom at zero; construction and verification
-    of the source's stable ratio law remain missing. Prime-root length weights and actual contamination
-    moment errors are proved conditionally on probability laws with the source support. Identifying
-    these with spectral laws remains an external mathematical obligation. The moment bound relaxes
-    ((2m-1)/(2 sqrt m))^(2k) to m^k. None of these changes the original problem target.
+    of the source's stable ratio law remain missing. Full joint rational independence of the entire
+    prime-root sequence and the exact scaled graph edge family, plus positivity, are now proved.
+    The actual graph core/total sums are now identified with the prescribed formulas and the weight
+    bound is proved for their actual ratio. Prime-root length weights and actual contamination moment
+    errors are proved conditionally on probability laws with the source support. Identifying these
+    with spectral laws remains an external mathematical obligation. The moment bound relaxes ((2m-1)/(2
+    sqrt m))^(2k) to m^k. None of these changes the original problem target.
 review:
-  status: Two independent boundary and final proof approvals per block; combined25-result local build
-    and axiom audit passed; expanded Linux verification pending
+  status: Two independent boundary and final proof approvals per block; combined31-result local build
+    and axiom audit passed; corresponding Linux check pending
   reviewers:
   - 'OpenAI Codex AI agent /root/spectral_review: independent initial, Transfer and Mixture referee;
     Inertia and Graph implementer'
   - 'OpenAI Codex AI agent /root/probability_review: independent statement and final proof referee
     across blocks'
-  - 'Root OpenAI Codex agent: initial and Transfer implementer; independent Inertia, Variance and
-    Graph referee'
-  - 'OpenAI Codex AI agent /root/lean_feasibility: Mixture and Variance implementer'
-  notes: Each block has a separate frozen statement boundary with two independent approvals before
+  - 'Root OpenAI Codex agent: Transfer implementer and package integrator; independent Inertia, Variance,
+    Graph, Length and GraphLengthBridge referee'
+  - 'OpenAI Codex AI agent /root/lean_feasibility: initial-three, Mixture, Variance, Length and GraphLengthBridge
+    implementer'
+  notes: 'Each block has a separate frozen statement boundary with two independent approvals before
     implementation and successful typechecks. Independent final proof reports and logs bind exact
     source hashes; no implementer counts as a final referee for their own proof. The combined Challenge
-    preserves all twenty-five reviewed signatures; its deliberate placeholders never enter Solution.
+    preserves all thirty-one reviewed signatures; its deliberate placeholders never enter Solution.
     Historical Linux evidence in verification/linux-2026-10-05/ applies only to the original three
     declarations. A fresh run is required for the expanded scope. No human review or source-author
-    endorsement of the implementation is claimed.
+    endorsement of the implementation is claimed. Implementation attribution is corrected here: lean_feasibility
+    implemented the initial three results; root integrated them. Earlier25-result metadata incorrectly
+    assigned that implementation to root. The initial independent referees remain spectral_review
+    and probability_review; no proof or review-independence claim changes.'
 alignment:
 - source: Manuscript Section 2, three module sign counts minus one pivot
   declarations:
@@ -327,6 +390,16 @@ alignment:
   - AIM.P114.counterexample_degrees
   - AIM.P114.counterexample_no_degree_two
   - AIM.P114.counterexample_euler_count
+- source: Manuscript Section 1, positive jointly rationally independent actual prescribed graph lengths
+  declarations:
+  - AIM.P114.prime_root_lengths_linearIndependent
+  - AIM.P114.counterexample_metric_lengths_positive
+  - AIM.P114.counterexample_metric_lengths_linearIndependent
+- source: Manuscript Sections 1 and 5, actual graph length sums and prescribed core fraction
+  declarations:
+  - AIM.P114.actual_graph_core_length_sum
+  - AIM.P114.actual_graph_total_length_sum
+  - AIM.P114.actual_graph_core_length_ratio_bound
 acknowledgements: Mathematical manuscript by Sidney Holden. Formalization generated with OpenAI Codex.
   Mathlib, Lean, LeanCert, Lean Comparator, and the AIM/NLA verification infrastructure retain their
   respective attribution and licenses. The local Apache-2.0 license covers the new formalization

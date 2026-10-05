@@ -1,0 +1,215 @@
+{
+  "scope": "28-declaration intermediate integration; prior25evidence preserved",
+  "blocks": {
+    "original": [
+      "module_count_identity",
+      "sign_second_moment",
+      "variance_mixture_kurtosis"
+    ],
+    "Transfer": [
+      "core_weight_bound",
+      "contaminated_law_probability",
+      "contamination_integral_bound",
+      "surplus_moment_contamination_bound",
+      "surplus_moment_contamination_tendsto"
+    ],
+    "Mixture": [
+      "standard_gaussian_fourth_moment",
+      "normalized_variance_mixture_moments",
+      "normalized_variance_mixture_not_gaussian"
+    ],
+    "Inertia": [
+      "core_completion_of_squares",
+      "core_positive_index"
+    ],
+    "Variance": [
+      "actual_nodal_variance_zero",
+      "actual_nodal_variance_bounds",
+      "actual_nodal_variance_continuous",
+      "actual_nodal_variance_mixture_inputs",
+      "actual_nodal_variance_mixture_not_gaussian"
+    ],
+    "Graph": [
+      "counterexample_loopless",
+      "counterexample_connected",
+      "counterexample_cardinalities",
+      "counterexample_parallel_edges",
+      "counterexample_degrees",
+      "counterexample_no_degree_two",
+      "counterexample_euler_count"
+    ],
+    "Length": [
+      "prime_root_lengths_linearIndependent",
+      "counterexample_metric_lengths_positive",
+      "counterexample_metric_lengths_linearIndependent"
+    ]
+  },
+  "frozen_signatures_match": true,
+  "old_frozen_math_and_pins_unchanged": true,
+  "config_manifest_axiom_prints_match": true,
+  "four_length_review_reports_checked": true,
+  "source_hashes": {
+    "Challenge.lean": "7240cb2c8da71ebe93c2d4e7aa4d6d3f698d2efaf443b425de574ca3679d29f7",
+    "Solution.lean": "e2e6c1b818622d048b96a7eb92874204ec6c7962f5d4382d66469b763162bab0",
+    "comparator.json": "feceb71a489791d22ed0d9ece6f9a552b37fd208e1cf30f7e31a58903d0d5905",
+    "formalization.yaml": "6a5078994b6de1c55a97f7a66e21b8e9e45982b8ce5fdb9248bc85c7e97530ae",
+    "AIM/P114/LengthDefinitions.lean": "0926ae9ca8ae094629c374defd9829436fddf313c63698d227ffd5eb9af70c20",
+    "AIM/P114/LengthProof.lean": "025f80e283f7b7b0a54ee74b55b45c234820b9ab0fa7b9ed828954268f650509",
+    "LengthChallenge.lean": "0ee1d8866b88d3e389209a16d21ff51291fcfce759bbdff15cbc4c18ce774809",
+    "LENGTH_TARGETS.md": "765439e1e49999c292a0c30a37ee1a1925e8b808770dcde9f30000bd835ee3dd",
+    "LENGTH_PROOF.md": "1632c7db66217c4834fd42943bd8fdc4e4eb20946082f5d79026ac49e49e3200"
+  },
+  "actual_axioms": {
+    "AIM.P114.module_count_identity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.sign_second_moment": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.variance_mixture_kurtosis": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.core_weight_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.contaminated_law_probability": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.contamination_integral_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.surplus_moment_contamination_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.surplus_moment_contamination_tendsto": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.standard_gaussian_fourth_moment": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.normalized_variance_mixture_moments": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.normalized_variance_mixture_not_gaussian": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.core_completion_of_squares": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.core_positive_index": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_continuous": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_mixture_inputs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_mixture_not_gaussian": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_loopless": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_connected": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_cardinalities": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_parallel_edges": [
+      "propext",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_degrees": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_no_degree_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_euler_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.prime_root_lengths_linearIndependent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_metric_lengths_positive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_metric_lengths_linearIndependent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "separate_environment_comparison": {
+    "statements": 28,
+    "referenced_constants": 32934,
+    "solution_imported_modules": 5207,
+    "challenge_imported": false,
+    "scope": "local imported-olean supplemental comparison, not isolated Linux export/kernel gate"
+  },
+  "local_commands_passed": [
+    "build Challenge Solution",
+    "separate-environment comparison",
+    "fresh Solution re-elaboration and axiom prints"
+  ]
+}

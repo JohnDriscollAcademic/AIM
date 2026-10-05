@@ -1,3 +1,5 @@
+import AIM.P114.GraphLengthBridgeProof
+import AIM.P114.LengthProof
 import AIM.P114.Proof
 import AIM.P114.TransferProof
 import AIM.P114.MixtureProof
@@ -30,3 +32,11 @@ import AIM.P114.GraphProof
 #print axioms AIM.P114.counterexample_degrees
 #print axioms AIM.P114.counterexample_no_degree_two
 #print axioms AIM.P114.counterexample_euler_count
+
+#print axioms AIM.P114.prime_root_lengths_linearIndependent
+#print axioms AIM.P114.counterexample_metric_lengths_positive
+#print axioms AIM.P114.counterexample_metric_lengths_linearIndependent
+
+#print axioms AIM.P114.actual_graph_core_length_sum
+#print axioms AIM.P114.actual_graph_total_length_sum
+#print axioms AIM.P114.actual_graph_core_length_ratio_bound

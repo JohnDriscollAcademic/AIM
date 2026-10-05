@@ -1,0 +1,3 @@
+'AIM.P114.prime_root_lengths_linearIndependent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.counterexample_metric_lengths_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.counterexample_metric_lengths_linearIndependent' depends on axioms: [propext, Classical.choice, Quot.sound]

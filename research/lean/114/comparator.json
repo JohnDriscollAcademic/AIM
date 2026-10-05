@@ -26,7 +26,13 @@
     "AIM.P114.counterexample_parallel_edges",
     "AIM.P114.counterexample_degrees",
     "AIM.P114.counterexample_no_degree_two",
-    "AIM.P114.counterexample_euler_count"
+    "AIM.P114.counterexample_euler_count",
+    "AIM.P114.prime_root_lengths_linearIndependent",
+    "AIM.P114.counterexample_metric_lengths_positive",
+    "AIM.P114.counterexample_metric_lengths_linearIndependent",
+    "AIM.P114.actual_graph_core_length_sum",
+    "AIM.P114.actual_graph_total_length_sum",
+    "AIM.P114.actual_graph_core_length_ratio_bound"
   ],
   "definition_names": [],
   "permitted_axioms": [

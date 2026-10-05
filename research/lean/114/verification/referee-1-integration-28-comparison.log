@@ -1,0 +1,84 @@
+$ /Users/sholden/.elan/bin/lake env lean --run verification/referee-1-integration-compare.lean
+Solution actual imported module closure: 5207 modules; no Challenge.
+Exact elaborated theorem statement PASS: AIM.P114.module_count_identity
+Exact elaborated theorem statement PASS: AIM.P114.sign_second_moment
+Exact elaborated theorem statement PASS: AIM.P114.variance_mixture_kurtosis
+Exact elaborated theorem statement PASS: AIM.P114.core_weight_bound
+Exact elaborated theorem statement PASS: AIM.P114.contaminated_law_probability
+Exact elaborated theorem statement PASS: AIM.P114.contamination_integral_bound
+Exact elaborated theorem statement PASS: AIM.P114.surplus_moment_contamination_bound
+Exact elaborated theorem statement PASS: AIM.P114.surplus_moment_contamination_tendsto
+Exact elaborated theorem statement PASS: AIM.P114.standard_gaussian_fourth_moment
+Exact elaborated theorem statement PASS: AIM.P114.normalized_variance_mixture_moments
+Exact elaborated theorem statement PASS: AIM.P114.normalized_variance_mixture_not_gaussian
+Exact elaborated theorem statement PASS: AIM.P114.core_completion_of_squares
+Exact elaborated theorem statement PASS: AIM.P114.core_positive_index
+Exact elaborated theorem statement PASS: AIM.P114.actual_nodal_variance_zero
+Exact elaborated theorem statement PASS: AIM.P114.actual_nodal_variance_bounds
+Exact elaborated theorem statement PASS: AIM.P114.actual_nodal_variance_continuous
+Exact elaborated theorem statement PASS: AIM.P114.actual_nodal_variance_mixture_inputs
+Exact elaborated theorem statement PASS: AIM.P114.actual_nodal_variance_mixture_not_gaussian
+Exact elaborated theorem statement PASS: AIM.P114.counterexample_loopless
+Exact elaborated theorem statement PASS: AIM.P114.counterexample_connected
+Exact elaborated theorem statement PASS: AIM.P114.counterexample_cardinalities
+Exact elaborated theorem statement PASS: AIM.P114.counterexample_parallel_edges
+Exact elaborated theorem statement PASS: AIM.P114.counterexample_degrees
+Exact elaborated theorem statement PASS: AIM.P114.counterexample_no_degree_two
+Exact elaborated theorem statement PASS: AIM.P114.counterexample_euler_count
+Exact elaborated theorem statement PASS: AIM.P114.prime_root_lengths_linearIndependent
+Exact elaborated theorem statement PASS: AIM.P114.counterexample_metric_lengths_positive
+Exact elaborated theorem statement PASS: AIM.P114.counterexample_metric_lengths_linearIndependent
+Exact referenced-constant closure PASS: 32934 constants.
+Project closure constant: AIM.P114.counterexampleMetricLength
+Project closure constant: AIM.P114.primeRootLength
+Project closure constant: AIM.P114.pendantLength
+Project closure constant: AIM.P114.counterexampleMetricLength.match_1
+Project closure constant: AIM.P114.CounterexampleEdge
+Project closure constant: AIM.P114.counterexampleGraph
+Project closure constant: AIM.P114.counterexampleGraph._proof_4
+Project closure constant: AIM.P114.counterexampleEnds
+Project closure constant: AIM.P114.graphV
+Project closure constant: AIM.P114.graphU._proof_1
+Project closure constant: AIM.P114.CounterexampleVertex
+Project closure constant: AIM.P114.graphW
+Project closure constant: AIM.P114.graphT
+Project closure constant: AIM.P114.graphU
+Project closure constant: AIM.P114.counterexampleEnds.match_1
+Project closure constant: AIM.P114.counterexampleGraph._proof_3
+Project closure constant: AIM.P114.counterexampleGraph._proof_2
+Project closure constant: AIM.P114.counterexampleGraph._proof_1
+Project closure constant: AIM.P114.actualNodalVariance
+Project closure constant: AIM.P114.actualNodalVariance._proof_2
+Project closure constant: AIM.P114.varianceTriangleEvent
+Project closure constant: AIM.P114.cauchyMagnitude
+Project closure constant: AIM.P114.cauchyTripleMeasure
+Project closure constant: AIM.P114.actualNodalVariance._proof_1
+Project closure constant: AIM.P114.normalizedVarianceMixture
+Project closure constant: AIM.P114.coreSchurValue
+Project closure constant: AIM.P114.coreQuadraticForm
+Project closure constant: AIM.P114.coreQuadraticForm._proof_4
+Project closure constant: AIM.P114.coreQuadraticForm._proof_3
+Project closure constant: AIM.P114.coreQuadraticForm._proof_2
+Project closure constant: AIM.P114.coreQuadraticForm._proof_1
+Project closure constant: AIM.P114.coreDiagonalizingEquiv
+Project closure constant: AIM.P114.coreDiagonalizingEquiv._proof_1
+Project closure constant: AIM.P114.coreDiagonalForm
+Project closure constant: AIM.P114.coreDiagonalWeights
+Project closure constant: AIM.P114.surplusEvenMoment
+Project closure constant: AIM.P114.surplusEvenMoment._proof_1
+Project closure constant: AIM.P114.coreWeight
+Project closure constant: AIM.P114.coreLength
+Project closure constant: AIM.P114.contaminatedLaw
+Project closure constant: AIM.P114.contaminatedLaw._proof_1
+Project closure constant: AIM.P114.triangleIndicator
+Project closure constant: AIM.P114.signSecondMoment
+Project closure constant: AIM.P114.signSecondMoment._proof_1
+Project closure constant: AIM.P114.signModule
+Project closure constant: AIM.P114.signModule._proof_1
+Project closure constant: AIM.P114.nonzeroSign
+Project closure constant: AIM.P114.centeredModule
+Project closure constant: AIM.P114.moduleCount
+Project closure constant: AIM.P114.negativeIndicator
+Local integration comparison PASS: 28 actual declarations.
+
+exit_code=0

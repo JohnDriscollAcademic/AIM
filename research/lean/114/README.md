@@ -2,7 +2,7 @@
 
 This is a **partial formalization** of Sidney Holden's six-page manuscript
 *A non-Gaussian limit for nodal surplus*, revised v0.3 (2026-10-02). The current
-package contains 25 results in six blocks. It does **not** yet prove
+package contains 31 results in eight blocks. It does **not** yet prove
 that the graph's spectral surplus converges to the constructed non-Gaussian
 law. The complete source correspondence and remaining gaps are in
 [NUMERICAL_TARGETS.md](NUMERICAL_TARGETS.md).
@@ -17,6 +17,8 @@ law. The complete source correspondence and remaining gaps are in
 | Finite core inertia: 2 results | Actual quadratic-form completion of squares by an explicit linear equivalence and its positive-index count, including a zero residual pivot | [Inertia boundary](INERTIA_TARGETS.md), [proof explanation](INERTIA_PROOF.md) |
 | Actual Cauchy variance: 5 results | The source's exact triangle-probability function: value at zero, strict bounds, global continuity, intrinsic nonconstancy, and its actual mixture's non-Gaussianity under a full-support ratio law with no atom at zero | [Variance boundary](VARIANCE_TARGETS.md), [proof explanation](VARIANCE_PROOF.md) |
 | Actual multigraph: 7 results | Looplessness, connectivity, vertex/edge counts, distinct parallel edges, exact degrees, no degree two, and the integer Euler expression | [Graph boundary](GRAPH_TARGETS.md), [proof explanation](GRAPH_PROOF.md) |
+| Actual edge lengths: 3 results | Joint rational independence of the whole prime-root sequence; positivity and joint independence of the actual graph lengths, including the scaled pendant | [Length boundary](LENGTH_TARGETS.md), [proof explanation](LENGTH_PROOF.md) |
+| Actual graph length sums: 3 results | Exact core and total sums over actual edge IDs; their actual ratio satisfies the prescribed weight bound | [Bridge boundary](GRAPH_LENGTH_BRIDGE_TARGETS.md), [proof explanation](GRAPH_LENGTH_BRIDGE_PROOF.md) |
 
 The Gaussian-mixture block proves a statement about an actual probability distribution.
 It derives positive normalization and variance from the source bounds and
@@ -30,9 +32,10 @@ identifying the inputs with the graph's spectral limit remain obligations.
 
 The solution imports only the proof modules under `AIM/P114/`. The combined
 [Challenge.lean](Challenge.lean) has deliberate statement placeholders and is
-never imported by the solution. The separate [TransferChallenge.lean](TransferChallenge.lean)
+never imported by the solution. The separate [TransferChallenge.lean](TransferChallenge.lean),
 [MixtureChallenge.lean](MixtureChallenge.lean), [InertiaChallenge.lean](InertiaChallenge.lean),
-[VarianceChallenge.lean](VarianceChallenge.lean), and [GraphChallenge.lean](GraphChallenge.lean) retain the exact extension
+[VarianceChallenge.lean](VarianceChallenge.lean), [GraphChallenge.lean](GraphChallenge.lean), [LengthChallenge.lean](LengthChallenge.lean), and
+[GraphLengthBridgeChallenge.lean](GraphLengthBridgeChallenge.lean) retain the exact extension
 boundaries independently approved before implementation. Every advertised
 result is listed in [comparator.json](comparator.json), with no replaceable
 definitions.
@@ -45,7 +48,7 @@ referees inspect the actual proofs and separately rebuild, re-elaborate, and
 print their transitive axioms. Reports identify their exact scope and source
 hashes in [reviews/](reviews/).
 
-The expanded combined build and axiom audit pass for all 25 declarations.
+The expanded combined build and axiom audit pass for all 31 declarations.
 Individual-block builds and independent audits likewise pass, using only
 the permitted standard axioms (`propext`, `Classical.choice`, and
 `Quot.sound`); the parallel-edge result needs only the first and third. The earlier isolated Linux

@@ -1,0 +1,76 @@
+$ systemd-run --user --quiet --wait --pipe --collect -p 'RestrictAddressFamilies=~AF_UNIX' --working-directory /home/runner/work/_temp/aim-lean-tools/.verification-tmp/nla-fresh-proof-vps8vfbk/project /usr/bin/env -i PATH=/home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin:/home/runner/.elan/bin:/home/runner/go/bin:/opt/hostedtoolcache/go/1.27.1/x64/bin:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin HOME=/home/runner LANG=C.UTF-8 XDG_RUNTIME_DIR=/run/user/1001 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus GIT_TERMINAL_PROMPT=0 GIT_CONFIG_NOSYSTEM=1 GIT_CONFIG_GLOBAL=/dev/null COMPARATOR_BIN=/home/runner/work/_temp/aim-lean-tools/.tools/comparator/.lake/build/bin/comparator COMPARATOR_LEAN4EXPORT=/home/runner/work/_temp/aim-lean-tools/.tools/lean4export/.lake/build/bin/lean4export COMPARATOR_LANDRUN=/home/runner/work/_temp/aim-lean-tools/scripts/strict_landrun.py XDG_CACHE_HOME=/home/runner/work/_temp/aim-lean-tools/.tools/cache TMPDIR=/home/runner/work/_temp/aim-lean-tools/.verification-tmp lake env /home/runner/work/_temp/aim-lean-tools/.tools/comparator/.lake/build/bin/comparator comparator.json
+Building Challenge
+✔ [3667/3677] Built AIM.P114.InertiaDefinitions (2.7s)
+✔ [3671/3677] Built AIM.P114.GraphDefinitions (3.5s)
+✔ [3672/3677] Built AIM.P114.MixtureDefinitions (3.2s)
+✔ [3673/3677] Built AIM.P114.Definitions (3.5s)
+✔ [3674/3677] Built AIM.P114.TransferDefinitions (2.4s)
+✔ [3675/3677] Built AIM.P114.VarianceDefinitions (2.1s)
+⚠ [3676/3677] Built Challenge (2.7s)
+warning: Challenge.lean:20:8: declaration uses `sorry`
+warning: Challenge.lean:27:8: declaration uses `sorry`
+warning: Challenge.lean:36:8: declaration uses `sorry`
+warning: Challenge.lean:45:8: declaration uses `sorry`
+warning: Challenge.lean:49:8: declaration uses `sorry`
+warning: Challenge.lean:55:8: declaration uses `sorry`
+warning: Challenge.lean:64:8: declaration uses `sorry`
+warning: Challenge.lean:74:8: declaration uses `sorry`
+warning: Challenge.lean:85:8: declaration uses `sorry`
+warning: Challenge.lean:90:8: declaration uses `sorry`
+warning: Challenge.lean:105:8: declaration uses `sorry`
+warning: Challenge.lean:114:8: declaration uses `sorry`
+warning: Challenge.lean:123:8: declaration uses `sorry`
+warning: Challenge.lean:132:8: declaration uses `sorry`
+warning: Challenge.lean:135:8: declaration uses `sorry`
+warning: Challenge.lean:139:8: declaration uses `sorry`
+warning: Challenge.lean:143:8: declaration uses `sorry`
+warning: Challenge.lean:154:8: declaration uses `sorry`
+warning: Challenge.lean:161:8: declaration uses `sorry`
+warning: Challenge.lean:166:8: declaration uses `sorry`
+warning: Challenge.lean:171:8: declaration uses `sorry`
+warning: Challenge.lean:177:8: declaration uses `sorry`
+warning: Challenge.lean:185:8: declaration uses `sorry`
+warning: Challenge.lean:193:8: declaration uses `sorry`
+warning: Challenge.lean:200:8: declaration uses `sorry`
+Build completed successfully (3677 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, AIM.P114.module_count_identity, AIM.P114.sign_second_moment, AIM.P114.variance_mixture_kurtosis, AIM.P114.core_weight_bound, AIM.P114.contaminated_law_probability, AIM.P114.contamination_integral_bound, AIM.P114.surplus_moment_contamination_bound, AIM.P114.surplus_moment_contamination_tendsto, AIM.P114.standard_gaussian_fourth_moment, AIM.P114.normalized_variance_mixture_moments, AIM.P114.normalized_variance_mixture_not_gaussian, AIM.P114.core_completion_of_squares, AIM.P114.core_positive_index, AIM.P114.actual_nodal_variance_zero, AIM.P114.actual_nodal_variance_bounds, AIM.P114.actual_nodal_variance_continuous, AIM.P114.actual_nodal_variance_mixture_inputs, AIM.P114.actual_nodal_variance_mixture_not_gaussian, AIM.P114.counterexample_loopless, AIM.P114.counterexample_connected, AIM.P114.counterexample_cardinalities, AIM.P114.counterexample_parallel_edges, AIM.P114.counterexample_degrees, AIM.P114.counterexample_no_degree_two, AIM.P114.counterexample_euler_count, propext, Classical.choice, Quot.sound, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Challenge
+Building Solution
+✔ [3676/3683] Built AIM.P114.InertiaProof (5.6s)
+✔ [3677/3683] Built AIM.P114.TransferProof (6.1s)
+✔ [3678/3683] Built AIM.P114.GraphProof (6.1s)
+✔ [3679/3683] Built AIM.P114.Proof (22s)
+✔ [3680/3683] Built AIM.P114.MixtureProof (3.7s)
+✔ [3681/3683] Built AIM.P114.VarianceProof (3.4s)
+ℹ [3682/3683] Built Solution (2.3s)
+info: Solution.lean:8:0: 'AIM.P114.module_count_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:9:0: 'AIM.P114.sign_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:10:0: 'AIM.P114.variance_mixture_kurtosis' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:11:0: 'AIM.P114.core_weight_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:12:0: 'AIM.P114.contaminated_law_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:13:0: 'AIM.P114.contamination_integral_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:14:0: 'AIM.P114.surplus_moment_contamination_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:15:0: 'AIM.P114.surplus_moment_contamination_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:16:0: 'AIM.P114.standard_gaussian_fourth_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:17:0: 'AIM.P114.normalized_variance_mixture_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:18:0: 'AIM.P114.normalized_variance_mixture_not_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:19:0: 'AIM.P114.core_completion_of_squares' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:20:0: 'AIM.P114.core_positive_index' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:21:0: 'AIM.P114.actual_nodal_variance_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:22:0: 'AIM.P114.actual_nodal_variance_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:23:0: 'AIM.P114.actual_nodal_variance_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:24:0: 'AIM.P114.actual_nodal_variance_mixture_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:25:0: 'AIM.P114.actual_nodal_variance_mixture_not_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:26:0: 'AIM.P114.counterexample_loopless' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:27:0: 'AIM.P114.counterexample_connected' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:28:0: 'AIM.P114.counterexample_cardinalities' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:29:0: 'AIM.P114.counterexample_parallel_edges' depends on axioms: [propext, Quot.sound]
+info: Solution.lean:30:0: 'AIM.P114.counterexample_degrees' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:31:0: 'AIM.P114.counterexample_no_degree_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:32:0: 'AIM.P114.counterexample_euler_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3683 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, AIM.P114.module_count_identity, AIM.P114.sign_second_moment, AIM.P114.variance_mixture_kurtosis, AIM.P114.core_weight_bound, AIM.P114.contaminated_law_probability, AIM.P114.contamination_integral_bound, AIM.P114.surplus_moment_contamination_bound, AIM.P114.surplus_moment_contamination_tendsto, AIM.P114.standard_gaussian_fourth_moment, AIM.P114.normalized_variance_mixture_moments, AIM.P114.normalized_variance_mixture_not_gaussian, AIM.P114.core_completion_of_squares, AIM.P114.core_positive_index, AIM.P114.actual_nodal_variance_zero, AIM.P114.actual_nodal_variance_bounds, AIM.P114.actual_nodal_variance_continuous, AIM.P114.actual_nodal_variance_mixture_inputs, AIM.P114.actual_nodal_variance_mixture_not_gaussian, AIM.P114.counterexample_loopless, AIM.P114.counterexample_connected, AIM.P114.counterexample_cardinalities, AIM.P114.counterexample_parallel_edges, AIM.P114.counterexample_degrees, AIM.P114.counterexample_no_degree_two, AIM.P114.counterexample_euler_count, propext, Classical.choice, Quot.sound, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Solution
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!
+
+EXIT_STATUS=0

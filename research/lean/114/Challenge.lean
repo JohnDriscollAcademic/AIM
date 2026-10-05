@@ -1,3 +1,4 @@
+import AIM.P114.LengthDefinitions
 import AIM.P114.GraphDefinitions
 import AIM.P114.VarianceDefinitions
 import AIM.P114.Definitions
@@ -201,5 +202,40 @@ theorem counterexample_euler_count (m : ℕ) :
     ((counterexampleGraph m).edgeSet.ncard : ℤ) -
       ((counterexampleGraph m).vertexSet.ncard : ℤ) + 1 = 2 * (m : ℤ) - 1 := by
   sorry
+
+
+/-- All square roots of successive primes are jointly independent over
+the rationals. This asserts independence of every finite relation in the
+entire sequence, not just individual irrationality or pairwise independence. -/
+theorem prime_root_lengths_linearIndependent :
+    LinearIndependent ℚ primeRootLength := by sorry
+
+/-- Every actual graph edge has positive prescribed length in the source range. -/
+theorem counterexample_metric_lengths_positive (m : ℕ) (hm : 3 ≤ m) :
+    ∀ e : CounterexampleEdge m, 0 < counterexampleMetricLength m e := by sorry
+
+/-- Joint rational independence of all `3*m+1` actual graph edge lengths,
+including the prescribed rational scaling on the pendant edge. -/
+theorem counterexample_metric_lengths_linearIndependent (m : ℕ) (hm : 3 ≤ m) :
+    LinearIndependent ℚ (counterexampleMetricLength m) := by sorry
+
+
+/-- Sum over all separately identified core edges, including parallel edges. -/
+theorem actual_graph_core_length_sum (m : ℕ) :
+    (∑ e : Fin m × Fin 3, counterexampleMetricLength m (some e)) =
+      coreLength m := by sorry
+
+/-- Sum over all actual graph edges, including the single pendant. -/
+theorem actual_graph_total_length_sum (m : ℕ) :
+    (∑ e : CounterexampleEdge m, counterexampleMetricLength m e) =
+      coreLength m + pendantLength m := by sorry
+
+/-- The manuscript's weight bound for the ratio of actual graph edge-length sums. -/
+theorem actual_graph_core_length_ratio_bound (m : ℕ) (hm : 3 ≤ m) :
+    0 ≤ (∑ e : Fin m × Fin 3, counterexampleMetricLength m (some e)) /
+      (∑ e : CounterexampleEdge m, counterexampleMetricLength m e) ∧
+    (∑ e : Fin m × Fin 3, counterexampleMetricLength m (some e)) /
+      (∑ e : CounterexampleEdge m, counterexampleMetricLength m e) ≤
+        3 / ((m : ℝ) ^ 5 + 3) := by sorry
 
 end AIM.P114

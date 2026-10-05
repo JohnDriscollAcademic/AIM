@@ -1,5 +1,15 @@
 # AIM 114: independent dependency assessment and next formalization steps
 
+**Progress update, 2026-10-05:** This assessment was written before the later
+extensions. The actual Gaussian-mixture law, prescribed-length transfer,
+finite core inertia, actual Cauchy variance function, finite multigraph, and
+positive jointly rationally independent actual edge lengths now have Lean
+proofs with separate reviews. See [current scope](NUMERICAL_TARGETS.md) and
+[verification](verification/README.md) for the exact completed and verified
+boundaries. The original assessment below is retained as technical background;
+its descriptions of then-missing finite blocks are historical. The stable-law,
+process/random-evaluation, and metric spectral bridges remain open work.
+
 Date: 2026-10-05. Assessor: Codex AI `spectral_review`, independent of implementation. This is a read-only library/source assessment: no mathematical proof implementation or execution claim is made here. The pinned Mathlib revision is `0df444a360eaa60ab8c11dca51a86af692955474` (Lean 4.33.1).
 
 All source links below refer to that immutable Mathlib revision. Line numbers were checked in its local cached checkout. A failed text search is evidence about what was located, not a theorem that an API cannot exist under another name.

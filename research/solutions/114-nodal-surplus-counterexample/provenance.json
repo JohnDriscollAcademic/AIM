@@ -19,8 +19,8 @@
   "result_scope": "Gaussian universality disproved by informal argument with two independent AI audits; universal variance bounds unresolved; full counterexample not Lean verified.",
   "files_sha256": {
     "PROOF.md": "1a621098125651077fddba39f027e5b8948448d8389f5376d02c701809dd2604",
-    "README.md": "c274b53a89eb34823e71b469099751dc0c56cf182cb359d2efd33f87dce65dd6",
-    "REVIEW.md": "d1b4e4cb1bd545eb5de8d13f3fbb981eb91c5b9496879f5c86a1ea2c3825d234",
+    "README.md": "2d9e0ad826949c6e15869b3a33b8c902891540cb4e6b3a5af48b1d62818399c1",
+    "REVIEW.md": "e870e42f5c7a44906378159dcfcd2bad085b12e05bc75520fee588c166d53bc8",
     "algebra-checks.log": "d3204c27967727396a16cc1b2bfab2ee2dbe4b3e2d684ecc9691f1f3293ee5d1",
     "check_algebra.py": "4121434e0f21ca9432b5d15829a8c699e3eae17a5357a3e8987ee8a4f0e91cbb",
     "reviews/probability-review.md": "b2bc0a1aad2205a9f0c82be1498349acfa3d72aa9739a50f45e03579a7db1a3a",

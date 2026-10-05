@@ -1,0 +1,19 @@
+Independent AI referee probability_review; 2026-10-05
+Preproof boundary check only; deliberate placeholders establish no theorem.
+0926ae9ca8ae094629c374defd9829436fddf313c63698d227ffd5eb9af70c20  AIM/P114/LengthDefinitions.lean
+0ee1d8866b88d3e389209a16d21ff51291fcfce759bbdff15cbc4c18ce774809  LengthChallenge.lean
+765439e1e49999c292a0c30a37ee1a1925e8b808770dcde9f30000bd835ee3dd  LENGTH_TARGETS.md
+07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca  AIM/P114/GraphDefinitions.lean
+e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08  AIM/P114/TransferDefinitions.lean
+$ /Users/sholden/.elan/bin/lake build AIM.P114.LengthDefinitions
+Build completed successfully (3252 jobs).
+
+Exit code: 0
+Source hashes unchanged: True
+$ /Users/sholden/.elan/bin/lake env lean LengthChallenge.lean
+LengthChallenge.lean:13:8: warning: declaration uses `sorry`
+LengthChallenge.lean:17:8: warning: declaration uses `sorry`
+LengthChallenge.lean:22:8: warning: declaration uses `sorry`
+
+Exit code: 0
+Source hashes unchanged: True

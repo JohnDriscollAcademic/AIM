@@ -8,7 +8,7 @@
 - Complete informal argument: `../../solutions/114-nodal-surplus-counterexample/submitted/short_proof-v0.3.pdf`, revised v0.3, 2026-10-02, six pages.
 - PDF SHA-256: `74185c70e83d9c6448d6a97e74411bfe39e5f500e217bc07df605055bbb24aa6`.
 - Mathematical author: **Sidney Holden**, supplied by the user. Formalization implementation: Codex for Sidney Holden (AI assisted).
-- Scope is **partial**. The combined package contains the initial three algebraic results, five prescribed-length transfer results, three actual Gaussian-mixture results, two actual finite core inertia results, five actual Cauchy-variance results, and seven actual multigraph results (25 declarations total). They do not establish the graph's convergence to that mixture or resolve AIM 114 in Lean.
+- Scope is **partial**. The combined package contains the initial three algebraic results, five prescribed-length transfer results, three actual Gaussian-mixture results, two actual finite core inertia results, five actual Cauchy-variance results, seven actual multigraph results, three actual edge-length admissibility results, and three actual graph length-sum/weight results (31 declarations total). They do not establish the graph's convergence to that mixture or resolve AIM 114 in Lean.
 
 ## Original target, preserved without weakening
 
@@ -143,10 +143,32 @@ only connectivity uses the underlying simple graph. The Euler theorem does
 not identify a homology or cycle-space dimension. Metric realization and
 spectral interpretation are separate obligations.
 
+## Actual edge-length admissibility extension
+
+The three exact signatures in [LengthChallenge.lean](LengthChallenge.lean)
+and [LENGTH_TARGETS.md](LENGTH_TARGETS.md) prove full joint rational independence
+of the entire sequence of prime square roots, strict positivity of every
+actual graph edge length for m>=3, and joint independence after the pendant's
+prescribed rational scaling. The definition attaches those lengths to the
+actual multigraph edge IDs, including both parallel edges. The proof uses
+constructed sign characters and Dedekind independence, with distinctness
+proved from prime arithmetic and the Galois fixed-field theorem.
+
+## Actual graph length-sum and weight bridge
+
+The three exact signatures in
+[GraphLengthBridgeChallenge.lean](GraphLengthBridgeChallenge.lean) and
+[GRAPH_LENGTH_BRIDGE_TARGETS.md](GRAPH_LENGTH_BRIDGE_TARGETS.md) prove that
+the actual assigned core-edge sum equals coreLength, the actual total equals
+coreLength plus pendantLength, and their actual ratio satisfies the prescribed
+core-weight bound. These exact finite sums preserve all parallel-edge IDs.
+They connect the graph/length and transfer blocks without assuming a sum
+identity or an abstract graph fraction.
+
 ## Unformalized links to the source target
 
-1. Prime-root rational independence, assignment of those lengths to the
-   actual graph, metric realization, the Kirchhoff operator, generic spectral-frequency laws, and the published edge-mixture
+1. Metric realization of the actual graph with its now-proved positive
+   independent lengths, the Kirchhoff operator, generic spectral-frequency laws, and the published edge-mixture
    measure theorem.
 2. Edge nodal counting, spectral counting by inertia, the full graph-matrix
    reduction beyond the proved finite core completion of squares,

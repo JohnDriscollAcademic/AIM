@@ -1,0 +1,18 @@
+Independent AI referee probability_review; 2026-10-05
+Working directory: /Users/sholden/Projects/AIM/research/lean/114
+Input SHA-256:
+bf60f07bc4ddb86274f7a7098709db825e15b47390e2966ba4b376c453922aea  AIM/P114/GraphLengthBridgeProof.lean
+d6ae573f026b748aab738c062995d65f4279f3da4c4f0ec410e4aa5a29cfb793  GraphLengthBridgeChallenge.lean
+11566eb5cc9c0903c9b2f8e1cf8dfca0a63b88c8d22d44bba05529ce511cacca  GRAPH_LENGTH_BRIDGE_TARGETS.md
+669a5a5228d2db7a19222b279dfaaefd0c2ea66d0ccbba2c9a824f7784b33448  GRAPH_LENGTH_BRIDGE_PROOF.md
+0926ae9ca8ae094629c374defd9829436fddf313c63698d227ffd5eb9af70c20  AIM/P114/LengthDefinitions.lean
+07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca  AIM/P114/GraphDefinitions.lean
+e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08  AIM/P114/TransferDefinitions.lean
+c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c  AIM/P114/TransferProof.lean
+f7f0c63c8e5bfc1b885e90ae8157be1f13f6a4385b6a5211c226fe026336cd48  lake-manifest.json
+3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71  lean-toolchain
+
+Command: /Users/sholden/.elan/bin/lake env lean AIM/P114/GraphLengthBridgeProof.lean
+
+Exit code: 0
+Source hashes unchanged: True

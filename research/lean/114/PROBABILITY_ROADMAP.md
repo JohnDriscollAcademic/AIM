@@ -1,5 +1,15 @@
 # AIM114 probability roadmap after the actual Gaussian mixture extension
 
+**Progress update, 2026-10-05:** This assessment was written before the later
+extensions. The actual Gaussian-mixture law, prescribed-length transfer,
+finite core inertia, actual Cauchy variance function, finite multigraph, and
+positive jointly rationally independent actual edge lengths now have Lean
+proofs with separate reviews. See [current scope](NUMERICAL_TARGETS.md) and
+[verification](verification/README.md) for the exact completed and verified
+boundaries. The original assessment below is retained as technical background;
+its descriptions of then-missing finite blocks are historical. The stable-law,
+process/random-evaluation, and metric spectral bridges remain open work.
+
 Status: read-only technical assessment, 2026-10-05. No theorem in this document
 has been implemented or approved as a new proof boundary. Pinned Mathlib is
 0df444a360eaa60ab8c11dca51a86af692955474. Source manuscript is Sidney Holden,

@@ -1,0 +1,8 @@
+Independent root reviewer; macOS; 2026-10-05
+Source SHA-256: bf60f07bc4ddb86274f7a7098709db825e15b47390e2966ba4b376c453922aea
+Command: lake env lean /tmp/aim114-review/root-graph-length-bridge-axioms.lean
+'AIM.P114.actual_graph_core_length_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.actual_graph_total_length_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.actual_graph_core_length_ratio_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Exit code: 0

@@ -1,0 +1,20 @@
+{
+  "Challenge.lean": "7240cb2c8da71ebe93c2d4e7aa4d6d3f698d2efaf443b425de574ca3679d29f7",
+  "Solution.lean": "e2e6c1b818622d048b96a7eb92874204ec6c7962f5d4382d66469b763162bab0",
+  "comparator.json": "feceb71a489791d22ed0d9ece6f9a552b37fd208e1cf30f7e31a58903d0d5905",
+  "formalization.yaml": "6a5078994b6de1c55a97f7a66e21b8e9e45982b8ce5fdb9248bc85c7e97530ae",
+  "AIM/P114/Definitions.lean": "0c29c3c5b0cec95e1463ca190792b26a8d42733cdcca5b99796f84bd03a854ff",
+  "AIM/P114/GraphDefinitions.lean": "07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca",
+  "AIM/P114/GraphProof.lean": "75232119b42e3cffb5829d959fc38842acc1381eeb409da33d9baef9faae95ea",
+  "AIM/P114/InertiaDefinitions.lean": "d40bb849d050150f4688bee02ba4f2a88341593f1c37114d253c79b2651b0795",
+  "AIM/P114/InertiaProof.lean": "d0acd2dfda515f792ca12195be04b1b07d0ca76e75e7cb20b1afd0e09e06345d",
+  "AIM/P114/LengthDefinitions.lean": "0926ae9ca8ae094629c374defd9829436fddf313c63698d227ffd5eb9af70c20",
+  "AIM/P114/LengthProof.lean": "025f80e283f7b7b0a54ee74b55b45c234820b9ab0fa7b9ed828954268f650509",
+  "AIM/P114/MixtureDefinitions.lean": "63573393a3e5521a4276e822717f307bbabd4c327540e22895c99a1c0fab7652",
+  "AIM/P114/MixtureProof.lean": "2a5d65beeeb576efad8eaf9940ebe0b5cd81cd52e402807e004444ca2e9e6bcf",
+  "AIM/P114/Proof.lean": "b4412ae1ae9f8f7bc26279c565e3e4799b203eb1a3f3d191b95aa4a239b69797",
+  "AIM/P114/TransferDefinitions.lean": "e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08",
+  "AIM/P114/TransferProof.lean": "c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c",
+  "AIM/P114/VarianceDefinitions.lean": "39448627e15c3dc5b6d0a9c825928abe8f79a6b92fed300cf40313bc9b5ef3aa",
+  "AIM/P114/VarianceProof.lean": "3a160951c60be915a49a2b9dedb1495e76e6f35007339ab7f30d03901e33e6c2"
+}
