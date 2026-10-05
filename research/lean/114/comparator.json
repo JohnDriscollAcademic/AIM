@@ -1,0 +1,43 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "AIM.P114.module_count_identity",
+    "AIM.P114.sign_second_moment",
+    "AIM.P114.variance_mixture_kurtosis",
+    "AIM.P114.core_weight_bound",
+    "AIM.P114.contaminated_law_probability",
+    "AIM.P114.contamination_integral_bound",
+    "AIM.P114.surplus_moment_contamination_bound",
+    "AIM.P114.surplus_moment_contamination_tendsto",
+    "AIM.P114.standard_gaussian_fourth_moment",
+    "AIM.P114.normalized_variance_mixture_moments",
+    "AIM.P114.normalized_variance_mixture_not_gaussian",
+    "AIM.P114.core_completion_of_squares",
+    "AIM.P114.core_positive_index",
+    "AIM.P114.actual_nodal_variance_zero",
+    "AIM.P114.actual_nodal_variance_bounds",
+    "AIM.P114.actual_nodal_variance_continuous",
+    "AIM.P114.actual_nodal_variance_mixture_inputs",
+    "AIM.P114.actual_nodal_variance_mixture_not_gaussian",
+    "AIM.P114.counterexample_loopless",
+    "AIM.P114.counterexample_connected",
+    "AIM.P114.counterexample_cardinalities",
+    "AIM.P114.counterexample_parallel_edges",
+    "AIM.P114.counterexample_degrees",
+    "AIM.P114.counterexample_no_degree_two",
+    "AIM.P114.counterexample_euler_count",
+    "AIM.P114.prime_root_lengths_linearIndependent",
+    "AIM.P114.counterexample_metric_lengths_positive",
+    "AIM.P114.counterexample_metric_lengths_linearIndependent",
+    "AIM.P114.actual_graph_core_length_sum",
+    "AIM.P114.actual_graph_total_length_sum",
+    "AIM.P114.actual_graph_core_length_ratio_bound"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "reviewer": "probability_review, independent OpenAI Codex AI",
+  "date": "2026-10-05",
+  "sha256": {
+    "AIM/P114/TransferDefinitions.lean": "e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08",
+    "AIM/P114/TransferProof.lean": "c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c",
+    "TransferChallenge.lean": "48d4e6a969b304dd89145bf8be6df2697db220b6e8a51ed458c6631047a544d1",
+    "TRANSFER_TARGETS.md": "6deb2147a2742f8cefbbdec369932b654d6153227d59b6686c4887bc71b69538",
+    "lakefile.toml": "aa76173343a28a5f7696a9a7c2cbac1afa3a4138b061c6828a37d13e4f6ccefa",
+    "lake-manifest.json": "f7f0c63c8e5bfc1b885e90ae8157be1f13f6a4385b6a5211c226fe026336cd48",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71"
+  }
+}

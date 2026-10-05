@@ -1,0 +1,15 @@
+Date: 2026-10-05
+Host: local macOS; not authoritative Linux verifier.
+Command: /Users/sholden/.elan/bin/lake build Challenge Solution
+
+⚠ [3227/3231] Replayed Challenge
+warning: Challenge.lean:14:8: declaration uses `sorry`
+warning: Challenge.lean:21:8: declaration uses `sorry`
+warning: Challenge.lean:30:8: declaration uses `sorry`
+ℹ [3230/3231] Replayed Solution
+info: Solution.lean:3:0: 'AIM.P114.module_count_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:4:0: 'AIM.P114.sign_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:5:0: 'AIM.P114.variance_mixture_kurtosis' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3231 jobs).
+
+Exit code: 0

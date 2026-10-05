@@ -1,0 +1,5 @@
+Date: 2026-10-05
+Host: macOS.
+Command: /Users/sholden/.elan/bin/lake env lean AIM/P114/TransferProof.lean
+
+Exit code: 0

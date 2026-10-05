@@ -1,0 +1,5 @@
+Independent root reviewer; macOS; 2026-10-05
+Source SHA-256: bf60f07bc4ddb86274f7a7098709db825e15b47390e2966ba4b376c453922aea
+Command: lake env lean AIM/P114/GraphLengthBridgeProof.lean
+
+Exit code: 0

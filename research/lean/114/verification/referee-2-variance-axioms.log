@@ -1,0 +1,33 @@
+Independent AI referee probability_review; 2026-10-05
+Command: /Users/sholden/.elan/bin/lake env lean /tmp/aim114-review/referee-2-variance-axioms.lean
+Working directory: /Users/sholden/Projects/AIM/research/lean/114
+Input SHA-256:
+39448627e15c3dc5b6d0a9c825928abe8f79a6b92fed300cf40313bc9b5ef3aa  AIM/P114/VarianceDefinitions.lean
+3a160951c60be915a49a2b9dedb1495e76e6f35007339ab7f30d03901e33e6c2  AIM/P114/VarianceProof.lean
+6b77c1f2e4debf3ac27f7264ab36ee8431a59c060e3e98ac99824160a21be0b5  VarianceChallenge.lean
+a215fb1019cd18812094ad0adac10aef5427e2346af39e9004db38e01cca14fb  VARIANCE_TARGETS.md
+575013a6e37c97e76b59f35a65db749812ec8f576f00e87bec0eb733546b5c27  VARIANCE_PROOF.md
+63573393a3e5521a4276e822717f307bbabd4c327540e22895c99a1c0fab7652  AIM/P114/MixtureDefinitions.lean
+2a5d65beeeb576efad8eaf9940ebe0b5cd81cd52e402807e004444ca2e9e6bcf  AIM/P114/MixtureProof.lean
+0c29c3c5b0cec95e1463ca190792b26a8d42733cdcca5b99796f84bd03a854ff  AIM/P114/Definitions.lean
+b4412ae1ae9f8f7bc26279c565e3e4799b203eb1a3f3d191b95aa4a239b69797  AIM/P114/Proof.lean
+f7f0c63c8e5bfc1b885e90ae8157be1f13f6a4385b6a5211c226fe026336cd48  lake-manifest.json
+3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71  lean-toolchain
+Temporary probe source:
+import AIM.P114.VarianceProof
+
+#print axioms AIM.P114.actual_nodal_variance_zero
+#print axioms AIM.P114.actual_nodal_variance_bounds
+#print axioms AIM.P114.actual_nodal_variance_continuous
+#print axioms AIM.P114.actual_nodal_variance_mixture_inputs
+#print axioms AIM.P114.actual_nodal_variance_mixture_not_gaussian
+
+
+'AIM.P114.actual_nodal_variance_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.actual_nodal_variance_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.actual_nodal_variance_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.actual_nodal_variance_mixture_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.actual_nodal_variance_mixture_not_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Exit code: 0
+Source hashes unchanged: True

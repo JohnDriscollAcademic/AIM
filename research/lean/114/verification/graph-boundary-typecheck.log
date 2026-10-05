@@ -1,0 +1,16 @@
+$ /Users/sholden/.elan/bin/lake build AIM.P114.GraphDefinitions
+✔ [3027/3027] Built AIM.P114.GraphDefinitions (10s)
+Build completed successfully (3027 jobs).
+
+exit_code=0
+
+$ /Users/sholden/.elan/bin/lake env lean GraphChallenge.lean
+GraphChallenge.lean:10:8: warning: declaration uses `sorry`
+GraphChallenge.lean:15:8: warning: declaration uses `sorry`
+GraphChallenge.lean:20:8: warning: declaration uses `sorry`
+GraphChallenge.lean:26:8: warning: declaration uses `sorry`
+GraphChallenge.lean:34:8: warning: declaration uses `sorry`
+GraphChallenge.lean:42:8: warning: declaration uses `sorry`
+GraphChallenge.lean:49:8: warning: declaration uses `sorry`
+
+exit_code=0

@@ -1,0 +1,5 @@
+$ /Users/sholden/.elan/bin/lake build AIM.P114.InertiaProof
+✔ [3014/3014] Built AIM.P114.InertiaProof (4.6s)
+Build completed successfully (3014 jobs).
+
+exit_code=0

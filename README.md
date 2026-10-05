@@ -17,7 +17,7 @@ Contributions made with or without AI are welcome.
 
 If a problem here is resolved, we encourage you to improve the proof, explain its ideas, explore its applications, and publish your work. Cite the actual proof and its authors, and cite AIM where you use its curation or research. You are welcome to share your preprint and corrections with the repository so that others can find and build on your contribution.
 
-**638 open targets** (528 open, 110 partial) · **27 solved entries** · **0 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
+**638 open targets** (527 open, 111 partial) · **27 solved entries** · **0 Lean verified** · **0 solution claims**. Counts reflect the statuses recorded in this collection.
 
 **[Browse all 638 open targets →](CATALOG.md)** · **[Solved and claimed solutions →](RESOLVED.md)**
 

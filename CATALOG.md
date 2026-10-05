@@ -486,7 +486,7 @@ No solved problems are currently recorded in this subject.
 | 111 | [Unbounded first Steklov multiplicity with fixed boundary count](problems/111-steklov-fixed-boundary-multiplicity.md) | 🔵 OPEN | Boundary-mode degeneracy |
 | 112 | [Arbitrarily large Steklov frequency with a prescribed embedded boundary](problems/112-fixed-embedded-boundary-steklov.md) | 🔵 OPEN | Geometric design of boundary-loaded media |
 | 113 | [Anderson localization for the cosine skew-shift model at every coupling](problems/113-skew-shift-localization.md) | 🔵 OPEN | Deterministic quantum disorder |
-| 114 | [A universal central limit law for quantum-graph nodal surplus](problems/114-quantum-graph-nodal-clt.md) | 🔵 OPEN | Wave networks and quantum chaos |
+| 114 | [A universal central limit law for quantum-graph nodal surplus](problems/114-quantum-graph-nodal-clt.md) | 🟡 PARTIAL | Wave networks and quantum chaos |
 | 115 | [Jakobson–Naud’s essential spectral-gap conjecture](problems/115-jakobson-naud-essential-gap.md) | 🔵 OPEN | Open chaotic scattering |
 | 116 | [Full-order resonance growth for every nonzero real compact potential](problems/116-full-order-potential-resonances.md) | 🔵 OPEN | Wave scattering by a localized medium |
 | 117 | [Boundary contact of the second nodal set in convex domains](problems/117-convex-higher-dimensional-payne.md) | 🔵 OPEN | Vibration interfaces and geometry |
@@ -966,7 +966,7 @@ Adding a batch does not revalidate earlier entries. Counts below include only cu
 | Publication batch | Open targets | Entry review dates |
 | --- | ---: | --- |
 | Original collection | 91 | 2026-09-08–2026-10-02 |
-| Second collection | 100 | 2026-09-08 |
+| Second collection | 100 | 2026-09-08–2026-10-05 |
 | Third collection | 96 | 2026-09-13 |
 | September 2026 expansion — batch 1 | 10 | 2026-09-17 |
 | September 2026 expansion — batch 2 | 10 | 2026-09-17 |

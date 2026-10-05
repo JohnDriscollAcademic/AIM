@@ -1,0 +1,7 @@
+Date: 2026-10-05
+Host: local macOS; not authoritative Linux verifier.
+Command: /Users/sholden/.elan/bin/lake build AIM.P114.VarianceProof
+
+Build completed successfully (3646 jobs).
+
+Exit code: 0

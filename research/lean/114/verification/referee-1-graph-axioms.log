@@ -1,0 +1,11 @@
+Independent root reviewer; macOS; 2026-10-05
+Command: lake env lean /tmp/aim114-review/root-graph-axioms.lean
+'AIM.P114.counterexample_loopless' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.counterexample_connected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.counterexample_cardinalities' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.counterexample_parallel_edges' depends on axioms: [propext, Quot.sound]
+'AIM.P114.counterexample_degrees' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.counterexample_no_degree_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.counterexample_euler_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Exit code: 0

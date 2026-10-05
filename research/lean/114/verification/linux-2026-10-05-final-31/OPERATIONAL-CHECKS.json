@@ -1,0 +1,363 @@
+{
+  "reviewer": "probability_review, independent OpenAI Codex AI",
+  "date": "2026-10-05",
+  "source_commit": "56afd77d2456af3da7934947699ee86735494010",
+  "run_id": 37365344243,
+  "live_run_metadata_match": true,
+  "all_three_jobs_and_steps_success": true,
+  "lean-114": {
+    "artifact_id": 11368511818,
+    "zip_sha256": "a5ac1a395a6094e28d3d675c5c541739de0a58c353583893d72acb729171b3ba",
+    "all_extracted_members_match": 13,
+    "live_GitHub_digest_match": true
+  },
+  "lean-checker-controls": {
+    "artifact_id": 11368063043,
+    "zip_sha256": "c201dae5aa511ece91ffb2d132a8dad773a1f712f3b4ca8da12f0c7482ade3b3",
+    "all_extracted_members_match": 10,
+    "live_GitHub_digest_match": true
+  },
+  "input_files": {
+    "count": 306,
+    "all_archive_and_immutable_git_hashes_match": true,
+    "exact_tracked_file_coverage": true
+  },
+  "source_archive_sha256": "ee357a709802b3162f8a8de782fb7dcec5da72bcc5a5beb135f9d0de5e0dbc4f",
+  "unchanged_infrastructure": {
+    ".github/workflows/lean-verification.yml": {
+      "sha256": "e1c90d7f073eb05288e3f1681468feffbb9b90a6ab0b1b2b31157ed1cf5d7560",
+      "identical_to_verified_3_and_25_scopes_and_current": true
+    },
+    "tools/lean/harness.py": {
+      "sha256": "f81767a17973956fbe9e5765c664d4639cce15ddf8c106f70cdcb32151808c2f",
+      "identical_to_verified_3_and_25_scopes_and_current": true
+    },
+    "tools/lean/source-lock.json": {
+      "sha256": "b3833b07916e5db77579b9cc53ca582282f6a841f36d6a60d693e5b02d342b6b",
+      "identical_to_verified_3_and_25_scopes_and_current": true
+    },
+    "tools/lean/verify.sh": {
+      "sha256": "fb97ffb467b0e9acac302b2bdfc418da12b88e4ae307fb0d580c96fd6b63e997",
+      "identical_to_verified_3_and_25_scopes_and_current": true
+    },
+    "tools/lean/bootstrap.sh": {
+      "sha256": "4cb4d6e09ca5d186e1911e51160286fef20fb4d7f61180e07ed684a03d36de8c",
+      "identical_to_verified_3_and_25_scopes_and_current": true
+    },
+    "tools/lean/selftest.sh": {
+      "sha256": "1d0459179f9fc4ef30ba322b0cda7286c7a8394c1125a813770a9f10b1fccad9",
+      "identical_to_verified_3_and_25_scopes_and_current": true
+    },
+    "docs/lean/ci-toolchain/lean-toolchain": {
+      "sha256": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+      "identical_to_verified_3_and_25_scopes_and_current": true
+    }
+  },
+  "locked_tool_receipt_matches_25_run": true,
+  "dependency_revisions": {
+    "leancert": "621a43d7cf21f87872392a01e874f2f1dbddc926",
+    "mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "plausible": "b7eb3304aeae834b12dda98993a37f6a41f6f0bb",
+    "LeanSearchClient": "5f4d51b81cbd3f6b32b156bfad9056621a040404",
+    "importGraph": "16f02aa7642864af59f1ff0e384a015994db9118",
+    "proofwidgets": "4be2e3d5087eeb272cf5a8853b8f9dd025ef5957",
+    "aesop": "3448c0bcc5ce01b2d1546e483ec3620e32df3d0e",
+    "Qq": "92c15be17b7caf78c2ad767ec40f89052d908d81",
+    "batteries": "4488d40d070b9700d4d5a6aa342f0d40c31b2a2d",
+    "Cli": "6130a47896ce867c6a4a55373441e59e565bad0f"
+  },
+  "proof_review_bindings": {
+    "AIM/P114/Proof.lean": {
+      "sha256": "b4412ae1ae9f8f7bc26279c565e3e4799b203eb1a3f3d191b95aa4a239b69797",
+      "both_independent_final_reports": [
+        "reviews/proof-referee-1.md",
+        "reviews/proof-referee-2.md"
+      ]
+    },
+    "AIM/P114/TransferProof.lean": {
+      "sha256": "c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c",
+      "both_independent_final_reports": [
+        "reviews/transfer-proof-referee-1.md",
+        "reviews/transfer-proof-referee-2.md"
+      ]
+    },
+    "AIM/P114/MixtureProof.lean": {
+      "sha256": "2a5d65beeeb576efad8eaf9940ebe0b5cd81cd52e402807e004444ca2e9e6bcf",
+      "both_independent_final_reports": [
+        "reviews/mixture-proof-referee-1.md",
+        "reviews/mixture-proof-referee-2.md"
+      ]
+    },
+    "AIM/P114/InertiaProof.lean": {
+      "sha256": "d0acd2dfda515f792ca12195be04b1b07d0ca76e75e7cb20b1afd0e09e06345d",
+      "both_independent_final_reports": [
+        "reviews/inertia-proof-referee-1.md",
+        "reviews/inertia-proof-referee-2.md"
+      ]
+    },
+    "AIM/P114/VarianceProof.lean": {
+      "sha256": "3a160951c60be915a49a2b9dedb1495e76e6f35007339ab7f30d03901e33e6c2",
+      "both_independent_final_reports": [
+        "reviews/variance-proof-referee-1.md",
+        "reviews/variance-proof-referee-2.md"
+      ]
+    },
+    "AIM/P114/GraphProof.lean": {
+      "sha256": "75232119b42e3cffb5829d959fc38842acc1381eeb409da33d9baef9faae95ea",
+      "both_independent_final_reports": [
+        "reviews/graph-proof-referee-1.md",
+        "reviews/graph-proof-referee-2.md"
+      ]
+    },
+    "AIM/P114/LengthProof.lean": {
+      "sha256": "025f80e283f7b7b0a54ee74b55b45c234820b9ab0fa7b9ed828954268f650509",
+      "both_independent_final_reports": [
+        "reviews/length-proof-referee-1.md",
+        "reviews/length-proof-referee-2.md"
+      ]
+    },
+    "AIM/P114/GraphLengthBridgeProof.lean": {
+      "sha256": "bf60f07bc4ddb86274f7a7098709db825e15b47390e2966ba4b376c453922aea",
+      "both_independent_final_reports": [
+        "reviews/graph-length-bridge-proof-referee-1.md",
+        "reviews/graph-length-bridge-proof-referee-2.md"
+      ]
+    }
+  },
+  "mathematical_files_unchanged_in_current_checkout": [
+    "AIM/P114/Definitions.lean",
+    "AIM/P114/GraphDefinitions.lean",
+    "AIM/P114/GraphLengthBridgeProof.lean",
+    "AIM/P114/GraphProof.lean",
+    "AIM/P114/InertiaDefinitions.lean",
+    "AIM/P114/InertiaProof.lean",
+    "AIM/P114/LengthDefinitions.lean",
+    "AIM/P114/LengthProof.lean",
+    "AIM/P114/MixtureDefinitions.lean",
+    "AIM/P114/MixtureProof.lean",
+    "AIM/P114/Proof.lean",
+    "AIM/P114/TransferDefinitions.lean",
+    "AIM/P114/TransferProof.lean",
+    "AIM/P114/VarianceDefinitions.lean",
+    "AIM/P114/VarianceProof.lean",
+    "Challenge.lean",
+    "GraphChallenge.lean",
+    "GraphLengthBridgeChallenge.lean",
+    "InertiaChallenge.lean",
+    "LengthChallenge.lean",
+    "MixtureChallenge.lean",
+    "Solution.lean",
+    "TransferChallenge.lean",
+    "VarianceChallenge.lean",
+    "comparator.json",
+    "lake-manifest.json",
+    "lakefile.toml",
+    "lean-toolchain"
+  ],
+  "selected_declarations_and_axioms_match": 31,
+  "all_axiom_sets": {
+    "AIM.P114.module_count_identity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.sign_second_moment": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.variance_mixture_kurtosis": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.core_weight_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.contaminated_law_probability": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.contamination_integral_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.surplus_moment_contamination_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.surplus_moment_contamination_tendsto": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.standard_gaussian_fourth_moment": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.normalized_variance_mixture_moments": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.normalized_variance_mixture_not_gaussian": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.core_completion_of_squares": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.core_positive_index": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_continuous": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_mixture_inputs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_mixture_not_gaussian": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_loopless": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_connected": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_cardinalities": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_parallel_edges": [
+      "propext",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_degrees": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_no_degree_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_euler_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.prime_root_lengths_linearIndependent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_metric_lengths_positive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_metric_lengths_linearIndependent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_graph_core_length_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_graph_total_length_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_graph_core_length_ratio_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "comparator_and_default_kernel_acceptance": true,
+  "separate_local_import_closures": {
+    "solution": [
+      "AIM/P114/Definitions.lean",
+      "AIM/P114/GraphDefinitions.lean",
+      "AIM/P114/GraphLengthBridgeProof.lean",
+      "AIM/P114/GraphProof.lean",
+      "AIM/P114/InertiaDefinitions.lean",
+      "AIM/P114/InertiaProof.lean",
+      "AIM/P114/LengthDefinitions.lean",
+      "AIM/P114/LengthProof.lean",
+      "AIM/P114/MixtureDefinitions.lean",
+      "AIM/P114/MixtureProof.lean",
+      "AIM/P114/Proof.lean",
+      "AIM/P114/TransferDefinitions.lean",
+      "AIM/P114/TransferProof.lean",
+      "AIM/P114/VarianceDefinitions.lean",
+      "AIM/P114/VarianceProof.lean",
+      "Solution.lean"
+    ],
+    "challenge": [
+      "AIM/P114/Definitions.lean",
+      "AIM/P114/GraphDefinitions.lean",
+      "AIM/P114/InertiaDefinitions.lean",
+      "AIM/P114/LengthDefinitions.lean",
+      "AIM/P114/MixtureDefinitions.lean",
+      "AIM/P114/TransferDefinitions.lean",
+      "AIM/P114/VarianceDefinitions.lean",
+      "Challenge.lean"
+    ],
+    "no_challenge_in_solution_and_no_proof_in_challenge": true
+  },
+  "combined_boundary_preserves_prior25_and_approved_extra6_signatures": true,
+  "controls": {
+    "lean-114/verify-20261005T195646Z-3965": {
+      "all_six_control_logs_required_markers_match": true,
+      "sandbox_build_and_export_isolation_pass": true
+    },
+    "lean-checker-controls/selftest-20261005T195709Z-4168": {
+      "all_six_control_logs_required_markers_match": true,
+      "sandbox_build_and_export_isolation_pass": true
+    }
+  },
+  "historical25_operational_checks": {
+    "checked_archived_sha256": "025ed834d67bab0553f206cd6c69d4951caf30a39081b89e912951f20ac5e4c1",
+    "current_administrative_sha256": "64c6363ff1d37ef9423b704befb4c2ca4f8608dfcd0a829972f44d7b616adc6d",
+    "archived_version_matches_run_input": true
+  },
+  "result_json_sha256": "1e2f910877632299e6a457f3e53ce3de0ce86e07ccdd946118108e8fee089f03"
+}

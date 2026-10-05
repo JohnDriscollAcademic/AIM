@@ -1,0 +1,5 @@
+Independent root reviewer; macOS; 2026-10-05
+Source SHA-256: 025f80e283f7b7b0a54ee74b55b45c234820b9ab0fa7b9ed828954268f650509
+Command: lake env lean AIM/P114/LengthProof.lean
+
+Exit code: 0

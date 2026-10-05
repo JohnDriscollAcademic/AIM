@@ -1,0 +1,56 @@
+$ /Users/sholden/.elan/bin/lake build Challenge Solution
+⚠ [3676/3685] Replayed Challenge
+warning: Challenge.lean:20:8: declaration uses `sorry`
+warning: Challenge.lean:27:8: declaration uses `sorry`
+warning: Challenge.lean:36:8: declaration uses `sorry`
+warning: Challenge.lean:45:8: declaration uses `sorry`
+warning: Challenge.lean:49:8: declaration uses `sorry`
+warning: Challenge.lean:55:8: declaration uses `sorry`
+warning: Challenge.lean:64:8: declaration uses `sorry`
+warning: Challenge.lean:74:8: declaration uses `sorry`
+warning: Challenge.lean:85:8: declaration uses `sorry`
+warning: Challenge.lean:90:8: declaration uses `sorry`
+warning: Challenge.lean:105:8: declaration uses `sorry`
+warning: Challenge.lean:114:8: declaration uses `sorry`
+warning: Challenge.lean:123:8: declaration uses `sorry`
+warning: Challenge.lean:132:8: declaration uses `sorry`
+warning: Challenge.lean:135:8: declaration uses `sorry`
+warning: Challenge.lean:139:8: declaration uses `sorry`
+warning: Challenge.lean:143:8: declaration uses `sorry`
+warning: Challenge.lean:154:8: declaration uses `sorry`
+warning: Challenge.lean:161:8: declaration uses `sorry`
+warning: Challenge.lean:166:8: declaration uses `sorry`
+warning: Challenge.lean:171:8: declaration uses `sorry`
+warning: Challenge.lean:177:8: declaration uses `sorry`
+warning: Challenge.lean:185:8: declaration uses `sorry`
+warning: Challenge.lean:193:8: declaration uses `sorry`
+warning: Challenge.lean:200:8: declaration uses `sorry`
+ℹ [3684/3685] Replayed Solution
+info: Solution.lean:8:0: 'AIM.P114.module_count_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:9:0: 'AIM.P114.sign_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:10:0: 'AIM.P114.variance_mixture_kurtosis' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:11:0: 'AIM.P114.core_weight_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:12:0: 'AIM.P114.contaminated_law_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:13:0: 'AIM.P114.contamination_integral_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:14:0: 'AIM.P114.surplus_moment_contamination_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:15:0: 'AIM.P114.surplus_moment_contamination_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:16:0: 'AIM.P114.standard_gaussian_fourth_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:17:0: 'AIM.P114.normalized_variance_mixture_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:18:0: 'AIM.P114.normalized_variance_mixture_not_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:19:0: 'AIM.P114.core_completion_of_squares' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:20:0: 'AIM.P114.core_positive_index' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:21:0: 'AIM.P114.actual_nodal_variance_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:22:0: 'AIM.P114.actual_nodal_variance_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:23:0: 'AIM.P114.actual_nodal_variance_continuous' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:24:0: 'AIM.P114.actual_nodal_variance_mixture_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:25:0: 'AIM.P114.actual_nodal_variance_mixture_not_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:26:0: 'AIM.P114.counterexample_loopless' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:27:0: 'AIM.P114.counterexample_connected' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:28:0: 'AIM.P114.counterexample_cardinalities' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:29:0: 'AIM.P114.counterexample_parallel_edges' depends on axioms: [propext, Quot.sound]
+info: Solution.lean:30:0: 'AIM.P114.counterexample_degrees' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:31:0: 'AIM.P114.counterexample_no_degree_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Solution.lean:32:0: 'AIM.P114.counterexample_euler_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3685 jobs).
+
+exit_code=0

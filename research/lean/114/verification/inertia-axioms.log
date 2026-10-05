@@ -1,0 +1,5 @@
+$ /Users/sholden/.elan/bin/lake env lean verification/inertia-axiom-audit.lean
+'AIM.P114.core_completion_of_squares' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.core_positive_index' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+exit_code=0

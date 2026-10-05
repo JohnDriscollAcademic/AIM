@@ -1,0 +1,7 @@
+Date: 2026-10-05
+Reviewer: root, independent of Inertia implementer.
+Command: lake env lean InertiaChallenge.lean
+InertiaChallenge.lean:12:8: warning: declaration uses `sorry`
+InertiaChallenge.lean:21:8: warning: declaration uses `sorry`
+
+Exit code: 0

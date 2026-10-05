@@ -1,0 +1,29 @@
+Independent AI referee probability_review; 2026-10-05
+Command: /Users/sholden/.elan/bin/lake env lean /tmp/aim114-review/referee-2-transfer-axioms.lean
+Working directory: /Users/sholden/Projects/AIM/research/lean/114
+Input SHA-256:
+e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08  AIM/P114/TransferDefinitions.lean
+c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c  AIM/P114/TransferProof.lean
+48d4e6a969b304dd89145bf8be6df2697db220b6e8a51ed458c6631047a544d1  TransferChallenge.lean
+6deb2147a2742f8cefbbdec369932b654d6153227d59b6686c4887bc71b69538  TRANSFER_TARGETS.md
+aa76173343a28a5f7696a9a7c2cbac1afa3a4138b061c6828a37d13e4f6ccefa  lakefile.toml
+f7f0c63c8e5bfc1b885e90ae8157be1f13f6a4385b6a5211c226fe026336cd48  lake-manifest.json
+3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71  lean-toolchain
+Temporary probe source:
+import AIM.P114.TransferProof
+
+#print axioms AIM.P114.core_weight_bound
+#print axioms AIM.P114.contaminated_law_probability
+#print axioms AIM.P114.contamination_integral_bound
+#print axioms AIM.P114.surplus_moment_contamination_bound
+#print axioms AIM.P114.surplus_moment_contamination_tendsto
+
+
+'AIM.P114.core_weight_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.contaminated_law_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.contamination_integral_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.surplus_moment_contamination_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.surplus_moment_contamination_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Exit code: 0
+Source hashes unchanged: True

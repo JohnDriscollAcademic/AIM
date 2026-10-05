@@ -1,0 +1,874 @@
+{
+  "scope": "Final31-declaration integration",
+  "blocks": {
+    "Original": [
+      "module_count_identity",
+      "sign_second_moment",
+      "variance_mixture_kurtosis"
+    ],
+    "Transfer": [
+      "core_weight_bound",
+      "contaminated_law_probability",
+      "contamination_integral_bound",
+      "surplus_moment_contamination_bound",
+      "surplus_moment_contamination_tendsto"
+    ],
+    "Mixture": [
+      "standard_gaussian_fourth_moment",
+      "normalized_variance_mixture_moments",
+      "normalized_variance_mixture_not_gaussian"
+    ],
+    "Inertia": [
+      "core_completion_of_squares",
+      "core_positive_index"
+    ],
+    "Variance": [
+      "actual_nodal_variance_zero",
+      "actual_nodal_variance_bounds",
+      "actual_nodal_variance_continuous",
+      "actual_nodal_variance_mixture_inputs",
+      "actual_nodal_variance_mixture_not_gaussian"
+    ],
+    "Graph": [
+      "counterexample_loopless",
+      "counterexample_connected",
+      "counterexample_cardinalities",
+      "counterexample_parallel_edges",
+      "counterexample_degrees",
+      "counterexample_no_degree_two",
+      "counterexample_euler_count"
+    ],
+    "Length": [
+      "prime_root_lengths_linearIndependent",
+      "counterexample_metric_lengths_positive",
+      "counterexample_metric_lengths_linearIndependent"
+    ],
+    "GraphLengthBridge": [
+      "actual_graph_core_length_sum",
+      "actual_graph_total_length_sum",
+      "actual_graph_core_length_ratio_bound"
+    ]
+  },
+  "exact_frozen_signatures": true,
+  "declaration_count": 31,
+  "config_metadata_print_alignment_exact": true,
+  "no_definition_holes": true,
+  "prior_frozen_mathematics_and_pins_unchanged": true,
+  "review_reports": 28,
+  "review_hash_checks": [
+    {
+      "report": "reviews/transfer-statement-referee-1.md",
+      "file": "AIM/P114/TransferDefinitions.lean",
+      "sha256": "e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08"
+    },
+    {
+      "report": "reviews/transfer-statement-referee-1.md",
+      "file": "TransferChallenge.lean",
+      "sha256": "48d4e6a969b304dd89145bf8be6df2697db220b6e8a51ed458c6631047a544d1"
+    },
+    {
+      "report": "reviews/transfer-statement-referee-1.md",
+      "file": "TRANSFER_TARGETS.md",
+      "sha256": "6deb2147a2742f8cefbbdec369932b654d6153227d59b6686c4887bc71b69538"
+    },
+    {
+      "report": "reviews/transfer-statement-referee-2.md",
+      "file": "AIM/P114/TransferDefinitions.lean",
+      "sha256": "e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08"
+    },
+    {
+      "report": "reviews/transfer-statement-referee-2.md",
+      "file": "TransferChallenge.lean",
+      "sha256": "48d4e6a969b304dd89145bf8be6df2697db220b6e8a51ed458c6631047a544d1"
+    },
+    {
+      "report": "reviews/transfer-statement-referee-2.md",
+      "file": "TRANSFER_TARGETS.md",
+      "sha256": "6deb2147a2742f8cefbbdec369932b654d6153227d59b6686c4887bc71b69538"
+    },
+    {
+      "report": "reviews/transfer-proof-referee-1.md",
+      "file": "AIM/P114/TransferDefinitions.lean",
+      "sha256": "e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08"
+    },
+    {
+      "report": "reviews/transfer-proof-referee-1.md",
+      "file": "TransferChallenge.lean",
+      "sha256": "48d4e6a969b304dd89145bf8be6df2697db220b6e8a51ed458c6631047a544d1"
+    },
+    {
+      "report": "reviews/transfer-proof-referee-1.md",
+      "file": "TRANSFER_TARGETS.md",
+      "sha256": "6deb2147a2742f8cefbbdec369932b654d6153227d59b6686c4887bc71b69538"
+    },
+    {
+      "report": "reviews/transfer-proof-referee-1.md",
+      "file": "AIM/P114/TransferProof.lean",
+      "sha256": "c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c"
+    },
+    {
+      "report": "reviews/transfer-proof-referee-2.md",
+      "file": "AIM/P114/TransferDefinitions.lean",
+      "sha256": "e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08"
+    },
+    {
+      "report": "reviews/transfer-proof-referee-2.md",
+      "file": "AIM/P114/TransferProof.lean",
+      "sha256": "c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c"
+    },
+    {
+      "report": "reviews/transfer-proof-referee-2.md",
+      "file": "TransferChallenge.lean",
+      "sha256": "48d4e6a969b304dd89145bf8be6df2697db220b6e8a51ed458c6631047a544d1"
+    },
+    {
+      "report": "reviews/transfer-proof-referee-2.md",
+      "file": "TRANSFER_TARGETS.md",
+      "sha256": "6deb2147a2742f8cefbbdec369932b654d6153227d59b6686c4887bc71b69538"
+    },
+    {
+      "report": "reviews/mixture-statement-referee-1.md",
+      "file": "AIM/P114/MixtureDefinitions.lean",
+      "sha256": "63573393a3e5521a4276e822717f307bbabd4c327540e22895c99a1c0fab7652"
+    },
+    {
+      "report": "reviews/mixture-statement-referee-1.md",
+      "file": "MixtureChallenge.lean",
+      "sha256": "edd2f69de4e8ba1552189d57856ae4bd7f35a4b9c73a53c0d2e1de81c5a3570a"
+    },
+    {
+      "report": "reviews/mixture-statement-referee-1.md",
+      "file": "MIXTURE_TARGETS.md",
+      "sha256": "85fd7a64932d5fcd567f4cceb13711da60fcc1ffdde70e118c7ee4e6143ef1f8"
+    },
+    {
+      "report": "reviews/mixture-statement-referee-2.md",
+      "file": "AIM/P114/MixtureDefinitions.lean",
+      "sha256": "63573393a3e5521a4276e822717f307bbabd4c327540e22895c99a1c0fab7652"
+    },
+    {
+      "report": "reviews/mixture-statement-referee-2.md",
+      "file": "MixtureChallenge.lean",
+      "sha256": "edd2f69de4e8ba1552189d57856ae4bd7f35a4b9c73a53c0d2e1de81c5a3570a"
+    },
+    {
+      "report": "reviews/mixture-statement-referee-2.md",
+      "file": "MIXTURE_TARGETS.md",
+      "sha256": "85fd7a64932d5fcd567f4cceb13711da60fcc1ffdde70e118c7ee4e6143ef1f8"
+    },
+    {
+      "report": "reviews/mixture-proof-referee-1.md",
+      "file": "AIM/P114/MixtureDefinitions.lean",
+      "sha256": "63573393a3e5521a4276e822717f307bbabd4c327540e22895c99a1c0fab7652"
+    },
+    {
+      "report": "reviews/mixture-proof-referee-1.md",
+      "file": "MixtureChallenge.lean",
+      "sha256": "edd2f69de4e8ba1552189d57856ae4bd7f35a4b9c73a53c0d2e1de81c5a3570a"
+    },
+    {
+      "report": "reviews/mixture-proof-referee-1.md",
+      "file": "MIXTURE_TARGETS.md",
+      "sha256": "85fd7a64932d5fcd567f4cceb13711da60fcc1ffdde70e118c7ee4e6143ef1f8"
+    },
+    {
+      "report": "reviews/mixture-proof-referee-1.md",
+      "file": "AIM/P114/MixtureProof.lean",
+      "sha256": "2a5d65beeeb576efad8eaf9940ebe0b5cd81cd52e402807e004444ca2e9e6bcf"
+    },
+    {
+      "report": "reviews/mixture-proof-referee-1.md",
+      "file": "MIXTURE_PROOF.md",
+      "sha256": "e6e736fea68fed8a2c23629991e5bb40aa87a84c670913360e18b668ea1229b1"
+    },
+    {
+      "report": "reviews/mixture-proof-referee-1.md",
+      "file": "AIM/P114/Proof.lean",
+      "sha256": "b4412ae1ae9f8f7bc26279c565e3e4799b203eb1a3f3d191b95aa4a239b69797"
+    },
+    {
+      "report": "reviews/mixture-proof-referee-2.md",
+      "file": "AIM/P114/MixtureDefinitions.lean",
+      "sha256": "63573393a3e5521a4276e822717f307bbabd4c327540e22895c99a1c0fab7652"
+    },
+    {
+      "report": "reviews/mixture-proof-referee-2.md",
+      "file": "AIM/P114/MixtureProof.lean",
+      "sha256": "2a5d65beeeb576efad8eaf9940ebe0b5cd81cd52e402807e004444ca2e9e6bcf"
+    },
+    {
+      "report": "reviews/mixture-proof-referee-2.md",
+      "file": "MixtureChallenge.lean",
+      "sha256": "edd2f69de4e8ba1552189d57856ae4bd7f35a4b9c73a53c0d2e1de81c5a3570a"
+    },
+    {
+      "report": "reviews/mixture-proof-referee-2.md",
+      "file": "MIXTURE_TARGETS.md",
+      "sha256": "85fd7a64932d5fcd567f4cceb13711da60fcc1ffdde70e118c7ee4e6143ef1f8"
+    },
+    {
+      "report": "reviews/mixture-proof-referee-2.md",
+      "file": "MIXTURE_PROOF.md",
+      "sha256": "e6e736fea68fed8a2c23629991e5bb40aa87a84c670913360e18b668ea1229b1"
+    },
+    {
+      "report": "reviews/mixture-proof-referee-2.md",
+      "file": "AIM/P114/Definitions.lean",
+      "sha256": "0c29c3c5b0cec95e1463ca190792b26a8d42733cdcca5b99796f84bd03a854ff"
+    },
+    {
+      "report": "reviews/mixture-proof-referee-2.md",
+      "file": "AIM/P114/Proof.lean",
+      "sha256": "b4412ae1ae9f8f7bc26279c565e3e4799b203eb1a3f3d191b95aa4a239b69797"
+    },
+    {
+      "report": "reviews/inertia-statement-referee-1.md",
+      "file": "AIM/P114/InertiaDefinitions.lean",
+      "sha256": "d40bb849d050150f4688bee02ba4f2a88341593f1c37114d253c79b2651b0795"
+    },
+    {
+      "report": "reviews/inertia-statement-referee-1.md",
+      "file": "InertiaChallenge.lean",
+      "sha256": "0c4fc841423c270b32cfe8761ec6258df1e30e8946ac4c396bfcbd94c1505e72"
+    },
+    {
+      "report": "reviews/inertia-statement-referee-1.md",
+      "file": "INERTIA_TARGETS.md",
+      "sha256": "4f847915317cc8721e5108dd4fe3efc0209706a686ea9353576569a68cc245a1"
+    },
+    {
+      "report": "reviews/inertia-statement-referee-2.md",
+      "file": "AIM/P114/InertiaDefinitions.lean",
+      "sha256": "d40bb849d050150f4688bee02ba4f2a88341593f1c37114d253c79b2651b0795"
+    },
+    {
+      "report": "reviews/inertia-statement-referee-2.md",
+      "file": "InertiaChallenge.lean",
+      "sha256": "0c4fc841423c270b32cfe8761ec6258df1e30e8946ac4c396bfcbd94c1505e72"
+    },
+    {
+      "report": "reviews/inertia-statement-referee-2.md",
+      "file": "INERTIA_TARGETS.md",
+      "sha256": "4f847915317cc8721e5108dd4fe3efc0209706a686ea9353576569a68cc245a1"
+    },
+    {
+      "report": "reviews/inertia-proof-referee-1.md",
+      "file": "AIM/P114/InertiaDefinitions.lean",
+      "sha256": "d40bb849d050150f4688bee02ba4f2a88341593f1c37114d253c79b2651b0795"
+    },
+    {
+      "report": "reviews/inertia-proof-referee-1.md",
+      "file": "InertiaChallenge.lean",
+      "sha256": "0c4fc841423c270b32cfe8761ec6258df1e30e8946ac4c396bfcbd94c1505e72"
+    },
+    {
+      "report": "reviews/inertia-proof-referee-1.md",
+      "file": "INERTIA_TARGETS.md",
+      "sha256": "4f847915317cc8721e5108dd4fe3efc0209706a686ea9353576569a68cc245a1"
+    },
+    {
+      "report": "reviews/inertia-proof-referee-1.md",
+      "file": "AIM/P114/InertiaProof.lean",
+      "sha256": "d0acd2dfda515f792ca12195be04b1b07d0ca76e75e7cb20b1afd0e09e06345d"
+    },
+    {
+      "report": "reviews/inertia-proof-referee-2.md",
+      "file": "AIM/P114/InertiaDefinitions.lean",
+      "sha256": "d40bb849d050150f4688bee02ba4f2a88341593f1c37114d253c79b2651b0795"
+    },
+    {
+      "report": "reviews/inertia-proof-referee-2.md",
+      "file": "AIM/P114/InertiaProof.lean",
+      "sha256": "d0acd2dfda515f792ca12195be04b1b07d0ca76e75e7cb20b1afd0e09e06345d"
+    },
+    {
+      "report": "reviews/inertia-proof-referee-2.md",
+      "file": "InertiaChallenge.lean",
+      "sha256": "0c4fc841423c270b32cfe8761ec6258df1e30e8946ac4c396bfcbd94c1505e72"
+    },
+    {
+      "report": "reviews/inertia-proof-referee-2.md",
+      "file": "INERTIA_TARGETS.md",
+      "sha256": "4f847915317cc8721e5108dd4fe3efc0209706a686ea9353576569a68cc245a1"
+    },
+    {
+      "report": "reviews/inertia-proof-referee-2.md",
+      "file": "INERTIA_PROOF.md",
+      "sha256": "7ae3749e8401be0795478f54c94bee2c29dc1cf158d89d15085084771a4d39d2"
+    },
+    {
+      "report": "reviews/variance-statement-referee-1.md",
+      "file": "AIM/P114/VarianceDefinitions.lean",
+      "sha256": "39448627e15c3dc5b6d0a9c825928abe8f79a6b92fed300cf40313bc9b5ef3aa"
+    },
+    {
+      "report": "reviews/variance-statement-referee-1.md",
+      "file": "VarianceChallenge.lean",
+      "sha256": "6b77c1f2e4debf3ac27f7264ab36ee8431a59c060e3e98ac99824160a21be0b5"
+    },
+    {
+      "report": "reviews/variance-statement-referee-1.md",
+      "file": "VARIANCE_TARGETS.md",
+      "sha256": "a215fb1019cd18812094ad0adac10aef5427e2346af39e9004db38e01cca14fb"
+    },
+    {
+      "report": "reviews/variance-statement-referee-2.md",
+      "file": "AIM/P114/VarianceDefinitions.lean",
+      "sha256": "39448627e15c3dc5b6d0a9c825928abe8f79a6b92fed300cf40313bc9b5ef3aa"
+    },
+    {
+      "report": "reviews/variance-statement-referee-2.md",
+      "file": "VarianceChallenge.lean",
+      "sha256": "6b77c1f2e4debf3ac27f7264ab36ee8431a59c060e3e98ac99824160a21be0b5"
+    },
+    {
+      "report": "reviews/variance-statement-referee-2.md",
+      "file": "VARIANCE_TARGETS.md",
+      "sha256": "a215fb1019cd18812094ad0adac10aef5427e2346af39e9004db38e01cca14fb"
+    },
+    {
+      "report": "reviews/variance-proof-referee-1.md",
+      "file": "AIM/P114/VarianceDefinitions.lean",
+      "sha256": "39448627e15c3dc5b6d0a9c825928abe8f79a6b92fed300cf40313bc9b5ef3aa"
+    },
+    {
+      "report": "reviews/variance-proof-referee-1.md",
+      "file": "VarianceChallenge.lean",
+      "sha256": "6b77c1f2e4debf3ac27f7264ab36ee8431a59c060e3e98ac99824160a21be0b5"
+    },
+    {
+      "report": "reviews/variance-proof-referee-1.md",
+      "file": "VARIANCE_TARGETS.md",
+      "sha256": "a215fb1019cd18812094ad0adac10aef5427e2346af39e9004db38e01cca14fb"
+    },
+    {
+      "report": "reviews/variance-proof-referee-1.md",
+      "file": "AIM/P114/VarianceProof.lean",
+      "sha256": "3a160951c60be915a49a2b9dedb1495e76e6f35007339ab7f30d03901e33e6c2"
+    },
+    {
+      "report": "reviews/variance-proof-referee-2.md",
+      "file": "AIM/P114/VarianceDefinitions.lean",
+      "sha256": "39448627e15c3dc5b6d0a9c825928abe8f79a6b92fed300cf40313bc9b5ef3aa"
+    },
+    {
+      "report": "reviews/variance-proof-referee-2.md",
+      "file": "AIM/P114/VarianceProof.lean",
+      "sha256": "3a160951c60be915a49a2b9dedb1495e76e6f35007339ab7f30d03901e33e6c2"
+    },
+    {
+      "report": "reviews/variance-proof-referee-2.md",
+      "file": "VarianceChallenge.lean",
+      "sha256": "6b77c1f2e4debf3ac27f7264ab36ee8431a59c060e3e98ac99824160a21be0b5"
+    },
+    {
+      "report": "reviews/variance-proof-referee-2.md",
+      "file": "VARIANCE_TARGETS.md",
+      "sha256": "a215fb1019cd18812094ad0adac10aef5427e2346af39e9004db38e01cca14fb"
+    },
+    {
+      "report": "reviews/variance-proof-referee-2.md",
+      "file": "VARIANCE_PROOF.md",
+      "sha256": "575013a6e37c97e76b59f35a65db749812ec8f576f00e87bec0eb733546b5c27"
+    },
+    {
+      "report": "reviews/variance-proof-referee-2.md",
+      "file": "AIM/P114/MixtureProof.lean",
+      "sha256": "2a5d65beeeb576efad8eaf9940ebe0b5cd81cd52e402807e004444ca2e9e6bcf"
+    },
+    {
+      "report": "reviews/graph-statement-referee-1.md",
+      "file": "AIM/P114/GraphDefinitions.lean",
+      "sha256": "07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca"
+    },
+    {
+      "report": "reviews/graph-statement-referee-1.md",
+      "file": "GraphChallenge.lean",
+      "sha256": "d08288b79567924d4e54853b48b48735dd4f37bc15a31e1162c525617f4f68b7"
+    },
+    {
+      "report": "reviews/graph-statement-referee-1.md",
+      "file": "GRAPH_TARGETS.md",
+      "sha256": "ab9f462562e75b7af02d33d5cf70c9af765edc8b14e50c2b960ebb625338633f"
+    },
+    {
+      "report": "reviews/graph-statement-referee-2.md",
+      "file": "AIM/P114/GraphDefinitions.lean",
+      "sha256": "07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca"
+    },
+    {
+      "report": "reviews/graph-statement-referee-2.md",
+      "file": "GraphChallenge.lean",
+      "sha256": "d08288b79567924d4e54853b48b48735dd4f37bc15a31e1162c525617f4f68b7"
+    },
+    {
+      "report": "reviews/graph-statement-referee-2.md",
+      "file": "GRAPH_TARGETS.md",
+      "sha256": "ab9f462562e75b7af02d33d5cf70c9af765edc8b14e50c2b960ebb625338633f"
+    },
+    {
+      "report": "reviews/graph-proof-referee-1.md",
+      "file": "AIM/P114/GraphDefinitions.lean",
+      "sha256": "07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca"
+    },
+    {
+      "report": "reviews/graph-proof-referee-1.md",
+      "file": "GraphChallenge.lean",
+      "sha256": "d08288b79567924d4e54853b48b48735dd4f37bc15a31e1162c525617f4f68b7"
+    },
+    {
+      "report": "reviews/graph-proof-referee-1.md",
+      "file": "GRAPH_TARGETS.md",
+      "sha256": "ab9f462562e75b7af02d33d5cf70c9af765edc8b14e50c2b960ebb625338633f"
+    },
+    {
+      "report": "reviews/graph-proof-referee-1.md",
+      "file": "AIM/P114/GraphProof.lean",
+      "sha256": "75232119b42e3cffb5829d959fc38842acc1381eeb409da33d9baef9faae95ea"
+    },
+    {
+      "report": "reviews/graph-proof-referee-2.md",
+      "file": "AIM/P114/GraphDefinitions.lean",
+      "sha256": "07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca"
+    },
+    {
+      "report": "reviews/graph-proof-referee-2.md",
+      "file": "AIM/P114/GraphProof.lean",
+      "sha256": "75232119b42e3cffb5829d959fc38842acc1381eeb409da33d9baef9faae95ea"
+    },
+    {
+      "report": "reviews/graph-proof-referee-2.md",
+      "file": "GraphChallenge.lean",
+      "sha256": "d08288b79567924d4e54853b48b48735dd4f37bc15a31e1162c525617f4f68b7"
+    },
+    {
+      "report": "reviews/graph-proof-referee-2.md",
+      "file": "GRAPH_TARGETS.md",
+      "sha256": "ab9f462562e75b7af02d33d5cf70c9af765edc8b14e50c2b960ebb625338633f"
+    },
+    {
+      "report": "reviews/graph-proof-referee-2.md",
+      "file": "GRAPH_PROOF.md",
+      "sha256": "3b969cb86b00fec44a9d9236cfed60cbd46fa33fc66932ecaafdd0e382cc49de"
+    },
+    {
+      "report": "reviews/length-statement-referee-1.md",
+      "file": "AIM/P114/LengthDefinitions.lean",
+      "sha256": "0926ae9ca8ae094629c374defd9829436fddf313c63698d227ffd5eb9af70c20"
+    },
+    {
+      "report": "reviews/length-statement-referee-1.md",
+      "file": "LengthChallenge.lean",
+      "sha256": "0ee1d8866b88d3e389209a16d21ff51291fcfce759bbdff15cbc4c18ce774809"
+    },
+    {
+      "report": "reviews/length-statement-referee-1.md",
+      "file": "LENGTH_TARGETS.md",
+      "sha256": "765439e1e49999c292a0c30a37ee1a1925e8b808770dcde9f30000bd835ee3dd"
+    },
+    {
+      "report": "reviews/length-statement-referee-2.md",
+      "file": "AIM/P114/LengthDefinitions.lean",
+      "sha256": "0926ae9ca8ae094629c374defd9829436fddf313c63698d227ffd5eb9af70c20"
+    },
+    {
+      "report": "reviews/length-statement-referee-2.md",
+      "file": "LengthChallenge.lean",
+      "sha256": "0ee1d8866b88d3e389209a16d21ff51291fcfce759bbdff15cbc4c18ce774809"
+    },
+    {
+      "report": "reviews/length-statement-referee-2.md",
+      "file": "LENGTH_TARGETS.md",
+      "sha256": "765439e1e49999c292a0c30a37ee1a1925e8b808770dcde9f30000bd835ee3dd"
+    },
+    {
+      "report": "reviews/length-statement-referee-2.md",
+      "file": "AIM/P114/GraphDefinitions.lean",
+      "sha256": "07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca"
+    },
+    {
+      "report": "reviews/length-statement-referee-2.md",
+      "file": "AIM/P114/TransferDefinitions.lean",
+      "sha256": "e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08"
+    },
+    {
+      "report": "reviews/length-proof-referee-1.md",
+      "file": "AIM/P114/LengthDefinitions.lean",
+      "sha256": "0926ae9ca8ae094629c374defd9829436fddf313c63698d227ffd5eb9af70c20"
+    },
+    {
+      "report": "reviews/length-proof-referee-1.md",
+      "file": "LengthChallenge.lean",
+      "sha256": "0ee1d8866b88d3e389209a16d21ff51291fcfce759bbdff15cbc4c18ce774809"
+    },
+    {
+      "report": "reviews/length-proof-referee-1.md",
+      "file": "LENGTH_TARGETS.md",
+      "sha256": "765439e1e49999c292a0c30a37ee1a1925e8b808770dcde9f30000bd835ee3dd"
+    },
+    {
+      "report": "reviews/length-proof-referee-1.md",
+      "file": "AIM/P114/LengthProof.lean",
+      "sha256": "025f80e283f7b7b0a54ee74b55b45c234820b9ab0fa7b9ed828954268f650509"
+    },
+    {
+      "report": "reviews/length-proof-referee-2.md",
+      "file": "AIM/P114/LengthDefinitions.lean",
+      "sha256": "0926ae9ca8ae094629c374defd9829436fddf313c63698d227ffd5eb9af70c20"
+    },
+    {
+      "report": "reviews/length-proof-referee-2.md",
+      "file": "AIM/P114/LengthProof.lean",
+      "sha256": "025f80e283f7b7b0a54ee74b55b45c234820b9ab0fa7b9ed828954268f650509"
+    },
+    {
+      "report": "reviews/length-proof-referee-2.md",
+      "file": "LengthChallenge.lean",
+      "sha256": "0ee1d8866b88d3e389209a16d21ff51291fcfce759bbdff15cbc4c18ce774809"
+    },
+    {
+      "report": "reviews/length-proof-referee-2.md",
+      "file": "LENGTH_TARGETS.md",
+      "sha256": "765439e1e49999c292a0c30a37ee1a1925e8b808770dcde9f30000bd835ee3dd"
+    },
+    {
+      "report": "reviews/length-proof-referee-2.md",
+      "file": "LENGTH_PROOF.md",
+      "sha256": "1632c7db66217c4834fd42943bd8fdc4e4eb20946082f5d79026ac49e49e3200"
+    },
+    {
+      "report": "reviews/length-proof-referee-2.md",
+      "file": "AIM/P114/GraphDefinitions.lean",
+      "sha256": "07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca"
+    },
+    {
+      "report": "reviews/length-proof-referee-2.md",
+      "file": "AIM/P114/TransferDefinitions.lean",
+      "sha256": "e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08"
+    },
+    {
+      "report": "reviews/graph-length-bridge-statement-referee-1.md",
+      "file": "GraphLengthBridgeChallenge.lean",
+      "sha256": "d6ae573f026b748aab738c062995d65f4279f3da4c4f0ec410e4aa5a29cfb793"
+    },
+    {
+      "report": "reviews/graph-length-bridge-statement-referee-1.md",
+      "file": "GRAPH_LENGTH_BRIDGE_TARGETS.md",
+      "sha256": "11566eb5cc9c0903c9b2f8e1cf8dfca0a63b88c8d22d44bba05529ce511cacca"
+    },
+    {
+      "report": "reviews/graph-length-bridge-statement-referee-1.md",
+      "file": "AIM/P114/LengthDefinitions.lean",
+      "sha256": "0926ae9ca8ae094629c374defd9829436fddf313c63698d227ffd5eb9af70c20"
+    },
+    {
+      "report": "reviews/graph-length-bridge-statement-referee-2.md",
+      "file": "GraphLengthBridgeChallenge.lean",
+      "sha256": "d6ae573f026b748aab738c062995d65f4279f3da4c4f0ec410e4aa5a29cfb793"
+    },
+    {
+      "report": "reviews/graph-length-bridge-statement-referee-2.md",
+      "file": "GRAPH_LENGTH_BRIDGE_TARGETS.md",
+      "sha256": "11566eb5cc9c0903c9b2f8e1cf8dfca0a63b88c8d22d44bba05529ce511cacca"
+    },
+    {
+      "report": "reviews/graph-length-bridge-statement-referee-2.md",
+      "file": "AIM/P114/LengthDefinitions.lean",
+      "sha256": "0926ae9ca8ae094629c374defd9829436fddf313c63698d227ffd5eb9af70c20"
+    },
+    {
+      "report": "reviews/graph-length-bridge-statement-referee-2.md",
+      "file": "AIM/P114/GraphDefinitions.lean",
+      "sha256": "07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca"
+    },
+    {
+      "report": "reviews/graph-length-bridge-statement-referee-2.md",
+      "file": "AIM/P114/TransferDefinitions.lean",
+      "sha256": "e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08"
+    },
+    {
+      "report": "reviews/graph-length-bridge-statement-referee-2.md",
+      "file": "AIM/P114/TransferProof.lean",
+      "sha256": "c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c"
+    },
+    {
+      "report": "reviews/graph-length-bridge-proof-referee-1.md",
+      "file": "GraphLengthBridgeChallenge.lean",
+      "sha256": "d6ae573f026b748aab738c062995d65f4279f3da4c4f0ec410e4aa5a29cfb793"
+    },
+    {
+      "report": "reviews/graph-length-bridge-proof-referee-1.md",
+      "file": "GRAPH_LENGTH_BRIDGE_TARGETS.md",
+      "sha256": "11566eb5cc9c0903c9b2f8e1cf8dfca0a63b88c8d22d44bba05529ce511cacca"
+    },
+    {
+      "report": "reviews/graph-length-bridge-proof-referee-1.md",
+      "file": "AIM/P114/LengthDefinitions.lean",
+      "sha256": "0926ae9ca8ae094629c374defd9829436fddf313c63698d227ffd5eb9af70c20"
+    },
+    {
+      "report": "reviews/graph-length-bridge-proof-referee-1.md",
+      "file": "AIM/P114/GraphLengthBridgeProof.lean",
+      "sha256": "bf60f07bc4ddb86274f7a7098709db825e15b47390e2966ba4b376c453922aea"
+    },
+    {
+      "report": "reviews/graph-length-bridge-proof-referee-2.md",
+      "file": "AIM/P114/GraphLengthBridgeProof.lean",
+      "sha256": "bf60f07bc4ddb86274f7a7098709db825e15b47390e2966ba4b376c453922aea"
+    },
+    {
+      "report": "reviews/graph-length-bridge-proof-referee-2.md",
+      "file": "GraphLengthBridgeChallenge.lean",
+      "sha256": "d6ae573f026b748aab738c062995d65f4279f3da4c4f0ec410e4aa5a29cfb793"
+    },
+    {
+      "report": "reviews/graph-length-bridge-proof-referee-2.md",
+      "file": "GRAPH_LENGTH_BRIDGE_TARGETS.md",
+      "sha256": "11566eb5cc9c0903c9b2f8e1cf8dfca0a63b88c8d22d44bba05529ce511cacca"
+    },
+    {
+      "report": "reviews/graph-length-bridge-proof-referee-2.md",
+      "file": "GRAPH_LENGTH_BRIDGE_PROOF.md",
+      "sha256": "669a5a5228d2db7a19222b279dfaaefd0c2ea66d0ccbba2c9a824f7784b33448"
+    },
+    {
+      "report": "reviews/graph-length-bridge-proof-referee-2.md",
+      "file": "AIM/P114/LengthDefinitions.lean",
+      "sha256": "0926ae9ca8ae094629c374defd9829436fddf313c63698d227ffd5eb9af70c20"
+    },
+    {
+      "report": "reviews/graph-length-bridge-proof-referee-2.md",
+      "file": "AIM/P114/GraphDefinitions.lean",
+      "sha256": "07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca"
+    },
+    {
+      "report": "reviews/graph-length-bridge-proof-referee-2.md",
+      "file": "AIM/P114/TransferDefinitions.lean",
+      "sha256": "e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08"
+    },
+    {
+      "report": "reviews/graph-length-bridge-proof-referee-2.md",
+      "file": "AIM/P114/TransferProof.lean",
+      "sha256": "c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c"
+    }
+  ],
+  "original_title_and_problem_statement_unchanged": true,
+  "original_full_statement_snapshot_unchanged": true,
+  "original_problem_statement_sha256": "750a9081ab8fa765cad49d26a1838428ce5685b25e0911e61b7c714c6f2d22fc",
+  "provenance_file_hash_checks": 9,
+  "source_hashes": {
+    "Challenge.lean": "01cf8ae355f45826003284e63641b2c7143ba0fbe0b3992d8c9ce0611593c315",
+    "Solution.lean": "5c5fff7bd54ea7e557a31595f13ff0033b1af058da1c8022f14dcf823adc53ae",
+    "comparator.json": "283281553c0e9728dc3468f4792651317831346418b586d3f7690bc466b6ec89",
+    "formalization.yaml": "8d214cdec6caa9f5deca7d4503b69dd469a554bc133123c00a502bb87614459b",
+    "lakefile.toml": "aa76173343a28a5f7696a9a7c2cbac1afa3a4138b061c6828a37d13e4f6ccefa",
+    "lake-manifest.json": "f7f0c63c8e5bfc1b885e90ae8157be1f13f6a4385b6a5211c226fe026336cd48",
+    "lean-toolchain": "3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71",
+    "README.md": "3268ad6c9180d28d79d8aa028084df7515d89a2a20b671c32f8622caee62c171",
+    "NUMERICAL_TARGETS.md": "5b2dee422433239d5d31da61dfa29391b159ab62eb1277bfef0eacd041839652",
+    "verification/README.md": "05b0fe17f500132e34a8654845902f25ea944d2ec2a0ad43d88009c120f7b518",
+    "AIM/P114/TransferDefinitions.lean": "e68aad72899cdb0827742bf90fd899c20682c460693faeaeec09c012a8426c08",
+    "AIM/P114/GraphLengthBridgeProof.lean": "bf60f07bc4ddb86274f7a7098709db825e15b47390e2966ba4b376c453922aea",
+    "AIM/P114/VarianceDefinitions.lean": "39448627e15c3dc5b6d0a9c825928abe8f79a6b92fed300cf40313bc9b5ef3aa",
+    "AIM/P114/Definitions.lean": "0c29c3c5b0cec95e1463ca190792b26a8d42733cdcca5b99796f84bd03a854ff",
+    "AIM/P114/GraphProof.lean": "75232119b42e3cffb5829d959fc38842acc1381eeb409da33d9baef9faae95ea",
+    "AIM/P114/GraphDefinitions.lean": "07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca",
+    "AIM/P114/TransferProof.lean": "c8788e2afe2c5728840485801dfe59488f2c8388f9ad5e20bb753984ee96056c",
+    "AIM/P114/MixtureProof.lean": "2a5d65beeeb576efad8eaf9940ebe0b5cd81cd52e402807e004444ca2e9e6bcf",
+    "AIM/P114/InertiaProof.lean": "d0acd2dfda515f792ca12195be04b1b07d0ca76e75e7cb20b1afd0e09e06345d",
+    "AIM/P114/Proof.lean": "b4412ae1ae9f8f7bc26279c565e3e4799b203eb1a3f3d191b95aa4a239b69797",
+    "AIM/P114/MixtureDefinitions.lean": "63573393a3e5521a4276e822717f307bbabd4c327540e22895c99a1c0fab7652",
+    "AIM/P114/LengthProof.lean": "025f80e283f7b7b0a54ee74b55b45c234820b9ab0fa7b9ed828954268f650509",
+    "AIM/P114/VarianceProof.lean": "3a160951c60be915a49a2b9dedb1495e76e6f35007339ab7f30d03901e33e6c2",
+    "AIM/P114/LengthDefinitions.lean": "0926ae9ca8ae094629c374defd9829436fddf313c63698d227ffd5eb9af70c20",
+    "AIM/P114/InertiaDefinitions.lean": "d40bb849d050150f4688bee02ba4f2a88341593f1c37114d253c79b2651b0795",
+    "TransferChallenge.lean": "48d4e6a969b304dd89145bf8be6df2697db220b6e8a51ed458c6631047a544d1",
+    "MixtureChallenge.lean": "edd2f69de4e8ba1552189d57856ae4bd7f35a4b9c73a53c0d2e1de81c5a3570a",
+    "InertiaChallenge.lean": "0c4fc841423c270b32cfe8761ec6258df1e30e8946ac4c396bfcbd94c1505e72",
+    "VarianceChallenge.lean": "6b77c1f2e4debf3ac27f7264ab36ee8431a59c060e3e98ac99824160a21be0b5",
+    "GraphChallenge.lean": "d08288b79567924d4e54853b48b48735dd4f37bc15a31e1162c525617f4f68b7",
+    "LengthChallenge.lean": "0ee1d8866b88d3e389209a16d21ff51291fcfce759bbdff15cbc4c18ce774809",
+    "GraphLengthBridgeChallenge.lean": "d6ae573f026b748aab738c062995d65f4279f3da4c4f0ec410e4aa5a29cfb793",
+    "MIXTURE_TARGETS.md": "85fd7a64932d5fcd567f4cceb13711da60fcc1ffdde70e118c7ee4e6143ef1f8",
+    "VARIANCE_TARGETS.md": "a215fb1019cd18812094ad0adac10aef5427e2346af39e9004db38e01cca14fb",
+    "INERTIA_TARGETS.md": "4f847915317cc8721e5108dd4fe3efc0209706a686ea9353576569a68cc245a1",
+    "LENGTH_TARGETS.md": "765439e1e49999c292a0c30a37ee1a1925e8b808770dcde9f30000bd835ee3dd",
+    "GRAPH_TARGETS.md": "ab9f462562e75b7af02d33d5cf70c9af765edc8b14e50c2b960ebb625338633f",
+    "GRAPH_LENGTH_BRIDGE_TARGETS.md": "11566eb5cc9c0903c9b2f8e1cf8dfca0a63b88c8d22d44bba05529ce511cacca",
+    "TRANSFER_TARGETS.md": "6deb2147a2742f8cefbbdec369932b654d6153227d59b6686c4887bc71b69538",
+    "FORMALIZATION_ROADMAP.md": "62f83b00bb32e391f84edeed4c49defa314fbd57f3f64d06ca72111a2720c56f",
+    "PROBABILITY_ROADMAP.md": "010250e768232818d5526e14d90f12cd471c478fa82ceecc4dedb7ea7287abc4",
+    "verification/referee-1-integration-compare.lean": "da96b14629f8265f6a586a007867059abd406499db3db6208cfaa8bcfc9cc65c"
+  },
+  "canonical_page_sha256": "f8815c980ab36184a143c405a509bb901edfe9422e0daa69635aa0fa38b79386",
+  "actual_axioms": {
+    "AIM.P114.module_count_identity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.sign_second_moment": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.variance_mixture_kurtosis": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.core_weight_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.contaminated_law_probability": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.contamination_integral_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.surplus_moment_contamination_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.surplus_moment_contamination_tendsto": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.standard_gaussian_fourth_moment": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.normalized_variance_mixture_moments": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.normalized_variance_mixture_not_gaussian": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.core_completion_of_squares": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.core_positive_index": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_zero": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_bounds": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_continuous": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_mixture_inputs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_nodal_variance_mixture_not_gaussian": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_loopless": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_connected": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_cardinalities": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_parallel_edges": [
+      "propext",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_degrees": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_no_degree_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_euler_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.prime_root_lengths_linearIndependent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_metric_lengths_positive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.counterexample_metric_lengths_linearIndependent": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_graph_core_length_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_graph_total_length_sum": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "AIM.P114.actual_graph_core_length_ratio_bound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "separate_environment_comparison": {
+    "declarations": 31,
+    "referenced_constants": 32934,
+    "solution_imported_modules": 5208,
+    "challenge_in_solution": false,
+    "scope": "local trusted-olean supplement, not isolated export/kernel Comparator"
+  },
+  "administrative_status": "31 local checks passed; 31 isolated Linux pending",
+  "manuscript_package_administrative_hashes": {
+    "README.md": "2d9e0ad826949c6e15869b3a33b8c902891540cb4e6b3a5af48b1d62818399c1",
+    "REVIEW.md": "e870e42f5c7a44906378159dcfcd2bad085b12e05bc75520fee588c166d53bc8",
+    "provenance.json": "81826b7d00e58785c53cb3ca81eecd6d648656fcfca9c66d18741c8e82864da0"
+  },
+  "provenance_correction": "Original three proofs implemented by lean_feasibility; root integrated them and implemented Transfer. Earlier administrative attribution corrected; mathematics and reviewer independence unchanged."
+}

@@ -1,0 +1,8 @@
+Independent root reviewer; macOS; 2026-10-05
+Source SHA-256: 025f80e283f7b7b0a54ee74b55b45c234820b9ab0fa7b9ed828954268f650509
+Command: lake env lean /tmp/aim114-review/root-length-axioms.lean
+'AIM.P114.prime_root_lengths_linearIndependent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.counterexample_metric_lengths_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.counterexample_metric_lengths_linearIndependent' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Exit code: 0

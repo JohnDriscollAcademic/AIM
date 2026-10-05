@@ -1,0 +1,9 @@
+Date: 2026-10-05
+Host: local macOS; not authoritative Linux verifier.
+Command: /Users/sholden/.elan/bin/lake env lean verification/mixture-axiom-audit.lean
+
+'AIM.P114.standard_gaussian_fourth_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.normalized_variance_mixture_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AIM.P114.normalized_variance_mixture_not_gaussian' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+Exit code: 0

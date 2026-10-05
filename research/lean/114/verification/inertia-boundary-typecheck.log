@@ -1,0 +1,11 @@
+$ /Users/sholden/.elan/bin/lake build AIM.P114.InertiaDefinitions
+✔ [1804/1804] Built AIM.P114.InertiaDefinitions (3.0s)
+Build completed successfully (1804 jobs).
+
+exit_code=0
+
+$ /Users/sholden/.elan/bin/lake env lean InertiaChallenge.lean
+InertiaChallenge.lean:12:8: warning: declaration uses `sorry`
+InertiaChallenge.lean:21:8: warning: declaration uses `sorry`
+
+exit_code=0

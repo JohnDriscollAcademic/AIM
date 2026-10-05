@@ -1,0 +1,15 @@
+Independent AI source-signature audit; not a substitute for authoritative Comparator.
+counterexample_loopless: Challenge/Proof signatures identical after whitespace normalization: True
+counterexample_connected: Challenge/Proof signatures identical after whitespace normalization: True
+counterexample_cardinalities: Challenge/Proof signatures identical after whitespace normalization: True
+counterexample_parallel_edges: Challenge/Proof signatures identical after whitespace normalization: True
+counterexample_degrees: Challenge/Proof signatures identical after whitespace normalization: True
+counterexample_no_degree_two: Challenge/Proof signatures identical after whitespace normalization: True
+counterexample_euler_count: Challenge/Proof signatures identical after whitespace normalization: True
+07bc41002c2ee24e98c3686748709fb576f9dd93922ebbd9b29c5297f93a71ca  AIM/P114/GraphDefinitions.lean
+75232119b42e3cffb5829d959fc38842acc1381eeb409da33d9baef9faae95ea  AIM/P114/GraphProof.lean
+d08288b79567924d4e54853b48b48735dd4f37bc15a31e1162c525617f4f68b7  GraphChallenge.lean
+ab9f462562e75b7af02d33d5cf70c9af765edc8b14e50c2b960ebb625338633f  GRAPH_TARGETS.md
+3b969cb86b00fec44a9d9236cfed60cbd46fa33fc66932ecaafdd0e382cc49de  GRAPH_PROOF.md
+f7f0c63c8e5bfc1b885e90ae8157be1f13f6a4385b6a5211c226fe026336cd48  lake-manifest.json
+3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71  lean-toolchain

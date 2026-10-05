@@ -1,0 +1,15 @@
+Independent AI referee probability_review; 2026-10-05
+Command: /Users/sholden/.elan/bin/lake env lean AIM/P114/InertiaProof.lean
+Working directory: /Users/sholden/Projects/AIM/research/lean/114
+Input SHA-256:
+d40bb849d050150f4688bee02ba4f2a88341593f1c37114d253c79b2651b0795  AIM/P114/InertiaDefinitions.lean
+d0acd2dfda515f792ca12195be04b1b07d0ca76e75e7cb20b1afd0e09e06345d  AIM/P114/InertiaProof.lean
+0c4fc841423c270b32cfe8761ec6258df1e30e8946ac4c396bfcbd94c1505e72  InertiaChallenge.lean
+4f847915317cc8721e5108dd4fe3efc0209706a686ea9353576569a68cc245a1  INERTIA_TARGETS.md
+7ae3749e8401be0795478f54c94bee2c29dc1cf158d89d15085084771a4d39d2  INERTIA_PROOF.md
+f7f0c63c8e5bfc1b885e90ae8157be1f13f6a4385b6a5211c226fe026336cd48  lake-manifest.json
+3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71  lean-toolchain
+
+
+Exit code: 0
+Source hashes unchanged: True

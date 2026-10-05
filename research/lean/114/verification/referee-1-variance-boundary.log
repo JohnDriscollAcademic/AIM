@@ -1,0 +1,10 @@
+Date: 2026-10-05
+Reviewer: root, independent of implementer.
+Command: lake env lean VarianceChallenge.lean
+VarianceChallenge.lean:13:8: warning: declaration uses `sorry`
+VarianceChallenge.lean:16:8: warning: declaration uses `sorry`
+VarianceChallenge.lean:20:8: warning: declaration uses `sorry`
+VarianceChallenge.lean:24:8: warning: declaration uses `sorry`
+VarianceChallenge.lean:35:8: warning: declaration uses `sorry`
+
+Exit code: 0

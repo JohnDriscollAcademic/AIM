@@ -1,0 +1,5 @@
+Date: 2026-10-05
+Reviewer: root, independent of Inertia implementer.
+Command: /Users/sholden/.elan/bin/lake env lean AIM/P114/InertiaProof.lean
+
+Exit code: 0

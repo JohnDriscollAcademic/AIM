@@ -1,0 +1,6 @@
+Independent reviewer: spectral_review
+UTC: 2026-10-05T16:49:33.729011+00:00
+Working directory: /Users/sholden/Projects/AIM/research/lean/114
+Command: /Users/sholden/.elan/bin/lake env lean AIM/P114/Proof.lean
+Exit code: 0
+
