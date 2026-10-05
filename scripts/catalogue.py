@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 from datetime import date
 from pathlib import Path
@@ -16,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = {"id", "title", "area", "file", "status", "last_checked"}
 SECTIONS = ("Problem statement", "Application", "References", "Status review")
 GENERATED_DOCUMENTS = ("README.md", "CATALOG.md", "RESOLVED.md")
+LOCAL_CACHE_DIRECTORIES = frozenset({".git", ".lake", ".venv", "__pycache__"})
 STATUS_DISPLAY = {
     "Open": "🔵 OPEN",
     "Partially resolved": "🟡 PARTIAL",
@@ -28,6 +30,16 @@ STATUS_DISPLAY = {
 OPEN_STATUSES = ("Open", "Partially resolved")
 SOLVED_STATUSES = ("Solved", "Lean verified")
 RETIRED_STATUSES = tuple(status for status in STATUS_DISPLAY if status not in OPEN_STATUSES)
+
+
+def markdown_paths(root):
+    """Visit source Markdown without descending into local dependency caches."""
+    for directory, subdirectories, filenames in os.walk(root):
+        subdirectories[:] = [name for name in subdirectories
+                             if name not in LOCAL_CACHE_DIRECTORIES]
+        for name in filenames:
+            if name.endswith(".md"):
+                yield Path(directory) / name
 
 
 def status_display(status):
@@ -454,8 +466,8 @@ def validate(entries, manifest, documents=None):
     for extra in sorted(actual - indexed):
         errors.append(f"Unindexed problem file: {extra.relative_to(ROOT)}")
     generated = {ROOT / name: content for name, content in (documents or {}).items()}
-    markdown = {path: path.read_text(encoding="utf-8") for path in ROOT.rglob("*.md")
-                if ".git" not in path.parts and path not in generated}
+    markdown = {path: path.read_text(encoding="utf-8") for path in markdown_paths(ROOT)
+                if path not in generated}
     markdown.update(generated)
     for path, content in markdown.items():
         errors.extend(f"{path.relative_to(ROOT).as_posix()}: {error}" for error in validate_math(content))

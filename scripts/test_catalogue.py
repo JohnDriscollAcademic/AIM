@@ -133,10 +133,31 @@ class CatalogueTests(unittest.TestCase):
         self.temp = tempfile.TemporaryDirectory(prefix='aim-catalogue-test-')
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
-        for name in ('data', 'problems', 'research', 'scripts'):
-            shutil.copytree(ROOT / name, self.root / name)
+        for name in ('data', 'problems', 'research', 'scripts', 'docs',
+                     'lean-statements', 'tools', '.github'):
+            shutil.copytree(ROOT / name, self.root / name,
+                            ignore=shutil.ignore_patterns('.git', '.lake', '.venv',
+                                                         '__pycache__'))
         for name in (*GENERATED, 'CONTRIBUTING.md', 'CITATION.cff', 'catalogue.json'):
             shutil.copy2(ROOT / name, self.root / name)
+
+    def test_local_dependency_markdown_is_ignored(self):
+        for directory in ('lean-statements/.lake/packages/example',
+                          'research/lean/114/.lake/packages/example', '.venv'):
+            path = self.root / directory / 'README.md'
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text('[missing](does-not-exist.md) and $unprotected$\n',
+                            encoding='utf-8')
+        self.run_catalogue()
+        self.run_catalogue('--check')
+
+    def test_source_markdown_remains_validated_with_caches_present(self):
+        cached = self.root / '.lake' / 'README.md'
+        cached.parent.mkdir()
+        cached.write_text('[ignored](missing-cache-file.md)\n', encoding='utf-8')
+        source = self.root / 'research' / 'cache-regression.md'
+        source.write_text('[must fail](missing-source-file.md)\n', encoding='utf-8')
+        self.run_catalogue(expected=1, message='missing-source-file.md')
 
     def run_catalogue(self, mode='--write', expected=0, message=None):
         # Exercise default locale encodings even when the parent enables UTF-8 mode.
