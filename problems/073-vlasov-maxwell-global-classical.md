@@ -42,3 +42,11 @@ This is the self-consistent collisionless model for relativistic plasmas; moment
 Han-Kwan–Nguyen–Rousset explicitly describe the three-dimensional large-data classical Cauchy problem as open in September 2025. Their linearized damping result is a different assertion. Known weak-solution, small-data and lower-dimensional results do not supply the stated continuation.
 
 Searches run on 2026-09-08: `site.arxiv.org Vlasov Maxwell open problem 2025`; `Vlasov Maxwell global classical solutions open problem 2025 2026`. This is a literature search, not a proof that no solution exists.
+
+OpenAI's September 23, 2026 preprint *Global classical solutions of the three-dimensional relativistic Vlasov–Maxwell system* establishes global existence and uniqueness of classical solutions for the three-dimensional one-species relativistic Vlasov–Maxwell system under the hypotheses stated above. The solution remains smooth on every finite time interval and has compact particle-phase support there, with no smallness, symmetry, or neutrality assumption.
+
+OpenAI claims The main result has been formally verified in Lean; the accompanying formalization is `VlasovMaxwell.lean`.
+
+Paper: https://github.com/openai/math/blob/main/preprints/Global-classical-solutions-of-the-three-dimensional-relativistic-Vlasov-Maxwell-system-September-23-2026/paper.pdf
+
+Lean documentation: https://github.com/openai/math/blob/main/lean/docs/362.md
